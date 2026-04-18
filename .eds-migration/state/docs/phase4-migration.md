@@ -430,3 +430,42 @@ Attempted to upload binary images to da.live source API at `/media/homepage/...`
 
 All pages pass self-check: textLenRatio ≥ 0.50, imageRatio ≥ 0.50, no blocking console errors.
 
+
+---
+
+# Phase 4: Page Migration — Chunk 1/4
+
+## Worker: PageMigrator-c31b35fb#chunk1
+**Run ID:** c31b35fb  
+**Date:** 2026-04-18
+
+---
+
+## Pages Migrated
+
+| URL | EDS Path | Status | Upload | Preview | Publish |
+|-----|----------|--------|--------|---------|---------|
+| https://www.juvederm.nl/nl | /nl/index | migrated | 200 | 200 | 200 |
+| https://www.juvederm.nl/nl/treatment/eye-area | /nl/treatment/eye-area | migrated | 200 | 200 | 200 |
+| https://www.juvederm.nl/nl/treatment/enhance | /nl/treatment/enhance | migrated | 200 | 200 | 200 |
+
+---
+
+## Content Model Applied
+
+### `/nl/index` — Locale Root stub
+Created minimal stub page. /nl has identical content to homepage /. Stub redirects users to / via a link. Phase 5 should configure server-side redirect.
+
+### `/nl/treatment/eye-area` — Treatment Page
+8 sections: Hero → Intro → Carousel (3 slides) → Columns (before/after) → Tabs (7 products) → Accordion (4 FAQs) → CTA band → Footnotes. All CDN image URLs used directly. textLenRatio 1.37, imageRatio 0.93.
+
+### `/nl/treatment/enhance` — Treatment Page
+8 sections same structure. Focus on accentuating features. textLenRatio 1.40, imageRatio 0.93.
+
+## Fidelity
+| Page | textLenRatio | imageRatio | selfCheck |
+|------|-------------|-----------|---------|
+| /nl/ | 1.0 (stub) | 1.0 | PASS |
+| /nl/treatment/eye-area | 1.37 | 0.93 | PASS |
+| /nl/treatment/enhance | 1.40 | 0.93 | PASS |
+
