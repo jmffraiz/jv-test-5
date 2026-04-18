@@ -1,0 +1,28 @@
+{
+  "url": "https://www.juvederm.nl/nl/find-a-clinic",
+  "edsPath": "/nl/find-a-clinic",
+  "archetype": "clinic-finder",
+  "status": "migrated",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/find-a-clinic",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/find-a-clinic",
+  "daSourceUrl": "https://admin.da.live/source/jmffraiz/jv-test-5/nl/find-a-clinic.html",
+  "textLenRatio": 2.0,
+  "imageRatio": 1.0,
+  "published": true,
+  "failureReason": null,
+  "blocksUsed": [
+    "clinic-finder",
+    "metadata"
+  ],
+  "sections": 2,
+  "selfCheck": {
+    "textLenRatio": 2.0,
+    "imageRatio": 1.0,
+    "imageCount": 0,
+    "sectionCount": 2,
+    "consoleErrors": [],
+    "passed": true
+  },
+  "uploadedAt": "2026-04-18T16:00:00Z",
+  "previewTriggeredAt": "2026-04-18T16:05:00Z"
+}

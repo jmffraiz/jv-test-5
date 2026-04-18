@@ -1,0 +1,33 @@
+{
+  "url": "https://www.juvederm.nl/nl/treatment/restore",
+  "edsPath": "/nl/treatment/restore",
+  "archetype": "treatment-page",
+  "status": "migrated",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/restore",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/restore",
+  "daSourceUrl": "https://admin.da.live/source/jmffraiz/jv-test-5/nl/treatment/restore.html",
+  "textLenRatio": 2.84,
+  "imageRatio": 2.0,
+  "published": true,
+  "failureReason": null,
+  "blocksUsed": [
+    "hero",
+    "carousel",
+    "columns",
+    "tabs",
+    "tabs",
+    "section-metadata",
+    "metadata"
+  ],
+  "sections": 8,
+  "selfCheck": {
+    "textLenRatio": 2.84,
+    "imageRatio": 2.0,
+    "imageCount": 14,
+    "sectionCount": 8,
+    "consoleErrors": [],
+    "passed": true
+  },
+  "uploadedAt": "2026-04-18T16:00:00Z",
+  "previewTriggeredAt": "2026-04-18T16:05:00Z"
+}

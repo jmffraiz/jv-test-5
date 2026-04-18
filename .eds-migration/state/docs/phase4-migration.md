@@ -469,3 +469,36 @@ Created minimal stub page. /nl has identical content to homepage /. Stub redirec
 | /nl/treatment/eye-area | 1.37 | 0.93 | PASS |
 | /nl/treatment/enhance | 1.40 | 0.93 | PASS |
 
+
+## Chunk 2/4 — Worker PageMigrator-c31b35fb
+
+**Processed:** 2026-04-18T16:00:00Z | **Status:** All 3 pages migrated ✅
+
+### Pages
+
+| URL | EDS Path | Archetype | Status | Preview |
+|-----|----------|-----------|--------|---------|
+| https://www.juvederm.nl/nl/treatment/restore | /nl/treatment/restore | treatment-page | migrated | https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/restore |
+| https://www.juvederm.nl/nl/treatment/male | /nl/treatment/male | treatment-page | migrated | https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/male |
+| https://www.juvederm.nl/nl/find-a-clinic | /nl/find-a-clinic | clinic-finder | migrated | https://main--jv-test-5--jmffraiz.aem.page/nl/find-a-clinic |
+
+### Block Structure
+
+**treatment-page (restore, male):** 8 sections — hero, intro text, carousel (3 benefit slides), columns (before/after), product tabs (6-7 products), treatment journey tabs (VROUWELIJK/MANNELIJK), cta-band, footnotes+metadata.
+
+**clinic-finder:** 2 sections — clinic-finder config block (heading, placeholder, data-source), metadata.
+
+### Self-Check Results
+
+| Page | Sections | Text Ratio | Images | Console Errors | Pass |
+|------|----------|------------|--------|----------------|------|
+| restore | 8 | 2.84 | 14 | 0 critical | ✅ |
+| male | 8 | 2.90 | 15 | 0 critical | ✅ |
+| find-a-clinic | 2 | 2.0 | 0 | 0 | ✅ |
+
+### Issues
+
+- **503 DNS cache overflow** on first hlx.page preview/publish calls — transient, resolved with 3s retry. All 3 pages previewed and published (HTTP 200).
+- **find-a-clinic** is a JavaScript-heavy interactive map; mapped to clinic-finder config block. Interactive functionality requires custom block implementation.
+- **Image CDN**: juvederm.nl dynamicmedia CDN URLs referenced directly (no auth needed). Same approach as pilot lips page.
+
