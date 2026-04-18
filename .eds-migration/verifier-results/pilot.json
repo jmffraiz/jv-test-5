@@ -1,0 +1,92 @@
+{
+  "verdict": "FAIL",
+  "summary": "3 of 4 pilot pages have broken images (homepage 3/3, FAQ 1/1); FAQ and Treatment/lips not accessible at canonical da.live source path (404 without .html extension)",
+  "verifiedAt": "2026-04-18T14:00:00Z",
+  "pages": {
+    "homepage": {
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/",
+      "previewStatus": 200,
+      "daSourceStatus": 200,
+      "daSourcePath": "https://admin.da.live/source/jmffraiz/jv-test-5/index",
+      "blocksRendered": ["hero (video)", "cards", "cards (no-images)", "carousel", "columns"],
+      "textRatio": 24.32,
+      "imageRatio": "N/A (0 in cleaned.html, 3 in da.live source; all 3 broken on preview)",
+      "metadataPresent": true,
+      "consoleErrors": ["metadata.js 404", "ERR_UNKNOWN_URL_SCHEME (video src)", "3x img 404"]
+    },
+    "treatment_lips": {
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/lips",
+      "previewStatus": 200,
+      "daSourceStatus": 404,
+      "daSourceStatusWithExt": 200,
+      "daSourcePath": "https://admin.da.live/source/jmffraiz/jv-test-5/nl/treatment/lips (404) / nl/treatment/lips.html (200)",
+      "blocksRendered": ["hero", "carousel", "columns", "tabs", "accordion"],
+      "textRatio": 23.89,
+      "imageRatio": "11/0 in cleaned.html = all in da.live source; images loading correctly via EDS pipeline",
+      "metadataPresent": true,
+      "consoleErrors": ["metadata.js 404"]
+    },
+    "faq": {
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/qa",
+      "previewStatus": 200,
+      "daSourceStatus": 404,
+      "daSourceStatusWithExt": 200,
+      "daSourcePath": "https://admin.da.live/source/jmffraiz/jv-test-5/nl/qa (404) / nl/qa.html (200)",
+      "blocksRendered": ["hero", "accordion", "topic-menu"],
+      "textRatio": 7.88,
+      "imageRatio": "1 preview img vs 2 cleaned.html imgs = 0.50 (borderline); hero image broken on preview",
+      "metadataPresent": true,
+      "consoleErrors": ["metadata.js 404", "hero img 404 (src=about:error)"]
+    },
+    "disclaimer": {
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/disclaimer",
+      "previewStatus": 200,
+      "daSourceStatus": 200,
+      "daSourcePath": "https://admin.da.live/source/jmffraiz/jv-test-5/nl/disclaimer",
+      "blocksRendered": [],
+      "textRatio": 0.87,
+      "imageRatio": "N/A (text-only page, no images expected)",
+      "metadataPresent": true,
+      "notes": "Empty metadata description field. Content complete and faithful.",
+      "consoleErrors": ["metadata.js 404"]
+    }
+  },
+  "issues": [
+    {
+      "severity": "medium",
+      "criterion": "da.live source API accessibility at canonical path",
+      "details": "FAQ page at /nl/qa returns HTTP 404 from admin.da.live source API. Treatment/lips at /nl/treatment/lips also returns HTTP 404. Both pages were uploaded with .html extension and are only accessible at /nl/qa.html and /nl/treatment/lips.html respectively. The canonical EDS path without extension resolves to 404. Evidence: `curl -H 'Authorization: Bearer ...' https://admin.da.live/source/jmffraiz/jv-test-5/nl/qa` → 404; `https://admin.da.live/source/jmffraiz/jv-test-5/nl/qa.html` → 200 (16117 bytes).",
+      "remediation": "Upload FAQ and Treatment/lips documents without the .html extension in da.live (delete the .html-suffixed document and re-upload as path-only), or ensure the da.live admin API recognizes both paths. EDS canonical path resolution requires the no-extension form to return 200."
+    },
+    {
+      "severity": "medium",
+      "criterion": "Images loading in preview (Homepage)",
+      "details": "Homepage preview at https://main--jv-test-5--jmffraiz.aem.page/ has 3 broken images. The da.live source references: /media/homepage/treatment-vrouwelijk.jpg, /media/homepage/treatment-mannelijk.jpg, /media/homepage/icon-kijk-uit.png. All 3 return HTTP 404. In preview HTML, image src attributes contain 'about:error'. Evidence: `curl -o /dev/null -w '%{http_code}' https://main--jv-test-5--jmffraiz.aem.page/media/homepage/treatment-vrouwelijk.jpg` → 404.",
+      "remediation": "Upload the homepage images to the EDS media pipeline. Use the AEM admin API to upload images and obtain proper hash-based media URLs (e.g., ./media_<hash>.webp), then update the da.live source document to reference these URLs. Alternatively, use absolute URLs pointing to the original juvederm.nl CDN."
+    },
+    {
+      "severity": "medium",
+      "criterion": "Images loading in preview (FAQ)",
+      "details": "FAQ preview at https://main--jv-test-5--jmffraiz.aem.page/nl/qa has a broken hero image. The da.live source references /media/nl-qa/hero-bg.jpg which returns HTTP 404. In preview HTML, the single img element has src='about:error'. Evidence: `curl -o /dev/null -w '%{http_code}' https://main--jv-test-5--jmffraiz.aem.page/media/nl-qa/hero-bg.jpg` → 404.",
+      "remediation": "Upload the FAQ hero image to the EDS media pipeline and update the da.live source for /nl/qa.html to reference the proper hash-based media URL."
+    },
+    {
+      "severity": "low",
+      "criterion": "metadata.js module 404 on all pages",
+      "details": "All 4 preview pages emit a console error for missing metadata.js module. This is a repo setup issue where the metadata block JS file is not present in the project. Not a migration-specific issue but affects overall page functionality.",
+      "remediation": "Add metadata.js to the EDS project repo blocks/metadata/ directory or ensure the block is properly imported from the block collection."
+    },
+    {
+      "severity": "low",
+      "criterion": "Disclaimer metadata description empty",
+      "details": "The disclaimer page da.live source at /nl/disclaimer has an empty description field in the Metadata block: `<tr><td>description</td><td></td></tr>`. No SEO description will be rendered for this page.",
+      "remediation": "Add a meaningful description value to the Metadata block in the disclaimer da.live document."
+    },
+    {
+      "severity": "low",
+      "criterion": "Homepage video URL uses non-standard scheme",
+      "details": "The homepage da.live source references a video with src pointing to the original juvederm.nl CDN. The worker noted ERR_UNKNOWN_URL_SCHEME errors in the console. The video element in the Hero (video) block uses an absolute URL to the AEM DAM which may have CORS or scheme issues.",
+      "remediation": "Upload the hero video to the EDS media store or confirm CORS headers are set correctly on the source CDN to allow cross-origin loading."
+    }
+  ]
+}
