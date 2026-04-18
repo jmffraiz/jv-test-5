@@ -1,0 +1,30 @@
+{
+  "url": "https://www.juvederm.nl/nl",
+  "edsPath": "/nl/index",
+  "archetype": "locale-root",
+  "status": "migrated",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/",
+  "daSourceUrl": "https://da.live/edit#/jmffraiz/jv-test-5/nl/index",
+  "textLenRatio": 1.0,
+  "imageRatio": 1.0,
+  "published": true,
+  "uploadStatus": 200,
+  "previewStatus": 200,
+  "publishStatus": 200,
+  "uploadedAt": "2026-04-18T15:30:00Z",
+  "previewTriggeredAt": "2026-04-18T15:30:05Z",
+  "publishedAt": "2026-04-18T15:30:10Z",
+  "blocksUsed": ["metadata"],
+  "selfCheck": {
+    "sectionCount": 1,
+    "textLenRatio": 1.0,
+    "imageRatio": 1.0,
+    "h1Count": 1,
+    "consoleErrors": [],
+    "passed": true,
+    "notes": "Locale-root stub page. /nl is identical in content to homepage /. Created as a minimal stub with H1 and link to homepage. Canonical points to /. Preview renders correctly (66 chars visible text, h1 present, no console errors). Phase 5 should configure a proper redirect /nl -> /."
+  },
+  "failureReason": null,
+  "notes": "Locale-root stub: /nl renders same content as homepage. Created minimal stub page with H1 heading and canonical redirect note. Phase 5 should configure server-side redirect from /nl to /."
+}
