@@ -1,0 +1,50 @@
+{
+  "verdict": "PASS",
+  "issues": [
+    {
+      "severity": "low",
+      "criterion": "Archetype schema completeness",
+      "details": "7 of 8 archetypes are missing the 'description' field. Only 'clinic-detail' includes a description. Archetypes without descriptions: homepage, locale-root, treatment-page, faq, clinic-finder, legal, contact.",
+      "remediation": "Add a human-readable description to each archetype entry in manifest.json (e.g., 'description': 'Main entry point landing page for Dutch locale' for locale-root)."
+    },
+    {
+      "severity": "low",
+      "criterion": "clinic-detail sampleUrls use non-canonical AEM internal paths",
+      "details": "The two sampleUrls for the clinic-detail archetype use AEM internal paths (/content/juvederm-ous/nl/nl/clinic.html?...) which redirect (HTTP 301) to the canonical paths (/nl/clinic?...). Evidence: curl -L 'https://www.juvederm.nl/content/juvederm-ous/nl/nl/clinic.html?location=52.3653996%2C4.8868754&clinic=a7q3Y000000XZtNQAW' resolves to https://www.juvederm.nl/nl/clinic?location=...",
+      "remediation": "Update clinic-detail sampleUrls to use the canonical /nl/clinic?location=...&clinic=... form rather than the /content/juvederm-ous/nl/nl/clinic.html?... AEM internal path."
+    },
+    {
+      "severity": "low",
+      "criterion": "Spurious navigation header entry",
+      "details": "navigation.header contains an entry {\"text\": \"https://privacy.abbvie/.\", \"href\": \"https://privacy.abbvie/\"} which is extracted from cookie consent banner text, not a real navigation link.",
+      "remediation": "Filter out cookie-consent banner text from navigation extraction. The privacy link is already captured as 'Privacy beleid' pointing to https://www.abbvie.nl/privacy.html."
+    }
+  ],
+  "summary": "PASS — manifest.json is well-formed with all required fields; 14 canonical pages and 8 archetypes correctly identified; all 3 spot-checked URLs return HTTP 200; sitemap has 13 URLs vs manifest's 14 (no truncation — crawler correctly found an extra legal page from nav links); priority assignments are sensible; minor issues: 7/8 archetypes lack description field, clinic-detail sample URLs use non-canonical AEM internal paths, one spurious nav entry from cookie consent banner.",
+  "checks": {
+    "minimumPageCount": {
+      "status": "PASS",
+      "detail": "14 canonical pages + 54 dynamic clinic-detail pages discovered; well above minimum of 10"
+    },
+    "urlSpotCheck": {
+      "status": "PASS",
+      "detail": "https://www.juvederm.nl/ → 200, https://www.juvederm.nl/nl/treatment/lips → 200, https://www.juvederm.nl/nl/qa → 200"
+    },
+    "sitemapCrossCheck": {
+      "status": "PASS",
+      "detail": "Sitemap (https://www.juvederm.nl/sitemap.xml) has 13 URLs; manifest has 14 canonical pages. Manifest has MORE than sitemap — crawler found https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker via navigation links (confirmed 200). No truncation."
+    },
+    "archetypeCategorization": {
+      "status": "PASS",
+      "detail": "8 archetypes are logically coherent: homepage (1), locale-root (1), treatment-page (5 treatments: lips/eye-area/enhance/restore/male), faq (1), clinic-finder (3 URL variants of same finder), legal (2: disclaimer + T&Cs), contact (1), clinic-detail (54 dynamic pages)"
+    },
+    "noMajorSectionsMissed": {
+      "status": "PASS",
+      "detail": "All nav sections map to archetypes: treatment pages → treatment-page, Q&A → faq, find-a-clinic → clinic-finder, contact → contact, legal pages → legal. No nav links point to undiscovered pages."
+    },
+    "priorityAssignments": {
+      "status": "PASS",
+      "detail": "Homepage: high ✓, treatment pages: high ✓, clinic finder (find-a-clinic): high ✓, FAQ: medium ✓, legal/utility: low ✓. Assignments are reasonable."
+    }
+  }
+}
