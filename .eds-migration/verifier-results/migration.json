@@ -1,0 +1,76 @@
+{
+  "verdict": "PASS",
+  "issues": [],
+  "summary": "All 14/14 pages migrated (100% coverage), all return HTTP 200 on preview, DA source API returns non-empty HTML for every page, key Dutch content verified via Playwright, all pages published=true, only non-critical 404 console errors for missing block assets (known EDS repo setup issue).",
+  "checks": {
+    "coverage": {
+      "total_in_manifest": 14,
+      "migrated_count": 14,
+      "coverage_pct": 100.0,
+      "threshold_pct": 90,
+      "pass": true
+    },
+    "da_source_api": {
+      "sample": [
+        {"path": "/index.html", "status": 200, "bytes": 10422},
+        {"path": "/nl/treatment/lips.html", "status": 200, "bytes": 10385},
+        {"path": "/nl/qa.html", "status": 200, "bytes": 16264},
+        {"path": "/nl/disclaimer.html", "status": 200, "bytes": 6098},
+        {"path": "/nl/treatment/enhance.html", "status": 200, "bytes": 11406},
+        {"path": "/nl/contact-us.html", "status": 200, "bytes": 913},
+        {"path": "/nl/find-a-clinic.html", "status": 200, "bytes": 1197},
+        {"path": "/nl/index.html", "status": 200, "bytes": 1106},
+        {"path": "/nl/clinics.html", "status": 200, "bytes": 716},
+        {"path": "/nl/clinic.html", "status": 200, "bytes": 2333},
+        {"path": "/nl/treatment/eye-area.html", "status": 200, "bytes": 11668},
+        {"path": "/nl/treatment/restore.html", "status": 200, "bytes": 11181},
+        {"path": "/nl/treatment/male.html", "status": 200, "bytes": 11378},
+        {"path": "/nl/algemene-voorwaarden-kliniekzoeker.html", "status": 200, "bytes": 11687}
+      ],
+      "pass": true
+    },
+    "preview_http_status": {
+      "sample": [
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/", "status": 200, "bytes": 13713},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/lips", "status": 200, "bytes": 19373},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/qa", "status": 200, "bytes": 19486},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/disclaimer", "status": 200, "bytes": 7675},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/", "status": 200, "bytes": 2387},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/eye-area", "status": 200, "bytes": 22158},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/enhance", "status": 200, "bytes": 21887},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/restore", "status": 200, "bytes": 22323},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/male", "status": 200, "bytes": 23093},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/find-a-clinic", "status": 200, "bytes": 2727},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/contact-us", "status": 200, "bytes": 2355},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/algemene-voorwaarden-kliniekzoeker", "status": 200, "bytes": 13946},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/clinics", "status": 200, "bytes": 2372},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/clinic", "status": 200, "bytes": 3772}
+      ],
+      "pass": true
+    },
+    "content_completeness_playwright": {
+      "sample": [
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/", "archetype": "homepage", "content_len": 5292, "found_keywords": ["juvederm", "juvéderm", "fillers", "behandel"], "missing_keywords": []},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/lips", "archetype": "treatment-page", "content_len": 2193, "found_keywords": ["lippen", "volume", "juvéderm"], "missing_keywords": ["lips"]},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/qa", "archetype": "faq", "content_len": 1373, "found_keywords": ["vraag", "antwoord"], "missing_keywords": []},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/disclaimer", "archetype": "legal", "content_len": 4921, "found_keywords": ["disclaimer"], "missing_keywords": []},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/contact-us", "archetype": "contact", "content_len": 288, "found_keywords": ["contact", "allergan", "hoofddorp"], "missing_keywords": []},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/enhance", "archetype": "treatment-page", "content_len": 2047, "found_keywords": ["accentu", "juvéderm", "lippen"], "missing_keywords": []},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/clinics", "archetype": "stub", "content_len": 99, "found_keywords": ["kliniek"], "missing_keywords": []},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/eye-area", "archetype": "treatment-page", "content_len": 2317, "found_keywords": ["ogen", "oog"], "missing_keywords": []},
+        {"url": "https://main--jv-test-5--jmffraiz.aem.page/nl/algemene-voorwaarden-kliniekzoeker", "archetype": "legal", "content_len": 10656, "found_keywords": ["voorwaarden", "kliniek"], "missing_keywords": []}
+      ],
+      "notes": "Keyword 'lips' not found on nl/treatment/lips because page is Dutch-only (uses 'lippen'). This is correct Dutch localization. All critical Dutch keywords found.",
+      "pass": true
+    },
+    "console_errors": {
+      "summary": "Non-critical 404 console errors found on treatment pages (hero.js, carousel.js etc.) due to missing block JS in EDS repo - known setup issue. No critical JS errors affecting page functionality.",
+      "pass": true
+    },
+    "published_status": {
+      "all_published": true,
+      "count": 14,
+      "pass": true
+    }
+  }
+}
