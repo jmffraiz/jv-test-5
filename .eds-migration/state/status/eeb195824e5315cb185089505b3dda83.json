@@ -1,0 +1,14 @@
+{
+  "url": "https://www.juvederm.nl/nl/treatment/lips",
+  "status": "migrated",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/lips",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/lips",
+  "textLenRatio": 23.49,
+  "imageRatio": 2.2,
+  "published": true,
+  "failureReason": "",
+  "archetype": "treatment-page",
+  "blocksUsed": ["hero", "carousel", "columns", "tabs", "accordion", "section-metadata", "metadata"],
+  "sections": 8,
+  "migrationNote": "Used authoring table format with full HTML structure (header/main/footer). Original juvederm.nl image CDN URLs preserved. Self-check: 11 images, all blocks rendered correctly."
+}

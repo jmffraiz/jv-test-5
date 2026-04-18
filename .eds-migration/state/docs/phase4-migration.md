@@ -107,3 +107,36 @@ Note: da.live content service returns a parsed/simplified version (~1332 text ch
 ### Key Issue Resolved
 `content.da.live` CDN serves from `{slug}.html` path (e.g. `index.html`), not the extensionless `index` path. Uploading to `POST /source/{org}/{repo}/index.html` explicitly solved the content-bus stale cache issue. The preview went live at 13:08:53 UTC after the corrected upload.
 
+
+---
+
+## Chunk 2/4 — Treatment/Lips (https://www.juvederm.nl/nl/treatment/lips)
+
+**Worker:** PageMigrator-c31b35fb#chunk2
+**Archetype:** treatment-page
+**EDS Path:** /nl/treatment/lips.html
+
+### Status: ✅ migrated + published
+
+| Metric | Value |
+|--------|-------|
+| Text ratio | 23.49 (source text was 168 chars due to JS rendering; preview has full content) |
+| Image ratio | 2.2 (11 images vs 5 source) |
+| Published | true |
+| Preview URL | https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/lips |
+
+### Blocks Authored
+- **Hero**: Full-bleed hero with lips image + h1 "Aantrekkelijke lippen"
+- **Carousel**: 3 benefit slides (natural feel, lasting results, personalized plan)
+- **Columns**: Before/After comparison (Voor/Na images)
+- **Tabs**: 5 product variants (VOLBELLA, VOLIFT, ULTRA 4, ULTRA 3, ULTRA 2)
+- **Accordion**: 4 FAQ items (consult, side effects, how fillers work, results timing)
+- **Section Metadata**: cta-band and footnotes styles
+- **Metadata block**: Full SEO metadata
+
+### Key Issues Resolved
+1. **JS-heavy AEM Cloud rendering**: Used custom Playwright scraper with `ignoreHTTPSErrors` and 8s wait
+2. **HTML structure**: Required `<header></header><main>...</main><footer></footer>` wrapper for AEM preview pipeline to parse content correctly
+3. **Image paths**: Used original juvederm.nl dynamic media CDN URLs; AEM pipeline auto-fetches, converts to WebP, and generates responsive `<picture>` elements
+4. **DA.live path**: Upload to `lips.html` (with extension) so preview pipeline finds content at `markup:https://content.da.live/.../nl/treatment/lips`
+
