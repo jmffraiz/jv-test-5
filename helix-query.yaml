@@ -2,11 +2,12 @@ version: 1
 indices:
   default:
     include:
-      - /nl/**
+      - /**
     exclude:
       - /nav
       - /footer
       - /redirects
+      - /metadata
     target: /query-index.json
     properties:
       title:
