@@ -140,3 +140,38 @@ Note: da.live content service returns a parsed/simplified version (~1332 text ch
 3. **Image paths**: Used original juvederm.nl dynamic media CDN URLs; AEM pipeline auto-fetches, converts to WebP, and generates responsive `<picture>` elements
 4. **DA.live path**: Upload to `lips.html` (with extension) so preview pipeline finds content at `markup:https://content.da.live/.../nl/treatment/lips`
 
+
+---
+
+## Chunk 3/3 — Disclaimer (https://www.juvederm.nl/nl/disclaimer) — RETRY
+
+**Worker:** PageMigrator-c31b35fb#chunk3
+**Archetype:** legal
+**EDS Path:** /nl/disclaimer.html
+
+### Status: ✅ migrated + published
+
+| Metric | Value |
+|--------|-------|
+| Text ratio | 1.43 (4992 chars preview vs ~3500 source) |
+| Image ratio | 1.0 (no images on source or target — text-only legal page) |
+| Published | true |
+| Preview URL | https://main--jv-test-5--jmffraiz.aem.page/nl/disclaimer |
+| Publish URL | https://main--jv-test-5--jmffraiz.aem.live/nl/disclaimer |
+
+### Content Modeled
+- **Section 1 (centered)**: H1 "Disclaimer" + 9 paragraphs + 4-item bulleted list with email/URL links
+- **Section Metadata**: `Style = centered`
+- **Metadata block**: Title + Template (content-page)
+- **No images**: Legal page is purely text-based
+
+### Key Issues Resolved
+1. **Previous attempt had empty section**: The prior chunk used `<div class="section" data-section-style="centered">` as content wrapper, but EDS document parser does not recognize this class — the section rendered empty on aem.page.
+2. **Fix applied**: Used proper EDS HTML document structure — `<header></header><main><div>...content...</div></main><footer></footer>`. The content divs inside `<main>` are parsed as EDS sections correctly, producing `<div class="section centered">` on render.
+3. **Content extraction**: The cleaned.html analysis file was truncated at 50,000 chars. Used Playwright to scrape the live page (`juvederm-disclaimer-page .text .cmp-text`) to get the full rendered HTML content.
+4. **Console errors**: `metadata.js 404` is a known project-level setup issue (missing block implementation file), not a content fault. All actual content rendered correctly.
+
+### Text/Image Fidelity
+- **Text**: Fully faithful — all 9 paragraphs and 4-item list from source carried over
+- **Images**: N/A (0 source images, 0 in EDS output)
+- **Links**: All 3 links preserved (juvederm.nl URL, 2 × ProductSurveillance email, infonederland email)

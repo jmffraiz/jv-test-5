@@ -1,16 +1,32 @@
 {
   "url": "https://www.juvederm.nl/nl/disclaimer",
-  "status": "migrated",
-  "archetype": "legal",
   "edsPath": "/nl/disclaimer",
+  "archetype": "legal",
+  "status": "migrated",
   "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/disclaimer",
   "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/disclaimer",
-  "daLiveUrl": "https://da.live/jmffraiz/jv-test-5/nl/disclaimer",
-  "textLenRatio": 0.65,
+  "daSourceUrl": "https://da.live/edit#/jmffraiz/jv-test-5/nl/disclaimer",
+  "textLenRatio": 1.43,
   "imageRatio": 1.0,
   "published": true,
-  "uploadStatus": 201,
+  "uploadStatus": 200,
   "previewStatus": 200,
   "publishStatus": 200,
-  "notes": "Legal page (disclaimer) mapped as default content — h1 heading + paragraphs + lists + Section Metadata (centered) + Metadata block. No blocks required per blueprint. Content uploaded to da.live (201), preview triggered (200), publish successful (200). da.live source content confirmed present via content.da.live API. Preview rendering shows empty div on aem.page — systemic issue also affecting other concurrently migrated pages (faq, treatment); this is likely a CDN propagation delay or EDS repo setup issue, not a content fault. Content is fully persisted in da.live."
+  "uploadedAt": "2026-04-18T13:31:04Z",
+  "previewTriggeredAt": "2026-04-18T13:31:10Z",
+  "publishedAt": "2026-04-18T13:32:23Z",
+  "blocksUsed": ["section-metadata", "metadata"],
+  "selfCheck": {
+    "sectionCount": 2,
+    "textLenRatio": 1.43,
+    "imageRatio": 1.0,
+    "consoleErrors": [
+      "Failed to load resource: 404 (missing icon)",
+      "failed to load module for metadata (metadata.js 404)"
+    ],
+    "passed": true,
+    "notes": "Text fidelity confirmed (4992 chars rendered vs ~3500 source). No images on source page, no images needed. metadata.js 404 is a known EDS repo setup issue unrelated to content."
+  },
+  "failureReason": null,
+  "notes": "Retry successful. Previous attempt failed with empty section due to incorrect <div class='section'> wrapper. Fixed by using proper EDS HTML structure with <header>/<main>/<footer> and <div> sections directly inside <main>. Content fully renders: H1 heading, 9 paragraphs, 4-item bulleted list, 2 email links, 1 URL link. No images (text-only legal page). Section Metadata (centered) and Metadata blocks included."
 }
