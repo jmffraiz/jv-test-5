@@ -1,0 +1,663 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-04-18T13:00:00Z",
+  "site": "juvederm.nl",
+  "locale": "nl-NL",
+
+  "blocks": [
+    {
+      "name": "hero",
+      "type": "standalone",
+      "source": "block-collection",
+      "blockCollectionUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/hero/hero.js",
+      "variants": ["default", "video"],
+      "usedByArchetypes": ["homepage", "treatment-page", "faq", "clinic-finder"],
+      "contentModel": {
+        "type": "standalone",
+        "description": "Full-bleed hero with background image, heading overlay, and optional CTA",
+        "structure": [
+          { "row": 1, "cells": ["Background image"], "notes": "Single image; for video variant, use a video link instead" },
+          { "row": 2, "cells": ["Heading (h1) + optional paragraph + optional CTA link"], "notes": "Rich text with heading, subtext, and button link" }
+        ],
+        "authoringExample": "| Hero |\n|---|\n| ![hero background](/images/hero-lips.jpg) |\n| # Jouw lippen, jouw keuze |\n| Ontdek de JUVÉDERM® behandelingen |\n| **[Vind je kliniek](/nl/find-a-clinic)** |",
+        "variantNotes": {
+          "default": "Static background image with text overlay",
+          "video": "Use Hero (video) variant name; first cell contains video URL instead of image"
+        }
+      },
+      "css": "hero.css — full-bleed background, gradient overlay for text readability, responsive image sizing, centered text",
+      "js": "hero.js — decorates image as background, handles video variant (auto-play, loop, muted), lazy-loads video",
+      "dependencies": []
+    },
+    {
+      "name": "accordion",
+      "type": "collection",
+      "source": "block-collection",
+      "blockCollectionUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/accordion/accordion.js",
+      "variants": ["default"],
+      "usedByArchetypes": ["faq", "homepage", "treatment-page"],
+      "contentModel": {
+        "type": "collection",
+        "description": "Expandable Q&A or collapsible content sections. Each row is one accordion item.",
+        "structure": [
+          { "row": "each", "cells": ["Heading (question/title)", "Rich text body (answer/content)"], "notes": "Col 1 = summary/trigger text, Col 2 = expandable detail. Rich text supports paragraphs, lists, sup references." }
+        ],
+        "authoringExample": "| Accordion |\n|---|---|\n| Wat is JUVÉDERM®? | JUVÉDERM® is een collectie van injecteerbare gezichtsvullers... |\n| Hoe lang houdt het resultaat aan? | De resultaten kunnen tot 12-18 maanden aanhouden.^1^ |"
+      },
+      "css": "accordion.css — expand/collapse animation, chevron indicator, focus styles, border between items",
+      "js": "accordion.js — toggle open/close, optional single-open mode, ARIA attributes for accessibility",
+      "dependencies": []
+    },
+    {
+      "name": "carousel",
+      "type": "collection",
+      "source": "block-collection",
+      "blockCollectionUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/carousel/carousel.js",
+      "variants": ["default"],
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "contentModel": {
+        "type": "collection",
+        "description": "Sliding content carousel. Each row is one slide with image and text content.",
+        "structure": [
+          { "row": "each", "cells": ["Image", "Heading + description + optional CTA link"], "notes": "Each row = one slide. Col 1 = slide image, Col 2 = text content with heading, paragraph, and optional link." }
+        ],
+        "authoringExample": "| Carousel |\n|---|---|\n| ![lips treatment](/images/lips.jpg) | ## Lippen |\n| | Creëer de perfecte pout met JUVÉDERM® |\n| | [Meer informatie](/nl/treatment/lips) |"
+      },
+      "css": "carousel.css — slide transitions, dot navigation, swipe support, responsive sizing",
+      "js": "carousel.js — slide logic, touch/swipe, dot indicators, auto-advance optional",
+      "dependencies": []
+    },
+    {
+      "name": "cards",
+      "type": "collection",
+      "source": "block-collection",
+      "blockCollectionUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/cards/cards.js",
+      "variants": ["default", "no-images"],
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "contentModel": {
+        "type": "collection",
+        "description": "Grid of content cards. Each row is one card with optional image.",
+        "structure": [
+          { "row": "each", "cells": ["Image (optional)", "Heading + description + optional CTA"], "notes": "For no-images variant, omit image cell. Cards auto-layout into responsive grid." }
+        ],
+        "authoringExample": "| Cards |\n|---|---|\n| ![icon natural](/images/icon-natural.svg) | ## Natuurlijk resultaat |\n| | JUVÉDERM® geeft een resultaat dat er natuurlijk uitziet en voelt. |"
+      },
+      "css": "cards.css — responsive grid layout (2-3 columns), card borders/shadows, hover states",
+      "js": "cards.js — minimal decoration, responsive column count",
+      "dependencies": []
+    },
+    {
+      "name": "tabs",
+      "type": "auto-blocked",
+      "source": "block-collection",
+      "blockCollectionUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/tabs/tabs.js",
+      "variants": ["default"],
+      "usedByArchetypes": ["treatment-page"],
+      "contentModel": {
+        "type": "auto-blocked",
+        "description": "Tabbed content sections. Each section with a tab-label in section metadata becomes a tab panel. Grouped under a Tabs block wrapper.",
+        "structure": [
+          { "row": "each", "cells": ["Tab label", "Tab content (rich text)"], "notes": "Each row = one tab. Col 1 = tab heading label, Col 2 = tab panel content." }
+        ],
+        "authoringExample": "| Tabs |\n|---|---|\n| VOLBELLA | JUVÉDERM® VOLBELLA met lidocaïne wordt gebruikt om fijne lijntjes te behandelen...^2^ |\n| VOLIFT | JUVÉDERM® VOLIFT met lidocaïne herstelt het volume in het middengelaat...^3^ |"
+      },
+      "css": "tabs.css — tab bar styling, active/inactive states, panel show/hide",
+      "js": "tabs.js — tab switching, ARIA tablist/tab/tabpanel roles, keyboard navigation",
+      "dependencies": []
+    },
+    {
+      "name": "columns",
+      "type": "standalone",
+      "source": "boilerplate",
+      "variants": ["default"],
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "contentModel": {
+        "type": "standalone",
+        "description": "Multi-column layout for side-by-side image + text. From EDS boilerplate.",
+        "structure": [
+          { "row": 1, "cells": ["Image or content", "Text content or image"], "notes": "2 cells = 2 columns. Content in each cell renders as a column." }
+        ],
+        "authoringExample": "| Columns |\n|---|---|\n| ![treatment photo](/images/treatment.jpg) | ## Waarom JUVÉDERM®? |\n| | Ons assortiment biedt... |"
+      },
+      "css": "columns.css — flexbox/grid 2-col layout, responsive stacking on mobile",
+      "js": "columns.js — minimal, adds column count class",
+      "dependencies": []
+    },
+    {
+      "name": "topic-menu",
+      "type": "standalone",
+      "source": "custom",
+      "variants": ["default"],
+      "usedByArchetypes": ["faq"],
+      "contentModel": {
+        "type": "standalone",
+        "description": "Sticky horizontal anchor navigation for FAQ sections. A single row with anchor links to page sections.",
+        "structure": [
+          { "row": 1, "cells": ["List of anchor links (ul with a-hrefs to #section-ids)"], "notes": "Author creates an unordered list of links. Each link targets a section anchor on the same page." }
+        ],
+        "authoringExample": "| Topic Menu |\n|---|\n| - [Over Juvéderm®](#about-juvederm) |\n| - [Kosten](#duration) |\n| - [Langdurige resultaten](#results) |\n| - [Veiligheid](#side-effects) |\n| - [Zones van het gezicht](#facial-areas) |"
+      },
+      "css": "topic-menu.css — sticky positioning, horizontal scroll on mobile, active state highlight, brand colors",
+      "js": "topic-menu.js — intersection observer to highlight active section, smooth scroll on click",
+      "dependencies": []
+    },
+    {
+      "name": "clinic-finder",
+      "type": "standalone",
+      "source": "custom",
+      "variants": ["full-page", "compact"],
+      "usedByArchetypes": ["clinic-finder"],
+      "contentModel": {
+        "type": "configuration",
+        "description": "Interactive clinic search with Google Maps. Configuration block that renders a map + search + results UI.",
+        "structure": [
+          { "row": 1, "cells": ["api-key", "(provided via env/config, not authored)"], "notes": "Google Maps API key loaded from site config, not authored in document" },
+          { "row": 2, "cells": ["heading", "Vind een kliniek bij jou in de buurt"], "notes": "Search heading text" },
+          { "row": 3, "cells": ["placeholder", "Voer je postcode of stad in"], "notes": "Search input placeholder text" },
+          { "row": 4, "cells": ["data-source", "URL or API endpoint for clinic data"], "notes": "Endpoint that returns clinic JSON data" }
+        ],
+        "authoringExample": "| Clinic Finder |\n|---|---|\n| heading | Vind een kliniek bij jou in de buurt |\n| placeholder | Voer je postcode of stad in |\n| data-source | /clinic-data.json |"
+      },
+      "css": "clinic-finder.css — map container, search bar, results list, clinic cards, responsive layout",
+      "js": "clinic-finder.js — Google Maps initialization, geocoding, clinic data fetch, distance sorting, result rendering",
+      "dependencies": ["Google Maps JavaScript API (maps.googleapis.com)", "Clinic data endpoint (to be determined — JSON spreadsheet or external API)"]
+    }
+  ],
+
+  "archetypes": [
+    {
+      "name": "homepage",
+      "sampleUrl": "https://www.juvederm.nl/",
+      "edsPath": "/",
+      "pageModel": [
+        {
+          "sectionIndex": 1,
+          "style": "hero",
+          "sequences": ["hero (video variant)"],
+          "notes": "Full-bleed hero with auto-playing background video, h1 heading, and CTA"
+        },
+        {
+          "sectionIndex": 2,
+          "style": "",
+          "sequences": ["default-content (intro paragraph with brand description and sup references)"],
+          "notes": "Introductory text about hyaluronic acid — default content paragraph"
+        },
+        {
+          "sectionIndex": 3,
+          "style": "highlight",
+          "sequences": ["carousel (treatment areas)"],
+          "notes": "Treatment area cards carousel: Lips, Eyes, Enhance, Restore, Male — each with image + heading + link"
+        },
+        {
+          "sectionIndex": 4,
+          "style": "",
+          "sequences": ["cards (benefits)"],
+          "notes": "'Why JUVÉDERM?' section: 4 benefit cards (natural look, leading brand, lasting results, satisfaction)"
+        },
+        {
+          "sectionIndex": 5,
+          "style": "",
+          "sequences": ["accordion (product details)"],
+          "notes": "Collapsible product details / secondary info section"
+        },
+        {
+          "sectionIndex": 6,
+          "style": "cta-band",
+          "sequences": ["default-content (CTA)"],
+          "notes": "Primary CTA: 'Vind je kliniek' button — rendered as default content strong link"
+        },
+        {
+          "sectionIndex": 7,
+          "style": "footnotes",
+          "sequences": ["default-content (regulatory footnotes)"],
+          "notes": "Regulatory footnotes with superscript references"
+        }
+      ],
+      "metadataMapping": {
+        "title": "JUVÉDERM Nederlands",
+        "description": "from source meta description",
+        "og:title": "same as title",
+        "og:description": "same as description",
+        "og:image": "downloaded hero image",
+        "twitter:title": "same as title",
+        "twitter:description": "same as description",
+        "keywords": "hyaluronic acid, facial fillers, juvederm, dermal fillers, cosmetic injectables",
+        "template": "content-page"
+      }
+    },
+    {
+      "name": "treatment-page",
+      "sampleUrl": "https://www.juvederm.nl/nl/treatment/lips",
+      "edsPath": "/nl/treatment/{slug}",
+      "pageModel": [
+        {
+          "sectionIndex": 1,
+          "style": "hero",
+          "sequences": ["hero (default variant)"],
+          "notes": "Full-bleed hero image specific to treatment area, h1 heading"
+        },
+        {
+          "sectionIndex": 2,
+          "style": "",
+          "sequences": ["default-content (treatment intro)"],
+          "notes": "Introductory paragraph about the treatment area"
+        },
+        {
+          "sectionIndex": 3,
+          "style": "",
+          "sequences": ["columns (image + text)"],
+          "notes": "Treatment benefits section with image on one side, descriptive text on the other"
+        },
+        {
+          "sectionIndex": 4,
+          "style": "",
+          "sequences": ["tabs (product range)"],
+          "notes": "JUVÉDERM® product range tabs: VOLBELLA, VOLIFT, ULTRA variants with descriptions"
+        },
+        {
+          "sectionIndex": 5,
+          "style": "highlight",
+          "sequences": ["cards (treatment journey)"],
+          "notes": "Step-by-step treatment journey: Consultation → Treatment → Results"
+        },
+        {
+          "sectionIndex": 6,
+          "style": "",
+          "sequences": ["accordion (additional info)"],
+          "notes": "Additional questions/details as collapsible accordion items"
+        },
+        {
+          "sectionIndex": 7,
+          "style": "cta-band",
+          "sequences": ["default-content (CTA)"],
+          "notes": "'Vind je kliniek' CTA button"
+        },
+        {
+          "sectionIndex": 8,
+          "style": "footnotes",
+          "sequences": ["default-content (regulatory footnotes)"],
+          "notes": "Superscript regulatory references and disclaimers"
+        }
+      ],
+      "metadataMapping": {
+        "title": "from source title (e.g., 'Juvederm en lippen | Juvéderm® Netherlands')",
+        "description": "from source meta description",
+        "og:title": "same as title",
+        "og:description": "same as description",
+        "og:image": "treatment-specific hero image",
+        "keywords": "from source keywords + treatment-specific terms",
+        "template": "content-page"
+      }
+    },
+    {
+      "name": "faq",
+      "sampleUrl": "https://www.juvederm.nl/nl/qa",
+      "edsPath": "/nl/qa",
+      "pageModel": [
+        {
+          "sectionIndex": 1,
+          "style": "hero",
+          "sequences": ["hero (default variant)"],
+          "notes": "Hero image with 'Ontdek het antwoord op je vraag' heading"
+        },
+        {
+          "sectionIndex": 2,
+          "style": "",
+          "sequences": ["topic-menu"],
+          "notes": "Sticky anchor navigation with 5 topic labels"
+        },
+        {
+          "sectionIndex": 3,
+          "style": "qa-section",
+          "sequences": ["default-content (section heading)", "accordion (Q&A items)"],
+          "notes": "Section: 'Over Juvéderm®' — h2 heading + accordion items. Repeat this pattern for each FAQ topic group."
+        },
+        {
+          "sectionIndex": "4-7",
+          "style": "qa-section",
+          "sequences": ["default-content (section heading)", "accordion (Q&A items)"],
+          "notes": "Repeat for: Kosten, Langdurige resultaten, Veiligheid, Zones van het gezicht"
+        },
+        {
+          "sectionIndex": 8,
+          "style": "cta-band",
+          "sequences": ["default-content (CTA)"],
+          "notes": "'Vind je kliniek' CTA"
+        },
+        {
+          "sectionIndex": 9,
+          "style": "footnotes",
+          "sequences": ["default-content (regulatory footnotes)"],
+          "notes": "Regulatory footnotes"
+        }
+      ],
+      "metadataMapping": {
+        "title": "Veelgestelde vragen Juvederm | Juvéderm® Netherlands",
+        "description": "from source meta description",
+        "og:title": "same as title",
+        "og:description": "same as description",
+        "keywords": "from source keywords",
+        "template": "content-page"
+      }
+    },
+    {
+      "name": "clinic-finder",
+      "sampleUrl": "https://www.juvederm.nl/nl/find-a-clinic",
+      "edsPath": "/nl/find-a-clinic",
+      "pageModel": [
+        {
+          "sectionIndex": 1,
+          "style": "hero",
+          "sequences": ["hero (default variant)"],
+          "notes": "Hero with 'Vind een kliniek' heading and search prompt"
+        },
+        {
+          "sectionIndex": 2,
+          "style": "",
+          "sequences": ["clinic-finder (full-page variant)"],
+          "notes": "Interactive clinic search map with search bar, Google Maps, and results list"
+        },
+        {
+          "sectionIndex": 3,
+          "style": "footnotes",
+          "sequences": ["default-content (regulatory footnotes)"],
+          "notes": "Regulatory footnotes"
+        }
+      ],
+      "metadataMapping": {
+        "title": "Vind een kliniek | Juvéderm® Netherlands",
+        "description": "Find the right clinic for you",
+        "og:title": "same as title",
+        "og:description": "same as description",
+        "template": "content-page"
+      }
+    },
+    {
+      "name": "legal",
+      "sampleUrl": "https://www.juvederm.nl/nl/disclaimer",
+      "edsPath": "/nl/{slug}",
+      "pageModel": [
+        {
+          "sectionIndex": 1,
+          "style": "centered",
+          "sequences": ["default-content (h1 heading + body text)"],
+          "notes": "Entirely default content: heading, paragraphs, lists. No blocks needed."
+        }
+      ],
+      "metadataMapping": {
+        "title": "from source title",
+        "description": "from source meta description (may be empty)",
+        "template": "content-page"
+      }
+    },
+    {
+      "name": "contact",
+      "sampleUrl": "https://www.juvederm.nl/nl/contact-us",
+      "edsPath": "/nl/contact-us",
+      "pageModel": [
+        {
+          "sectionIndex": 1,
+          "style": "centered",
+          "sequences": ["default-content (h1 heading + contact info + address + links)"],
+          "notes": "Simple contact info page — heading, address block, email/phone links. All default content."
+        }
+      ],
+      "metadataMapping": {
+        "title": "Neem contact op",
+        "description": "",
+        "template": "content-page"
+      }
+    }
+  ],
+
+  "navigation": {
+    "model": {
+      "document": "/nav",
+      "description": "EDS auto-loads header from /nav document. Structured as logo link + nested list for dropdown navigation + CTA button.",
+      "structure": [
+        "Logo image linked to /",
+        "Nested unordered list:",
+        "  - Behandeling (top-level, no link)",
+        "    - Lippen → /nl/treatment/lips",
+        "    - Ogen → /nl/treatment/eye-area",
+        "    - Accentueren → /nl/treatment/enhance",
+        "    - Herstel → /nl/treatment/restore",
+        "    - Man → /nl/treatment/male",
+        "  - FAQ (top-level, no link)",
+        "    - Over Juvéderm® → /nl/qa#about-juvederm",
+        "    - Kosten → /nl/qa#duration",
+        "    - Langdurige resultaten → /nl/qa#results",
+        "    - Veiligheid → /nl/qa#side-effects",
+        "    - Zones van het gezicht → /nl/qa#facial-areas",
+        "CTA button: **[Vind je kliniek](/nl/find-a-clinic)** (strong link = primary button)"
+      ],
+      "mobileNotes": "Hamburger menu with slide-out navigation panel. Same link structure."
+    }
+  },
+
+  "footer": {
+    "model": {
+      "document": "/footer",
+      "description": "EDS auto-loads footer from /footer document. Contains CTA, social links, nav links, regulatory text, and legal links.",
+      "structure": [
+        "Section 1 — CTA: **[Vind je kliniek](/nl/find-a-clinic)**",
+        "Section 2 — Social media icons: Instagram, Facebook (SVG icons from /icons/)",
+        "Section 3 — Navigation links (same structure as header nav but flat list)",
+        "Section 4 — Regulatory/brand text: AbbVie/Allergan branding, disclaimer text",
+        "Section 5 — Legal links: Privacy, Terms, Disclaimer, Cookie settings (#onetrust), Clinic T&Cs",
+        "Section 6 — Copyright: © AbbVie [year]. All rights reserved."
+      ]
+    }
+  },
+
+  "metadata": {
+    "globalMapping": {
+      "title": "Preserved from source page titles (trimmed of leading spaces)",
+      "description": "Preserved from source meta description",
+      "og:title": "Same as title",
+      "og:description": "Same as description",
+      "og:image": "Re-hosted hero/share image per page (downloaded from source DAM)",
+      "og:type": "website",
+      "og:site_name": "Juvéderm® Netherlands",
+      "twitter:title": "Same as title",
+      "twitter:description": "Same as description",
+      "twitter:image": "Same as og:image",
+      "keywords": "Preserved from source where present",
+      "template": "content-page (all pages use same AEM template)",
+      "lang": "nl"
+    },
+    "bulkMetadata": {
+      "description": "Use bulk metadata spreadsheet (metadata.xlsx) for site-wide defaults: og:site_name, template, lang. Per-page metadata authored in document metadata block.",
+      "defaults": {
+        "og:site_name": "Juvéderm® Netherlands",
+        "template": "content-page",
+        "lang": "nl"
+      }
+    }
+  },
+
+  "decisions": [
+    {
+      "id": "D1",
+      "title": "homepage / locale-root dedup",
+      "decision": "Migrate once as homepage (/). Set up redirect from /nl → / in redirects.xlsx.",
+      "rationale": "Both / and /nl serve identical content with the same canonical URL. Maintaining two identical pages creates authoring overhead and confusion. Single homepage with redirect is cleaner."
+    },
+    {
+      "id": "D2",
+      "title": "clinic-detail pages out of scope",
+      "decision": "Mark clinic-detail pages as out-of-scope for static migration. The clinic-finder block will render individual clinic info dynamically.",
+      "rationale": "54+ dynamic pages generated by JS with CRM query params. Not suitable for static content migration. The clinic-finder custom block will handle clinic display at runtime from a data source."
+    },
+    {
+      "id": "D3",
+      "title": "clinic-finder Google Maps integration",
+      "decision": "Build custom clinic-finder block with Google Maps JavaScript API. Clinic data served from a JSON spreadsheet or external API endpoint. API key stored in site configuration (not authored).",
+      "rationale": "Source site uses Google Maps via emu-location-services. Custom block is required — no Block Collection equivalent. Spreadsheet-as-JSON provides a simple, authorable data source for clinic records."
+    },
+    {
+      "id": "D4",
+      "title": "cookie consent via delayed.js",
+      "decision": "Integrate OneTrust cookie consent script in delayed.js. Not a content block — it's a global script integration.",
+      "rationale": "Cookie consent must not impact page load performance. delayed.js is the standard EDS pattern for third-party scripts. OneTrust SDK loaded after page content is interactive."
+    },
+    {
+      "id": "D5",
+      "title": "video in hero, not standalone block",
+      "decision": "Handle homepage video as a Hero (video) variant rather than a separate video block.",
+      "rationale": "Only the homepage uses video, and only as a hero background. A standalone video block is unnecessary. Hero variant keeps the palette minimal and the authoring model simple."
+    },
+    {
+      "id": "D6",
+      "title": "/nl/clinics and /nl/clinic are clinic-finder aliases",
+      "decision": "Set up redirects: /nl/clinics → /nl/find-a-clinic and /nl/clinic → /nl/find-a-clinic in redirects.xlsx.",
+      "rationale": "All three URLs serve the same clinic finder UI. Single canonical page avoids duplication."
+    },
+    {
+      "id": "D7",
+      "title": "topic-menu as custom block (not section style)",
+      "decision": "Implement topic-menu as a lightweight custom block rather than a section style on default content.",
+      "rationale": "A dedicated block provides clearer authoring semantics, JS for intersection-observer highlighting, and potential reuse on other long-form pages."
+    },
+    {
+      "id": "D8",
+      "title": "prefer default content over blocks for simple pages",
+      "decision": "Legal and contact pages use exclusively default content (headings, paragraphs, lists, links). No blocks authored.",
+      "rationale": "These pages are simple text. Wrapping them in blocks would add authoring complexity for no benefit. EDS default content renders clean semantic HTML."
+    },
+    {
+      "id": "D9",
+      "title": "Google Fonts → self-hosted fonts",
+      "decision": "Download Assistant and Roboto fonts from Google Fonts, host in /fonts/ directory, declare in fonts.css.",
+      "rationale": "Self-hosting fonts avoids third-party DNS lookups and improves LCP. Standard EDS performance best practice."
+    },
+    {
+      "id": "D10",
+      "title": "analytics via delayed.js",
+      "decision": "Load Google Tag Manager, Google Analytics, and Facebook Pixel scripts via delayed.js.",
+      "rationale": "All analytics/marketing scripts are non-critical for page functionality. Loading via delayed.js protects Core Web Vitals scores."
+    }
+  ],
+
+  "migrationOrder": {
+    "pilot": [
+      {
+        "url": "https://www.juvederm.nl/",
+        "edsPath": "/",
+        "archetype": "homepage",
+        "rationale": "Homepage is the highest-traffic page and exercises the most blocks (hero, carousel, cards, accordion). Validates core infrastructure."
+      },
+      {
+        "url": "https://www.juvederm.nl/nl/treatment/lips",
+        "edsPath": "/nl/treatment/lips",
+        "archetype": "treatment-page",
+        "rationale": "Lips is the primary treatment page. Validates the treatment-page template (hero, columns, tabs, cards, accordion)."
+      },
+      {
+        "url": "https://www.juvederm.nl/nl/qa",
+        "edsPath": "/nl/qa",
+        "archetype": "faq",
+        "rationale": "FAQ validates accordion (heaviest usage), topic-menu custom block, and anchor navigation."
+      },
+      {
+        "url": "https://www.juvederm.nl/nl/disclaimer",
+        "edsPath": "/nl/disclaimer",
+        "archetype": "legal",
+        "rationale": "Simple text page — quick win to validate default content rendering and metadata."
+      }
+    ],
+    "batch": [
+      {
+        "url": "https://www.juvederm.nl/nl/treatment/eye-area",
+        "edsPath": "/nl/treatment/eye-area",
+        "archetype": "treatment-page"
+      },
+      {
+        "url": "https://www.juvederm.nl/nl/treatment/enhance",
+        "edsPath": "/nl/treatment/enhance",
+        "archetype": "treatment-page"
+      },
+      {
+        "url": "https://www.juvederm.nl/nl/treatment/restore",
+        "edsPath": "/nl/treatment/restore",
+        "archetype": "treatment-page"
+      },
+      {
+        "url": "https://www.juvederm.nl/nl/treatment/male",
+        "edsPath": "/nl/treatment/male",
+        "archetype": "treatment-page"
+      },
+      {
+        "url": "https://www.juvederm.nl/nl/find-a-clinic",
+        "edsPath": "/nl/find-a-clinic",
+        "archetype": "clinic-finder"
+      },
+      {
+        "url": "https://www.juvederm.nl/nl/contact-us",
+        "edsPath": "/nl/contact-us",
+        "archetype": "contact"
+      },
+      {
+        "url": "https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker",
+        "edsPath": "/nl/algemene-voorwaarden-kliniekzoeker",
+        "archetype": "legal"
+      }
+    ],
+    "redirectsOnly": [
+      {
+        "source": "/nl",
+        "destination": "/",
+        "reason": "Duplicate of homepage — identical content, same canonical"
+      },
+      {
+        "source": "/nl/clinics",
+        "destination": "/nl/find-a-clinic",
+        "reason": "Alias for clinic finder"
+      },
+      {
+        "source": "/nl/clinic",
+        "destination": "/nl/find-a-clinic",
+        "reason": "Alias for clinic finder"
+      }
+    ],
+    "outOfScope": [
+      {
+        "archetype": "clinic-detail",
+        "count": 54,
+        "reason": "Dynamic pages generated from CRM data. Handled at runtime by the clinic-finder block, not as static content pages."
+      }
+    ]
+  },
+
+  "siteConventions": {
+    "sectionStyles": [
+      { "name": "hero", "description": "Full-bleed background image section, used for page heroes" },
+      { "name": "highlight", "description": "Accent background color section for feature callouts" },
+      { "name": "qa-section", "description": "FAQ topic group section with id anchor for topic-menu navigation" },
+      { "name": "cta-band", "description": "Centered call-to-action band section" },
+      { "name": "centered", "description": "Centered text content layout (legal, contact pages)" },
+      { "name": "footnotes", "description": "Small-text regulatory footnotes section at bottom of pages" }
+    ],
+    "ctaPattern": {
+      "primary": "<p><strong><a href=\"/nl/find-a-clinic\">Vind je kliniek</a></strong></p>",
+      "secondary": "<p><em><a href=\"/nl/treatment/lips\">Meer informatie</a></em></p>",
+      "description": "Primary CTA is 'Vind je kliniek' (Find your clinic) linking to clinic finder. Secondary CTAs link to treatment pages. Standard EDS button patterns: strong-wrapped link = primary, em-wrapped = secondary."
+    },
+    "imageStrategy": {
+      "approach": "download-and-rehost",
+      "sourcePattern": "/content/dam/juvederm-ous/",
+      "notes": "Download all images from source AEM DAM. Commit to DA content or repo. EDS CDN handles responsive optimization automatically. SVG icons go to /icons/ directory."
+    },
+    "brandConventions": {
+      "brandName": "JUVÉDERM®",
+      "registeredMark": "Always include ® on first mention per page",
+      "superscriptRefs": "Regulatory citation numbers rendered as <sup> (e.g., ^2-9^, ^14-16^)",
+      "locale": "nl-NL, Dutch-only site"
+    },
+    "fonts": {
+      "primary": "Assistant (Google Fonts → self-hosted)",
+      "secondary": "Roboto (Google Fonts → self-hosted)",
+      "strategy": "Download and self-host in /fonts/, declare in fonts.css, preload primary font for LCP"
+    }
+  }
+}
