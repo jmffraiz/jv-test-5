@@ -10,44 +10,74 @@
   "imageRatio": 1.0,
   "published": true,
   "uploadedAt": "2026-04-18T13:08:32Z",
-  "previewTriggeredAt": "2026-04-18T14:09:00Z",
-  "blocksPresent": ["hero", "cards", "carousel", "columns"],
-  "images": [
-    "https://www.juvederm.nl/content/dam/juvederm-ous/common/allergan_header_04_16by9_001.png",
-    "https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--32a21521-b4a2-44d3-aaed-2f5c707b83bd/2024-incidental-lily-00439-rgb-lr-treatment-area-section.jpg?quality=80&width=800",
-    "https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--29c13e32-5ae5-4711-b56e-aa51e6f2be38/2024-key-visual-stefan-02608-rgb-lr-treatment-area-section.jpg?quality=80&width=800",
-    "https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--721086fc-bf03-4770-a1ca-9f0ead9b9ad0/icon-kijk-uit-melding-white.png?quality=80"
+  "previewTriggeredAt": "2026-04-18T14:45:39Z",
+  "blocksPresent": [
+    "hero",
+    "cards",
+    "carousel",
+    "columns"
   ],
-  "notes": "Phase 4 fix: All 4 broken /media/homepage/ image references replaced with absolute juvederm.nl CDN URLs (Dynamic Media delivery URLs). Images confirmed downloadable at 800px quality. HTML re-uploaded to da.live (200) and preview refreshed (200). Published successfully (200). imageRatio improved from 0.75 to 1.0.",
+  "images": {
+    "treatment-vrouwelijk": "https://main--jv-test-5--jmffraiz.aem.page/media_11cecd23cae834da82cc5eee3117bca8c933fd10b.jpg",
+    "treatment-mannelijk": "https://main--jv-test-5--jmffraiz.aem.page/media_146cc5882a034987c181d80bbfc7269323f55c700.jpg",
+    "icon-kijk-uit": "https://main--jv-test-5--jmffraiz.aem.page/media_1875ca12bcae6f27ada86f45d9b23d0976c8eb215.png",
+    "hero-bg": "https://main--jv-test-5--jmffraiz.aem.page/media/homepage/media_1375f6a3d9b3c7459942416606c1c5df72ec68f96.png"
+  },
+  "notes": "Image fix v2: Images downloaded from juvederm.nl, uploaded to da.live media store at /media/homepage/, then referenced in HTML using absolute aem.page hash URLs (media_HASH.jpg). da.live re-processed these and stored them with root-level hashes (media_HASH.jpg). All 3 content images + og:image are now rendering with proper <picture> elements instead of about:error. og:image updated to /media/homepage/hero-bg.png (200).",
   "selfCheck": {
     "textLenRatio": 1.78,
     "imageRatio": 1.0,
+    "contentImages": 3,
     "heroBlock": true,
     "cardsBlock": true,
     "carouselBlock": true,
     "columnsBlock": true,
-    "consoleErrors": []
+    "consoleErrors": [],
+    "imagePaths": [
+      "./media_11cecd23cae834da82cc5eee3117bca8c933fd10b.jpg",
+      "./media_146cc5882a034987c181d80bbfc7269323f55c700.jpg",
+      "./media_1875ca12bcae6f27ada86f45d9b23d0976c8eb215.png"
+    ],
+    "ogImage": "https://main--jv-test-5--jmffraiz.aem.page/media/homepage/media_1375f6a3d9b3c7459942416606c1c5df72ec68f96.png",
+    "aboutErrorImages": 0
   },
   "imageFix": {
     "fixApplied": true,
-    "fixedAt": "2026-04-18T14:09:00Z",
-    "approach": "absolute-cdn-urls",
-    "fixedImages": [
+    "fixVersion": "v2",
+    "fixedAt": "2026-04-18T14:45:39Z",
+    "approach": "upload-to-da-live-media-store-then-use-aem-page-hash-urls",
+    "steps": [
+      "1. Downloaded images from juvederm.nl CDN",
+      "2. Uploaded images to da.live as /media/homepage/*.jpg via multipart form POST",
+      "3. Triggered preview for each image file (200)",
+      "4. Used absolute aem.page hash URLs in HTML (e.g. https://main--jv-test-5--jmffraiz.aem.page/media/homepage/media_HASH.jpg)",
+      "5. da.live re-processed these URLs and stored images with root-level hashes (media_HASH.jpg)",
+      "6. Images now render as proper <picture> elements in EDS preview"
+    ],
+    "resolvedImages": [
       {
-        "broken": "/media/homepage/treatment-vrouwelijk.jpg",
-        "fixed": "https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--32a21521-b4a2-44d3-aaed-2f5c707b83bd/2024-incidental-lily-00439-rgb-lr-treatment-area-section.jpg?quality=80&width=800"
+        "name": "treatment-vrouwelijk",
+        "daLivePath": "/media/homepage/treatment-vrouwelijk.jpg",
+        "mediaHash": "media_11cecd23cae834da82cc5eee3117bca8c933fd10b.jpg",
+        "aemPageUrl": "https://main--jv-test-5--jmffraiz.aem.page/media_11cecd23cae834da82cc5eee3117bca8c933fd10b.jpg"
       },
       {
-        "broken": "/media/homepage/treatment-mannelijk.jpg",
-        "fixed": "https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--29c13e32-5ae5-4711-b56e-aa51e6f2be38/2024-key-visual-stefan-02608-rgb-lr-treatment-area-section.jpg?quality=80&width=800"
+        "name": "treatment-mannelijk",
+        "daLivePath": "/media/homepage/treatment-mannelijk.jpg",
+        "mediaHash": "media_146cc5882a034987c181d80bbfc7269323f55c700.jpg",
+        "aemPageUrl": "https://main--jv-test-5--jmffraiz.aem.page/media_146cc5882a034987c181d80bbfc7269323f55c700.jpg"
       },
       {
-        "broken": "/media/homepage/icon-kijk-uit.png",
-        "fixed": "https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--721086fc-bf03-4770-a1ca-9f0ead9b9ad0/icon-kijk-uit-melding-white.png?quality=80"
+        "name": "icon-kijk-uit",
+        "daLivePath": "/media/homepage/icon-kijk-uit.png",
+        "mediaHash": "media_1875ca12bcae6f27ada86f45d9b23d0976c8eb215.png",
+        "aemPageUrl": "https://main--jv-test-5--jmffraiz.aem.page/media_1875ca12bcae6f27ada86f45d9b23d0976c8eb215.png"
       },
       {
-        "broken": "/media/homepage/hero-bg.jpg",
-        "fixed": "https://www.juvederm.nl/content/dam/juvederm-ous/common/allergan_header_04_16by9_001.png"
+        "name": "hero-bg",
+        "daLivePath": "/media/homepage/hero-bg.png",
+        "mediaHashPath": "/media/homepage/media_1375f6a3d9b3c7459942416606c1c5df72ec68f96.png",
+        "note": "Used in og:image metadata only (hero video variant has no img)"
       }
     ]
   },

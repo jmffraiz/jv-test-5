@@ -286,3 +286,50 @@ Retrieved original image URLs from juvederm.nl's Adobe Dynamic Media CDN by scra
 
 ### Why Not da.live Media Upload?
 Attempted to upload binary images to da.live source API at `/media/homepage/...` paths — uploads returned 201 but images were NOT accessible at `aem.page` or `content.da.live` (404). EDS media pipeline only processes images that are embedded in document HTML and referenced as relative paths during document preview. Standalone binary file uploads to `/media/` paths bypass the media pipeline and are not served by the CDN.
+
+---
+
+## Phase 4 Image Fix v2 — Homepage (2026-04-18, chunk 1/2)
+
+### Problem Diagnosis
+After the Phase 4 image fix v1 (using absolute juvederm.nl CDN URLs), the verifier found:
+- Homepage: 3 images still `about:error` (external CDN URLs blocked by EDS browser rendering/CORS)
+- The juvederm.nl CDN URLs DO return 200 server-side, but the browser (via aem.js `createOptimizedPicture`) fails to load them cross-origin
+
+### Root Cause
+The EDS client-side rendering (aem.js) converts `<img>` tags to `<picture>` elements using `createOptimizedPicture`. When the image src is an external domain (juvederm.nl), the browser's image load fails with `about:error` due to CORS/CSP restrictions on the aem.page domain.
+
+Working images (e.g. lips page) have `media_HASH.webp` paths on the aem.page domain itself — no cross-origin issues.
+
+### Solution Applied (v2)
+**Correct approach: Upload images to da.live media store, then reference via absolute aem.page hash URLs**
+
+**Step-by-step:**
+1. Downloaded 4 images from juvederm.nl CDN: treatment-vrouwelijk.jpg (800x800), treatment-mannelijk.jpg (800x800), icon-kijk-uit.png (100x76), hero-bg.png (1920x1080)
+2. Uploaded each to da.live via multipart form POST: `POST /source/jmffraiz/jv-test-5/media/homepage/{filename}` → 201
+3. Triggered `POST /preview/.../media/homepage/{filename}` → 200 for each image
+4. Images stored at `/media/homepage/media_HASH.{ext}` and accessible via aem.page (301 → 200)
+5. Updated homepage HTML with absolute aem.page hash URLs as img src:
+   - `https://main--jv-test-5--jmffraiz.aem.page/media/homepage/media_11cecd23cae834da82cc5eee3117bca8c933fd10b.jpg#width=800&height=800`
+   - `https://main--jv-test-5--jmffraiz.aem.page/media/homepage/media_146cc5882a034987c181d80bbfc7269323f55c700.jpg#width=800&height=800`
+   - `https://main--jv-test-5--jmffraiz.aem.page/media/homepage/media_1875ca12bcae6f27ada86f45d9b23d0976c8eb215.png#width=100&height=76`
+6. Uploaded updated HTML to da.live → 200. da.live re-processed image URLs and stored them with **root-level** hashes:
+   - `media_11cecd23cae834da82cc5eee3117bca8c933fd10b.jpg`
+   - `media_146cc5882a034987c181d80bbfc7269323f55c700.jpg`
+   - `media_1875ca12bcae6f27ada86f45d9b23d0976c8eb215.png`
+7. Triggered preview → 200. Verified rendered HTML: all 3 images now render as `<picture>` elements with `./media_HASH.jpg` paths — no `about:error`
+8. og:image updated to `/media/homepage/hero-bg.png` (hero-bg stored separately, returns 200)
+9. Published → 200
+
+### Verified Results
+- `[image0]` → `./media_11cecd23cae834da82cc5eee3117bca8c933fd10b.jpg` (200, 23KB optimized webp)
+- `[image1]` → `./media_146cc5882a034987c181d80bbfc7269323f55c700.jpg` (200, 31KB optimized webp)
+- `[image2]` → `./media_1875ca12bcae6f27ada86f45d9b23d0976c8eb215.png` (200, 2.5KB optimized webp)
+- og:image → `https://main--jv-test-5--jmffraiz.aem.page/media/homepage/media_1375f6a3d9b3c7459942416606c1c5df72ec68f96.png` (200)
+- imageRatio: 3/3 content images = 1.0
+
+### Key Learnings for Future Migrations
+1. Images referenced as external URLs (other domains) in da.live HTML fail CORS in browser rendering
+2. **Correct workflow**: Upload images to da.live via multipart form POST → trigger preview → get `media_HASH` URLs → use those in HTML → da.live stores final root-level hashes
+3. The `/media/homepage/` path prefix is arbitrary — what matters is triggering preview so da.live assigns hashes
+4. For og:image in Metadata block, use the full aem.page hash URL (not relative path)
