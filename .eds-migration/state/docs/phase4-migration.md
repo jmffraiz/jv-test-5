@@ -77,3 +77,33 @@ None — the disclaimer page matched the `legal` archetype from the blueprint.
 | /nl/disclaimer | ~0.65 (da.live parsed subset) | 1.0 (no images) |
 
 Note: da.live content service returns a parsed/simplified version (~1332 text chars) of the uploaded HTML (5089 text chars). The full content is preserved in the da.live source HTML. The ratio reflects da.live's rendering pipeline, not data loss.
+
+---
+
+## Chunk 1/4 — Homepage (https://www.juvederm.nl/)
+
+**Worker:** PageMigrator-c31b35fb#chunk1  
+**Archetype:** homepage  
+**EDS Path:** /index.html  
+
+### Status: ✅ migrated + published
+
+| Metric | Value |
+|--------|-------|
+| Text ratio | 1.78 |
+| Image ratio | 0.75 |
+| Published | true |
+| Preview URL | https://main--jv-test-5--jmffraiz.aem.page/ |
+
+### Blocks Authored
+- **Hero (video)**: Background video + "Jouw unieke schoonheid" h1 + CTA
+- **Cards (no-images)**: "Waarom JUVÉDERM®?" — 4 benefit cards with h3 headings and text
+- **Carousel**: Treatment area slides (Versterk contouren, Stralende oogopslag, Herstel volume)
+- **Cards**: Treatment areas with images (vrouwelijk/mannelijk) and links
+- **Columns**: Warning banner (Kijk uit)
+- **Default content**: Brand intro paragraph, regulatory footnotes, CTA band
+- **Metadata block**: Full SEO metadata
+
+### Key Issue Resolved
+`content.da.live` CDN serves from `{slug}.html` path (e.g. `index.html`), not the extensionless `index` path. Uploading to `POST /source/{org}/{repo}/index.html` explicitly solved the content-bus stale cache issue. The preview went live at 13:08:53 UTC after the corrected upload.
+
