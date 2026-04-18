@@ -1,0 +1,66 @@
+{
+  "phase": "config",
+  "runId": "c31b35fb",
+  "generatedAt": "2026-04-18T16:06:00Z",
+  "site": "juvederm.nl",
+  "org": "jmffraiz",
+  "repo": "jv-test-5",
+  "artifacts": {
+    "redirects": {
+      "dalivePath": "/redirects",
+      "uploadStatus": 201,
+      "previewStatus": 200,
+      "count": 4,
+      "entries": [
+        { "source": "/nl", "destination": "/" },
+        { "source": "/nl/clinics", "destination": "/nl/find-a-clinic" },
+        { "source": "/nl/clinic", "destination": "/nl/find-a-clinic" },
+        { "source": "/nl/contacteer-ons", "destination": "/nl/contact-us" }
+      ]
+    },
+    "metadata": {
+      "dalivePath": "/metadata",
+      "uploadStatus": 201,
+      "previewStatus": 404,
+      "previewNote": "Expected - metadata consumed as spreadsheet, not rendered page",
+      "patterns": [
+        {
+          "url": "/**",
+          "properties": {
+            "og:site_name": "JUVÉDERM® Nederland",
+            "og:locale": "nl_NL",
+            "og:type": "website",
+            "twitter:card": "summary_large_image",
+            "robots": "index, follow"
+          }
+        }
+      ]
+    },
+    "nav": {
+      "dalivePath": "/nav",
+      "uploadStatus": 201,
+      "previewStatus": 200
+    },
+    "footer": {
+      "dalivePath": "/footer",
+      "uploadStatus": 201,
+      "previewStatus": 200
+    },
+    "helixQueryYaml": {
+      "branch": "main",
+      "path": "helix-query.yaml",
+      "commitStatus": "pushed"
+    },
+    "helixSitemapYaml": {
+      "branch": "main",
+      "path": "helix-sitemap.yaml",
+      "commitStatus": "pushed"
+    },
+    "robotsTxt": {
+      "branch": "main",
+      "path": "robots.txt",
+      "commitStatus": "pushed"
+    }
+  },
+  "complete": true
+}
