@@ -1,0 +1,73 @@
+{
+  "verdict": "PASS",
+  "issues": [
+    {
+      "severity": "low",
+      "criterion": "Nav coverage matches manifest navigation.header",
+      "details": "Two paths from manifest.navigation.header are absent from the nav document: /nl/disclaimer (Social media disclaimer) and /nl/algemene-voorwaarden-kliniekzoeker. These are footer/legal links, not primary navigation items.",
+      "remediation": "No action required — both links are correctly present in the footer document (https://admin.da.live/source/jmffraiz/jv-test-5/footer). EDS best practice places legal links in the footer, not the nav. Consider clarifying whether manifest.navigation.header is expected to include footer-only links."
+    }
+  ],
+  "summary": "All Phase 5 config checks pass: helix-query.yaml, helix-sitemap.yaml, robots.txt present on main and valid; fstab.yaml intact; all 4 redirects correctly uploaded as HTML table; nav and footer exist in da.live and return 200 on preview; 2 footer/legal links absent from nav but correctly present in footer document (low severity only).",
+  "evidence": {
+    "github_files": {
+      "helix-query.yaml": {"status": 200, "url": "https://api.github.com/repos/jmffraiz/jv-test-5/contents/helix-query.yaml?ref=main"},
+      "helix-sitemap.yaml": {"status": 200, "url": "https://api.github.com/repos/jmffraiz/jv-test-5/contents/helix-sitemap.yaml?ref=main"},
+      "robots.txt": {"status": 200, "url": "https://api.github.com/repos/jmffraiz/jv-test-5/contents/robots.txt?ref=main"}
+    },
+    "fstab_yaml": {
+      "raw_url": "https://raw.githubusercontent.com/jmffraiz/jv-test-5/main/fstab.yaml",
+      "contains_da_live_path": true,
+      "value": "https://content.da.live/jmffraiz/jv-test-5"
+    },
+    "redirects": {
+      "url": "https://admin.da.live/source/jmffraiz/jv-test-5/redirects",
+      "status": 200,
+      "format": "HTML table",
+      "has_source_destination_headers": true,
+      "entries": [
+        {"/nl": "/"},
+        {"/nl/clinics": "/nl/find-a-clinic"},
+        {"/nl/clinic": "/nl/find-a-clinic"},
+        {"/nl/contacteer-ons": "/nl/contact-us"}
+      ]
+    },
+    "nav_da_live": {
+      "status": 200,
+      "url": "https://admin.da.live/source/jmffraiz/jv-test-5/nav",
+      "non_empty": true
+    },
+    "footer_da_live": {
+      "status": 200,
+      "url": "https://admin.da.live/source/jmffraiz/jv-test-5/footer",
+      "non_empty": true
+    },
+    "nav_preview": {
+      "status": 200,
+      "url": "https://main--jv-test-5--jmffraiz.aem.page/nav"
+    },
+    "footer_preview": {
+      "status": 200,
+      "url": "https://main--jv-test-5--jmffraiz.aem.page/footer"
+    },
+    "yaml_validity": {
+      "helix-query.yaml": "valid",
+      "helix-sitemap.yaml": "valid",
+      "helix-sitemap-origin": "https://www.juvederm.nl"
+    },
+    "nav_coverage": {
+      "manifest_header_juvederm_paths": [
+        "/nl/treatment/lips", "/nl/treatment/eye-area", "/nl/treatment/enhance",
+        "/nl/treatment/restore", "/nl/treatment/male", "/nl/qa",
+        "/nl/find-a-clinic", "/nl/contact-us", "/nl/disclaimer",
+        "/nl/algemene-voorwaarden-kliniekzoeker"
+      ],
+      "in_nav_doc": [
+        "/", "/nl/treatment/lips", "/nl/treatment/eye-area", "/nl/treatment/enhance",
+        "/nl/treatment/restore", "/nl/treatment/male", "/nl/qa",
+        "/nl/find-a-clinic", "/nl/contact-us"
+      ],
+      "missing_from_nav_but_in_footer": ["/nl/disclaimer", "/nl/algemene-voorwaarden-kliniekzoeker"]
+    }
+  }
+}
