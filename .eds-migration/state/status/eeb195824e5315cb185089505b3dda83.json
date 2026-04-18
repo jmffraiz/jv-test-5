@@ -1,14 +1,40 @@
 {
   "url": "https://www.juvederm.nl/nl/treatment/lips",
   "status": "migrated",
+  "archetype": "treatment-page",
+  "edsPath": "/nl/treatment/lips",
   "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/lips",
   "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/lips",
+  "daSourceUrl": "https://admin.da.live/source/jmffraiz/jv-test-5/nl/treatment/lips.html",
   "textLenRatio": 23.49,
   "imageRatio": 2.2,
   "published": true,
-  "failureReason": "",
-  "archetype": "treatment-page",
-  "blocksUsed": ["hero", "carousel", "columns", "tabs", "accordion", "section-metadata", "metadata"],
+  "failureReason": null,
+  "blocksUsed": [
+    "hero",
+    "carousel",
+    "columns",
+    "tabs",
+    "accordion",
+    "section-metadata",
+    "metadata"
+  ],
   "sections": 8,
-  "migrationNote": "Used authoring table format with full HTML structure (header/main/footer). Original juvederm.nl image CDN URLs preserved. Self-check: 11 images, all blocks rendered correctly."
+  "selfCheck": {
+    "textLenRatio": 23.49,
+    "imageRatio": 2.2,
+    "imageCount": 11,
+    "h1Count": 1,
+    "h2Count": 5,
+    "h3Count": 3,
+    "heroBlock": true,
+    "carouselBlock": true,
+    "columnsBlock": true,
+    "tabsBlock": true,
+    "accordionBlock": true,
+    "ctaPresent": true,
+    "pageLength": 19271
+  },
+  "verifiedAt": "2026-04-18T13:27:21.512756+00:00",
+  "notes": "Previously migrated and verified. Retry chunk confirmed page is live at aem.page with all 8 sections, all blocks (hero, carousel, columns, tabs, accordion), 11 images, and CTA. da.live source returns 200. Content-fidelity confirmed: all blocks present."
 }

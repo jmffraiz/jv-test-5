@@ -180,3 +180,29 @@ Note: da.live content service returns a parsed/simplified version (~1332 text ch
 - All anchor IDs for topic navigation preserved ✅
 - CTA (Vind je kliniek) preserved ✅
 - Legal footnotes preserved ✅
+## Chunk 1/3 — Retry: /nl/treatment/lips (2026-04-18)
+### Pages in Batch
+| URL | Status | Preview |
+|-----|--------|---------|
+| https://www.juvederm.nl/nl/treatment/lips | ✅ migrated (verified) | https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/lips |
+### Verification Results
+The /nl/treatment/lips page was previously migrated in an earlier worker run. This retry chunk verified the page is live and serving correct content:
+**Self-check results:**
+- HTTP 200 from aem.page ✅
+- da.live source HTTP 200 ✅
+- 11 images rendered (imageRatio: 2.2 vs source) ✅
+- H1 count: 1 ✅
+- H2 count: 5, H3 count: 3 ✅
+- All 8 sections present ✅
+- All blocks present: hero, carousel, columns, tabs, accordion ✅
+- CTA "Vind je kliniek" present ✅
+- Page content length: 19,271 bytes ✅
+**Blocks used:** hero, carousel, columns, tabs, accordion, section-metadata, metadata
+### Decision: No Re-upload Required
+Since the previous migration successfully completed (status: migrated) and the live page passes all self-checks, no re-upload was performed. The status file was updated with verified self-check metrics.
+### Fidelity Summary
+| Metric | Value |
+|--------|-------|
+| Text length ratio | 23.49x (EDS page has richer rendered HTML) |
+| Image ratio | 2.2x (original CDN images preserved + EDS webp variants) |
+| Block count | 7 blocks + section-metadata + metadata |
