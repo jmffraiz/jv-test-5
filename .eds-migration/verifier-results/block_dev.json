@@ -1,0 +1,37 @@
+{
+  "verdict": "FAIL",
+  "issues": [
+    {
+      "severity": "medium",
+      "criterion": "Blocks decorate correctly on preview URLs",
+      "details": "5 of 8 blocks (accordion, carousel, tabs, topic-menu, clinic-finder) cannot be verified on aem.page preview because all content pages that should use these blocks return empty HTML (<main><div></div></main>). Pages checked: /nl/qa (expected accordion), /nl/find-a-clinic (expected clinic-finder), /nl/treatment/lips, /nl/treatment/enhance, /nl/treatment/eye-area (expected tabs/carousel/columns). DA content listing confirms these files exist (lastModified timestamps present) but they have not been published/previewed to https://main--jv-test-5--jmffraiz.aem.page. Only 3 blocks verified live: hero, cards, columns (all rendered correctly with zero console errors on main homepage).",
+      "remediation": "Trigger aem.page preview for all content pages via POST to https://admin.hlx.page/preview/jmffraiz/jv-test-5/main/nl/qa, /nl/find-a-clinic, and /nl/treatment/* paths. Alternatively add test content pages to DA with block tables for each unverified block and preview them."
+    },
+    {
+      "severity": "low",
+      "criterion": "CSS is properly scoped",
+      "details": "blocks/clinic-finder/clinic-finder.css uses 'main .clinic-finder' as the outermost selector for all rules instead of '.clinic-finder' directly. While still scoped to the block name, the selector starts with the 'main' element tag rather than '.clinic-finder'. Example: 'main .clinic-finder { padding: 0; }'. The criterion requires every selector to start with '.{block-name}'.",
+      "remediation": "Remove the 'main' prefix from clinic-finder.css selectors. Change 'main .clinic-finder { ... }' to '.clinic-finder { ... }' throughout the file. The block scoping via .clinic-finder is sufficient."
+    }
+  ],
+  "summary": "FAIL — All 8 block JS/CSS files exist on main, lint passes, fstab/scripts/styles/head all correct, but 5 blocks (accordion, carousel, tabs, topic-menu, clinic-finder) cannot be verified on live preview URLs because their content pages return empty HTML. Only hero, cards, and columns verified on aem.page.",
+  "evidence": {
+    "fstab_yaml": "https://raw.githubusercontent.com/jmffraiz/jv-test-5/main/fstab.yaml → contains 'https://content.da.live/jmffraiz/jv-test-5' ✓",
+    "blocks_github_api": "All 8 blocks: JS=200, CSS=200 via GitHub API on main branch ✓",
+    "npm_lint": "npm run lint (eslint + stylelint) → zero errors ✓",
+    "scripts_lang": "scripts/scripts.js line 134: document.documentElement.lang = 'nl' ✓",
+    "delayed_onetrust": "scripts/delayed.js has loadOneTrust() function at line 10, called at line 68 ✓",
+    "head_html": "head.html has viewport meta, CSP, aem.js/scripts.js modules, styles.css ✓",
+    "brand_colors": "styles.css: --brand-primary: #6b2fa0 (purple), --brand-secondary: #d4145a, --brand-accent: #e91e8c (magenta) ✓",
+    "section_styles": "styles.css: .section.dark, .section.highlight, .section.centered, .section.cta-band all defined ✓",
+    "no_framework_imports": "All block JS files: no react/vue/jquery/tailwind imports ✓",
+    "es6_modules": "All 8 blocks have 'export default function decorate(block)' ✓",
+    "live_blocks_verified": "hero/cards/columns render on https://main--jv-test-5--jmffraiz.aem.page/ with 0 console errors ✓",
+    "lang_at_runtime": "Playwright confirms html[lang='nl'] on live preview ✓",
+    "empty_pages": [
+      "https://main--jv-test-5--jmffraiz.aem.page/nl/qa → <main><div></div></main>",
+      "https://main--jv-test-5--jmffraiz.aem.page/nl/find-a-clinic → <main><div></div></main>",
+      "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/lips → <main><div></div></main>"
+    ]
+  }
+}
