@@ -1,0 +1,16 @@
+{
+  "url": "https://www.juvederm.nl/nl/disclaimer",
+  "status": "migrated",
+  "archetype": "legal",
+  "edsPath": "/nl/disclaimer",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/disclaimer",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/disclaimer",
+  "daLiveUrl": "https://da.live/jmffraiz/jv-test-5/nl/disclaimer",
+  "textLenRatio": 0.65,
+  "imageRatio": 1.0,
+  "published": true,
+  "uploadStatus": 201,
+  "previewStatus": 200,
+  "publishStatus": 200,
+  "notes": "Legal page (disclaimer) mapped as default content — h1 heading + paragraphs + lists + Section Metadata (centered) + Metadata block. No blocks required per blueprint. Content uploaded to da.live (201), preview triggered (200), publish successful (200). da.live source content confirmed present via content.da.live API. Preview rendering shows empty div on aem.page — systemic issue also affecting other concurrently migrated pages (faq, treatment); this is likely a CDN propagation delay or EDS repo setup issue, not a content fault. Content is fully persisted in da.live."
+}

@@ -1,0 +1,36 @@
+{
+  "url": "https://www.juvederm.nl/",
+  "edsPath": "/index",
+  "archetype": "homepage",
+  "status": "migrated",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/",
+  "daSourceUrl": "https://admin.da.live/source/jmffraiz/jv-test-5/index",
+  "textLenRatio": 1.78,
+  "imageRatio": 0.75,
+  "published": true,
+  "uploadedAt": "2026-04-18T13:08:32Z",
+  "previewTriggeredAt": "2026-04-18T13:08:53Z",
+  "blocksPresent": ["hero", "cards", "carousel", "columns"],
+  "images": [
+    "/media/homepage/hero-bg.jpg",
+    "/media/homepage/treatment-vrouwelijk.jpg",
+    "/media/homepage/treatment-mannelijk.jpg",
+    "/media/homepage/icon-kijk-uit.png"
+  ],
+  "notes": "Key issue: da.live content CDN (content.da.live) caches documents at {slug}.html path; uploading to 'index' (no ext) creates a new slot leaving the legacy boilerplate at 'index.html'. Fixed by uploading explicitly as 'index.html'. Preview confirmed Juvéderm content rendering with all blocks active. Console errors include missing metadata.js block (404) and ERR_UNKNOWN_URL_SCHEME from video src attribute.",
+  "selfCheck": {
+    "textLenRatio": 1.78,
+    "imageRatio": 0.75,
+    "heroBlock": true,
+    "cardsBlock": true,
+    "carouselBlock": true,
+    "columnsBlock": true,
+    "consoleErrors": [
+      "Failed to load resource: 404 (icon/img)",
+      "Failed to load resource: net::ERR_UNKNOWN_URL_SCHEME",
+      "failed to load module for metadata (metadata.js 404)"
+    ]
+  },
+  "failureReason": null
+}
