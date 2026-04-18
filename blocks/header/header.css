@@ -2,8 +2,9 @@
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
-  z-index: 2;
+  z-index: 10;
   position: fixed;
+  box-shadow: 0 1px 6px rgb(0 0 0 / 8%);
 }
 
 header nav {
@@ -56,6 +57,11 @@ header nav p {
 
 header nav a:any-link {
   color: currentcolor;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: var(--brand-primary);
 }
 
 /* hamburger */
@@ -242,10 +248,12 @@ header nav .nav-sections ul > li > ul > li {
     display: block;
     position: absolute;
     left: -24px;
-    width: 200px;
+    width: 220px;
     top: 150%;
     padding: 16px;
-    background-color: var(--light-color);
+    background-color: var(--background-color);
+    box-shadow: 0 4px 16px rgb(0 0 0 / 12%);
+    border-radius: 4px;
     white-space: initial;
   }
 
@@ -258,7 +266,7 @@ header nav .nav-sections ul > li > ul > li {
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid var(--light-color);
+    border-bottom: 8px solid var(--background-color);
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
@@ -266,7 +274,12 @@ header nav .nav-sections ul > li > ul > li {
   }
 }
 
-/* tools */
+/* tools — CTA button in nav */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+header nav .nav-tools a.button {
+  font-size: var(--body-font-size-xs);
+  padding: 0.4em 1em;
 }

@@ -1,1 +1,41 @@
-/* add global styles that can be loaded post LCP here */
+/* Global styles loaded after LCP (lazy) */
+
+/* Smooth scrolling for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus outlines for accessibility */
+:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--brand-primary-light);
+  color: var(--brand-primary-dark);
+}
+
+/* Branded HR */
+main hr {
+  border: 0;
+  border-top: 1px solid #e8e4eb;
+  margin: 2em 0;
+}
+
+/* Skip-to-main link for accessibility */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 0.5em 1em;
+  background-color: var(--brand-primary);
+  color: var(--background-color);
+  font-weight: 600;
+}
+
+.skip-to-main:focus {
+  left: 0;
+  top: 0;
+}
