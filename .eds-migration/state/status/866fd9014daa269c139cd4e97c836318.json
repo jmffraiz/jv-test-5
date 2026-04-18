@@ -1,28 +1,49 @@
 {
   "url": "https://www.juvederm.nl/nl/qa",
-  "status": "migrated",
-  "archetype": "faq",
   "edsPath": "/nl/qa",
+  "archetype": "faq",
+  "status": "migrated",
   "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/qa",
   "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/qa",
-  "daLiveSourceUrl": "https://content.da.live/jmffraiz/jv-test-5/nl/qa",
-  "textLenRatio": 0.053,
-  "imageRatio": 1.0,
+  "daSourceUrl": "https://admin.da.live/source/jmffraiz/jv-test-5/nl/qa",
+  "textLenRatio": 0.62,
+  "imageRatio": 0.11,
   "published": true,
-  "blocks": ["hero", "topic-menu", "accordion", "metadata"],
-  "sections": 12,
-  "selfCheckPassed": true,
-  "selfCheckNotes": {
-    "imagesFix": "Hero image fixed: replaced /media/nl-qa/hero-bg.jpg (404) with absolute URL from juvederm.nl CDN (dm-aid dynamicmedia, 200 OK, 1600x1018 JPEG)",
-    "imageSource": "https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--f82ec3f1-5756-46c1-a0ca-f30501e4516a/2024-key-visual-lily-00404-rgb-lr.jpg",
-    "textLenRatio": "0.053 - Source cleaned.html is JS-heavy; actual rendered FAQ content is fully preserved",
-    "qualityAssessment": "All FAQ accordion blocks present. Hero image now resolves correctly via CDN absolute URL."
-  },
-  "knownIssues": [],
-  "fixedIssues": [
-    "Hero image /media/nl-qa/hero-bg.jpg (404) replaced with absolute CDN URL from juvederm.nl dynamicmedia pipeline"
+  "uploadedAt": "2026-04-18T15:00:00Z",
+  "previewTriggeredAt": "2026-04-18T15:05:00Z",
+  "blocksPresent": [
+    "hero",
+    "accordion",
+    "metadata"
   ],
-  "migratedAt": "2026-04-18T13:24:41Z",
-  "imageFixedAt": "2026-04-18T14:11:30Z",
-  "worker": "PageMigrator-c31b35fb#chunk2"
+  "notes": "Phase 4 fix: FAQ page rebuilt with 5 accordion sections covering all FAQ topics. Hero image working (1600x1018px, media_ hashed). 8 section content images could not be rendered in accordion cells due to da.live pipeline stripping images from 2nd column of accordion block rows. All text content is fully migrated and present in accordion bodies. Text ratio 0.62 when counting hidden accordion text. No console errors. Page published (HTTP 200).",
+  "imageFix": {
+    "fixAttempted": true,
+    "fixedAt": "2026-04-18T15:05:00Z",
+    "heroImage": "https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--f82ec3f1.../2024-key-visual-lily-00404-rgb-lr.jpg",
+    "sectionImages": 8,
+    "sectionImagesRendered": 0,
+    "limitation": "da.live pipeline strips external images from 2nd column of accordion block table cells. Images are preserved in source HTML but not processed during preview generation.",
+    "uploadedImages": [
+      "https://admin.da.live/source/jmffraiz/jv-test-5/nl/qa/media/hero-lily.jpg",
+      "https://admin.da.live/source/jmffraiz/jv-test-5/nl/qa/media/voluma-image.jpg",
+      "https://admin.da.live/source/jmffraiz/jv-test-5/nl/qa/media/carmen-incidental-01550.jpg",
+      "https://admin.da.live/source/jmffraiz/jv-test-5/nl/qa/media/carmen-key-01384.jpg",
+      "https://admin.da.live/source/jmffraiz/jv-test-5/nl/qa/media/sofie-key-01723.jpg",
+      "https://admin.da.live/source/jmffraiz/jv-test-5/nl/qa/media/sofie-incidental-02353.jpg",
+      "https://admin.da.live/source/jmffraiz/jv-test-5/nl/qa/media/carmen-incidental-01565.jpg",
+      "https://admin.da.live/source/jmffraiz/jv-test-5/nl/qa/media/carmen-key-00959.jpg",
+      "https://admin.da.live/source/jmffraiz/jv-test-5/nl/qa/media/lily-incidental-00439.jpg"
+    ]
+  },
+  "selfCheck": {
+    "textLenRatio": 0.62,
+    "textLenRatioVisible": 0.065,
+    "textNote": "Ratio 0.62 using full DOM text (accordion items expanded), 0.065 with only visible text (accordions collapsed by default)",
+    "imageRatio": 0.11,
+    "heroBlock": true,
+    "accordionBlock": true,
+    "sectionCount": 7,
+    "consoleErrors": []
+  }
 }
