@@ -1,92 +1,125 @@
 {
   "verdict": "FAIL",
-  "summary": "3 of 4 pilot pages have broken images (homepage 3/3, FAQ 1/1); FAQ and Treatment/lips not accessible at canonical da.live source path (404 without .html extension)",
-  "verifiedAt": "2026-04-18T14:00:00Z",
-  "pages": {
-    "homepage": {
+  "verifiedAt": "2026-04-18T16:00:00Z",
+  "pages": [
+    {
+      "url": "https://www.juvederm.nl/",
       "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/",
-      "previewStatus": 200,
+      "daSourcePath": "/source/jmffraiz/jv-test-5/index",
       "daSourceStatus": 200,
-      "daSourcePath": "https://admin.da.live/source/jmffraiz/jv-test-5/index",
-      "blocksRendered": ["hero (video)", "cards", "cards (no-images)", "carousel", "columns"],
-      "textRatio": 24.32,
-      "imageRatio": "N/A (0 in cleaned.html, 3 in da.live source; all 3 broken on preview)",
-      "metadataPresent": true,
-      "consoleErrors": ["metadata.js 404", "ERR_UNKNOWN_URL_SCHEME (video src)", "3x img 404"]
+      "previewStatus": 200,
+      "sourceImageCount": 11,
+      "previewImageCount": 0,
+      "imageRatio": 0.0,
+      "textParity": "acceptable (EDS pages exclude nav/footer)"
     },
-    "treatment_lips": {
+    {
+      "url": "https://www.juvederm.nl/nl/treatment/lips",
       "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/lips",
-      "previewStatus": 200,
-      "daSourceStatus": 404,
-      "daSourceStatusWithExt": 200,
-      "daSourcePath": "https://admin.da.live/source/jmffraiz/jv-test-5/nl/treatment/lips (404) / nl/treatment/lips.html (200)",
-      "blocksRendered": ["hero", "carousel", "columns", "tabs", "accordion"],
-      "textRatio": 23.89,
-      "imageRatio": "11/0 in cleaned.html = all in da.live source; images loading correctly via EDS pipeline",
-      "metadataPresent": true,
-      "consoleErrors": ["metadata.js 404"]
-    },
-    "faq": {
-      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/qa",
-      "previewStatus": 200,
-      "daSourceStatus": 404,
-      "daSourceStatusWithExt": 200,
-      "daSourcePath": "https://admin.da.live/source/jmffraiz/jv-test-5/nl/qa (404) / nl/qa.html (200)",
-      "blocksRendered": ["hero", "accordion", "topic-menu"],
-      "textRatio": 7.88,
-      "imageRatio": "1 preview img vs 2 cleaned.html imgs = 0.50 (borderline); hero image broken on preview",
-      "metadataPresent": true,
-      "consoleErrors": ["metadata.js 404", "hero img 404 (src=about:error)"]
-    },
-    "disclaimer": {
-      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/disclaimer",
-      "previewStatus": 200,
+      "daSourcePath": "/source/jmffraiz/jv-test-5/nl/treatment/lips.html",
       "daSourceStatus": 200,
-      "daSourcePath": "https://admin.da.live/source/jmffraiz/jv-test-5/nl/disclaimer",
-      "blocksRendered": [],
-      "textRatio": 0.87,
-      "imageRatio": "N/A (text-only page, no images expected)",
-      "metadataPresent": true,
-      "notes": "Empty metadata description field. Content complete and faithful.",
-      "consoleErrors": ["metadata.js 404"]
+      "previewStatus": 200,
+      "sourceImageCount": 14,
+      "previewImageCount": 11,
+      "imageRatio": 0.79,
+      "textParity": "acceptable (EDS pages exclude nav/footer)"
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/qa",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/qa",
+      "daSourcePath": "/source/jmffraiz/jv-test-5/nl/qa.html",
+      "daSourceStatus": 200,
+      "previewStatus": 200,
+      "sourceImageCount": 12,
+      "previewImageCount": 1,
+      "imageRatio": 0.083,
+      "textParity": "acceptable (EDS pages exclude nav/footer)"
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/disclaimer",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/disclaimer",
+      "daSourcePath": "/source/jmffraiz/jv-test-5/nl/disclaimer",
+      "daSourceStatus": 200,
+      "previewStatus": 200,
+      "sourceImageCount": 1,
+      "previewImageCount": 0,
+      "imageRatio": 0.0,
+      "textParity": "acceptable — full legal text present (5042 chars)"
     }
+  ],
+  "checks": {
+    "allPreviewsReturn200": true,
+    "allDaLiveSourcesReturn200": true,
+    "metadataJsLoads": true,
+    "metadataJsUrl": "https://main--jv-test-5--jmffraiz.aem.page/blocks/metadata/metadata.js",
+    "metadataJsStatus": 200,
+    "metadataJsSizeBytes": 680,
+    "noRelativeMediaPaths": true,
+    "imageUrlsReturnOk": true
   },
   "issues": [
     {
-      "severity": "medium",
-      "criterion": "da.live source API accessibility at canonical path",
-      "details": "FAQ page at /nl/qa returns HTTP 404 from admin.da.live source API. Treatment/lips at /nl/treatment/lips also returns HTTP 404. Both pages were uploaded with .html extension and are only accessible at /nl/qa.html and /nl/treatment/lips.html respectively. The canonical EDS path without extension resolves to 404. Evidence: `curl -H 'Authorization: Bearer ...' https://admin.da.live/source/jmffraiz/jv-test-5/nl/qa` → 404; `https://admin.da.live/source/jmffraiz/jv-test-5/nl/qa.html` → 200 (16117 bytes).",
-      "remediation": "Upload FAQ and Treatment/lips documents without the .html extension in da.live (delete the .html-suffixed document and re-upload as path-only), or ensure the da.live admin API recognizes both paths. EDS canonical path resolution requires the no-extension form to return 200."
+      "severity": "high",
+      "criterion": "Images render correctly — no broken images in preview",
+      "details": "Homepage preview contains 3 broken <img src=\"about:error\"> elements in the cards and columns blocks. The da.live HTML has correct absolute juvederm.nl CDN URLs (confirmed 200), but the AEM EDS preview pipeline fails to process them and renders 'about:error' as the image src. Affected alts: 'Vrouwelijke behandeling met JUVÉDERM®', 'Mannelijke behandeling met JUVÉDERM®', 'Waarschuwing icoon'. Effective image ratio for homepage: 0/11 = 0% (threshold: 50%).",
+      "evidence": {
+        "file": "fetched from https://main--jv-test-5--jmffraiz.aem.page/",
+        "html_snippet": "<img src=\"about:error\" alt=\"Vrouwelijke behandeling met JUVÉDERM®\" loading=\"lazy\">",
+        "da_live_html": "<img src=\"https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--32a21521-.../treatment-area-section.jpg?quality=80&width=800\">",
+        "image_url_http_status": 200
+      },
+      "remediation": "Images in EDS da.live content must be hosted in da.live's own media store (uploaded via da.live API, not external absolute URLs). External URLs from juvederm.nl CDN cannot be reliably processed by the EDS image optimization pipeline. Either: (1) download images and re-upload to da.live as /media/* assets, or (2) use the da.live media upload API to store images internally before referencing them in HTML."
+    },
+    {
+      "severity": "high",
+      "criterion": "Content fidelity — image count ratio >= 50% of source",
+      "details": "FAQ page (https://main--jv-test-5--jmffraiz.aem.page/nl/qa) has 1 image in preview vs 12 images in the source page. Image ratio = 8.3%, well below the 50% threshold. The 11 missing images are topic/category section images (e.g. juvederm-voluma-image03, incidental-carmen, key-visual-sofie etc.) that appear alongside the FAQ accordion topics. The topic-menu block was implemented as a text-only navigation list (links only, no images).",
+      "evidence": {
+        "source_url": "https://www.juvederm.nl/nl/qa",
+        "source_image_count": 12,
+        "preview_image_count": 1,
+        "da_live_image_count": 1,
+        "missing_image_examples": [
+          "/adobe/dynamicmedia/deliver/dm-aid--262f3c23-.../juvederm-voluma-image03.jpg",
+          "/adobe/dynamicmedia/deliver/dm-aid--b4d686b3-.../2024-incidental-carmen-01559.jpg",
+          "/adobe/dynamicmedia/deliver/dm-aid--05c207a5-.../2024-key-visual-sofie-01723.jpg"
+        ]
+      },
+      "remediation": "FAQ category/topic images must be included in the topic-menu block or as standalone images in each FAQ section. Review the source FAQ page and add the category images to the da.live document (as properly hosted da.live media assets). Re-upload and re-trigger preview."
     },
     {
       "severity": "medium",
-      "criterion": "Images loading in preview (Homepage)",
-      "details": "Homepage preview at https://main--jv-test-5--jmffraiz.aem.page/ has 3 broken images. The da.live source references: /media/homepage/treatment-vrouwelijk.jpg, /media/homepage/treatment-mannelijk.jpg, /media/homepage/icon-kijk-uit.png. All 3 return HTTP 404. In preview HTML, image src attributes contain 'about:error'. Evidence: `curl -o /dev/null -w '%{http_code}' https://main--jv-test-5--jmffraiz.aem.page/media/homepage/treatment-vrouwelijk.jpg` → 404.",
-      "remediation": "Upload the homepage images to the EDS media pipeline. Use the AEM admin API to upload images and obtain proper hash-based media URLs (e.g., ./media_<hash>.webp), then update the da.live source document to reference these URLs. Alternatively, use absolute URLs pointing to the original juvederm.nl CDN."
-    },
-    {
-      "severity": "medium",
-      "criterion": "Images loading in preview (FAQ)",
-      "details": "FAQ preview at https://main--jv-test-5--jmffraiz.aem.page/nl/qa has a broken hero image. The da.live source references /media/nl-qa/hero-bg.jpg which returns HTTP 404. In preview HTML, the single img element has src='about:error'. Evidence: `curl -o /dev/null -w '%{http_code}' https://main--jv-test-5--jmffraiz.aem.page/media/nl-qa/hero-bg.jpg` → 404.",
-      "remediation": "Upload the FAQ hero image to the EDS media pipeline and update the da.live source for /nl/qa.html to reference the proper hash-based media URL."
-    },
-    {
-      "severity": "low",
-      "criterion": "metadata.js module 404 on all pages",
-      "details": "All 4 preview pages emit a console error for missing metadata.js module. This is a repo setup issue where the metadata block JS file is not present in the project. Not a migration-specific issue but affects overall page functionality.",
-      "remediation": "Add metadata.js to the EDS project repo blocks/metadata/ directory or ensure the block is properly imported from the block collection."
+      "criterion": "Metadata/Open Graph image must not reference broken paths",
+      "details": "Homepage preview's <meta property=\"og:image\"> still references the broken path \"/media/homepage/hero-bg.jpg\" (which returns 404). The og:image:secure_url is set to \"about:error\". This broken OG image path was one of the previously identified fixes, but the Metadata block in da.live was not updated with the correct absolute CDN URL for the OG image.",
+      "evidence": {
+        "html_snippet": "<meta property=\"og:image\" content=\"/media/homepage/hero-bg.jpg\"><meta property=\"og:image:secure_url\" content=\"about:error\">",
+        "source": "https://main--jv-test-5--jmffraiz.aem.page/"
+      },
+      "remediation": "Update the Metadata block in the da.live homepage document (index): change the 'og:image' or 'image' property from '/media/homepage/hero-bg.jpg' to the correct absolute CDN URL (e.g. https://www.juvederm.nl/content/dam/juvederm-ous/common/allergan_header_04_16by9_001.png). Then re-upload and preview."
     },
     {
       "severity": "low",
-      "criterion": "Disclaimer metadata description empty",
-      "details": "The disclaimer page da.live source at /nl/disclaimer has an empty description field in the Metadata block: `<tr><td>description</td><td></td></tr>`. No SEO description will be rendered for this page.",
-      "remediation": "Add a meaningful description value to the Metadata block in the disclaimer da.live document."
-    },
-    {
-      "severity": "low",
-      "criterion": "Homepage video URL uses non-standard scheme",
-      "details": "The homepage da.live source references a video with src pointing to the original juvederm.nl CDN. The worker noted ERR_UNKNOWN_URL_SCHEME errors in the console. The video element in the Hero (video) block uses an absolute URL to the AEM DAM which may have CORS or scheme issues.",
-      "remediation": "Upload the hero video to the EDS media store or confirm CORS headers are set correctly on the source CDN to allow cross-origin loading."
+      "criterion": "Content completeness — disclaimer page",
+      "details": "The disclaimer source page contains a 'Kijk uit' (warning) section with an icon image (icon-kijk-uit-melding-white.png). This section is absent from the da.live disclaimer document. The image ratio for disclaimer is 0/1 = 0%. While the main legal text is fully present, this warning section is part of the main content area (not nav/footer).",
+      "evidence": {
+        "source_image": "/adobe/dynamicmedia/deliver/dm-aid--721086fc-.../icon-kijk-uit-melding-white.png",
+        "da_live_has_kijk_uit_text": false,
+        "da_live_text_length": 5089
+      },
+      "remediation": "Add the 'Kijk uit' warning section to the da.live disclaimer document with the proper warning icon image and text. Upload the image to da.live media store and reference it correctly."
     }
-  ]
+  ],
+  "passingChecks": [
+    "All 4 preview pages return HTTP 200",
+    "All 4 da.live source API endpoints return HTTP 200",
+    "metadata.js returns HTTP 200 (680 bytes) — previously 404, now fixed",
+    "No broken /media/ relative paths in da.live image src attributes",
+    "FAQ hero image: absolute CDN URL confirmed 200 (was previously broken)",
+    "Lips page: 11 images all with absolute juvederm.nl CDN URLs, all return 200",
+    "Homepage hero video block renders correctly (hero video class present)",
+    "FAQ: 5 accordion tables present with question/answer structure",
+    "Lips: hero, carousel, tabs, accordion blocks all decorate correctly",
+    "Disclaimer: h1 heading and full legal text present"
+  ],
+  "summary": "FAIL — 2 high-severity issues block acceptance: (1) Homepage 3 content images render as about:error (0% image ratio) because external absolute CDN URLs are not supported by EDS image pipeline; (2) FAQ has 8.3% image ratio (11 topic/category images missing from da.live document). Medium issue: homepage og:image metadata still references broken /media/homepage/hero-bg.jpg path. metadata.js 404 is confirmed fixed."
 }
