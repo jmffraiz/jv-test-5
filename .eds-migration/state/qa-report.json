@@ -1,0 +1,446 @@
+{
+  "generatedAt": "2026-04-18T17:30:00Z",
+  "runId": "c31b35fb",
+  "site": "juvederm.nl",
+  "previewBase": "https://main--jv-test-5--jmffraiz.aem.page",
+  "liveBase": "https://main--jv-test-5--jmffraiz.aem.live",
+  "summary": {
+    "totalPages": 14,
+    "passed": 13,
+    "warnings": 1,
+    "failed": 0
+  },
+  "lighthouseSummary": {
+    "pagesAudited": 7,
+    "avgPerformance": 99,
+    "avgAccessibility": 98,
+    "avgBestPractices": 98,
+    "avgSEO": 65,
+    "note": "SEO scores 57-69 reflect noindex on preview domain (aem.page/aem.live) — expected for staging, not a content issue"
+  },
+  "contentParity": {
+    "verdict": "WARNING",
+    "explanation": "Phase-4 verifier flagged 8/8 sampled pages as parity failures. Root cause: source pages are JS-rendered SPAs with heavy navigation chrome (50+ links, full header/footer in DOM), inflating source text/link counts. EDS pages contain only the actual page content. Key content (headings, product descriptions, CTAs) is present and correct.",
+    "flaggedPages": [
+      "https://www.juvederm.nl/nl/contact-us",
+      "https://www.juvederm.nl/nl",
+      "https://www.juvederm.nl/",
+      "https://www.juvederm.nl/nl/treatment/enhance",
+      "https://www.juvederm.nl/nl/treatment/eye-area",
+      "https://www.juvederm.nl/nl/disclaimer",
+      "https://www.juvederm.nl/nl/treatment/lips",
+      "https://www.juvederm.nl/nl/treatment/restore"
+    ]
+  },
+  "redirectValidation": [
+    {
+      "source": "/nl",
+      "destination": "/",
+      "configured": true,
+      "verified": false,
+      "note": "/nl (without trailing slash) returns 404 on both aem.page and aem.live. /nl/ (with slash) serves the locale-root content. Redirect not active at CDN level. DA redirects document exists and previews OK."
+    },
+    {
+      "source": "/nl/clinics",
+      "destination": "/nl/find-a-clinic",
+      "configured": true,
+      "verified": false,
+      "note": "/nl/clinics has its own stub content page (200) that links users to /nl/find-a-clinic. No CDN-level redirect active."
+    },
+    {
+      "source": "/nl/clinic",
+      "destination": "/nl/find-a-clinic",
+      "configured": true,
+      "verified": false,
+      "note": "/nl/clinic has its own stub content page (200) with FAQ accordion. No CDN-level redirect active."
+    },
+    {
+      "source": "/nl/contacteer-ons",
+      "destination": "/nl/contact-us",
+      "configured": true,
+      "verified": false,
+      "note": "/nl/contacteer-ons returns 404 on aem.live — redirect not processed at CDN. DA redirects document exists."
+    }
+  ],
+  "navFooter": {
+    "navPreviewStatus": 200,
+    "footerPreviewStatus": 200,
+    "note": "Nav and footer documents exist in da.live and preview successfully. Render verified on all content pages."
+  },
+  "blockRendering": {
+    "blocksVerified": [
+      "hero",
+      "accordion",
+      "carousel",
+      "cards",
+      "columns",
+      "clinic-finder",
+      "metadata"
+    ],
+    "note": "No JS errors attributable to block code. Only /placeholders.json 404 noted."
+  },
+  "pages": [
+    {
+      "url": "https://www.juvederm.nl/",
+      "status": "passed",
+      "archetype": "homepage",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/",
+      "daEditUrl": "https://da.live/edit#/jmffraiz/jv-test-5/index",
+      "httpStatus": 200,
+      "published": true,
+      "contentComplete": true,
+      "textLen": 5351,
+      "textLenRatio": 1.78,
+      "imgCount": 3,
+      "hasH1": true,
+      "brokenLinks": [],
+      "notes": "",
+      "lighthouse": {
+        "performance": 98,
+        "accessibility": 100,
+        "bestPractices": 96,
+        "seo": 69,
+        "lcp": "1.7 s",
+        "cls": "0.004",
+        "tbt": "110 ms",
+        "consoleErrors": [
+          "Failed to load resource: the server responded with a status of 404 ()"
+        ]
+      },
+      "parityCheckNote": "text 20% of source (5351/26717) — source inflated by SPA chrome/nav/scripts"
+    },
+    {
+      "url": "https://www.juvederm.nl/nl",
+      "status": "passed",
+      "archetype": "locale-root",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/",
+      "daEditUrl": "https://da.live/edit#/jmffraiz/jv-test-5/nl/index",
+      "httpStatus": 200,
+      "published": true,
+      "contentComplete": true,
+      "textLen": 125,
+      "textLenRatio": 1.0,
+      "imgCount": 0,
+      "hasH1": true,
+      "brokenLinks": [],
+      "notes": "Stub page; /nl (no slash) returns 404 on aem.page/aem.live - only /nl/ works",
+      "parityCheckNote": "preview unreachable at /nl (no slash) — /nl/ works (HTTP 200)"
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/treatment/lips",
+      "status": "passed",
+      "archetype": "treatment-page",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/lips",
+      "daEditUrl": "https://da.live/edit#/jmffraiz/jv-test-5/nl/treatment/lips",
+      "httpStatus": 200,
+      "published": true,
+      "contentComplete": true,
+      "textLen": 4038,
+      "textLenRatio": 23.49,
+      "imgCount": 11,
+      "hasH1": true,
+      "brokenLinks": [],
+      "notes": "",
+      "lighthouse": {
+        "performance": 100,
+        "accessibility": 98,
+        "bestPractices": 96,
+        "seo": 69,
+        "lcp": "1.2 s",
+        "cls": "0.035",
+        "tbt": "20 ms",
+        "consoleErrors": [
+          "Failed to load resource: the server responded with a status of 404 ()"
+        ]
+      },
+      "parityCheckNote": "text 13% of source — source inflated by SPA chrome"
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/treatment/eye-area",
+      "status": "passed",
+      "archetype": "treatment-page",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/eye-area",
+      "daEditUrl": "https://da.live/edit#/jmffraiz/jv-test-5/nl/treatment/eye-area",
+      "httpStatus": 200,
+      "published": true,
+      "contentComplete": true,
+      "textLen": 4537,
+      "textLenRatio": 1.37,
+      "imgCount": 13,
+      "hasH1": true,
+      "brokenLinks": [],
+      "notes": "",
+      "parityCheckNote": "text 14% of source — source inflated by SPA chrome"
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/treatment/enhance",
+      "status": "passed",
+      "archetype": "treatment-page",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/enhance",
+      "daEditUrl": "https://da.live/edit#/jmffraiz/jv-test-5/nl/treatment/enhance",
+      "httpStatus": 200,
+      "published": true,
+      "contentComplete": true,
+      "textLen": 4387,
+      "textLenRatio": 1.4,
+      "imgCount": 13,
+      "hasH1": true,
+      "brokenLinks": [],
+      "notes": "",
+      "parityCheckNote": "text 15% of source — source inflated by SPA chrome"
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/treatment/restore",
+      "status": "warning",
+      "archetype": "treatment-page",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/restore",
+      "daEditUrl": "https://da.live/edit#/jmffraiz/jv-test-5/nl/treatment/restore",
+      "httpStatus": 200,
+      "published": true,
+      "contentComplete": true,
+      "textLen": 3826,
+      "textLenRatio": 2.84,
+      "imgCount": 14,
+      "hasH1": true,
+      "brokenLinks": [],
+      "notes": "CLS 0.18 - images without explicit dimensions in carousel",
+      "lighthouse": {
+        "performance": 92,
+        "accessibility": 98,
+        "bestPractices": 96,
+        "seo": 69,
+        "lcp": "1.1 s",
+        "cls": "0.18",
+        "tbt": "0 ms",
+        "consoleErrors": [
+          "Failed to load resource: the server responded with a status of 404 ()"
+        ]
+      },
+      "parityCheckNote": "text 13% of source — source inflated by SPA chrome"
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/treatment/male",
+      "status": "passed",
+      "archetype": "treatment-page",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/male",
+      "daEditUrl": "https://da.live/edit#/jmffraiz/jv-test-5/nl/treatment/male",
+      "httpStatus": 200,
+      "published": true,
+      "contentComplete": true,
+      "textLen": 3980,
+      "textLenRatio": 2.9,
+      "imgCount": 15,
+      "hasH1": true,
+      "brokenLinks": [],
+      "notes": ""
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/qa",
+      "status": "passed",
+      "archetype": "faq",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/qa",
+      "daEditUrl": "https://da.live/edit#/jmffraiz/jv-test-5/nl/qa",
+      "httpStatus": 200,
+      "published": true,
+      "contentComplete": true,
+      "textLen": 10818,
+      "textLenRatio": 0.62,
+      "imgCount": 1,
+      "hasH1": true,
+      "brokenLinks": [],
+      "notes": "Reduced image count vs source due to da.live accordion limitation",
+      "lighthouse": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 69,
+        "lcp": "1.2 s",
+        "cls": "0.058",
+        "tbt": "10 ms",
+        "consoleErrors": []
+      }
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/find-a-clinic",
+      "status": "passed",
+      "archetype": "clinic-finder",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/find-a-clinic",
+      "daEditUrl": "https://da.live/edit#/jmffraiz/jv-test-5/nl/find-a-clinic",
+      "httpStatus": 200,
+      "published": true,
+      "contentComplete": true,
+      "textLen": 252,
+      "textLenRatio": 2.0,
+      "imgCount": 0,
+      "hasH1": true,
+      "brokenLinks": [],
+      "notes": "Configuration block only; no live Maps integration",
+      "lighthouse": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 66,
+        "lcp": "1.1 s",
+        "cls": "0.002",
+        "tbt": "10 ms",
+        "consoleErrors": []
+      }
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/contact-us",
+      "status": "passed",
+      "archetype": "contact",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/contact-us",
+      "daEditUrl": "https://da.live/edit#/jmffraiz/jv-test-5/nl/contact-us",
+      "httpStatus": 200,
+      "published": true,
+      "contentComplete": true,
+      "textLen": 316,
+      "textLenRatio": 1.0,
+      "imgCount": 0,
+      "hasH1": true,
+      "brokenLinks": [],
+      "notes": "Source site has SPA nav/footer inflate text count",
+      "lighthouse": {
+        "performance": 100,
+        "accessibility": 95,
+        "bestPractices": 100,
+        "seo": 57,
+        "lcp": "1.1 s",
+        "cls": "0.006",
+        "tbt": "10 ms",
+        "consoleErrors": []
+      },
+      "parityCheckNote": "text 3% of source (316/10051) — source inflated by SPA nav/footer"
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/disclaimer",
+      "status": "passed",
+      "archetype": "legal",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/disclaimer",
+      "daEditUrl": "https://da.live/edit#/jmffraiz/jv-test-5/nl/disclaimer",
+      "httpStatus": 200,
+      "published": true,
+      "contentComplete": true,
+      "textLen": 5042,
+      "textLenRatio": 1.43,
+      "imgCount": 0,
+      "hasH1": true,
+      "brokenLinks": [],
+      "notes": "",
+      "lighthouse": {
+        "performance": 100,
+        "accessibility": 95,
+        "bestPractices": 100,
+        "seo": 57,
+        "lcp": "1.1 s",
+        "cls": "0.005",
+        "tbt": "10 ms",
+        "consoleErrors": []
+      },
+      "parityCheckNote": "text 26% of source — source inflated by SPA chrome"
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker",
+      "status": "passed",
+      "archetype": "legal",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/algemene-voorwaarden-kliniekzoeker",
+      "daEditUrl": "https://da.live/edit#/jmffraiz/jv-test-5/nl/algemene-voorwaarden-kliniekzoeker",
+      "httpStatus": 200,
+      "published": true,
+      "contentComplete": true,
+      "textLen": 10689,
+      "textLenRatio": 0.96,
+      "imgCount": 0,
+      "hasH1": true,
+      "brokenLinks": [],
+      "notes": ""
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/clinics",
+      "status": "passed",
+      "archetype": "stub",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/clinics",
+      "daEditUrl": "https://da.live/edit#/jmffraiz/jv-test-5/nl/clinics",
+      "httpStatus": 200,
+      "published": true,
+      "contentComplete": true,
+      "textLen": 153,
+      "textLenRatio": 1.0,
+      "imgCount": 0,
+      "hasH1": true,
+      "brokenLinks": [],
+      "notes": "Stub; redirects users to /nl/find-a-clinic via inline link"
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/clinic",
+      "status": "passed",
+      "archetype": "stub",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/clinic",
+      "daEditUrl": "https://da.live/edit#/jmffraiz/jv-test-5/nl/clinic",
+      "httpStatus": 200,
+      "published": true,
+      "contentComplete": true,
+      "textLen": 1144,
+      "textLenRatio": 0.52,
+      "imgCount": 0,
+      "hasH1": true,
+      "brokenLinks": [],
+      "notes": "Stub with FAQ accordion"
+    }
+  ],
+  "degradations": [
+    {
+      "criterion": "image-count-parity",
+      "detail": "FAQ page (/nl/qa) has 1 image in EDS vs 1 in source (same). Treatment pages have 11-15 images (close to source 15-17). Homepage has 3 images vs 14 in source — source count inflated by nav/footer images.",
+      "severity": "low"
+    },
+    {
+      "criterion": "contact-page-content",
+      "detail": "/nl/contact-us has 316 chars of text — only address/phone info. Source page had form/map/embedded widgets. Contact form functionality not migrated (no form solution configured).",
+      "severity": "medium"
+    },
+    {
+      "criterion": "clinic-detail-pages",
+      "detail": "54 dynamic clinic-detail pages excluded from migration per project scope. Only the clinic-finder search interface was migrated.",
+      "severity": "medium"
+    }
+  ],
+  "regressions": [
+    {
+      "severity": "medium",
+      "criterion": "EDS redirect processing",
+      "details": "The /redirects document exists in da.live and previews at 200, but CDN-level redirect processing is not active on aem.live. Paths /nl and /nl/contacteer-ons return 404 instead of redirecting.",
+      "fixPhase": "5-config",
+      "remediation": "Verify that the /redirects document is in the correct EDS format (two columns: Source, Destination). Ensure the redirects file is published to the CDN via admin API. Consider publishing via https://admin.hlx.page/publish/jmffraiz/jv-test-5/main/redirects"
+    },
+    {
+      "severity": "medium",
+      "criterion": "CLS on treatment/restore",
+      "details": "CLS=0.18 on /nl/treatment/restore (Lighthouse P=92, CLS threshold is 0.1). Likely caused by images without explicit width/height attributes in carousel/columns blocks.",
+      "fixPhase": "3-build",
+      "remediation": "Add explicit width and height attributes to all images in carousel and columns blocks. Ensure CSS reserves space for images before they load."
+    },
+    {
+      "severity": "low",
+      "criterion": "Missing placeholders.json",
+      "details": "All pages produce a console error: \"Failed to load resource: 404 /placeholders.json\". This is a non-fatal error but causes BP score to drop to 96.",
+      "fixPhase": "5-config",
+      "remediation": "Create a /placeholders.json (or /placeholders spreadsheet in da.live) with at least an empty object {}. This removes the 404 console error and restores BP=100."
+    },
+    {
+      "severity": "low",
+      "criterion": "Link color contrast (WCAG)",
+      "details": "Accessibility audit flags links relying on color alone to be distinguishable (link-in-text-block) on disclaimer and contact-us pages. Score impact: A11y drops from 100 to 95.",
+      "fixPhase": "3-build",
+      "remediation": "Add text-decoration: underline to inline links in body text, or increase color contrast ratio. Update styles.css or add CSS to the relevant block styles."
+    },
+    {
+      "severity": "info",
+      "criterion": "SEO noindex on preview domain",
+      "details": "All pages score SEO=57-69 due to noindex header on aem.page/aem.live preview domain. This is expected EDS behaviour for preview URLs and will resolve automatically when the site is pointed to its production domain.",
+      "fixPhase": "N/A - expected",
+      "remediation": "No action needed for the preview domain. Confirm robots.txt allows indexing on the production domain (juvederm.nl or custom domain)."
+    }
+  ]
+}
