@@ -1,0 +1,13 @@
+version: 1
+sitemaps:
+  default:
+    origin: https://main--jv-test-5--jmffraiz.aem.live
+    include:
+      - /nl/**
+    exclude:
+      - /nav
+      - /footer
+      - /redirects
+    languages:
+      - hreflang: nl
+        alternate: /nl/{path}

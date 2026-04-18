@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://main--jv-test-5--jmffraiz.aem.live/sitemap.xml
