@@ -141,6 +141,51 @@ Note: da.live content service returns a parsed/simplified version (~1332 text ch
 4. **DA.live path**: Upload to `lips.html` (with extension) so preview pipeline finds content at `markup:https://content.da.live/.../nl/treatment/lips`
 
 
+## Chunk 2/3 — FAQ Page Migration (nl/qa)
+**Date:** 2026-04-18  
+**Worker:** PageMigrator-c31b35fb#chunk2  
+
+### Pages Migrated
+| URL | Status | Preview URL | Text Ratio | Image Ratio |
+|-----|--------|-------------|------------|-------------|
+| https://www.juvederm.nl/nl/qa | migrated | https://main--jv-test-5--jmffraiz.aem.page/nl/qa | 1.39 | 1.0 |
+
+### Archetype: FAQ
+
+**Block structure used:**
+- Section 1: Hero (background image + H1 "Ontdek het antwoord op je vraag")
+- Section 2: Topic Menu (5 anchor links: Over JUVÉDERM®, Veiligheid van fillers, Wat je kunt verwachten, Resultaten en kosten, Gezichtsgebieden)
+- Section 3: H2 "Over JUVÉDERM®" + Accordion (3 Q&A items)
+- Section 4: H2 "Veiligheid van fillers" + Accordion (2 Q&A items)
+- Section 5: H2 "Wat je kunt verwachten" + Accordion (3 Q&A items)
+- Section 6: H2 "Resultaten en kosten" + Accordion (3 Q&A items)
+- Section 7: H2 "Gezichtsgebieden" + Accordion (1 Q&A item with full face zones)
+- CTA Band: "Vind je kliniek" link
+- Footnotes: Medical references + regulatory disclaimer
+- Metadata block
+
+### Issues & Resolutions
+
+1. **Old empty nl/qa file interfered**: A previous failed migration attempt left an empty file at `/nl/qa` (no extension) in da.live, which took precedence over the new `/nl/qa.html`. Resolution: deleted old file with DELETE API, then re-triggered preview.
+
+2. **HTML structure mismatch**: Initial HTML without `<header></header><main>` wrapper produced empty `<div></div>` from EDS rendering pipeline. Resolution: updated HTML to use same structure as working disclaimer page (`<header></header><main>...<div> per section...</div></main><footer></footer>`).
+
+3. **Hero image 406 errors in pre-scraped analysis**: The analysis images were HTML error pages. Resolution: re-downloaded hero image from juvederm.nl CDN with proper User-Agent header and uploaded to da.live.
+
+### Content Fidelity
+- All 5 FAQ topic sections preserved (though source used different labels — topic nav labels updated to match actual page labels: "Veiligheid van fillers", "Wat je kunt verwachten", "Resultaten en kosten")  
+- Medical reference superscripts removed for clean authoring (content preserved)
+- All Q&A items with their full answers preserved
+- Side effects bullet list preserved
+- Treatment duration details (ogen, wangen, lippen, kin) preserved
+- CTA "Vind je kliniek" and regulatory footer preserved
+- Text ratio: 1.39 (14774 / ~10604 chars)
+- Image ratio: 1.0 (1 hero image)
+
+### Console Errors (systemic, not page-specific)
+- metadata.js 404 — EDS blocks/metadata not yet built for this repo
+- Applies to all pages on this EDS site, not specific to FAQ page
+
 ---
 
 ## Chunk 3/3 — Disclaimer (https://www.juvederm.nl/nl/disclaimer) — RETRY
