@@ -3,46 +3,58 @@
   "issues": [
     {
       "severity": "high",
-      "criterion": "Samples directory missing",
-      "details": "The orchestrator requires .eds-migration/state/samples/ directory with sample JSON files and a samples-summary.json. Neither the directory nor the summary file exists. Only two artifacts are present under .eds-migration/state/: manifest.json and docs/phase1-discovery.md.",
-      "remediation": "The scraper/analyzer sub-phase must run to produce per-page sample JSON files (one per archetype) in .eds-migration/state/samples/ and a samples-summary.json aggregating them. Re-run the scrape/sample phase before proceeding."
+      "criterion": "Phase 2b block-inventory.json missing",
+      "details": "File .eds-migration/state/block-inventory.json does not exist on branch migration-state/c31b35fb. The orchestrator requires this file as a deliverable of the Phase 2b block-inventory sub-phase.",
+      "remediation": "Run the block-inventory agent sub-phase to produce .eds-migration/state/block-inventory.json before proceeding to downstream phases."
     },
     {
-      "severity": "medium",
-      "criterion": "Archetype count mismatch vs orchestrator expectation",
-      "details": "The orchestrator note references '8 archetypes from the manifest', but manifest.json contains only 7 distinct archetypes: homepage, locale-root, treatment-page, faq, clinic-finder, legal, contact. The phase1-discovery.md doc mentions 'clinic-detail' as an 8th archetype (dynamic parametrized pages) but it is explicitly excluded from the manifest and has no representative static URL. No sample can be scraped for clinic-detail from the manifest entries.",
-      "remediation": "Either add a representative clinic-detail URL to the manifest (e.g. a fixed-parameter example) or update the orchestrator expectation to 7 archetypes. Document the exclusion of clinic-detail as a dynamic archetype."
+      "severity": "high",
+      "criterion": "Phase 2b documentation missing",
+      "details": "File .eds-migration/state/docs/phase2b-block-inventory.md does not exist on branch migration-state/c31b35fb. Only phase1-discovery.md is present under docs/.",
+      "remediation": "The block-inventory agent sub-phase must also write .eds-migration/state/docs/phase2b-block-inventory.md documenting the block inventory findings."
     }
   ],
   "checks": {
     "minimum_page_count": {
       "result": "PASS",
-      "detail": "manifest.json contains 14 pages (threshold: 10)"
+      "detail": "manifest.json contains 14 canonical pages (threshold: 10). Additionally 54 dynamic clinic-detail pages are tracked in stats."
     },
     "url_spot_check": {
       "result": "PASS",
-      "detail": "Checked https://www.juvederm.nl/ (200), https://www.juvederm.nl/nl/treatment/male (200), https://www.juvederm.nl/nl/qa (200) — all return HTTP 200, real content pages"
+      "detail": "Spot-checked 3 URLs directly via curl: https://www.juvederm.nl/ → 200, https://www.juvederm.nl/nl/treatment/lips → 200, https://www.juvederm.nl/nl/qa → 200. All return real pages with no redirect to login wall or error page."
     },
     "sitemap_cross_check": {
       "result": "PASS",
-      "detail": "Sitemap at https://www.juvederm.nl/sitemap.xml has 13 URLs; manifest has 14 (manifest includes /nl/algemene-voorwaarden-kliniekzoeker which is absent from sitemap but resolves 200). No truncation detected."
+      "detail": "Sitemap at https://www.juvederm.nl/sitemap.xml has 13 URLs; manifest has 14 (manifest includes /nl/algemene-voorwaarden-kliniekzoeker which is absent from sitemap but resolves HTTP 200). Difference is <20% and manifest actually has MORE URLs than sitemap — no truncation detected."
     },
     "archetype_categorization": {
       "result": "PASS",
-      "detail": "Sampled URLs per archetype are coherent: treatment-page URLs all follow /nl/treatment/{area}, clinic-finder groups /find-a-clinic + /clinics + /clinic shell, legal groups disclaimer + T&Cs."
+      "detail": "All 8 archetypes are internally coherent: treatment-page URLs all follow /nl/treatment/{area}, clinic-finder groups /find-a-clinic + /clinics + /clinic shell pages, legal groups disclaimer + T&Cs, faq/contact/locale-root are single-page archetypes appropriately categorized."
     },
     "nav_section_coverage": {
       "result": "PASS",
-      "detail": "All primary nav sections mapped: Behandelingen→treatment-page, Vragen→faq, Vind je kliniek→clinic-finder, Contact→contact, legal footer links→legal."
+      "detail": "All primary nav and footer sections are covered: treatment links → treatment-page archetype, FAQ anchor links → faq archetype, Vind je kliniek → clinic-finder, Neem contact op → contact, social media disclaimer + algemene voorwaarden → legal. No orphaned nav sections detected."
     },
     "priority_assignments": {
       "result": "PASS",
-      "detail": "Homepage and locale-root are 'high'; treatment pages are 'high' (appropriate as primary content); faq/contact/find-a-clinic are 'medium'; legal/utility pages are 'low'."
+      "detail": "Homepage ('high') and locale-root ('high') are correctly top-priority. Treatment pages ('high') are core content warranting high priority. FAQ and contact are 'medium'. Legal/utility pages and the empty clinic shell are 'low'. Assignments are logical."
     },
-    "samples_directory": {
+    "samples_directory_intact": {
+      "result": "PASS",
+      "detail": "samples/ directory is intact from Phase 2a with 8 files: clinic-finder.json, contact.json, faq.json, homepage.json, legal.json, locale-root.json, samples-summary.json, treatment-page.json. All files have valid JSON with expected keys (archetype, bodyClasses, etc.)."
+    },
+    "analysis_directory_intact": {
+      "result": "PASS",
+      "detail": "analysis/ directory has 7 archetype subdirectories each with a slug subfolder: clinic-finder/nl_find-a-clinic, contact/nl_contact-us, faq/nl_qa, homepage/index, legal/nl_disclaimer, locale-root/nl, treatment-page/nl_treatment_lips."
+    },
+    "block_inventory_exists": {
       "result": "FAIL",
-      "detail": ".eds-migration/state/samples/ does not exist. No sample JSON files or samples-summary.json present."
+      "detail": ".eds-migration/state/block-inventory.json does not exist on branch migration-state/c31b35fb."
+    },
+    "phase2b_doc_exists": {
+      "result": "FAIL",
+      "detail": ".eds-migration/state/docs/phase2b-block-inventory.md does not exist. Only phase1-discovery.md is present under docs/."
     }
   },
-  "summary": "FAIL — samples/ directory and samples-summary.json are missing (scrape sub-phase not yet run); 7 archetypes in manifest vs 8 referenced by orchestrator"
+  "summary": "FAIL — block-inventory.json and phase2b-block-inventory.md are missing (Phase 2b block-inventory sub-phase has not run); all core crawler checks (page count, URL spot-check, sitemap cross-check, archetype categorization, nav coverage, priorities) PASS and samples/ is intact from Phase 2a"
 }
