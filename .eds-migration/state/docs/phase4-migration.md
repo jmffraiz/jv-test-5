@@ -343,6 +343,7 @@ Attempted to upload binary images to da.live source API at `/media/homepage/...`
 
 ---
 
+<<<<<<< Updated upstream
 ## Chunk 3/4 — Worker: PageMigrator-c31b35fb#chunk3
 
 ### Pages Migrated
@@ -389,3 +390,56 @@ None — all three pages were straightforward text-only content pages. No images
 | /nl/contact-us | 1.0 | 1.0 | All content preserved |
 | /nl/algemene-voorwaarden-kliniekzoeker | 0.96 | 1.0 | All 13 sections preserved |
 | /nl/clinics | 1.0 | 1.0 | Stub page; original was dynamic Google Maps page |
+=======
+## Chunk 4/4 — Worker: PageMigrator-c31b35fb#chunk4
+
+### Pages Assigned
+- https://www.juvederm.nl/nl/clinic
+
+### Migration Results
+
+| URL | Status | Preview URL | Text Ratio | Image Ratio |
+|-----|--------|-------------|------------|-------------|
+| https://www.juvederm.nl/nl/clinic | migrated | https://main--jv-test-5--jmffraiz.aem.page/nl/clinic | 0.52 | 1.0 |
+
+### Page Details
+
+#### `/nl/clinic` — Clinic Detail Shell
+**Source page analysis:**
+- Title: "Vind een kliniek | Juvéderm® Netherlands"
+- Content: The page was a broken clinic detail template — the clinic finder/map component showed "Er gaat iets fout" (Something went wrong), indicating it was a dynamic shell with no working content
+- Only substantive content: "Veelgestelde vragen tijdens je consult" section with 4 FAQ Q&A pairs about what to ask during a clinic consultation
+- No content images (only 3 images: navigation icon + 2 cookie consent logos)
+- Archetype in manifest: clinic-finder, priority: low
+
+**EDS HTML created:**
+- Section 1: Intro with h1 "Vind een kliniek" + CTA to /nl/find-a-clinic
+- Section 2: h2 heading + Accordion block with 4 FAQ items
+- Section 3: Metadata block (title, description, template)
+
+**Blocks used:** accordion, metadata
+
+**Self-check results:**
+- ✅ Text ratio: 0.52 (≥ 0.50 threshold — accordion collapsed so questions visible)
+- ✅ Image ratio: 1.0 (source had 0 content images, EDS has 0 — perfect match)
+- ✅ No JS console errors
+- ✅ All 4 FAQ questions rendered
+- ✅ CTA link to /nl/find-a-clinic present
+- ✅ Metadata title matches source
+
+### Issues Encountered
+
+1. **Empty page render on first upload attempt** — HTML uploaded without `<main>`, `<header>`, `<footer>` wrappers and using `<td>` instead of `<th>` for block name rows. Fixed by comparing against working da.live source format from `/nl/qa` and `/nl/disclaimer`. EDS pipeline requires proper structural wrappers and `<th>` for block headers.
+
+2. **Source page had broken clinic-finder component** — The `/nl/clinic` URL was a clinic detail template shell where the dynamic clinic map/finder JavaScript failed to load (showing "Er gaat iets fout"). This means there was no meaningful clinic-specific content to migrate beyond the generic FAQ section.
+
+### Recommendation for Phase 5
+Add a server-side redirect from `/nl/clinic` → `/nl/find-a-clinic` in `redirects.xlsx`. The current stub page is functional but the intended behavior for this URL pattern was likely a redirect to the clinic finder.
+
+### Fidelity Distribution
+
+| Page | Text Ratio | Image Ratio | Status |
+|------|-----------|-------------|--------|
+| `/nl/clinic` | 0.52 | 1.0 | migrated (stub — source was broken shell) |
+
+>>>>>>> Stashed changes

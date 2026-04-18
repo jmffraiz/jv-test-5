@@ -1,0 +1,28 @@
+{
+  "url": "https://www.juvederm.nl/nl/clinic",
+  "status": "migrated",
+  "archetype": "clinic-finder",
+  "edsPath": "/nl/clinic",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/clinic",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/clinic",
+  "daSourceUrl": "https://admin.da.live/source/jmffraiz/jv-test-5/nl/clinic.html",
+  "textLenRatio": 0.52,
+  "imageRatio": 1.0,
+  "published": true,
+  "failureReason": null,
+  "blocksUsed": ["accordion", "metadata"],
+  "sections": 3,
+  "selfCheck": {
+    "textLenRatio": 0.52,
+    "imageRatio": 1.0,
+    "imageCount": 0,
+    "h1Count": 1,
+    "h2Count": 1,
+    "accordionBlock": true,
+    "ctaPresent": true,
+    "pageLength": 364,
+    "consoleErrors": 0
+  },
+  "verifiedAt": "2026-04-18T14:00:00.000000+00:00",
+  "notes": "Clinic detail shell page — source page had no content images (only cookie/nav icons). Page rendered as clinic consultation FAQ stub with 4 accordion items and CTA to /nl/find-a-clinic. Title matches. All FAQ content preserved. Phase 5 should add server-side redirect from /nl/clinic to /nl/find-a-clinic via redirects.xlsx. Fix applied: HTML required <main><header><footer> wrappers and <th> (not <td>) for block name rows."
+}
