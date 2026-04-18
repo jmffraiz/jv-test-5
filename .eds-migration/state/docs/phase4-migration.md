@@ -220,3 +220,27 @@ Note: da.live content service returns a parsed/simplified version (~1332 text ch
 - **Text**: Fully faithful — all 9 paragraphs and 4-item list from source carried over
 - **Images**: N/A (0 source images, 0 in EDS output)
 - **Links**: All 3 links preserved (juvederm.nl URL, 2 × ProductSurveillance email, infonederland email)
+
+## Chunk 2/2 — Image Fix Pass (2026-04-18T14:11Z)
+
+### Worker: PageMigrator-c31b35fb#chunk2
+
+**Pages fixed in this pass:**
+- `https://www.juvederm.nl/nl/qa` → `/nl/qa`
+
+**Issue resolved:**
+The FAQ hero image (`/media/nl-qa/hero-bg.jpg`) was returning 404 on aem.page preview because it used a custom `/media/` path instead of a hash-based EDS media URL.
+
+**Fix applied:**
+- Identified source image in cleaned.html: `/adobe/dynamicmedia/deliver/dm-aid--f82ec3f1-5756-46c1-a0ca-f30501e4516a/2024-key-visual-lily-00404-rgb-lr.jpg`
+- Verified image accessible on juvederm.nl CDN (HTTP 200, 111 KB JPEG, 1600×1018)
+- Updated da.live HTML to use absolute CDN URL instead of local `/media/` path
+- Re-uploaded corrected HTML → da.live (HTTP 200)
+- Triggered preview (HTTP 200) → `https://main--jv-test-5--jmffraiz.aem.page/nl/qa`
+- Triggered publish (HTTP 200) → `https://main--jv-test-5--jmffraiz.aem.live/nl/qa`
+
+**Note on da.live media upload approach:**
+- Attempted direct binary upload of image via `POST /source/.../nl/media/hero-bg.jpg` (HTTP 201 response) but the image was not accessible via content.da.live or aem.page subsequently.
+- Used alternative approach (absolute CDN URL) as per task specification — this is the reliable method until the da.live media pipeline flow is confirmed.
+
+**Status:** ✅ Fixed — image resolves, preview/publish both 200.
