@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+      <html>
+        <head>
+          <title>406 Not Acceptable</title>
+        </head>
+        <body>
+          <h1>Error 406 Not Acceptable</h1>
+          <p>Not Acceptable</p>
+          <p>Trace-id: fc842dae-6ac2-4cf7-83d7-62da3a3027de</p>
+        </body>
+      </html>
+    

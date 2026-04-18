@@ -1,0 +1,540 @@
+{
+  "archetype": "contact",
+  "url": "https://www.juvederm.nl/nl/contact-us",
+  "requestedUrl": "https://www.juvederm.nl/nl/contact-us",
+  "scrapedAt": "2026-04-18T11:53:59.576Z",
+  "status": 200,
+  "title": "Neem contact op",
+  "metadata": {
+    "description": "",
+    "ogTitle": "Neem contact op",
+    "ogImage": "",
+    "canonical": "https://www.juvederm.nl/nl/contact-us",
+    "lang": "nl",
+    "allMeta": {
+      "og:title": "Neem contact op",
+      "twitter:title": "Neem contact op",
+      "template": "content-page",
+      "viewport": "width=device-width, initial-scale=1",
+      "content-page-ref": "ra7MPLSpMjPqcf6ED3IxuBWjYqugsxhzu2dpUMZKA0zMT2s2LBpdMaonbQhoz5Sj0wqlJQdILb2lTTDSCnvLow"
+    }
+  },
+  "header": {
+    "html": "<header class=\"experiencefragment aem-GridColumn aem-GridColumn--default--12\">\n<div id=\"experiencefragment-d1664d76c6\" class=\"cmp-experiencefragment cmp-experiencefragment--header\">\n\n    \n    \n  \n  <div id=\"container-85150fa12e\" data-component=\"container\" data-layout=\"simple\" class=\"aaaem-container cmp-container  aaaem-container__position-static\" data-gtm-attribute=\"containerComponent\" style=\"\">\n    \n    <div class=\"header\"><header class=\"header\" data-component=\"header\">\n  <div class=\"hidden remediationBanner-start-date\" data-start-date=\"2022/12/19\" data-end-date=\"2022/12/30\">\n</div>\n<div id=\"remediationBanner\" role=\"dialog\">\n    <div class=\"wrapper-block\">\n        <button class=\"btn close-icon\">✖</button>\n        <div class=\"remediation-content\">\n            <p class=\"privacy\">See our new privacy terms at\n                    <a href=\"https://privacy.abbvie/\" target=\"_blank\" rel=\"noopener noreferrer\">https://privacy.abbvie/.</a></p>\n        </div>\n    </div>\n</div>\n\n    \n\n  \n  <div class=\"cmp-container-header\">\n    <div class=\"skip-menu-container\">\n      <a class=\"skip-menu\" href=\"#maincontent\" data-gtm-attribute=\"skipToContent\">\n        Skip to Main Content\n      </a>\n    </div>\n    <div class=\"header__logo\">\n<div data-component=\"image\" data-emu-type=\"image\" data-cmp-lazythreshold=\"0\" data-cmp-src=\"/content/experience-fragments/juvederm-ous/nl/nl/site/header/master/_jcr_content/root/header/logo.coreimg{.width}.svg/1692180084147/juvederm.svg\" data-asset=\"/content/dam/juvederm-ous/nl/Juvederm.svg\" data-title=\"Juvéderm logo\" id=\"image-5ee2ed2acf\" data-id=\"image-5ee2ed2acf\" data-cmp-data-layer=\"{&quot;image-5ee2ed2acf&quot;:{&quot;@type&quot;:&quot;aaaem-common/components/image/v1/image&quot;,&quot;repo:modifyDate&quot;:&quot;2023-08-16T10:01:24Z&quot;,&quot;xdm:linkURL&quot;:&quot;/nl.html&quot;,&quot;image&quot;:{&quot;repo:id&quot;:&quot;236e4438-ea2c-4fa1-b757-d81cf4b5587b&quot;,&quot;repo:modifyDate&quot;:&quot;2023-05-23T12:52:28Z&quot;,&quot;@type&quot;:&quot;image/svg+xml&quot;,&quot;repo:path&quot;:&quot;/content/dam/juvederm-ous/nl/Juvederm.svg&quot;}}}\" data-emit-image-click=\"false\" data-emit-inview=\"false\" class=\"emu-image aaaem-image cmp-image\" itemscope=\"\" itemtype=\"http://schema.org/ImageObject\" data-emu-title=\"Juvéderm logo\" data-map-single-active=\"false\">\n    <a data-ref=\"link-image\" class=\"emu-image__link cmp-image__link\" href=\"/nl\" target=\"_self\" data-cmp-clickable=\"\" data-cmp-hook-image=\"link\" aria-label=\"Home\" data-gtm-attribute=\"imageComponent\">\n       \n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"180\" height=\"37\" viewBox=\"0 0 180 37\">\n    <defs>\n        <linearGradient id=\"6vbp5zen3a\" x1=\"64.214%\" x2=\"25.636%\" y1=\"106.732%\" y2=\".127%\">\n            <stop offset=\"14%\" stop-color=\"#AB7FB6\"></stop>\n            <stop offset=\"100%\" stop-color=\"#4B2552\"></stop>\n        </linearGradient>\n        <linearGradient id=\"gh1w0qiesb\" x1=\"32.091%\" x2=\"70.504%\" y1=\"91.477%\" y2=\"19.697%\">\n            <stop offset=\"0%\" stop-color=\"#522",
+    "classes": [
+      "experiencefragment",
+      "aem-GridColumn",
+      "aem-GridColumn--default--12"
+    ]
+  },
+  "footer": {
+    "html": "<footer class=\"experiencefragment aem-GridColumn aem-GridColumn--default--12\">\n<div id=\"experiencefragment-ea8f1b9b65\" class=\"cmp-experiencefragment cmp-experiencefragment--footer\">\n\n    \n  <div id=\"container-f64c9ace21\" data-component=\"container\" data-layout=\"responsiveGrid\" class=\"cmp-container aaaem-container\" data-gtm-attribute=\"containerComponent\" style=\"\">\n    \n\n\n<div class=\"aem-Grid aem-Grid--12 aem-Grid--default--12 \">\n    \n    <div class=\"footer aem-GridColumn aem-GridColumn--default--12\"><footer class=\"footer\" data-gtm-attribute=\"footerNav\">\n    <div class=\"upper_section\">\n        <div class=\"footer__logo\">\n\n\n\n    \n\n</div>\n        <div>\n\n\n<div class=\"aem-Grid aem-Grid--12 aem-Grid--default--12 \">\n    \n    <div class=\"container responsivegrid aem-GridColumn aem-GridColumn--default--12\">\n    \n    \n  \n  <div id=\"container-9667c70f8e\" data-component=\"container\" data-layout=\"simple\" class=\"aaaem-container cmp-container  juvederm-footer  aaaem-container__position-static\" data-gtm-attribute=\"containerComponent\" style=\"\">\n    \n    <div class=\"container responsivegrid\">\n    \n    \n  \n  <div id=\"container-b4c8834607\" data-component=\"container\" data-layout=\"simple\" class=\"aaaem-container cmp-container\" data-gtm-attribute=\"containerComponent\" style=\"\">\n    \n    <div class=\"button\">\n<a data-is-toggleable=\"false\" data-toggle-off-text=\"Vind je kliniek\" id=\"button-258570182c\" class=\"emu-button cmp-button aaaem-button aaaem-button__primary-outline\" href=\"/nl/find-a-clinic\" target=\"_self\" aria-label=\"find a clinic\" data-cmp-clickable=\"\" data-cmp-data-layer=\"{&quot;button-258570182c&quot;:{&quot;@type&quot;:&quot;core/wcm/components/button/v1/button&quot;,&quot;repo:modifyDate&quot;:&quot;2024-01-30T17:37:31Z&quot;,&quot;dc:title&quot;:&quot;Vind je kliniek&quot;,&quot;xdm:linkURL&quot;:&quot;/nl/find-a-clinic.html&quot;}}\" data-component=\"button\" data-emu-type=\"button\" data-emu-title=\"Vind je kliniek\" data-emit-click=\"false\" data-emit-inview=\"false\" data-gtm-attribute=\"buttonLinkComponent\">\n  \n  \n    \n  \n  \n  <span><span data-ref=\"button-text\" class=\"cmp-button__text\" data-gtm-label=\"\">Vind je kliniek</span></span>\n</a>\n</div>\n<div class=\"button\">\n<a data-is-toggleable=\"false\" data-icon-reference=\"/content/dam/juvederm-ous/common/Instagram.svg\" id=\"button-7888a4cdc4\" class=\"emu-button cmp-button aaaem-button aaaem-button__primary-filled\" href=\"https://www.instagram.com/juvederm.nl/\" target=\"_self\" aria-label=\"instagram\" data-cmp-clickable=\"\" data-cmp-data-layer=\"{&quot;button-7888a4cdc4&quot;:{&quot;@type&quot;:&quot;core/wcm/components/button/v1/button&quot;,&quot;repo:modifyDate&quot;:&quot;2024-01-30T17:37:31Z&quot;,&quot;xdm:linkURL&quot;:&quot;https://www.instagram.com/juvederm.nl/&quot;}}\" data-component=\"button\" data-emu-type=\"button\" data-emit-click=\"false\" data-emit-inview=\"false\" data-gtm-attribute=\"buttonLinkComponent\">\n  \n  \n    <!--?xml version=\"1.0\" encoding=\"UTF-8\"?-->\n<svg width=\"48px\" height=\"48px\" viewBox=\"0 0 48 48\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n    <title>Instagram</title>\n    <g stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g fill=\"#FFFFFF\">\n            <path d=\"M25.8597552,0.000968902378 C29.2416854,0.00498363413 30.6996619,0.0222946612 32.0508733,0.0679271851 L32.3202305,0.0774357617 C32.8134165,0.0955767792 33.3085358,0.117660135 33.8951693,0.144426516 C36.4496895,0.260939463 38.1943351,0.666686514 39.720912,1.26001655 C41.2991241,1.87325763 42.6375464,2.69389748 43.9718721,4.02812792 C45.3061025,5.36245363 46.1267424,6.70087587 46.7400787,8.27908805 C47.3333135,9.80566488 47.7390605,11.5503105 47.8555735,14.1048307 C47.8823399,14.6914642 47.9044232,15.1865835 47.9225642,15.6797706 L47.9320728,15.9491286 C47.9777053,17.3003444 47.9950164,18.7583353 47.9990311,22.1403133 L47.9999635,23.6000247 L48,24.0000476 C48,24.1358385 47.999988,24.2691551 47.9999635,24.4000648 L47.9990311,25.8597552 C47.9950164,29.2416854 47.9777053,30.6996619 47.9320728,32.0508733 L47.9225642,32.3202305 C47.9044232,32.8134165 47.8823399,33.3085358 47.8555735,33.8951693 C47.7390605,36.4496895 47.3333135,38.1943351 46.7400787,39.720912 C46.1267424,41.2991241 45.3061025,42.6375464 43.9718721,43.9718721 C42.6375464,45.3061025 41.2991241,46.1267424 39.720912,46.7400787 C38.1943351,47.3333135 36.4496895,47.7390605 33.8951693,47.8555735 C33.3085358,47.8823399 32.8134165,47.9044232 32.3202305,47.9225642 L32.0508733,47.9320728 C30.6996619,47.9777053 29.2416854,47.9950164 25.8597552,47.9990311 L24.4000648,47.9999635 L24.0000476,48 C23.8642548,48 23.7309362,47.999988 23.6000247,47.9999635 L22.1403133,47.9990311 C18.7583353,47.9950164 17.3003444,47.9777053 15.9491286,47.9320728 L15.6797706,47.9225642 C15.1865835,47.9044232 14.6914642,47.8823399 14.1048307,47.8555735 C11.5503105,47.7390605 9.80566488,47.3333135 8.27908805,46.7400787 C6.70087587,46.1267424 5.36245363,45.3061025 4.02812792,43.9718721 C2.69389748,42.6375464 1.87325763,41.2991241 1.",
+    "classes": [
+      "experiencefragment",
+      "aem-GridColumn",
+      "aem-GridColumn--default--12"
+    ],
+    "links": [
+      {
+        "text": "Vind je kliniek",
+        "href": "https://www.juvederm.nl/nl/find-a-clinic"
+      },
+      {
+        "text": "Instagram",
+        "href": "https://www.instagram.com/juvederm.nl/"
+      },
+      {
+        "text": "Facebook",
+        "href": "https://www.facebook.com/juvederm.nl"
+      },
+      {
+        "text": "",
+        "href": "https://www.juvederm.nl/nl"
+      },
+      {
+        "text": "",
+        "href": "https://www.allerganaesthetics.nl/"
+      },
+      {
+        "text": "Lippen",
+        "href": "https://www.juvederm.nl/nl/treatment/lips"
+      },
+      {
+        "text": "Ogen",
+        "href": "https://www.juvederm.nl/nl/treatment/eye-area"
+      },
+      {
+        "text": "Accentueren",
+        "href": "https://www.juvederm.nl/nl/treatment/enhance"
+      },
+      {
+        "text": "Herstel",
+        "href": "https://www.juvederm.nl/nl/treatment/restore"
+      },
+      {
+        "text": "Man",
+        "href": "https://www.juvederm.nl/nl/treatment/male"
+      },
+      {
+        "text": "Over Juvéderm®",
+        "href": "https://www.juvederm.nl/nl/qa#about-juvederm"
+      },
+      {
+        "text": "Kosten",
+        "href": "https://www.juvederm.nl/nl/qa#duration"
+      },
+      {
+        "text": "Langdurige resultaten",
+        "href": "https://www.juvederm.nl/nl/qa#results"
+      },
+      {
+        "text": "Veiligheid",
+        "href": "https://www.juvederm.nl/nl/qa#side-effects"
+      },
+      {
+        "text": "Zones van het gezicht",
+        "href": "https://www.juvederm.nl/nl/qa#facial-areas"
+      },
+      {
+        "text": "Neem contact op",
+        "href": "https://www.juvederm.nl/nl/contact-us"
+      },
+      {
+        "text": "Privacy beleid",
+        "href": "https://www.abbvie.nl/privacy.html"
+      },
+      {
+        "text": "Algemene voorwaarden",
+        "href": "https://www.abbvie.nl/termsofuse.html"
+      },
+      {
+        "text": "Social media disclaimer",
+        "href": "https://www.juvederm.nl/nl/disclaimer"
+      },
+      {
+        "text": "Cookies settings",
+        "href": "https://www.juvederm.nl/nl/contact-us#onetrust"
+      },
+      {
+        "text": "Algemene voorwaarden kliniekzoeke",
+        "href": "https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker"
+      }
+    ]
+  },
+  "navigation": [
+    {
+      "text": "Lippen",
+      "href": "https://www.juvederm.nl/nl/treatment/lips"
+    },
+    {
+      "text": "Ogen",
+      "href": "https://www.juvederm.nl/nl/treatment/eye-area"
+    },
+    {
+      "text": "Accentueren",
+      "href": "https://www.juvederm.nl/nl/treatment/enhance"
+    },
+    {
+      "text": "Herstel",
+      "href": "https://www.juvederm.nl/nl/treatment/restore"
+    },
+    {
+      "text": "Man",
+      "href": "https://www.juvederm.nl/nl/treatment/male"
+    },
+    {
+      "text": "Over Juvéderm®",
+      "href": "https://www.juvederm.nl/nl/qa#about-juvederm"
+    },
+    {
+      "text": "Kosten",
+      "href": "https://www.juvederm.nl/nl/qa#duration"
+    },
+    {
+      "text": "Langdurige resultaten",
+      "href": "https://www.juvederm.nl/nl/qa#results"
+    },
+    {
+      "text": "Veiligheid",
+      "href": "https://www.juvederm.nl/nl/qa#side-effects"
+    },
+    {
+      "text": "Zones van het gezicht",
+      "href": "https://www.juvederm.nl/nl/qa#facial-areas"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "tag": "div",
+      "classes": [
+        "upper_section"
+      ],
+      "rect": {
+        "top": 643,
+        "width": 1410,
+        "height": 848
+      },
+      "textContent": "Vind je kliniek\n\n\n\n\n  \n  \n    \n\n    Instagram\n    \n        \n            \n        \n    \n\n  \n  \n  \n\n\n\n\n  \n  \n    \n\n    Facebook\n    \n        \n            \n        \n    \n\n  \n  \n  \n\n\n\n    \n  \n\n\n\n    \n  \n    \n\n\n\n    \n    \n    \n    \n  \n  \n    \n    \n\n    \n       \n        \n    \n        \n            \n            \n        \n        \n            \n            \n        \n        \n            \n            \n        \n    \n    \n        \n            \n                \n                \n                \n              ",
+      "headings": [],
+      "images": [
+        {
+          "src": "https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--721086fc-bf03-4770-a1ca-9f0ead9b9ad0/icon-kijk-uit-melding-white.png?preferwebp=true&quality=80",
+          "alt": ""
+        }
+      ],
+      "links": [
+        {
+          "text": "Vind je kliniek",
+          "href": "https://www.juvederm.nl/nl/find-a-clinic",
+          "isButton": true
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/juvederm.nl/",
+          "isButton": true
+        },
+        {
+          "text": "Facebook",
+          "href": "https://www.facebook.com/juvederm.nl",
+          "isButton": true
+        },
+        {
+          "text": "",
+          "href": "https://www.juvederm.nl/nl",
+          "isButton": false
+        },
+        {
+          "text": "",
+          "href": "https://www.allerganaesthetics.nl/",
+          "isButton": false
+        },
+        {
+          "text": "Lippen",
+          "href": "https://www.juvederm.nl/nl/treatment/lips",
+          "isButton": false
+        },
+        {
+          "text": "Ogen",
+          "href": "https://www.juvederm.nl/nl/treatment/eye-area",
+          "isButton": false
+        },
+        {
+          "text": "Accentueren",
+          "href": "https://www.juvederm.nl/nl/treatment/enhance",
+          "isButton": false
+        },
+        {
+          "text": "Herstel",
+          "href": "https://www.juvederm.nl/nl/treatment/restore",
+          "isButton": false
+        },
+        {
+          "text": "Man",
+          "href": "https://www.juvederm.nl/nl/treatment/male",
+          "isButton": false
+        },
+        {
+          "text": "Over Juvéderm®",
+          "href": "https://www.juvederm.nl/nl/qa#about-juvederm",
+          "isButton": false
+        },
+        {
+          "text": "Kosten",
+          "href": "https://www.juvederm.nl/nl/qa#duration",
+          "isButton": false
+        },
+        {
+          "text": "Langdurige resultaten",
+          "href": "https://www.juvederm.nl/nl/qa#results",
+          "isButton": false
+        },
+        {
+          "text": "Veiligheid",
+          "href": "https://www.juvederm.nl/nl/qa#side-effects",
+          "isButton": false
+        },
+        {
+          "text": "Zones van het gezicht",
+          "href": "https://www.juvederm.nl/nl/qa#facial-areas",
+          "isButton": false
+        },
+        {
+          "text": "Neem contact op",
+          "href": "https://www.juvederm.nl/nl/contact-us",
+          "isButton": false
+        },
+        {
+          "text": "Privacy beleid",
+          "href": "https://www.abbvie.nl/privacy.html",
+          "isButton": false
+        },
+        {
+          "text": "Algemene voorwaarden",
+          "href": "https://www.abbvie.nl/termsofuse.html",
+          "isButton": false
+        },
+        {
+          "text": "Social media disclaimer",
+          "href": "https://www.juvederm.nl/nl/disclaimer",
+          "isButton": false
+        },
+        {
+          "text": "Cookies settings",
+          "href": "https://www.juvederm.nl/nl/contact-us#onetrust",
+          "isButton": false
+        }
+      ],
+      "hasForms": false,
+      "innerHTML": "\n        <div class=\"footer__logo\">\n\n\n\n    \n\n</div>\n        <div>\n\n\n<div class=\"aem-Grid aem-Grid--12 aem-Grid--default--12 \">\n    \n    <div class=\"container responsivegrid aem-GridColumn aem-GridColumn--default--12\">\n    \n    \n  \n  <div id=\"container-9667c70f8e\" data-component=\"container\" data-layout=\"simple\" class=\"aaaem-container cmp-container  juvederm-footer  aaaem-container__position-static\" data-gtm-attribute=\"containerComponent\" style=\"\">\n    \n    <div class=\"container responsivegrid\">\n    \n    \n  \n  <div id=\"container-b4c8834607\" data-component=\"container\" data-layout=\"simple\" class=\"aaaem-container cmp-container\" data-gtm-attribute=\"containerComponent\" style=\"\">\n    \n    <div class=\"button\">\n<a data-is-toggleable=\"false\" data-toggle-off-text=\"Vind je kliniek\" id=\"button-258570182c\" class=\"emu-button cmp-button aaaem-button aaaem-button__primary-outline\" href=\"/nl/find-a-clinic\" target=\"_self\" aria-label=\"find a clinic\" data-cmp-clickable=\"\" data-cmp-data-layer=\"{&quot;button-258570182c&quot;:{&quot;@type&quot;:&quot;core/wcm/components/button/v1/button&quot;,&quot;repo:modifyDate&quot;:&quot;2024-01-30T17:37:31Z&quot;,&quot;dc:title&quot;:&quot;Vind je kliniek&quot;,&quot;xdm:linkURL&quot;:&quot;/nl/find-a-clinic.html&quot;}}\" data-component=\"button\" data-emu-type=\"button\" data-emu-title=\"Vind je kliniek\" data-emit-click=\"false\" data-emit-inview=\"false\" data-gtm-attribute=\"buttonLinkComponent\">\n  \n  \n    \n  \n  \n  <span><span data-ref=\"button-text\" class=\"cmp-button__text\" data-gtm-label=\"\">Vind je kliniek</span></span>\n</a>\n</div>\n<div class=\"button\">\n<a data-is-toggleable=\"false\" data-icon-reference=\"/content/dam/juvederm-ous/common/Instagram.svg\" id=\"button-7888a4cdc4\" class=\"emu-button cmp-button aaaem-button aaaem-button__primary-filled\" href=\"https://www.instagram.com/juvederm.nl/\" target=\"_self\" aria-label=\"instagram\" data-cmp-clickable=\"\" data-cmp-data-layer=\"{&quot;button-7888a4cdc4&quot;:{&quot;@type&quot;:&quot;core/wcm/components/button/v1/butto"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--721086fc-bf03-4770-a1ca-9f0ead9b9ad0/icon-kijk-uit-melding-white.png?preferwebp=true&quality=80",
+      "alt": "",
+      "width": 1440,
+      "height": 1094,
+      "inView": false
+    },
+    {
+      "src": "https://cdn.cookielaw.org/logos/baa8d3f1-40eb-408e-9928-100470b8ea17/d3d1cfc8-a240-4d6b-9294-9da4ca956082/4ea85c59-380e-455d-8e55-b11e9295bb9e/AllerganAesthetics_logo_stacked_divisionendorser_blk_rgb.png",
+      "alt": "Bedrijfslogo",
+      "width": 2481,
+      "height": 1355,
+      "inView": true
+    },
+    {
+      "src": "https://cdn.cookielaw.org/logos/static/powered_by_logo.svg",
+      "alt": "Powered by Onetrust",
+      "width": 568,
+      "height": 53,
+      "inView": true
+    }
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "NEEM CONTACT OP",
+      "classes": [
+        "emu-title__text",
+        "cmp-title__text"
+      ]
+    },
+    {
+      "level": 2,
+      "text": "Voorkeurenmenu",
+      "classes": []
+    },
+    {
+      "level": 3,
+      "text": "Cookievoorkeuren beheren",
+      "classes": []
+    },
+    {
+      "level": 4,
+      "text": "Vereiste cookies",
+      "classes": [
+        "ot-cat-header"
+      ]
+    },
+    {
+      "level": 4,
+      "text": "Functionele cookies",
+      "classes": [
+        "ot-cat-header"
+      ]
+    },
+    {
+      "level": 4,
+      "text": "Advertentie Cookies",
+      "classes": [
+        "ot-cat-header"
+      ]
+    },
+    {
+      "level": 3,
+      "text": "Leverancierslijst",
+      "classes": []
+    }
+  ],
+  "interactiveElements": {
+    "forms": [],
+    "buttons": [
+      {
+        "text": "✖",
+        "tag": "button",
+        "classes": [
+          "btn",
+          "close-icon"
+        ]
+      },
+      {
+        "text": "MENU",
+        "tag": "button",
+        "classes": [
+          "emu-button",
+          "cmp-button",
+          "aaaem-button",
+          "add-icon-right",
+          "aaaem-button__primary-outline",
+          "juvederm-header-burger"
+        ]
+      },
+      {
+        "text": "Close Nav Button",
+        "tag": "button",
+        "classes": [
+          "emu-button",
+          "cmp-button",
+          "aaaem-button"
+        ]
+      },
+      {
+        "text": "×",
+        "tag": "button",
+        "classes": [
+          "close",
+          "main-close"
+        ]
+      },
+      {
+        "text": "Behandeling",
+        "tag": "button",
+        "classes": [
+          "aaaem-accordion__button",
+          "js-badger-accordion-header"
+        ]
+      },
+      {
+        "text": "FAQ",
+        "tag": "button",
+        "classes": [
+          "aaaem-accordion__button",
+          "js-badger-accordion-header"
+        ]
+      },
+      {
+        "text": "Alle cookies accepteren",
+        "tag": "button",
+        "classes": []
+      },
+      {
+        "text": "Cookie-instellingen",
+        "tag": "button",
+        "classes": []
+      },
+      {
+        "text": "",
+        "tag": "button",
+        "classes": [
+          "onetrust-close-btn-handler",
+          "onetrust-close-btn-ui",
+          "banner-close-button",
+          "ot-close-icon"
+        ]
+      },
+      {
+        "text": "",
+        "tag": "button",
+        "classes": [
+          "ot-close-icon"
+        ]
+      },
+      {
+        "text": "Alle toestaan",
+        "tag": "button",
+        "classes": []
+      },
+      {
+        "text": "",
+        "tag": "button",
+        "classes": []
+      },
+      {
+        "text": "Leveranciersdetails weergeven‎",
+        "tag": "button",
+        "classes": [
+          "ot-link-btn",
+          "category-host-list-handler"
+        ]
+      },
+      {
+        "text": "",
+        "tag": "button",
+        "classes": []
+      },
+      {
+        "text": "Leveranciersdetails weergeven‎",
+        "tag": "button",
+        "classes": [
+          "ot-link-btn",
+          "category-host-list-handler"
+        ]
+      },
+      {
+        "text": "",
+        "tag": "button",
+        "classes": []
+      },
+      {
+        "text": "Leveranciersdetails weergeven‎",
+        "tag": "button",
+        "classes": [
+          "ot-link-btn",
+          "category-host-list-handler"
+        ]
+      },
+      {
+        "text": "Back Button",
+        "tag": "button",
+        "classes": [
+          "ot-link-btn",
+          "back-btn-handler"
+        ]
+      },
+      {
+        "text": "Filter Icon",
+        "tag": "button",
+        "classes": []
+      },
+      {
+        "text": "Clear",
+        "tag": "button",
+        "classes": []
+      },
+      {
+        "text": "Apply",
+        "tag": "button",
+        "classes": []
+      },
+      {
+        "text": "Cancel",
+        "tag": "button",
+        "classes": []
+      },
+      {
+        "text": "Mijn keuzes bevestigen",
+        "tag": "button",
+        "classes": [
+          "save-preference-btn-handler",
+          "onetrust-close-btn-handler"
+        ]
+      }
+    ],
+    "hasAccordions": true,
+    "hasTabs": true
+  },
+  "layoutPatterns": {
+    "hasHero": true,
+    "hasCarousel": false
+  },
+  "bodyClasses": [
+    "page",
+    "basicpage"
+  ],
+  "pageDimensions": {
+    "width": 1440,
+    "height": 1491
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "generatedAt": "2026-04-18T11:53:06.689Z",
+  "totalArchetypes": 7,
+  "totalScraped": 7,
+  "errors": 0,
+  "pages": [
+    {
+      "archetype": "homepage",
+      "url": "https://www.juvederm.nl/",
+      "title": "JUVÉDERM Nederlands",
+      "status": 200,
+      "sectionCount": 1,
+      "imageCount": 17,
+      "headingCount": 22,
+      "formCount": 1,
+      "hasAccordions": true,
+      "hasTabs": true,
+      "hasHero": true,
+      "hasCarousel": true,
+      "pageDimensions": {
+        "width": 1440,
+        "height": 10466
+      }
+    },
+    {
+      "archetype": "locale-root",
+      "url": "https://www.juvederm.nl/nl",
+      "title": "JUVÉDERM Nederlands",
+      "status": 200,
+      "sectionCount": 1,
+      "imageCount": 17,
+      "headingCount": 22,
+      "formCount": 1,
+      "hasAccordions": true,
+      "hasTabs": true,
+      "hasHero": true,
+      "hasCarousel": true,
+      "pageDimensions": {
+        "width": 1440,
+        "height": 10466
+      }
+    },
+    {
+      "archetype": "treatment-page",
+      "url": "https://www.juvederm.nl/nl/treatment/lips",
+      "title": " Juvederm en lippen | Juvéderm® Netherlands",
+      "status": 200,
+      "sectionCount": 1,
+      "imageCount": 16,
+      "headingCount": 27,
+      "formCount": 1,
+      "hasAccordions": true,
+      "hasTabs": true,
+      "hasHero": true,
+      "hasCarousel": true,
+      "pageDimensions": {
+        "width": 1440,
+        "height": 7027
+      }
+    },
+    {
+      "archetype": "faq",
+      "url": "https://www.juvederm.nl/nl/qa",
+      "title": "Veelgestelde vragen Juvederm | Juvéderm® Netherlands",
+      "status": 200,
+      "sectionCount": 6,
+      "imageCount": 14,
+      "headingCount": 32,
+      "formCount": 0,
+      "hasAccordions": true,
+      "hasTabs": true,
+      "hasHero": true,
+      "hasCarousel": true,
+      "pageDimensions": {
+        "width": 1440,
+        "height": 18883
+      }
+    },
+    {
+      "archetype": "clinic-finder",
+      "url": "https://www.juvederm.nl/nl/find-a-clinic",
+      "title": " Vind een kliniek | Juvéderm® Netherlands",
+      "status": 200,
+      "sectionCount": 1,
+      "imageCount": 4,
+      "headingCount": 9,
+      "formCount": 1,
+      "hasAccordions": true,
+      "hasTabs": true,
+      "hasHero": true,
+      "hasCarousel": false,
+      "pageDimensions": {
+        "width": 1440,
+        "height": 2492
+      }
+    },
+    {
+      "archetype": "contact",
+      "url": "https://www.juvederm.nl/nl/contact-us",
+      "title": "Neem contact op",
+      "status": 200,
+      "sectionCount": 1,
+      "imageCount": 3,
+      "headingCount": 7,
+      "formCount": 0,
+      "hasAccordions": true,
+      "hasTabs": true,
+      "hasHero": true,
+      "hasCarousel": false,
+      "pageDimensions": {
+        "width": 1440,
+        "height": 1491
+      }
+    },
+    {
+      "archetype": "legal",
+      "url": "https://www.juvederm.nl/nl/disclaimer",
+      "title": "Social media disclaimer | Juvéderm® Netherlands",
+      "status": 200,
+      "sectionCount": 1,
+      "imageCount": 3,
+      "headingCount": 7,
+      "formCount": 0,
+      "hasAccordions": true,
+      "hasTabs": true,
+      "hasHero": false,
+      "hasCarousel": false,
+      "pageDimensions": {
+        "width": 1440,
+        "height": 3202
+      }
+    }
+  ]
+}
