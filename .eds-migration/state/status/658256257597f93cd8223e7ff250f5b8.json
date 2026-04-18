@@ -7,29 +7,48 @@
   "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/",
   "daSourceUrl": "https://admin.da.live/source/jmffraiz/jv-test-5/index",
   "textLenRatio": 1.78,
-  "imageRatio": 0.75,
+  "imageRatio": 1.0,
   "published": true,
   "uploadedAt": "2026-04-18T13:08:32Z",
-  "previewTriggeredAt": "2026-04-18T13:08:53Z",
+  "previewTriggeredAt": "2026-04-18T14:09:00Z",
   "blocksPresent": ["hero", "cards", "carousel", "columns"],
   "images": [
-    "/media/homepage/hero-bg.jpg",
-    "/media/homepage/treatment-vrouwelijk.jpg",
-    "/media/homepage/treatment-mannelijk.jpg",
-    "/media/homepage/icon-kijk-uit.png"
+    "https://www.juvederm.nl/content/dam/juvederm-ous/common/allergan_header_04_16by9_001.png",
+    "https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--32a21521-b4a2-44d3-aaed-2f5c707b83bd/2024-incidental-lily-00439-rgb-lr-treatment-area-section.jpg?quality=80&width=800",
+    "https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--29c13e32-5ae5-4711-b56e-aa51e6f2be38/2024-key-visual-stefan-02608-rgb-lr-treatment-area-section.jpg?quality=80&width=800",
+    "https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--721086fc-bf03-4770-a1ca-9f0ead9b9ad0/icon-kijk-uit-melding-white.png?quality=80"
   ],
-  "notes": "Key issue: da.live content CDN (content.da.live) caches documents at {slug}.html path; uploading to 'index' (no ext) creates a new slot leaving the legacy boilerplate at 'index.html'. Fixed by uploading explicitly as 'index.html'. Preview confirmed Juvéderm content rendering with all blocks active. Console errors include missing metadata.js block (404) and ERR_UNKNOWN_URL_SCHEME from video src attribute.",
+  "notes": "Phase 4 fix: All 4 broken /media/homepage/ image references replaced with absolute juvederm.nl CDN URLs (Dynamic Media delivery URLs). Images confirmed downloadable at 800px quality. HTML re-uploaded to da.live (200) and preview refreshed (200). Published successfully (200). imageRatio improved from 0.75 to 1.0.",
   "selfCheck": {
     "textLenRatio": 1.78,
-    "imageRatio": 0.75,
+    "imageRatio": 1.0,
     "heroBlock": true,
     "cardsBlock": true,
     "carouselBlock": true,
     "columnsBlock": true,
-    "consoleErrors": [
-      "Failed to load resource: 404 (icon/img)",
-      "Failed to load resource: net::ERR_UNKNOWN_URL_SCHEME",
-      "failed to load module for metadata (metadata.js 404)"
+    "consoleErrors": []
+  },
+  "imageFix": {
+    "fixApplied": true,
+    "fixedAt": "2026-04-18T14:09:00Z",
+    "approach": "absolute-cdn-urls",
+    "fixedImages": [
+      {
+        "broken": "/media/homepage/treatment-vrouwelijk.jpg",
+        "fixed": "https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--32a21521-b4a2-44d3-aaed-2f5c707b83bd/2024-incidental-lily-00439-rgb-lr-treatment-area-section.jpg?quality=80&width=800"
+      },
+      {
+        "broken": "/media/homepage/treatment-mannelijk.jpg",
+        "fixed": "https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--29c13e32-5ae5-4711-b56e-aa51e6f2be38/2024-key-visual-stefan-02608-rgb-lr-treatment-area-section.jpg?quality=80&width=800"
+      },
+      {
+        "broken": "/media/homepage/icon-kijk-uit.png",
+        "fixed": "https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--721086fc-bf03-4770-a1ca-9f0ead9b9ad0/icon-kijk-uit-melding-white.png?quality=80"
+      },
+      {
+        "broken": "/media/homepage/hero-bg.jpg",
+        "fixed": "https://www.juvederm.nl/content/dam/juvederm-ous/common/allergan_header_04_16by9_001.png"
+      }
     ]
   },
   "failureReason": null

@@ -244,3 +244,45 @@ The FAQ hero image (`/media/nl-qa/hero-bg.jpg`) was returning 404 on aem.page pr
 - Used alternative approach (absolute CDN URL) as per task specification — this is the reliable method until the da.live media pipeline flow is confirmed.
 
 **Status:** ✅ Fixed — image resolves, preview/publish both 200.
+---
+
+## Image Fix Pass — PageMigrator-c31b35fb#chunk1
+
+**Worker:** PageMigrator-c31b35fb#chunk1 (image fix pass)
+**Date:** 2026-04-18
+**Scope:** Fix broken /media/ image paths on homepage (/)
+
+### Problem
+Pilot verifier found 3 broken images on the homepage (aem.page returning 404):
+- `/media/homepage/treatment-vrouwelijk.jpg`
+- `/media/homepage/treatment-mannelijk.jpg`
+- `/media/homepage/icon-kijk-uit.png`
+- `/media/homepage/hero-bg.jpg` (og:image + twitter:image metadata)
+
+Root cause: EDS does not serve arbitrary binary files uploaded to `/media/` paths via the da.live source API. Images uploaded directly to da.live content storage at non-document paths return 404 from both `content.da.live` and `main--jv-test-5--jmffraiz.aem.page`.
+
+### Solution Applied
+**Approach: Absolute CDN URLs** (alternative approach)
+
+Retrieved original image URLs from juvederm.nl's Adobe Dynamic Media CDN by scraping the live source page. Confirmed all images downloadable (200 OK) without auth. Updated all 4 broken `/media/homepage/` references in the da.live HTML to use absolute juvederm.nl Dynamic Media URLs.
+
+| Broken Path | Fixed URL |
+|-------------|-----------|
+| `/media/homepage/treatment-vrouwelijk.jpg` | `https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--32a21521.../2024-incidental-lily...jpg?quality=80&width=800` |
+| `/media/homepage/treatment-mannelijk.jpg` | `https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--29c13e32.../2024-key-visual-stefan...jpg?quality=80&width=800` |
+| `/media/homepage/icon-kijk-uit.png` | `https://www.juvederm.nl/adobe/dynamicmedia/deliver/dm-aid--721086fc.../icon-kijk-uit-melding-white.png?quality=80` |
+| `/media/homepage/hero-bg.jpg` | `https://www.juvederm.nl/content/dam/juvederm-ous/common/allergan_header_04_16by9_001.png` |
+
+### Pipeline Steps
+1. ✅ Downloaded current da.live HTML (GET admin.da.live/source/.../index)
+2. ✅ Identified 4 broken /media/ references
+3. ✅ Located original juvederm.nl Dynamic Media CDN URLs by scraping source page
+4. ✅ Confirmed image download (200 OK for all 4 images)
+5. ✅ Updated HTML with absolute CDN URLs
+6. ✅ Re-uploaded corrected HTML to da.live (200)
+7. ✅ Triggered preview refresh (200)
+8. ✅ Published (200)
+9. ✅ Updated status file (imageRatio: 0.75 → 1.0)
+
+### Why Not da.live Media Upload?
+Attempted to upload binary images to da.live source API at `/media/homepage/...` paths — uploads returned 201 but images were NOT accessible at `aem.page` or `content.da.live` (404). EDS media pipeline only processes images that are embedded in document HTML and referenced as relative paths during document preview. Standalone binary file uploads to `/media/` paths bypass the media pipeline and are not served by the CDN.
