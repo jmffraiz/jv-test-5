@@ -1,0 +1,32 @@
+{
+  "url": "https://www.juvederm.nl/nl/contact-us",
+  "edsPath": "/nl/contact-us",
+  "archetype": "contact",
+  "status": "migrated",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/contact-us",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/contact-us",
+  "daSourceUrl": "https://admin.da.live/source/jmffraiz/jv-test-5/nl/contact-us.html",
+  "textLenRatio": 1.0,
+  "imageRatio": 1.0,
+  "published": true,
+  "uploadStatus": 200,
+  "previewStatus": 200,
+  "publishStatus": 200,
+  "uploadedAt": "2026-04-18T15:30:00Z",
+  "previewTriggeredAt": "2026-04-18T15:30:10Z",
+  "publishedAt": "2026-04-18T15:30:20Z",
+  "blocksUsed": ["section-metadata", "metadata"],
+  "selfCheck": {
+    "sectionCount": 2,
+    "textLenRatio": 1.0,
+    "imageRatio": 1.0,
+    "h1": "Neem contact op",
+    "renderedTextLen": 288,
+    "sourceTextLen": 290,
+    "consoleErrors": [],
+    "passed": true,
+    "notes": "Contact page fully rendered: H1, address block with phone/email links, side-effects email. No images on source page. Text ratio ~1.0."
+  },
+  "failureReason": null,
+  "notes": "Simple contact page. All content present: Allergan Aesthetics address (Wegalaan 9, 2132 JD Hoofddorp), phone (+31 88 322 2843), email links (infonederland@abbvie.com, ProductSurveillance_EAME@Abbvie.com). Section Metadata (centered) and Metadata blocks included."
+}

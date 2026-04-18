@@ -1,0 +1,32 @@
+{
+  "url": "https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker",
+  "edsPath": "/nl/algemene-voorwaarden-kliniekzoeker",
+  "archetype": "legal",
+  "status": "migrated",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/algemene-voorwaarden-kliniekzoeker",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/algemene-voorwaarden-kliniekzoeker",
+  "daSourceUrl": "https://admin.da.live/source/jmffraiz/jv-test-5/nl/algemene-voorwaarden-kliniekzoeker.html",
+  "textLenRatio": 0.96,
+  "imageRatio": 1.0,
+  "published": true,
+  "uploadStatus": 200,
+  "previewStatus": 200,
+  "publishStatus": 200,
+  "uploadedAt": "2026-04-18T15:30:00Z",
+  "previewTriggeredAt": "2026-04-18T15:30:10Z",
+  "publishedAt": "2026-04-18T15:30:20Z",
+  "blocksUsed": ["section-metadata", "metadata"],
+  "selfCheck": {
+    "sectionCount": 2,
+    "textLenRatio": 0.96,
+    "imageRatio": 1.0,
+    "h1": "Algemene Voorwaarden Kliniekzoeker",
+    "renderedTextLen": 10656,
+    "sourceTextLen": 11078,
+    "consoleErrors": [],
+    "passed": true,
+    "notes": "Full legal T&C text rendered (10,656 chars). All 13 sections present (ALGEMEEN, GEBRUIK, UITSLUITING VAN GARANTIES, RISICO, AANSPRAKELIJKHEID, UITSLUITING VAN AANSPRAKELIJKHEID, VERWIJDERING, AUTEURSRECHT, HANDELSMERKEN, PRIVACY, BEËINDIGING, GELDIGHEID, WIJZIGINGEN). No images on source page. AbbVie attribution footer present."
+  },
+  "failureReason": null,
+  "notes": "Legal T&C page for clinic finder. All 13 articles migrated as default content with proper heading hierarchy (H1, H2, H3). Section Metadata (centered) and Metadata blocks included. Title updated to include '| Juvéderm® Netherlands' per site convention."
+}

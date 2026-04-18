@@ -1,0 +1,32 @@
+{
+  "url": "https://www.juvederm.nl/nl/clinics",
+  "edsPath": "/nl/clinics",
+  "archetype": "clinic-finder",
+  "status": "migrated",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/clinics",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/clinics",
+  "daSourceUrl": "https://admin.da.live/source/jmffraiz/jv-test-5/nl/clinics.html",
+  "textLenRatio": 1.0,
+  "imageRatio": 1.0,
+  "published": true,
+  "uploadStatus": 201,
+  "previewStatus": 200,
+  "publishStatus": 200,
+  "uploadedAt": "2026-04-18T15:30:00Z",
+  "previewTriggeredAt": "2026-04-18T15:30:10Z",
+  "publishedAt": "2026-04-18T15:30:20Z",
+  "blocksUsed": ["section-metadata", "metadata"],
+  "selfCheck": {
+    "sectionCount": 2,
+    "textLenRatio": 1.0,
+    "imageRatio": 1.0,
+    "h1": "Klinieken",
+    "renderedTextLen": 99,
+    "consoleErrors": [],
+    "passed": true,
+    "notes": "Stub redirect page created. H1 'Klinieken' with link to /nl/find-a-clinic. Source page was a dynamic Google Maps clinic finder - not suitable for static EDS migration."
+  },
+  "failureReason": null,
+  "stubType": "redirect-stub",
+  "notes": "Source /nl/clinics is a dynamic clinic finder page using Google Maps API with live search results. Not suitable for direct static migration to EDS. Created as a stub page with CTA linking to /nl/find-a-clinic. Phase 5 should configure an HTTP 301 redirect from /nl/clinics to /nl/find-a-clinic. Source images (18 total) were all Google Maps tiles and OneTrust cookie logos — no meaningful content images."
+}

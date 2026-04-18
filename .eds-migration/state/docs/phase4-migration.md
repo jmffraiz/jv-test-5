@@ -340,3 +340,52 @@ Attempted to upload binary images to da.live source API at `/media/homepage/...`
 |------|-----------|-------------|--------|
 | `/nl/qa` | 0.62 (DOM) / 0.065 (visible) | 0.11 | migrated (image limitation) |
 
+
+---
+
+## Chunk 3/4 — Worker: PageMigrator-c31b35fb#chunk3
+
+### Pages Migrated
+
+| URL | EDS Path | Archetype | Status | Text Ratio | Image Ratio |
+|-----|----------|-----------|--------|-----------|-------------|
+| https://www.juvederm.nl/nl/contact-us | /nl/contact-us | contact | migrated | 1.0 | 1.0 |
+| https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker | /nl/algemene-voorwaarden-kliniekzoeker | legal | migrated | 0.96 | 1.0 |
+| https://www.juvederm.nl/nl/clinics | /nl/clinics | clinic-finder (stub) | migrated | 1.0 | 1.0 |
+
+### Methodology
+
+All three pages were scraped with Playwright (locale nl-NL, `--ignore-certificate-errors`), then converted to EDS HTML using default content structure (no complex blocks needed).
+
+**contact-us** (`/nl/contact-us`):
+- Archetype: contact (simple content page, no blocks beyond metadata)
+- Content: H1 "Neem contact op", address block with phone and two mailto: links
+- Structure: 1 content section (centered) + metadata section
+- No images on source page — all 2 source images were OneTrust cookie logos
+- Text ratio ~1.0 (288 rendered vs 290 source chars)
+
+**algemene-voorwaarden-kliniekzoeker** (`/nl/algemene-voorwaarden-kliniekzoeker`):
+- Archetype: legal (long-form T&C text)
+- Content: H1, H2, 13 numbered H3 sections (ALGEMEEN, GEBRUIK, UITSLUITING VAN GARANTIES, RISICO, AANSPRAKELIJKHEID, UITSLUITING VAN AANSPRAKELIJKHEID, VERWIJDERING, AUTEURSRECHT, HANDELSMERKEN, PRIVACY, BEËINDIGING, GELDIGHEID, WIJZIGINGEN)
+- Structure: 1 content section (centered) + metadata section
+- No images on source page
+- Text ratio 0.96 (10,656 rendered vs 11,078 source chars — slight difference from cookie consent overlay text)
+- AbbVie attribution footer line preserved: "AbbVie B.V./AbbVie N.V. | NL-JUV-220043 | March 2022"
+
+**clinics** (`/nl/clinics`):
+- Source page is a fully dynamic clinic finder with Google Maps API — not suitable for static EDS migration
+- Created as a stub redirect page: H1 "Klinieken" + CTA link to /nl/find-a-clinic
+- Phase 5 should configure an HTTP 301 redirect: /nl/clinics → /nl/find-a-clinic
+- All 18 source images were Google Maps tiles and OneTrust logos (no meaningful content images)
+
+### Issues Encountered
+
+None — all three pages were straightforward text-only content pages. No images required. Upload/preview/publish all succeeded (HTTP 200/201).
+
+### Fidelity Distribution
+
+| Page | Text Ratio | Image Ratio | Notes |
+|------|-----------|-------------|-------|
+| /nl/contact-us | 1.0 | 1.0 | All content preserved |
+| /nl/algemene-voorwaarden-kliniekzoeker | 0.96 | 1.0 | All 13 sections preserved |
+| /nl/clinics | 1.0 | 1.0 | Stub page; original was dynamic Google Maps page |
