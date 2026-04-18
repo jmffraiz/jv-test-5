@@ -1,50 +1,48 @@
 {
-  "verdict": "PASS",
+  "verdict": "FAIL",
   "issues": [
     {
-      "severity": "low",
-      "criterion": "Archetype schema completeness",
-      "details": "7 of 8 archetypes are missing the 'description' field. Only 'clinic-detail' includes a description. Archetypes without descriptions: homepage, locale-root, treatment-page, faq, clinic-finder, legal, contact.",
-      "remediation": "Add a human-readable description to each archetype entry in manifest.json (e.g., 'description': 'Main entry point landing page for Dutch locale' for locale-root)."
+      "severity": "high",
+      "criterion": "Samples directory missing",
+      "details": "The orchestrator requires .eds-migration/state/samples/ directory with sample JSON files and a samples-summary.json. Neither the directory nor the summary file exists. Only two artifacts are present under .eds-migration/state/: manifest.json and docs/phase1-discovery.md.",
+      "remediation": "The scraper/analyzer sub-phase must run to produce per-page sample JSON files (one per archetype) in .eds-migration/state/samples/ and a samples-summary.json aggregating them. Re-run the scrape/sample phase before proceeding."
     },
     {
-      "severity": "low",
-      "criterion": "clinic-detail sampleUrls use non-canonical AEM internal paths",
-      "details": "The two sampleUrls for the clinic-detail archetype use AEM internal paths (/content/juvederm-ous/nl/nl/clinic.html?...) which redirect (HTTP 301) to the canonical paths (/nl/clinic?...). Evidence: curl -L 'https://www.juvederm.nl/content/juvederm-ous/nl/nl/clinic.html?location=52.3653996%2C4.8868754&clinic=a7q3Y000000XZtNQAW' resolves to https://www.juvederm.nl/nl/clinic?location=...",
-      "remediation": "Update clinic-detail sampleUrls to use the canonical /nl/clinic?location=...&clinic=... form rather than the /content/juvederm-ous/nl/nl/clinic.html?... AEM internal path."
-    },
-    {
-      "severity": "low",
-      "criterion": "Spurious navigation header entry",
-      "details": "navigation.header contains an entry {\"text\": \"https://privacy.abbvie/.\", \"href\": \"https://privacy.abbvie/\"} which is extracted from cookie consent banner text, not a real navigation link.",
-      "remediation": "Filter out cookie-consent banner text from navigation extraction. The privacy link is already captured as 'Privacy beleid' pointing to https://www.abbvie.nl/privacy.html."
+      "severity": "medium",
+      "criterion": "Archetype count mismatch vs orchestrator expectation",
+      "details": "The orchestrator note references '8 archetypes from the manifest', but manifest.json contains only 7 distinct archetypes: homepage, locale-root, treatment-page, faq, clinic-finder, legal, contact. The phase1-discovery.md doc mentions 'clinic-detail' as an 8th archetype (dynamic parametrized pages) but it is explicitly excluded from the manifest and has no representative static URL. No sample can be scraped for clinic-detail from the manifest entries.",
+      "remediation": "Either add a representative clinic-detail URL to the manifest (e.g. a fixed-parameter example) or update the orchestrator expectation to 7 archetypes. Document the exclusion of clinic-detail as a dynamic archetype."
     }
   ],
-  "summary": "PASS — manifest.json is well-formed with all required fields; 14 canonical pages and 8 archetypes correctly identified; all 3 spot-checked URLs return HTTP 200; sitemap has 13 URLs vs manifest's 14 (no truncation — crawler correctly found an extra legal page from nav links); priority assignments are sensible; minor issues: 7/8 archetypes lack description field, clinic-detail sample URLs use non-canonical AEM internal paths, one spurious nav entry from cookie consent banner.",
   "checks": {
-    "minimumPageCount": {
-      "status": "PASS",
-      "detail": "14 canonical pages + 54 dynamic clinic-detail pages discovered; well above minimum of 10"
+    "minimum_page_count": {
+      "result": "PASS",
+      "detail": "manifest.json contains 14 pages (threshold: 10)"
     },
-    "urlSpotCheck": {
-      "status": "PASS",
-      "detail": "https://www.juvederm.nl/ → 200, https://www.juvederm.nl/nl/treatment/lips → 200, https://www.juvederm.nl/nl/qa → 200"
+    "url_spot_check": {
+      "result": "PASS",
+      "detail": "Checked https://www.juvederm.nl/ (200), https://www.juvederm.nl/nl/treatment/male (200), https://www.juvederm.nl/nl/qa (200) — all return HTTP 200, real content pages"
     },
-    "sitemapCrossCheck": {
-      "status": "PASS",
-      "detail": "Sitemap (https://www.juvederm.nl/sitemap.xml) has 13 URLs; manifest has 14 canonical pages. Manifest has MORE than sitemap — crawler found https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker via navigation links (confirmed 200). No truncation."
+    "sitemap_cross_check": {
+      "result": "PASS",
+      "detail": "Sitemap at https://www.juvederm.nl/sitemap.xml has 13 URLs; manifest has 14 (manifest includes /nl/algemene-voorwaarden-kliniekzoeker which is absent from sitemap but resolves 200). No truncation detected."
     },
-    "archetypeCategorization": {
-      "status": "PASS",
-      "detail": "8 archetypes are logically coherent: homepage (1), locale-root (1), treatment-page (5 treatments: lips/eye-area/enhance/restore/male), faq (1), clinic-finder (3 URL variants of same finder), legal (2: disclaimer + T&Cs), contact (1), clinic-detail (54 dynamic pages)"
+    "archetype_categorization": {
+      "result": "PASS",
+      "detail": "Sampled URLs per archetype are coherent: treatment-page URLs all follow /nl/treatment/{area}, clinic-finder groups /find-a-clinic + /clinics + /clinic shell, legal groups disclaimer + T&Cs."
     },
-    "noMajorSectionsMissed": {
-      "status": "PASS",
-      "detail": "All nav sections map to archetypes: treatment pages → treatment-page, Q&A → faq, find-a-clinic → clinic-finder, contact → contact, legal pages → legal. No nav links point to undiscovered pages."
+    "nav_section_coverage": {
+      "result": "PASS",
+      "detail": "All primary nav sections mapped: Behandelingen→treatment-page, Vragen→faq, Vind je kliniek→clinic-finder, Contact→contact, legal footer links→legal."
     },
-    "priorityAssignments": {
-      "status": "PASS",
-      "detail": "Homepage: high ✓, treatment pages: high ✓, clinic finder (find-a-clinic): high ✓, FAQ: medium ✓, legal/utility: low ✓. Assignments are reasonable."
+    "priority_assignments": {
+      "result": "PASS",
+      "detail": "Homepage and locale-root are 'high'; treatment pages are 'high' (appropriate as primary content); faq/contact/find-a-clinic are 'medium'; legal/utility pages are 'low'."
+    },
+    "samples_directory": {
+      "result": "FAIL",
+      "detail": ".eds-migration/state/samples/ does not exist. No sample JSON files or samples-summary.json present."
     }
-  }
+  },
+  "summary": "FAIL — samples/ directory and samples-summary.json are missing (scrape sub-phase not yet run); 7 archetypes in manifest vs 8 referenced by orchestrator"
 }
