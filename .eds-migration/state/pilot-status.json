@@ -6,7 +6,8 @@
     "3/3"
   ],
   "timestamp": "2026-04-19T22:25:00Z",
-  "platformIssue": "admin.da.live + content.da.live + aem.page CDN all returning 503 DNS cache overflow (Cloudflare platform outage). admin.hlx.page preview API still responds to GET status checks but POST preview returns 401 (content-bus unavailable). EDS_TOKEN also expired.",
+  "lastRetry": "2026-04-19T22:38:00Z",
+  "platformIssue": "EDS_TOKEN expired on every run. Token created_at=2026-04-18T09:47:55Z, expires_in=86400s → expired 2026-04-19T09:47:55Z. Chunk-1 retry confirmed 401 from admin.da.live at 22:38Z (13h past expiry). admin.hlx.page GET returns 200 (public endpoint works). All HTML artifacts are committed to branch and ready for upload once a fresh token is provided.",
   "pages": [
     {
       "url": "https://www.juvederm.nl/nl",
@@ -14,7 +15,7 @@
       "archetype": "homepage",
       "status": "html-ready",
       "htmlArtifact": ".eds-migration/pages/nl/index.html",
-      "failureReason": "EDS_TOKEN expired. HTML artifact committed to branch.",
+      "failureReason": "EDS_TOKEN expired. Retry #2 attempted 2026-04-19T22:38Z — da.live returns 401.",
       "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl",
       "uploaded": false,
       "previewed": false,
@@ -30,7 +31,7 @@
       "archetype": "treatment-page",
       "status": "html-ready",
       "htmlArtifact": ".eds-migration/pages/nl/treatment/lips/index.html",
-      "failureReason": "EDS_TOKEN expired. HTML artifact committed to branch.",
+      "failureReason": "EDS_TOKEN expired. Retry #2 attempted 2026-04-19T22:38Z — da.live returns 401.",
       "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/lips",
       "uploaded": false,
       "previewed": false,
@@ -46,7 +47,7 @@
       "archetype": "faq",
       "status": "html-ready",
       "htmlArtifact": "nl/qa.html",
-      "failureReason": "EDS_TOKEN expired at time of upload attempt. HTML committed to git.",
+      "failureReason": "EDS_TOKEN expired. Not retried in this chunk (chunk 2/3 or 3/3 scope).",
       "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/qa",
       "uploaded": false,
       "previewed": false,
@@ -60,7 +61,7 @@
       "archetype": "clinic-finder",
       "status": "html-ready",
       "htmlArtifact": "nl/find-a-clinic.html",
-      "failureReason": "EDS_TOKEN expired at time of upload attempt. HTML committed to git.",
+      "failureReason": "EDS_TOKEN expired. Not retried in this chunk (chunk 2/3 or 3/3 scope).",
       "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/find-a-clinic",
       "uploaded": false,
       "previewed": false,
@@ -74,7 +75,7 @@
       "archetype": "legal",
       "status": "html-ready",
       "htmlArtifact": "nl/disclaimer.html",
-      "failureReason": "da.live Source API 503 DNS cache overflow + EDS_TOKEN expired",
+      "failureReason": "EDS_TOKEN expired. Not retried in this chunk (chunk 2/3 or 3/3 scope).",
       "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/disclaimer",
       "uploaded": false,
       "previewed": false,
@@ -88,7 +89,7 @@
       "archetype": "contact",
       "status": "html-ready",
       "htmlArtifact": "nl/contact-us.html",
-      "failureReason": "da.live Source API 503 DNS cache overflow + EDS_TOKEN expired",
+      "failureReason": "EDS_TOKEN expired. Not retried in this chunk (chunk 2/3 or 3/3 scope).",
       "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/contact-us",
       "uploaded": false,
       "previewed": false,
@@ -104,6 +105,8 @@
     "failed": 0,
     "pendingPatterns": 0,
     "blockedByTokenExpiry": 6,
-    "blockedByPlatformOutage": 2
+    "retryAttempts": {
+      "chunk1": 2
+    }
   }
 }

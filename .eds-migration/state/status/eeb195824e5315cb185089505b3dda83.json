@@ -9,8 +9,10 @@
   "imageRatio": 0.92,
   "published": false,
   "daUploaded": false,
-  "failureReason": "EDS_TOKEN expired (created 2026-04-18T09:47:55Z, expired 2026-04-19T09:47:55Z). HTML artifact committed to branch for re-upload when token is refreshed.",
+  "failureReason": "EDS_TOKEN expired on all attempts. Token created_at=2026-04-18T09:47:55Z, expires_in=86400s → expired 2026-04-19T09:47:55Z. Retry chunk1 attempted 2026-04-19T22:38Z (13h past expiry). da.live Source API returns HTTP 401. HTML artifact committed to branch at .eds-migration/pages/nl/treatment/lips/index.html — ready for upload once a fresh token is provided.",
   "artifactPath": ".eds-migration/pages/nl/treatment/lips/index.html",
+  "retryAttempts": 2,
+  "lastRetry": "2026-04-19T22:38:00Z",
   "blocksUsed": ["hero", "carousel", "before-after", "carousel (product-cards)", "accordion (faq)", "tabs", "clinic-finder (compact)", "fragment", "metadata"],
   "selfCheck": {
     "textLenRatio": 0.68,

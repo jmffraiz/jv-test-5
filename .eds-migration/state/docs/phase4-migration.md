@@ -258,3 +258,34 @@ Both pages were successfully transformed into EDS-compliant HTML:
 4. **No images downloaded**: The FAQ page hero image is served from `juvederm.nl` CDN - kept as absolute URL. The clinic finder page has no images.
 
 5. **References**: Included all 40 academic references as ordered list in dedicated section, as required for pharma compliance.
+
+---
+
+## Chunk 1 Retry — 2026-04-19T22:38Z
+
+**Worker:** PageMigrator-693fdd13#chunk1  
+**Pages:** https://www.juvederm.nl/nl, https://www.juvederm.nl/nl/treatment/lips
+
+### Status: BLOCKED — EDS_TOKEN Expired
+
+The token provided in this retry session was the same token from the previous run:
+- `created_at`: 2026-04-18T09:47:55Z
+- `expires_in`: 86400s (24 hours)
+- Expired at: 2026-04-19T09:47:55Z
+- Retry attempted: 2026-04-19T22:38Z (13h past expiry)
+
+**API response:** `admin.da.live` returns `HTTP 401` for both GET and PUT with this token.  
+**`admin.hlx.page` GET** returns `HTTP 200` (public endpoint, no auth needed for status checks).
+
+### HTML Artifacts (ready to upload)
+
+Both HTML files are committed to the branch and have passed self-checks:
+
+| Page | Artifact | Text Ratio | Image Ratio |
+|------|----------|-----------|-------------|
+| `/nl` (homepage) | `.eds-migration/pages/nl/index.html` | 1.13 | 0.82 |
+| `/nl/treatment/lips` | `.eds-migration/pages/nl/treatment/lips/index.html` | 0.68 | 0.92 |
+
+### Action Required
+
+Provide a fresh EDS_TOKEN (less than 24h old) to unblock all 6 pilot pages. No HTML regeneration needed — all artifacts are committed and ready.
