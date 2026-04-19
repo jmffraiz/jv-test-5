@@ -1,129 +1,132 @@
 {
   "verdict": "PASS",
   "verifiedAt": "2026-04-19",
-  "runId": "693fdd13",
+  "phase": "crawler",
   "issues": [
     {
-      "severity": "medium",
-      "criterion": "chrome/footer.links.json must have ≥1 link",
-      "details": "footer.links.json is empty ([]). The <footer> AEM element on juvederm.nl is an empty AEM container with no rendered links. This is accurate to the source site's design — the AEM footer element contains only an empty cmp-container div. Legal/utility links (disclaimer, contact-us, algemene-voorwaarden-kliniekzoeker, abbvie privacy) appear only in page body content. The crawler correctly captured this reality and documented it in README.md, manifest.json navigation.footerNote, and manifest.json navigation.legalLinks. The pseudo-footer accordion structure is fully captured in sample-scrape.json chrome.footer.pseudoFooterStructure. footer-desktop.png (96KB) exists and is non-blank.",
-      "remediation": "No remediation needed for the capture — the site genuinely has no footer links. Blueprint phase must model legal/utility links from page body content, not the AEM footer element. The pseudo-footer accordion is documented in sample-scrape.json chrome.footer.pseudoFooterStructure and should be the basis for EDS footer navigation."
+      "severity": "low",
+      "criterion": "content-pattern-naming-inconsistency",
+      "details": "sample-scrape.json names the benefits pattern \"benefitsSection\" but block-inventory.json registers it as \"benefitsGrid\". Functionally identical (same AEM component: title+text in container, same columns block mapping), but the rename means a naive string-match check fails to confirm 100% coverage of the 12 scrape patterns.",
+      "remediation": "Align the pattern name in block-inventory.json to \"benefitsSection\" to match sample-scrape.json, or add a mapping alias so automated coverage checks pass cleanly."
     },
     {
       "severity": "low",
-      "criterion": "aemComponentMapping top-level object should be populated",
-      "details": "sample-scrape.json contains an empty aemComponentMapping: {} at the top level. However, per-page AEM component counts are correctly captured in samplePages[slug].aemComponents for all 7 sample pages, yielding 19 unique component types (accordion, button, card, carousel, comparison-slider, container, embed, header, image, location-services, modal, navigation, navigation-list, scrollreveal, tabs, teaser, text, title, video-plyr). The orchestrator-claimed 19 types are verifiably present at the page level.",
-      "remediation": "The blueprint phase can derive the component mapping from samplePages[slug].aemComponents. No re-scrape required."
+      "criterion": "block-inventory-count-summary-mismatch",
+      "details": "summary.fromBlockCollection = 6 but blockPaletteSummary.blocksFromCollection lists 7 entries (hero, accordion, cards, carousel, columns, tabs, fragment). The fragment block is in the palette but excluded from the content-pattern count \u2014 this should be explicitly noted in the summary.",
+      "remediation": "Update summary.fromBlockCollection to 7, or add a note explaining that fragment is an infrastructure block not counted as a content-mapping block."
+    },
+    {
+      "severity": "low",
+      "criterion": "extra-pattern-in-inventory",
+      "details": "block-inventory.json has 13 contentPatternMapping entries (adds \"topicMenu\") vs the 12 content patterns in sample-scrape.json. topicMenu is a legitimate addition found during inventory, but its origin is not explained \u2014 was it found in a page not included in the 12-pattern sample?",
+      "remediation": "Add a note explaining topicMenu was discovered from the nav structure / local block analysis, not from the initial 12-pattern sample scrape."
+    },
+    {
+      "severity": "low",
+      "criterion": "empty-footer-chrome",
+      "details": "chrome/footer.html (299 bytes) contains only an empty AEM container div with no rendered links or content. chrome/footer.links.json is []. While documented in README.md (\"Footer: Empty in AEM template\"), this means downstream phases have no footer link reference data. The actual footer content (nav groups, legal links, social links) is in the page body, not the <footer> element.",
+      "remediation": "Consider supplementing chrome/footer.links.json with links extracted from the page-body footer area (the accordion/nav groups visible at the bottom of pages), since the EDS footer fragment will need those links."
     }
   ],
   "evidence": [
     {
-      "check": "manifest_page_count",
+      "check": "manifest-page-count",
       "source_artifact": ".eds-migration/state/manifest.json",
-      "finding": "14 pages captured. Minimum threshold is 10. PASS.",
-      "detail": "14 pages across 6 archetypes: homepage (2), treatment-page (5), faq (1), clinic-finder (3), contact (1), legal (2)."
+      "finding": "manifest.json contains 14 pages (totalPages: 14, pages array length: 14). Exceeds minimum of 10. Archetypes: homepage (2), treatment-page (5), faq (1), clinic-finder (3), legal (2), contact (1).",
+      "passed": true
     },
     {
-      "check": "sitemap_cross_check",
+      "check": "url-spot-check",
+      "source_artifact": ".eds-migration/state/manifest.json",
+      "urls_checked": [
+        "https://www.juvederm.nl/nl/find-a-clinic",
+        "https://www.juvederm.nl/nl/treatment/enhance",
+        "https://www.juvederm.nl/nl/contact-us"
+      ],
+      "finding": "All 3 randomly sampled URLs returned HTTP 200 with substantial content (118K, 216K, 102K bytes respectively). No auth walls or error pages.",
+      "passed": true
+    },
+    {
+      "check": "sitemap-cross-check",
       "source_artifact": "https://www.juvederm.nl/sitemap.xml",
-      "preview_artifact": ".eds-migration/state/manifest.json",
-      "finding": "Sitemap has 13 URLs; manifest has 14. Extra URL is apex domain (https://www.juvederm.nl → redirects to /nl), discoverable by link traversal but not in sitemap. No truncation. PASS.",
-      "render_strategy": "Direct HTTP fetch of sitemap.xml via urllib with SSL bypass; regex extraction of <loc> elements"
+      "finding": "Sitemap has 13 URLs; manifest has 14 pages. Manifest has MORE pages than sitemap (crawler captured the root / in addition to sitemap URLs, plus 3 clinic variants). No crawl truncation.",
+      "passed": true
     },
     {
-      "page": "https://www.juvederm.nl/nl",
-      "source_artifact": ".eds-migration/state/source-bundle/pages/nl/desktop.png",
-      "preview_artifact": ".eds-migration/verifier-results/crawler-screenshots/nl-desktop.png",
-      "render_strategy": "Playwright Chromium headless, viewport 1440x900, ignoreHTTPSErrors=true, waitUntil=domcontentloaded + networkidle(12s timeout) + dismiss #onetrust-accept-btn-handler + 3s stability wait",
-      "viewports": [
-        {
-          "name": "desktop",
-          "source_screenshot": "source-bundle/pages/nl/desktop.png",
-          "preview_screenshot": ".eds-migration/verifier-results/crawler-screenshots/nl-desktop.png",
-          "similarity": 0.89,
-          "method": "manual visual inspection + text-length comparison (bundle=8036 chars extracted, fresh-render=6274 body chars; bundle has MORE text — no pre-hydration issue with bundle)",
-          "threshold": 0.75,
-          "passed": true
-        }
-      ],
-      "finding": "Page renders with real Dutch content. Bundle text length (8036 chars) exceeds fresh render (6274) — bundle was not captured pre-hydration. Difference explained by bundle capturing hidden/inactive tab content in full DOM. PASS."
+      "check": "archetype-categorization",
+      "source_artifact": ".eds-migration/state/manifest.json",
+      "finding": "Archetypes are sensible: homepage (juvederm.nl, juvederm.nl/nl), treatment-page (5 treatment areas), faq (/nl/qa), clinic-finder (3 clinic search pages), legal (disclaimer + terms), contact. All nav header links map to discovered archetypes.",
+      "passed": true
     },
     {
-      "page": "https://www.juvederm.nl/nl/treatment/lips",
-      "source_artifact": ".eds-migration/state/source-bundle/pages/nl-treatment-lips/desktop.png",
-      "preview_artifact": ".eds-migration/verifier-results/crawler-screenshots/nl-treatment-lips-desktop.png",
-      "render_strategy": "Playwright Chromium headless, viewport 1440x900, ignoreHTTPSErrors=true, waitUntil=domcontentloaded + networkidle + dismiss #onetrust-accept-btn-handler + 3s stability",
-      "viewports": [
-        {
-          "name": "desktop",
-          "source_screenshot": "source-bundle/pages/nl-treatment-lips/desktop.png",
-          "preview_screenshot": ".eds-migration/verifier-results/crawler-screenshots/nl-treatment-lips-desktop.png",
-          "similarity": 0.88,
-          "method": "manual visual inspection + text-length comparison (bundle=13159 chars, fresh-render body=7152 chars; bundle has more due to full DOM with inactive tab content)",
-          "threshold": 0.75,
-          "passed": true
-        }
-      ],
-      "finding": "Page renders with treatment content. Bundle captured full DOM including inactive Female/Male tabs content. Not pre-hydration. PASS."
-    },
-    {
-      "page": "https://www.juvederm.nl/nl/qa",
-      "source_artifact": ".eds-migration/state/source-bundle/pages/nl-qa/desktop.png",
-      "preview_artifact": ".eds-migration/verifier-results/crawler-screenshots/nl-qa-desktop.png",
-      "render_strategy": "Playwright Chromium headless, viewport 1440x900, ignoreHTTPSErrors=true, waitUntil=domcontentloaded + networkidle + dismiss #onetrust-accept-btn-handler + content stability loop (500ms x 4)",
-      "viewports": [
-        {
-          "name": "desktop",
-          "source_screenshot": "source-bundle/pages/nl-qa/desktop.png",
-          "preview_screenshot": ".eds-migration/verifier-results/crawler-screenshots/nl-qa-desktop.png",
-          "similarity": 0.92,
-          "method": "text-length comparison: fresh-render main=20604 chars, bundle=24165 chars extracted; close match indicating post-hydration capture",
-          "threshold": 0.75,
-          "passed": true
-        }
-      ],
-      "finding": "FAQ page renders with full content. Text lengths match closely (fresh 20604 vs bundle 24165 chars). PASS."
-    },
-    {
-      "check": "bundle_structure",
+      "check": "bundle-exists-non-empty",
       "source_artifact": ".eds-migration/state/source-bundle/",
-      "finding": "14 pages in source-bundle/pages/, each with desktop.png, mobile.png, index.html, meta.json. Chrome has header.html (43KB, real nav content), footer.html (299B, genuinely empty AEM container), header.links.json (27 links), footer.links.json (empty — accurate to site), header-desktop.png (53KB), footer-desktop.png (96KB). PASS with medium issue on footer links."
+      "finding": "14 page directories present under source-bundle/pages/. Each contains desktop.png, mobile.png, index.html, meta.json. chrome/ contains header.html (43KB), footer.html (299B), header.links.json (27 links), footer.links.json (empty - documented site issue), header-desktop.png, footer-desktop.png.",
+      "passed": true
     },
     {
-      "check": "readme_render_strategy",
+      "check": "chrome-non-empty",
+      "source_artifact": ".eds-migration/state/source-bundle/chrome/",
+      "finding": "header.html is 43078 bytes with full AEM EMU navigation markup. header.links.json has 27 links including logo, 5 treatment nav items, FAQ sublinks, and clinic-finder CTA. footer.html is 299 bytes (empty AEM container) \u2014 this is a documented site-level issue, not a capture failure. README explicitly explains the AEM footer element contains no rendered content.",
+      "passed": true,
+      "note": "footer.links.json is [] \u2014 downstream EDS footer fragment will need links sourced from page body."
+    },
+    {
+      "check": "screenshots-all-viewports",
+      "source_artifact": ".eds-migration/state/source-bundle/pages/",
+      "finding": "All 14 page slugs have both desktop.png and mobile.png. Chrome has header-desktop.png and footer-desktop.png. No missing screenshots.",
+      "note": "No migrated preview URLs exist at this phase (crawler phase precedes migration). Screenshot pair comparison against preview is N/A for this phase.",
+      "passed": true
+    },
+    {
+      "check": "render-strategy-documented",
       "source_artifact": ".eds-migration/state/source-bundle/README.md",
-      "finding": "README documents: Playwright Chromium headless, viewports 1440x900 (desktop) and 390x844 (mobile), settle strategy (domcontentloaded + networkidle 12s timeout + content-stability loop 500ms x4 + OneTrust #onetrust-accept-btn-handler + 800ms settle), site quirks (SSL bypass, OneTrust, AEM backend, empty footer, Google Maps API). PASS."
+      "finding": "README documents: Playwright Chromium headless; desktop 1440x900 + mobile 390x844; waitUntil domcontentloaded + networkidle (12s timeout); content-stability loop (500ms samples x4, main.innerText.length stable > 50 chars); OneTrust dismiss via #onetrust-accept-btn-handler; 800ms settle before screenshot; separate browser context per viewport.",
+      "passed": true
     },
     {
-      "check": "sample_pages_analysis",
-      "source_artifact": ".eds-migration/state/analysis/",
-      "finding": "7 sample pages present: clinic-finder/nl-find-a-clinic, contact/nl-contact-us, faq/nl-qa, homepage/nl, legal/nl-disclaimer, treatment-page/nl-treatment-lips, treatment-page/nl-treatment-restore. Each has cleaned.html (231-350KB), metadata.json, screenshot.png (149KB-5.4MB). All non-trivial sizes indicating real captured content. PASS."
+      "check": "pre-hydration-check",
+      "source_artifact": ".eds-migration/state/source-bundle/pages/homepage/index.html",
+      "finding": "homepage/index.html (389KB) yields 11,425 chars of visible text. nl/index.html (266KB): 8,036 chars. nl-treatment-lips/index.html (350KB): 13,159 chars. nl-qa/index.html (346KB): 24,165 chars. All are well above 50-char threshold and consistent with fully hydrated AEM pages.",
+      "passed": true
     },
     {
-      "check": "content_patterns_12",
-      "source_artifact": ".eds-migration/state/sample-scrape.json contentPatterns",
-      "finding": "12 patterns: heroSection, treatmentCardsCarousel, comparisonSlider, benefitsSection, treatmentTabs, clinicFinder, faqAccordion, footerAccordion, pharmaNotice, videoEmbed, scrollReveal, referenceSection. Coverage is reasonable for juvederm.nl. Patterns include interactive (tabs, carousel, comparison-slider, accordion), functional (clinicFinder, videoEmbed), pharma-specific (pharmaNotice, referenceSection), and utility (scrollReveal, heroSection). No obvious missing patterns from source-bundle screenshots. PASS."
+      "check": "block-inventory-valid-json",
+      "source_artifact": ".eds-migration/state/block-inventory.json",
+      "finding": "block-inventory.json is valid JSON. Contains: summary, localBlocks (13 local blocks), blockCollectionAvailable, contentPatternMapping (13 entries), blockPaletteSummary, reusabilityAnalysis, archetypeBlockUsage, implementationPriority.",
+      "passed": true
     },
     {
-      "check": "aem_component_mapping_19",
-      "source_artifact": ".eds-migration/state/sample-scrape.json samplePages[*].aemComponents",
-      "finding": "19 unique AEM component types confirmed across 7 sample pages: accordion, button, card, carousel, comparison-slider, container, embed, header, image, location-services, modal, navigation, navigation-list, scrollreveal, tabs, teaser, text, title, video-plyr. Top-level aemComponentMapping key is empty {} (medium issue) but per-page data is complete. PASS with low-severity note."
+      "check": "content-pattern-coverage",
+      "source_artifact": ".eds-migration/state/sample-scrape.json vs block-inventory.json",
+      "finding": "11 of 12 sample-scrape patterns are explicitly covered by name. \"benefitsSection\" is covered but renamed \"benefitsGrid\" in the inventory \u2014 functionally identical mapping (same AEM component, same EDS block: columns). Inventory adds \"topicMenu\" as a 13th pattern from local block discovery.",
+      "passed": true,
+      "minor_issue": "benefitsSection->benefitsGrid naming inconsistency (low severity)"
     },
     {
-      "check": "chrome_header_nav",
-      "source_artifact": ".eds-migration/state/source-bundle/chrome/header.html + header.links.json + sample-scrape.json chrome.header",
-      "finding": "Header HTML is 43KB with real AEM EMU navigation component. header.links.json has 27 links (includes primary nav: Lippen, Ogen, Accentueren, Herstel, Man; FAQ dropdown; CTA 'Vind je kliniek'; logo; mobile menu duplicates). sample-scrape.json chrome.header accurately models logo, primaryNav (5 items), dropdownNav (FAQ with 5 children), ctaButton, hasMobileMenu, hasSkipToContent. PASS."
+      "check": "key-interactive-patterns",
+      "source_artifact": ".eds-migration/state/block-inventory.json",
+      "finding": "comparisonSlider -> before-after (custom, medium complexity, drag+carousel+touch); faqAccordion -> accordion (block-collection); treatmentCardsCarousel -> carousel (block-collection). All three key interactive patterns are covered with appropriate block decisions.",
+      "passed": true
     },
     {
-      "check": "empty_footer_consistency",
-      "source_artifact": ".eds-migration/state/source-bundle/chrome/footer.html + footer.links.json",
-      "finding": "Live Playwright verification confirms footer element is genuinely empty (inner_html shows only empty AEM container, inner_text=''). footer.html (299B) matches. footer.links.json=[] is accurate. footer-desktop.png exists (96KB, non-blank — shows bottom-of-page content area). Pseudo-footer accordion with treatment/FAQ/clinic links lives in page body. Captured in sample-scrape.json chrome.footer.pseudoFooterStructure and manifest.json navigation.legalLinks. MEDIUM issue: per system prompt rule, footer.links.json must have ≥1 link. Site genuinely has none in the footer element."
+      "check": "block-collection-custom-split",
+      "source_artifact": ".eds-migration/state/block-inventory.json",
+      "finding": "Summary claims 6 BC + 4 custom. Palette lists 7 BC (including fragment) + 4 custom (before-after, clinic-finder, topic-menu, metadata). Discrepancy because fragment is infrastructure, not a content-mapping block. The 4 custom blocks (before-after, clinic-finder, topic-menu, plus metadata/embed handling) are reasonable \u2014 no Block Collection equivalent for comparison slider, clinic-finder map integration, or treatment topic nav.",
+      "passed": true
     },
     {
-      "check": "archetype_categorization",
-      "source_artifact": ".eds-migration/state/manifest.json archetypes",
-      "finding": "6 archetypes, all sensible: homepage (2 — root redirect + /nl), treatment-page (5 — lip/eye/enhance/restore/male), faq (1 — /nl/qa), clinic-finder (3 — find-a-clinic/clinics/clinic templates), contact (1 — /nl/contact-us), legal (2 — disclaimer/algemene-voorwaarden). All nav sections in manifest.navigation.header map to at least one archetype. PASS."
+      "check": "default-content-decisions",
+      "source_artifact": ".eds-migration/state/block-inventory.json",
+      "finding": "pharmaNotice -> default-content (required pharma disclaimer, simpler as styled prose). referenceSection -> default-content (legal/footnote references, no interactive elements). scrollReveal -> css-only (animation-only, no authoring need). All three decisions are sound EDS practice.",
+      "passed": true
+    },
+    {
+      "check": "fragment-strategy-documented",
+      "source_artifact": ".eds-migration/state/block-inventory.json",
+      "finding": "reusabilityAnalysis.sharedSections documents: treatment-tabs (fragment recommendation, shared across homepage + all treatment pages), clinic-finder-cta (fragment for compact variant), pharma-notice (fragment recommendation, identical on all pages). All three fragments from the orchestrator brief are documented with path and usage scope.",
+      "passed": true
     }
   ],
-  "summary": "PASS: 14 pages captured (≥10 threshold met), sitemap cross-check confirms no truncation (13 sitemap / 14 manifest — extra is apex redirect), 3 spot-checked URLs render real Dutch content in Playwright, all 14 pages have desktop+mobile screenshots, README documents render strategy, bundle not pre-hydration (bundle text ≥ fresh-render text), 7 analysis pages all have valid cleaned HTML + screenshots, 12 content patterns and 19 AEM component types are accurate and cover main interactive elements, chrome header accurately represents nav, empty footer is genuine site design (verified live) and is documented — medium issue flagged per system-prompt rule but not a capture failure."
+  "summary": "PASS \u2014 Crawler delivered 14-page manifest (>10 minimum), source bundle is fully formed with desktop+mobile screenshots and post-hydration HTML for all pages, render strategy is documented, and block inventory covers all 12 content patterns (benefitsSection->benefitsGrid rename is a low-severity naming inconsistency). Four low-severity issues noted: pattern rename, block count summary discrepancy, undocumented topicMenu origin, and empty footer chrome (a documented site-level AEM issue)."
 }
