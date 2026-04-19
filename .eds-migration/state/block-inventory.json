@@ -1,0 +1,633 @@
+{
+  "generatedAt": "2026-04-19",
+  "site": "juvederm.nl",
+  "phase": "2b",
+  "summary": {
+    "totalContentPatterns": 12,
+    "totalBlocksNeeded": 10,
+    "fromBlockCollection": 6,
+    "customBlocks": 4,
+    "defaultContent": 3,
+    "localBlocksInProject": 13
+  },
+
+  "localBlocks": [
+    {
+      "name": "accordion",
+      "path": "blocks/accordion/",
+      "origin": "block-collection",
+      "description": "Expandable details/summary sections for FAQ and collapsible content",
+      "blockCollectionUrl": "https://main--aem-block-collection--adobe.aem.live/block-collection/accordion"
+    },
+    {
+      "name": "before-after",
+      "path": "blocks/before-after/",
+      "origin": "custom",
+      "description": "Before/after image comparison with slider navigation dots. Multiple pairs create a carousel."
+    },
+    {
+      "name": "cards",
+      "path": "blocks/cards/",
+      "origin": "block-collection",
+      "description": "Grid of items with image and text body (ul/li pattern)",
+      "blockCollectionUrl": "https://main--aem-block-collection--adobe.aem.live/block-collection/cards"
+    },
+    {
+      "name": "carousel",
+      "path": "blocks/carousel/",
+      "origin": "block-collection",
+      "description": "Rotating slide content with navigation dots and prev/next buttons",
+      "blockCollectionUrl": "https://main--aem-block-collection--adobe.aem.live/block-collection/carousel"
+    },
+    {
+      "name": "clinic-finder",
+      "path": "blocks/clinic-finder/",
+      "origin": "custom",
+      "description": "Interactive clinic search with Google Maps integration. Configuration-style block with key-value rows."
+    },
+    {
+      "name": "columns",
+      "path": "blocks/columns/",
+      "origin": "block-collection",
+      "description": "Side-by-side content in 2-4 columns",
+      "blockCollectionUrl": "https://main--aem-block-collection--adobe.aem.live/block-collection/columns"
+    },
+    {
+      "name": "footer",
+      "path": "blocks/footer/",
+      "origin": "boilerplate",
+      "description": "Site footer loaded as a fragment from /footer path"
+    },
+    {
+      "name": "fragment",
+      "path": "blocks/fragment/",
+      "origin": "block-collection",
+      "description": "Reusable content section loaded from a path via .plain.html",
+      "blockCollectionUrl": "https://main--aem-block-collection--adobe.aem.live/block-collection/fragment"
+    },
+    {
+      "name": "header",
+      "path": "blocks/header/",
+      "origin": "boilerplate",
+      "description": "Site header with logo, primary nav links, dropdown FAQ menu, and clinic-finder CTA"
+    },
+    {
+      "name": "hero",
+      "path": "blocks/hero/",
+      "origin": "block-collection-adapted",
+      "description": "Full-width hero with background image, H1, subtext, optional CTA. Has video variant for Vimeo backgrounds.",
+      "blockCollectionUrl": "https://main--aem-block-collection--adobe.aem.live/block-collection/hero"
+    },
+    {
+      "name": "metadata",
+      "path": "blocks/metadata/",
+      "origin": "custom",
+      "description": "Configuration block that reads authored key-value pairs and sets document meta tags"
+    },
+    {
+      "name": "tabs",
+      "path": "blocks/tabs/",
+      "origin": "block-collection",
+      "description": "Accessible tabbed interface with ARIA roles for switching content panels",
+      "blockCollectionUrl": "https://main--aem-block-collection--adobe.aem.live/block-collection/tabs"
+    },
+    {
+      "name": "topic-menu",
+      "path": "blocks/topic-menu/",
+      "origin": "custom",
+      "description": "Sticky horizontal anchor navigation for FAQ page. Highlights active section via IntersectionObserver scrollspy."
+    }
+  ],
+
+  "blockCollectionAvailable": [
+    {
+      "name": "hero",
+      "status": "already-local",
+      "liveExampleUrl": "https://main--aem-block-collection--adobe.aem.live/block-collection/hero",
+      "jsUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/hero/hero.js",
+      "cssUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/hero/hero.css"
+    },
+    {
+      "name": "accordion",
+      "status": "already-local",
+      "liveExampleUrl": "https://main--aem-block-collection--adobe.aem.live/block-collection/accordion",
+      "jsUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/accordion/accordion.js",
+      "cssUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/accordion/accordion.css"
+    },
+    {
+      "name": "cards",
+      "status": "already-local",
+      "liveExampleUrl": "https://main--aem-block-collection--adobe.aem.live/block-collection/cards",
+      "jsUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/cards/cards.js",
+      "cssUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/cards/cards.css"
+    },
+    {
+      "name": "carousel",
+      "status": "already-local",
+      "liveExampleUrl": "https://main--aem-block-collection--adobe.aem.live/block-collection/carousel",
+      "jsUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/carousel/carousel.js",
+      "cssUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/carousel/carousel.css"
+    },
+    {
+      "name": "columns",
+      "status": "already-local",
+      "liveExampleUrl": "https://main--aem-block-collection--adobe.aem.live/block-collection/columns",
+      "jsUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/columns/columns.js",
+      "cssUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/columns/columns.css"
+    },
+    {
+      "name": "tabs",
+      "status": "already-local",
+      "liveExampleUrl": "https://main--aem-block-collection--adobe.aem.live/block-collection/tabs",
+      "jsUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/tabs/tabs.js",
+      "cssUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/tabs/tabs.css"
+    },
+    {
+      "name": "fragment",
+      "status": "already-local",
+      "liveExampleUrl": "https://main--aem-block-collection--adobe.aem.live/block-collection/fragment",
+      "jsUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/fragment/fragment.js",
+      "cssUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/fragment/fragment.css"
+    },
+    {
+      "name": "video",
+      "status": "available-not-used",
+      "note": "Available in Block Collection. Local hero block has a video variant which covers the one video-embed use case. Standalone video block may be needed if video appears outside hero context.",
+      "liveExampleUrl": "https://main--aem-block-collection--adobe.aem.live/block-collection/video",
+      "jsUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/video/video.js",
+      "cssUrl": "https://github.com/adobe/aem-block-collection/blob/main/blocks/video/video.css"
+    },
+    {
+      "name": "quote",
+      "status": "available-not-needed",
+      "note": "No testimonial/quote patterns found on juvederm.nl.",
+      "liveExampleUrl": "https://main--aem-block-collection--adobe.aem.live/block-collection/quote"
+    }
+  ],
+
+  "blockPartyReferences": [
+    {
+      "name": "Image-Compare",
+      "category": "Block",
+      "description": "Simple before/after image comparison with slider overlay",
+      "githubUrl": "https://github.com/dave-fink/franklin-demo/tree/main/blocks/image-compare",
+      "showcaseUrl": "https://main--franklin-demo--dave-fink.hlx.live/image-compare",
+      "relevance": "Alternative to local before-after block. Local implementation is preferred — it has Dutch labels ('Voor'/'Na'), multi-pair carousel support, and Juvederm-specific styling.",
+      "decision": "not-adopted"
+    },
+    {
+      "name": "Interactive Map Implementation",
+      "category": "Block",
+      "description": "Google Maps API with category-based filtering, marker clustering, and responsive design",
+      "githubUrl": "https://github.com/meejain/map-demo",
+      "relevance": "Reference for clinic-finder Google Maps integration. Local clinic-finder block uses a simpler config-driven approach with search-by-city, more appropriate for this pharma site.",
+      "decision": "reference-only"
+    },
+    {
+      "name": "Video block",
+      "category": "Block",
+      "description": "AEM assets plugin video block with poster image and Dynamic Media support",
+      "githubUrl": "https://github.com/adobe-rnd/aem-assets-plugin/tree/main/blocks/video",
+      "showcaseUrl": "https://main--assets-blocks--hlxsites.aem.live/video-block-demo",
+      "relevance": "Potential reference for treatment page video embeds. Local hero (video) variant covers primary use case. May adopt if standalone video blocks become needed.",
+      "decision": "reference-only"
+    },
+    {
+      "name": "Responsive Slider",
+      "category": "Block",
+      "description": "Swiper.js-based responsive slider with centralized configuration management",
+      "githubUrl": "https://github.com/meejain/slider",
+      "showcaseUrl": "https://main--slider--meejain.aem.live/",
+      "relevance": "Alternative carousel approach. Local carousel block (from Block Collection) is simpler and doesn't add Swiper.js dependency.",
+      "decision": "not-adopted"
+    }
+  ],
+
+  "contentPatternMapping": [
+    {
+      "pattern": "heroSection",
+      "description": "Full-width teaser with background image, H1 title, optional description and CTA button",
+      "sourceAemComponent": "teaser",
+      "edsBlock": "hero",
+      "blockSource": "block-collection-adapted",
+      "contentModel": {
+        "type": "standalone",
+        "structure": [
+          { "row": 1, "cells": ["background image (picture)"] },
+          { "row": 2, "cells": ["H1 heading, paragraph text, CTA link (combined in one cell)"] }
+        ],
+        "maxCellsPerRow": 1,
+        "notes": "Single-column layout. Row 1 is the background image, Row 2 contains heading + text + optional CTA."
+      },
+      "variants": [
+        { "name": "hero (video)", "description": "Video background from Vimeo URL instead of image", "usedOn": ["treatment-page (some)"] }
+      ],
+      "usedByArchetypes": ["homepage", "treatment-page", "faq"],
+      "occurrenceCount": "8+ pages"
+    },
+    {
+      "pattern": "benefitsGrid",
+      "description": "Grid of 3-4 benefit items, each with H3/H4 heading and supporting paragraph text",
+      "sourceAemComponent": "title + text in container",
+      "edsBlock": "columns",
+      "blockSource": "block-collection",
+      "contentModel": {
+        "type": "standalone",
+        "structure": [
+          { "row": 1, "cells": ["H3 + paragraph (benefit 1)", "H3 + paragraph (benefit 2)", "H3 + paragraph (benefit 3)"] }
+        ],
+        "maxCellsPerRow": 4,
+        "notes": "Standard columns block. Each column contains an H3 heading followed by supporting text. Variant 'highlights' adds visual emphasis styling."
+      },
+      "variants": [
+        { "name": "columns (highlights)", "description": "Visually emphasized benefit columns with brand primary color accents", "usedOn": ["homepage", "treatment-page"] }
+      ],
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "occurrenceCount": "6+ pages"
+    },
+    {
+      "pattern": "treatmentCardsCarousel",
+      "description": "Carousel of JUVÉDERM® product cards with product image, H4 title, and body text",
+      "sourceAemComponent": "carousel + card",
+      "edsBlock": "carousel",
+      "blockSource": "block-collection",
+      "contentModel": {
+        "type": "standalone",
+        "structure": [
+          { "row": "per slide", "cells": ["product image (picture) | H4 product name + paragraph description"] }
+        ],
+        "maxCellsPerRow": 2,
+        "notes": "Each row is one carousel slide. Col 1 = product image, Col 2 = product name (H4) + description paragraph. 5-6 slides per treatment page."
+      },
+      "variants": [
+        { "name": "carousel (product-cards)", "description": "Card-styled carousel slides for product showcase", "usedOn": ["treatment-page"] }
+      ],
+      "usedByArchetypes": ["treatment-page"],
+      "occurrenceCount": "5 treatment pages"
+    },
+    {
+      "pattern": "comparisonSlider",
+      "description": "Before/after treatment comparison with two images and interactive slider control",
+      "sourceAemComponent": "comparison-slider",
+      "edsBlock": "before-after",
+      "blockSource": "custom",
+      "contentModel": {
+        "type": "standalone",
+        "structure": [
+          { "row": "per comparison pair", "cells": ["before image (picture)", "after image (picture)"] }
+        ],
+        "maxCellsPerRow": 2,
+        "notes": "Each row = one before/after pair. Col 1 = before image, Col 2 = after image. Multiple rows produce a carousel with navigation dots. Labels 'Voor'/'Na' are added by JS."
+      },
+      "variants": [],
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "occurrenceCount": "6+ uses (5 on homepage inside tabs, 1 per treatment page)",
+      "customBlockSpec": {
+        "complexity": "medium",
+        "jsFeatures": ["Slider drag interaction", "Multi-pair carousel navigation", "Touch support", "Dutch labels (Voor/Na)"],
+        "cssFeatures": ["Overlay positioning", "Drag handle styling", "Responsive sizing"],
+        "blockPartyRef": "Image-Compare by dave-fink (simpler, single-pair only)",
+        "why-custom": "No Block Collection equivalent. Block Party 'Image-Compare' lacks multi-pair carousel, Dutch localization, and pharma brand styling integration."
+      }
+    },
+    {
+      "pattern": "treatmentTabs",
+      "description": "VROUWELIJK (Female) / MANNELIJK (Male) tab switcher containing treatment area content with image maps and descriptions",
+      "sourceAemComponent": "tabs",
+      "edsBlock": "tabs",
+      "blockSource": "block-collection",
+      "contentModel": {
+        "type": "standalone",
+        "structure": [
+          { "row": 1, "cells": ["Tab label: VROUWELIJK | Tab content: treatment area cards (image + H3 + paragraph + link)"] },
+          { "row": 2, "cells": ["Tab label: MANNELIJK | Tab content: treatment area cards (image + H3 + paragraph + link)"] }
+        ],
+        "maxCellsPerRow": 2,
+        "notes": "Standard tabs block. Each row = one tab. Col 1 = tab label, Col 2 = tab panel content. Content within each tab panel can include cards sub-block or styled default content with treatment area descriptions."
+      },
+      "variants": [],
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "occurrenceCount": "6+ pages (shared section)"
+    },
+    {
+      "pattern": "clinicFinder",
+      "description": "Interactive clinic search with Google Maps, search by city/postcode",
+      "sourceAemComponent": "location-services",
+      "edsBlock": "clinic-finder",
+      "blockSource": "custom",
+      "contentModel": {
+        "type": "configuration",
+        "structure": [
+          { "row": 1, "cells": ["heading", "Vind een kliniek bij jou in de buurt"] },
+          { "row": 2, "cells": ["placeholder", "Voer je postcode of stad in"] },
+          { "row": 3, "cells": ["api-key", "(Google Maps API key)"] },
+          { "row": 4, "cells": ["country", "NL"] }
+        ],
+        "maxCellsPerRow": 2,
+        "notes": "Configuration block with key-value pairs. JS reads config, creates search UI, initializes Google Maps. Actual clinic data loaded dynamically via API."
+      },
+      "variants": [
+        { "name": "clinic-finder (full-page)", "description": "Full-page layout with prominent map, used on /find-a-clinic", "usedOn": ["clinic-finder"] },
+        { "name": "clinic-finder (compact)", "description": "Inline compact version as CTA widget on content pages", "usedOn": ["homepage", "treatment-page"] }
+      ],
+      "usedByArchetypes": ["homepage", "treatment-page", "clinic-finder"],
+      "occurrenceCount": "8+ pages",
+      "customBlockSpec": {
+        "complexity": "high",
+        "jsFeatures": ["Google Maps API init", "Places Autocomplete", "Geocoding", "Marker rendering", "Results list", "Search form"],
+        "cssFeatures": ["Map container", "Search bar", "Results cards", "Responsive map/list toggle"],
+        "blockPartyRef": "Interactive Map by meejain (generic Google Maps, lacks clinic-specific search UX)",
+        "why-custom": "Requires Allergan/AbbVie clinic API integration, Google Maps with Places Autocomplete, and pharma-brand search UX. No reusable block covers this specific pattern.",
+        "externalDependencies": ["Google Maps JavaScript API", "Google Places Autocomplete", "Allergan clinic locator API"]
+      }
+    },
+    {
+      "pattern": "faqAccordion",
+      "description": "Expandable FAQ items with question as summary and answer as body content",
+      "sourceAemComponent": "accordion",
+      "edsBlock": "accordion",
+      "blockSource": "block-collection",
+      "contentModel": {
+        "type": "standalone",
+        "structure": [
+          { "row": "per FAQ item", "cells": ["question text (summary)", "answer content (body: paragraphs, lists, links)"] }
+        ],
+        "maxCellsPerRow": 2,
+        "notes": "Standard accordion pattern. Row per item. Col 1 = clickable question label (rendered as <summary>). Col 2 = expandable answer body. Treatment pages have 3-5 items; FAQ page has sections with many items."
+      },
+      "variants": [
+        { "name": "accordion (faq)", "description": "FAQ-specific styling with brand colors and larger text", "usedOn": ["treatment-page", "faq"] }
+      ],
+      "usedByArchetypes": ["treatment-page", "faq"],
+      "occurrenceCount": "6+ pages"
+    },
+    {
+      "pattern": "footerAccordion",
+      "description": "Bottom-of-page accordion serving as footer navigation with grouped link lists (Behandeling, FAQ sections)",
+      "sourceAemComponent": "accordion + navigation-list",
+      "edsBlock": "footer (fragment containing accordion)",
+      "blockSource": "boilerplate + block-collection",
+      "contentModel": {
+        "type": "fragment",
+        "structure": [
+          { "description": "Footer fragment (/footer) contains: accordion block with nav groups, legal links bar, social links, copyright notice" },
+          { "accordion-row": "per group", "cells": ["group label (Behandeling / FAQ)", "link list (ul with treatment/FAQ links)"] }
+        ],
+        "maxCellsPerRow": 2,
+        "notes": "The AEM <footer> element is empty — the actual footer content is an accordion + legal links bar rendered above the AEM footer. In EDS, this becomes the /footer fragment containing an accordion block + default content for legal/social/copyright."
+      },
+      "variants": [],
+      "usedByArchetypes": ["all"],
+      "occurrenceCount": "all 14 pages"
+    },
+    {
+      "pattern": "pharmaNotice",
+      "description": "Required Dutch pharmaceutical disclaimer: warning icon + 'Kijk uit. Jezelf mooier maken kan lelijk uitpakken.' text",
+      "sourceAemComponent": "image + text in container",
+      "edsBlock": null,
+      "blockSource": "default-content",
+      "contentModel": {
+        "type": "default-content",
+        "structure": [
+          { "description": "Section with style 'pharma-notice' containing: warning icon image + H3 disclaimer heading + paragraph explanation text" }
+        ],
+        "notes": "No block needed. Authored as default content within a section styled as 'pharma-notice'. The section style adds the background color, icon positioning, and branded warning appearance. This is a legal/regulatory compliance requirement for Dutch pharma advertising."
+      },
+      "sectionStyle": "pharma-notice",
+      "usedByArchetypes": ["homepage", "treatment-page", "faq"],
+      "occurrenceCount": "8+ content pages"
+    },
+    {
+      "pattern": "videoEmbed",
+      "description": "Embedded video (Vimeo/plyr) for treatment demonstrations",
+      "sourceAemComponent": "embed + video-plyr",
+      "edsBlock": "hero (video) or embed (auto-blocked)",
+      "blockSource": "block-collection (video) / auto-block",
+      "contentModel": {
+        "type": "auto-blocked",
+        "structure": [
+          { "description": "Plain Vimeo URL in content auto-blocks as embed. For hero context, use hero (video) variant." }
+        ],
+        "notes": "Sparse usage — only some treatment pages. Vimeo URLs can be auto-blocked by scripts.js. If standalone video display is needed, the Block Collection 'video' block is available. The local hero block already handles video backgrounds."
+      },
+      "usedByArchetypes": ["treatment-page"],
+      "occurrenceCount": "1-2 treatment pages"
+    },
+    {
+      "pattern": "scrollReveal",
+      "description": "Scroll-triggered reveal animation on homepage content sections",
+      "sourceAemComponent": "scrollreveal",
+      "edsBlock": null,
+      "blockSource": "css-only",
+      "contentModel": {
+        "type": "css-animation",
+        "structure": [
+          { "description": "Not a block. CSS animation triggered by IntersectionObserver in scripts.js. Applied via section style 'scroll-reveal'." }
+        ],
+        "notes": "Pure presentational effect. Implemented as a section style that triggers fade-in/slide-up animation when content scrolls into viewport. No authoring table needed."
+      },
+      "sectionStyle": "scroll-reveal",
+      "usedByArchetypes": ["homepage"],
+      "occurrenceCount": "1 page"
+    },
+    {
+      "pattern": "referenceSection",
+      "description": "Footnotes and reference citations with superscript numbers (pharma compliance)",
+      "sourceAemComponent": "text",
+      "edsBlock": null,
+      "blockSource": "default-content",
+      "contentModel": {
+        "type": "default-content",
+        "structure": [
+          { "description": "Section with style 'references' containing small-text paragraphs with citation numbers" }
+        ],
+        "notes": "No block needed. Authored as default content (paragraphs with superscript reference numbers) within a section styled as 'references'. The section style reduces font size, adds muted color, and compact spacing. Essential for pharma regulatory compliance."
+      },
+      "sectionStyle": "references",
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "occurrenceCount": "6+ pages"
+    },
+    {
+      "pattern": "topicMenu",
+      "description": "Sticky horizontal anchor navigation for FAQ page topic sections with scrollspy highlighting",
+      "sourceAemComponent": "navigation-list (custom)",
+      "edsBlock": "topic-menu",
+      "blockSource": "custom",
+      "contentModel": {
+        "type": "standalone",
+        "structure": [
+          { "row": 1, "cells": ["unordered list of anchor links (#about-juvederm, #duration, #results, etc.)"] }
+        ],
+        "maxCellsPerRow": 1,
+        "notes": "Single-cell block containing a list of anchor links. JS makes it sticky on scroll and highlights the active section via IntersectionObserver. Only used on the FAQ page."
+      },
+      "variants": [],
+      "usedByArchetypes": ["faq"],
+      "occurrenceCount": "1 page",
+      "customBlockSpec": {
+        "complexity": "low",
+        "jsFeatures": ["Sticky positioning", "IntersectionObserver scrollspy", "Smooth scroll on click", "Active link highlighting"],
+        "cssFeatures": ["Sticky nav bar", "Horizontal scroll on mobile", "Active state underline"],
+        "why-custom": "No Block Collection equivalent for sticky anchor navigation with scrollspy. Simple enough to build from scratch."
+      }
+    }
+  ],
+
+  "blockPaletteSummary": {
+    "blocksFromCollection": [
+      { "name": "hero", "purpose": "Page hero with background image + heading + CTA", "status": "local (adapted)" },
+      { "name": "accordion", "purpose": "Expandable Q&A sections", "status": "local" },
+      { "name": "cards", "purpose": "Content grid with image + text", "status": "local" },
+      { "name": "carousel", "purpose": "Rotating content slides", "status": "local" },
+      { "name": "columns", "purpose": "Side-by-side content layout", "status": "local" },
+      { "name": "tabs", "purpose": "Switchable content panels", "status": "local" },
+      { "name": "fragment", "purpose": "Reusable content inclusion", "status": "local" }
+    ],
+    "customBlocks": [
+      { "name": "before-after", "purpose": "Treatment before/after image comparison slider", "complexity": "medium", "status": "local" },
+      { "name": "clinic-finder", "purpose": "Clinic search with Google Maps integration", "complexity": "high", "status": "local" },
+      { "name": "topic-menu", "purpose": "Sticky anchor navigation for FAQ page", "complexity": "low", "status": "local" },
+      { "name": "metadata", "purpose": "Configuration block for document meta tags", "complexity": "low", "status": "local" }
+    ],
+    "boilerplateBlocks": [
+      { "name": "header", "purpose": "Site header with logo + navigation", "status": "local" },
+      { "name": "footer", "purpose": "Site footer loaded as fragment", "status": "local" }
+    ],
+    "defaultContent": [
+      { "pattern": "pharmaNotice", "sectionStyle": "pharma-notice", "reason": "Simple icon + text, no interactive behavior needed" },
+      { "pattern": "referenceSection", "sectionStyle": "references", "reason": "Plain text footnotes, no structural complexity" },
+      { "pattern": "scrollReveal", "sectionStyle": "scroll-reveal", "reason": "CSS-only animation, not a content pattern" }
+    ]
+  },
+
+  "sectionStyles": [
+    {
+      "name": "pharma-notice",
+      "description": "Pharmaceutical disclaimer section with warning icon and branded background",
+      "usedByArchetypes": ["homepage", "treatment-page", "faq"],
+      "cssFeatures": ["Background color (dark/brand)", "Warning icon positioning", "Centered text", "Distinct visual emphasis for regulatory compliance"]
+    },
+    {
+      "name": "references",
+      "description": "Footnotes/citations section with small text and compact spacing",
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "cssFeatures": ["Smaller font size", "Muted text color", "Compact line-height and spacing"]
+    },
+    {
+      "name": "scroll-reveal",
+      "description": "Scroll-triggered fade-in/slide-up animation for content sections",
+      "usedByArchetypes": ["homepage"],
+      "cssFeatures": ["opacity/transform transition", "IntersectionObserver trigger via scripts.js"]
+    },
+    {
+      "name": "highlight",
+      "description": "Visually emphasized content section with brand background color",
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "cssFeatures": ["Brand background color", "Additional padding", "Color contrast adjustments"]
+    }
+  ],
+
+  "reusabilityAnalysis": {
+    "sharedFragments": [
+      {
+        "name": "footer",
+        "path": "/footer",
+        "usedOn": "all pages",
+        "contains": ["accordion (nav groups)", "legal links bar", "social links (Instagram, Facebook)", "copyright notice (Allergan Aesthetics / AbbVie)"]
+      },
+      {
+        "name": "nav",
+        "path": "/nav",
+        "usedOn": "all pages",
+        "contains": ["logo", "primary nav (treatment links)", "dropdown (FAQ sections)", "CTA (clinic finder)"]
+      }
+    ],
+    "sharedSections": [
+      {
+        "name": "treatment-tabs",
+        "description": "Female/Male treatment area explorer (tabs block)",
+        "sharedBetween": ["homepage", "all treatment pages"],
+        "recommendation": "Author as a fragment and include via fragment block to avoid duplication"
+      },
+      {
+        "name": "clinic-finder-cta",
+        "description": "Compact clinic finder widget as page CTA",
+        "sharedBetween": ["homepage", "all treatment pages"],
+        "recommendation": "Author as a fragment for the compact variant; full-page version is standalone"
+      },
+      {
+        "name": "pharma-notice",
+        "description": "Required pharmaceutical disclaimer",
+        "sharedBetween": ["homepage", "treatment pages", "faq"],
+        "recommendation": "Author as a fragment since it's identical on all pages and legally required"
+      }
+    ]
+  },
+
+  "archetypeBlockUsage": {
+    "homepage": {
+      "blocks": ["hero", "columns (highlights)", "before-after", "tabs", "clinic-finder (compact)", "fragment (footer)"],
+      "defaultContent": ["pharma-notice", "references", "scroll-reveal"],
+      "noteablePatterns": ["5 comparison sliders inside tabs section", "High component density"]
+    },
+    "treatment-page": {
+      "blocks": ["hero", "columns (highlights)", "carousel (product-cards)", "before-after", "accordion (faq)", "tabs", "clinic-finder (compact)", "fragment (footer)"],
+      "defaultContent": ["pharma-notice", "references"],
+      "noteablePatterns": ["All 5 treatment pages follow same template", "Some have video embed"]
+    },
+    "faq": {
+      "blocks": ["hero", "topic-menu", "accordion (faq)", "fragment (footer)"],
+      "defaultContent": ["references"],
+      "noteablePatterns": ["Text-heavy, anchor-linked sections", "Topic menu for in-page navigation"]
+    },
+    "clinic-finder": {
+      "blocks": ["clinic-finder (full-page)", "fragment (footer)"],
+      "defaultContent": [],
+      "noteablePatterns": ["Google Maps as primary content", "3 clinic pages use same template"]
+    },
+    "contact": {
+      "blocks": ["fragment (footer)"],
+      "defaultContent": ["pharma-notice"],
+      "noteablePatterns": ["Simple text-only page with contact info"]
+    },
+    "legal": {
+      "blocks": ["fragment (footer)"],
+      "defaultContent": [],
+      "noteablePatterns": ["Long-form text content, no interactive components"]
+    }
+  },
+
+  "externalDependencies": [
+    {
+      "dependency": "Google Maps JavaScript API",
+      "usedBy": "clinic-finder",
+      "loadStrategy": "delayed",
+      "notes": "Loaded only on pages with clinic-finder block. Includes Places Autocomplete."
+    },
+    {
+      "dependency": "Allergan/AbbVie Clinic Locator API",
+      "usedBy": "clinic-finder",
+      "loadStrategy": "on-demand",
+      "notes": "Backend API for clinic search results. Endpoint TBD during implementation."
+    },
+    {
+      "dependency": "Adobe Typekit (sic6ayn)",
+      "usedBy": "all pages",
+      "loadStrategy": "eager",
+      "notes": "Brand typography. Consider self-hosting for performance."
+    }
+  ],
+
+  "implementationPriority": [
+    { "priority": 1, "block": "hero", "reason": "Used on all content pages, critical for visual fidelity" },
+    { "priority": 2, "block": "accordion", "reason": "Used for FAQ and footer navigation on every page" },
+    { "priority": 3, "block": "columns", "reason": "Benefits grid appears on homepage and all treatment pages" },
+    { "priority": 4, "block": "tabs", "reason": "Shared treatment-area explorer on 6+ pages" },
+    { "priority": 5, "block": "carousel", "reason": "Product cards on all treatment pages" },
+    { "priority": 6, "block": "cards", "reason": "Grid pattern used within tabs content" },
+    { "priority": 7, "block": "before-after", "reason": "Custom — treatment comparison slider on 6+ pages" },
+    { "priority": 8, "block": "clinic-finder", "reason": "Custom — high complexity, Google Maps dependency" },
+    { "priority": 9, "block": "topic-menu", "reason": "Custom — only used on FAQ page" },
+    { "priority": 10, "block": "metadata", "reason": "Configuration block, simple implementation" }
+  ]
+}
