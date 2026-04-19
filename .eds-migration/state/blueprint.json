@@ -1,0 +1,1053 @@
+{
+  "version": "1.0",
+  "generatedAt": "2026-04-19",
+  "site": "juvederm.nl",
+  "phase": "2c",
+  "language": "nl",
+  "sourceUrl": "https://www.juvederm.nl",
+
+  "blockPalette": [
+    {
+      "name": "hero",
+      "source": "block-collection-adapted",
+      "contentModel": "standalone",
+      "usedByArchetypes": ["homepage", "treatment-page", "faq"],
+      "variants": ["hero", "hero (video)"],
+      "description": "Full-width hero with background image, H1, optional subtext and CTA. Video variant for Vimeo backgrounds.",
+      "cellLayout": {
+        "rows": [
+          {"row": 1, "description": "Background image (picture element)"},
+          {"row": 2, "description": "H1 heading, paragraph text, optional CTA link (all in one cell)"}
+        ],
+        "maxCellsPerRow": 1
+      },
+      "authoringExample": {
+        "blockTable": "Hero",
+        "row1": ["[background-image.jpg]"],
+        "row2": ["<h1>Jouw unieke schoonheid</h1><p>Ontdek de mogelijkheden van JUVÉDERM®</p><a href='/nl/find-a-clinic'>Vind je kliniek</a>"]
+      },
+      "variantNotes": {
+        "hero (video)": "Use 'Hero (video)' block name. Row 1 = Vimeo URL instead of image. Used on some treatment pages for background video."
+      }
+    },
+    {
+      "name": "columns",
+      "source": "block-collection",
+      "contentModel": "standalone",
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "variants": ["columns", "columns (highlights)"],
+      "description": "Side-by-side content layout for benefits grid. Highlights variant adds brand color accents.",
+      "cellLayout": {
+        "rows": [
+          {"row": 1, "description": "Column 1: H3 + paragraph | Column 2: H3 + paragraph | Column 3: H3 + paragraph (up to 4 columns)"}
+        ],
+        "maxCellsPerRow": 4
+      },
+      "authoringExample": {
+        "blockTable": "Columns (highlights)",
+        "row1": [
+          "<h3>Een natuurlijke uitstraling</h3><p>JUVÉDERM® wordt gemaakt op basis van hyaluronzuur.</p>",
+          "<h3>Toonaangevend</h3><p>Wereldwijd het meest toonaangevende merk in fillers.</p>",
+          "<h3>Langdurige resultaten</h3><p>Het resultaat blijft 9 tot 24 maanden zichtbaar.</p>",
+          "<h3>Hoge patiënt tevredenheid</h3><p>Ruim 91% was tevreden na de behandeling.</p>"
+        ]
+      }
+    },
+    {
+      "name": "carousel",
+      "source": "block-collection",
+      "contentModel": "standalone",
+      "usedByArchetypes": ["treatment-page"],
+      "variants": ["carousel", "carousel (product-cards)"],
+      "description": "Rotating slide content. Product-cards variant for JUVÉDERM® product showcase on treatment pages.",
+      "cellLayout": {
+        "rows": [
+          {"row": "per slide", "description": "Column 1: product image | Column 2: H4 product name + paragraph description"}
+        ],
+        "maxCellsPerRow": 2
+      },
+      "authoringExample": {
+        "blockTable": "Carousel (product-cards)",
+        "row1": ["[volbella-product.jpg]", "<h4>JUVÉDERM® VOLBELLA met lidocaïne</h4><p>Voor subtiele lipvergroting en het gladstrijken van periorale lijntjes.</p>"],
+        "row2": ["[volift-product.jpg]", "<h4>JUVÉDERM® VOLIFT met lidocaïne</h4><p>Voor het herstellen van volume in het middengedeelte van het gezicht.</p>"]
+      }
+    },
+    {
+      "name": "before-after",
+      "source": "custom",
+      "contentModel": "standalone",
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "variants": [],
+      "description": "Before/after image comparison slider with Dutch labels (Voor/Na). Multiple rows create carousel with navigation dots.",
+      "cellLayout": {
+        "rows": [
+          {"row": "per comparison pair", "description": "Column 1: before image | Column 2: after image"}
+        ],
+        "maxCellsPerRow": 2
+      },
+      "authoringExample": {
+        "blockTable": "Before-After",
+        "row1": ["[lips-before.jpg]", "[lips-after.jpg]"],
+        "row2": ["[eyes-before.jpg]", "[eyes-after.jpg]"]
+      },
+      "customBlockSpec": {
+        "complexity": "medium",
+        "jsFeatures": ["Slider drag interaction", "Multi-pair carousel navigation", "Touch support", "Dutch labels (Voor/Na)"],
+        "cssFeatures": ["Overlay positioning", "Drag handle styling", "Responsive sizing"]
+      }
+    },
+    {
+      "name": "tabs",
+      "source": "block-collection",
+      "contentModel": "standalone",
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "variants": [],
+      "description": "VROUWELIJK/MANNELIJK tab switcher for treatment area content. Each tab panel contains cards with treatment descriptions.",
+      "cellLayout": {
+        "rows": [
+          {"row": 1, "description": "Column 1: tab label (VROUWELIJK) | Column 2: tab panel content (cards with image + H3 + text + link)"},
+          {"row": 2, "description": "Column 1: tab label (MANNELIJK) | Column 2: tab panel content (cards with image + H3 + text + link)"}
+        ],
+        "maxCellsPerRow": 2
+      },
+      "authoringExample": {
+        "blockTable": "Tabs",
+        "row1": ["VROUWELIJK", "<h3>Versterk contouren</h3><p>Jouw gezichtskenmerken versterken...</p><a href='/nl/treatment/enhance'>Meer informatie</a><h3>Stralende oogopslag</h3><p>Fijne lijntjes gladstrijken...</p><a href='/nl/treatment/eye-area'>Meer informatie</a>"],
+        "row2": ["MANNELIJK", "<h3>Versterk contouren</h3><p>Contouren van kin en kaaklijn versterken...</p><a href='/nl/treatment/enhance'>Meer informatie</a>"]
+      },
+      "fragmentNote": "Shared across homepage and all treatment pages. Author as /fragments/treatment-tabs and include via fragment block."
+    },
+    {
+      "name": "accordion",
+      "source": "block-collection",
+      "contentModel": "standalone",
+      "usedByArchetypes": ["treatment-page", "faq"],
+      "variants": ["accordion", "accordion (faq)"],
+      "description": "Expandable Q&A sections. FAQ variant has brand-specific styling. Also used in footer fragment for navigation groups.",
+      "cellLayout": {
+        "rows": [
+          {"row": "per item", "description": "Column 1: question/label text (becomes <summary>) | Column 2: answer content (paragraphs, lists, links)"}
+        ],
+        "maxCellsPerRow": 2
+      },
+      "authoringExample": {
+        "blockTable": "Accordion (faq)",
+        "row1": ["Wat kan ik verwachten tijdens mijn consult?", "<p>Tijdens je eerste consult bespreekt de arts je wensen...</p><p>De behandeling duurt doorgaans 15-60 minuten.</p>"],
+        "row2": ["Zijn er bijwerkingen?", "<p>Zoals bij elke medische behandeling kunnen er bijwerkingen optreden...</p>"]
+      }
+    },
+    {
+      "name": "cards",
+      "source": "block-collection",
+      "contentModel": "standalone",
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "variants": [],
+      "description": "Grid of content cards with image and text. Used within tab panels for treatment area cards.",
+      "cellLayout": {
+        "rows": [
+          {"row": "per card", "description": "Column 1: card image | Column 2: H3/H4 title + paragraph + optional link"}
+        ],
+        "maxCellsPerRow": 2
+      },
+      "authoringExample": {
+        "blockTable": "Cards",
+        "row1": ["[contour-treatment.jpg]", "<h3>Versterk contouren</h3><p>Contouren van kin en kaaklijn versterken.</p><a href='/nl/treatment/enhance'>Meer informatie</a>"],
+        "row2": ["[eye-treatment.jpg]", "<h3>Stralende oogopslag</h3><p>Fijne lijntjes gladstrijken.</p><a href='/nl/treatment/eye-area'>Meer informatie</a>"]
+      }
+    },
+    {
+      "name": "clinic-finder",
+      "source": "custom",
+      "contentModel": "configuration",
+      "usedByArchetypes": ["homepage", "treatment-page", "clinic-finder"],
+      "variants": ["clinic-finder", "clinic-finder (compact)"],
+      "description": "Interactive clinic search with Google Maps. Full-page variant for /find-a-clinic, compact variant as CTA on content pages.",
+      "cellLayout": {
+        "rows": [
+          {"row": 1, "description": "heading | Vind een kliniek bij jou in de buurt"},
+          {"row": 2, "description": "placeholder | Voer je postcode of stad in"},
+          {"row": 3, "description": "api-key | (Google Maps API key)"},
+          {"row": 4, "description": "country | NL"}
+        ],
+        "maxCellsPerRow": 2
+      },
+      "authoringExample": {
+        "blockTable": "Clinic-Finder (compact)",
+        "row1": ["heading", "Vind een kliniek bij jou in de buurt"],
+        "row2": ["placeholder", "Voer je postcode of stad in"],
+        "row3": ["api-key", "AIza..."],
+        "row4": ["country", "NL"]
+      },
+      "customBlockSpec": {
+        "complexity": "high",
+        "jsFeatures": ["Google Maps JavaScript API", "Places Autocomplete", "Clinic Locator API integration", "City quick-links"],
+        "externalDependencies": ["Google Maps JavaScript API", "Allergan/AbbVie Clinic Locator API"]
+      },
+      "fragmentNote": "Compact variant shared across homepage + treatment pages. Author as /fragments/clinic-finder-cta."
+    },
+    {
+      "name": "topic-menu",
+      "source": "custom",
+      "contentModel": "standalone",
+      "usedByArchetypes": ["faq"],
+      "variants": [],
+      "description": "Sticky horizontal anchor navigation for FAQ page sections. Highlights active section via scrollspy.",
+      "cellLayout": {
+        "rows": [
+          {"row": 1, "description": "Unordered list of anchor links (#about-juvederm, #duration, #results, etc.)"}
+        ],
+        "maxCellsPerRow": 1
+      },
+      "authoringExample": {
+        "blockTable": "Topic-Menu",
+        "row1": ["<ul><li><a href='#about-juvederm'>Over Juvéderm®</a></li><li><a href='#duration'>Kosten</a></li><li><a href='#results'>Langdurige resultaten</a></li><li><a href='#side-effects'>Veiligheid</a></li><li><a href='#facial-areas'>Zones van het gezicht</a></li></ul>"]
+      },
+      "customBlockSpec": {
+        "complexity": "low",
+        "jsFeatures": ["Sticky positioning", "IntersectionObserver scrollspy", "Smooth scroll", "Active link highlighting"]
+      }
+    },
+    {
+      "name": "fragment",
+      "source": "block-collection",
+      "contentModel": "standalone",
+      "usedByArchetypes": ["homepage", "treatment-page", "faq", "clinic-finder", "contact", "legal"],
+      "variants": [],
+      "description": "Reusable content inclusion via .plain.html. Used to load shared fragments (treatment-tabs, clinic-finder CTA, pharma notice).",
+      "cellLayout": {
+        "rows": [
+          {"row": 1, "description": "Fragment path (e.g. /fragments/treatment-tabs)"}
+        ],
+        "maxCellsPerRow": 1
+      },
+      "authoringExample": {
+        "blockTable": "Fragment",
+        "row1": ["/fragments/treatment-tabs"]
+      }
+    }
+  ],
+
+  "archetypeBlueprints": {
+    "homepage": {
+      "edsPath": "/nl",
+      "description": "Main landing page with hero, benefits, treatment explorer, and clinic finder CTA",
+      "sections": [
+        {
+          "name": "hero",
+          "style": null,
+          "layout": "full-width",
+          "sequences": [
+            {
+              "type": "block",
+              "block": "hero",
+              "variant": null,
+              "content": "Background: key visual (Sofie image). H1: 'Jouw unieke schoonheid'. Subtext intro paragraph."
+            }
+          ]
+        },
+        {
+          "name": "brand-introduction",
+          "style": "scroll-reveal",
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "H2: 'Accentueer je mooiste gezichtskenmerken met JUVÉDERM®'. Large portrait image (Lily). Intro paragraph about JUVÉDERM® product range."
+            }
+          ]
+        },
+        {
+          "name": "benefits",
+          "style": "highlight",
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "H1: 'Waarom JUVÉDERM®?'"
+            },
+            {
+              "type": "block",
+              "block": "columns",
+              "variant": "highlights",
+              "content": "4 columns: natural look (H3+p), leading brand (H3+p), lasting results (H3+p), patient satisfaction (H3+p)"
+            }
+          ]
+        },
+        {
+          "name": "footnotes-1",
+          "style": "references",
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "Small-text footnotes for benefit claims (references 1-17). Superscript markers match headings above."
+            }
+          ]
+        },
+        {
+          "name": "treatment-explorer",
+          "style": null,
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "H2: 'Bekijk de mogelijkheden van JUVÉDERM®'"
+            },
+            {
+              "type": "block",
+              "block": "fragment",
+              "variant": null,
+              "content": "/fragments/treatment-tabs"
+            }
+          ]
+        },
+        {
+          "name": "clinic-finder-cta",
+          "style": null,
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "block",
+              "block": "fragment",
+              "variant": null,
+              "content": "/fragments/clinic-finder-cta"
+            }
+          ]
+        },
+        {
+          "name": "pharma-notice",
+          "style": "pharma-notice",
+          "layout": "full-width",
+          "sequences": [
+            {
+              "type": "block",
+              "block": "fragment",
+              "variant": null,
+              "content": "/fragments/pharma-notice"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "title": "JUVÉDERM Nederlands",
+        "description": "Juvéderm® facial fillers help to enhance, restore or hydrate your features. Embrace what makes you, you.",
+        "template": "homepage",
+        "og:image": "key-visual-sofie.jpg"
+      }
+    },
+
+    "treatment-page": {
+      "edsPath": "/nl/treatment/{treatment-slug}",
+      "description": "Treatment-specific page. 5 instances: lips, eye-area, enhance, restore, male. All follow same template.",
+      "sections": [
+        {
+          "name": "hero",
+          "style": null,
+          "layout": "full-width",
+          "sequences": [
+            {
+              "type": "block",
+              "block": "hero",
+              "variant": null,
+              "content": "Background: treatment-specific key visual. H1: treatment title (e.g., 'Aantrekkelijke lippen'). Note: some pages use hero (video) variant with Vimeo background."
+            }
+          ]
+        },
+        {
+          "name": "treatment-intro",
+          "style": null,
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "H2: treatment subtitle (e.g., 'Vollere lippen dankzij JUVÉDERM®'). 1-2 paragraphs describing the treatment area."
+            }
+          ]
+        },
+        {
+          "name": "benefits",
+          "style": "highlight",
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "block",
+              "block": "columns",
+              "variant": "highlights",
+              "content": "3 columns: benefit 1 (H4+p), benefit 2 (H4+p), benefit 3 (H4+p). Treatment-specific benefits."
+            }
+          ]
+        },
+        {
+          "name": "products",
+          "style": null,
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "H2: 'JUVÉDERM® maakt het verschil'. H3: 'Versterk je gelaatstrekken met JUVÉDERM® fillers'."
+            },
+            {
+              "type": "block",
+              "block": "carousel",
+              "variant": "product-cards",
+              "content": "5-6 product cards: VOLBELLA, VOLIFT, ULTRA 4, ULTRA 3, ULTRA 2, etc. Each with product image, H4 name, description."
+            }
+          ]
+        },
+        {
+          "name": "before-after",
+          "style": null,
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "block",
+              "block": "before-after",
+              "variant": null,
+              "content": "1-3 before/after comparison pairs for this treatment area."
+            }
+          ]
+        },
+        {
+          "name": "faq-teaser",
+          "style": null,
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "H5: 'Ontdek het antwoord op je vraag'"
+            },
+            {
+              "type": "block",
+              "block": "accordion",
+              "variant": "faq",
+              "content": "3-5 treatment-specific FAQ items (e.g., consultation expectations, side effects, how fillers work, timeline). Each row: question | answer content."
+            },
+            {
+              "type": "default-content",
+              "content": "CTA link: 'Meer' → /nl/qa"
+            }
+          ]
+        },
+        {
+          "name": "treatment-explorer",
+          "style": null,
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "H2: 'Jouw behandeling met JUVÉDERM®'"
+            },
+            {
+              "type": "block",
+              "block": "fragment",
+              "variant": null,
+              "content": "/fragments/treatment-tabs"
+            }
+          ]
+        },
+        {
+          "name": "clinic-finder-cta",
+          "style": null,
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "block",
+              "block": "fragment",
+              "variant": null,
+              "content": "/fragments/clinic-finder-cta"
+            }
+          ]
+        },
+        {
+          "name": "pharma-notice",
+          "style": "pharma-notice",
+          "layout": "full-width",
+          "sequences": [
+            {
+              "type": "block",
+              "block": "fragment",
+              "variant": null,
+              "content": "/fragments/pharma-notice"
+            }
+          ]
+        },
+        {
+          "name": "references",
+          "style": "references",
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "Treatment-specific footnotes/citations. These are unique per treatment page, NOT a fragment."
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "title": "{Treatment} | Juvéderm® Netherlands",
+        "description": "{treatment-specific meta description}",
+        "template": "treatment-page",
+        "og:image": "{treatment-specific key visual}"
+      }
+    },
+
+    "faq": {
+      "edsPath": "/nl/qa",
+      "description": "FAQ page with topic navigation, multiple accordion sections, and anchor-linked headings.",
+      "sections": [
+        {
+          "name": "hero",
+          "style": null,
+          "layout": "full-width",
+          "sequences": [
+            {
+              "type": "block",
+              "block": "hero",
+              "variant": null,
+              "content": "Background: FAQ key visual. H1: 'Ontdek het antwoord op je vraag'."
+            }
+          ]
+        },
+        {
+          "name": "topic-navigation",
+          "style": null,
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "block",
+              "block": "topic-menu",
+              "variant": null,
+              "content": "Anchor links: Over Juvéderm® (#about-juvederm), Kosten (#duration), Langdurige resultaten (#results), Veiligheid (#side-effects), Zones van het gezicht (#facial-areas)"
+            }
+          ]
+        },
+        {
+          "name": "about-juvederm",
+          "style": null,
+          "layout": "contained",
+          "sectionId": "about-juvederm",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "H2: 'Wat is JUVÉDERM®?'. Info cards (H4 headings: product range, lasting results, unique plan, high quality) with supporting paragraphs."
+            },
+            {
+              "type": "default-content",
+              "content": "H3: 'Wat zijn fillers?' with answer paragraph. H3: 'Wat is hyaluronzuur?' with answer paragraph."
+            },
+            {
+              "type": "default-content",
+              "content": "H3: 'Belangrijkste leerpunten' — summary bullets."
+            }
+          ]
+        },
+        {
+          "name": "treatment-prep",
+          "style": null,
+          "layout": "contained",
+          "sectionId": "side-effects",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "H2: 'Voorbereiding op jouw behandeling met JUVÉDERM®'. H3: 'Zijn er bijwerkingen van JUVÉDERM®?' with answer content."
+            },
+            {
+              "type": "default-content",
+              "content": "H3: 'Belangrijkste leerpunten' — summary bullets."
+            }
+          ]
+        },
+        {
+          "name": "consultation",
+          "style": null,
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "H2: 'Wat kan ik verwachten tijdens mijn consult?'. H3: treatment process, H3: pain expectations with answer paragraphs."
+            },
+            {
+              "type": "default-content",
+              "content": "H3: 'Belangrijkste leerpunten' — summary bullets."
+            }
+          ]
+        },
+        {
+          "name": "costs-results",
+          "style": null,
+          "layout": "contained",
+          "sectionId": "duration",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "H2: 'Hoeveel kost een JUVÉDERM® behandeling?'. H3: 'Hoelang blijven de resultaten zichtbaar?' with H4 subheading on 9-24 month results. H3: 'Zijn de resultaten blijvend?'"
+            },
+            {
+              "type": "default-content",
+              "content": "H3: 'Belangrijkste leerpunten' — summary bullets."
+            }
+          ]
+        },
+        {
+          "name": "facial-areas",
+          "style": null,
+          "layout": "contained",
+          "sectionId": "facial-areas",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "H2: 'Waar in mijn gezicht kunnen fillers van JUVÉDERM® worden gebruikt?'. H4 overview paragraph. Treatment area descriptions."
+            }
+          ]
+        },
+        {
+          "name": "references",
+          "style": "references",
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "Footnotes/citations for FAQ content."
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "title": "Veelgestelde vragen Juvederm | Juvéderm® Netherlands",
+        "description": "JUVÉDERM® is a collection of injectable facial fillers...",
+        "template": "faq"
+      }
+    },
+
+    "clinic-finder": {
+      "edsPath": "/nl/find-a-clinic",
+      "description": "Full-page clinic finder with Google Maps integration and city quick-links. Also covers /nl/clinics and /nl/clinic (results views).",
+      "sections": [
+        {
+          "name": "clinic-search",
+          "style": null,
+          "layout": "full-width",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "H1: 'Vind een kliniek bij jou in de buurt'"
+            },
+            {
+              "type": "block",
+              "block": "clinic-finder",
+              "variant": null,
+              "content": "Full-page layout. Config: heading, search placeholder, API key, country=NL. Quick city links: Amsterdam, Rotterdam, Den Haag, Utrecht."
+            }
+          ]
+        },
+        {
+          "name": "pharma-notice",
+          "style": "pharma-notice",
+          "layout": "full-width",
+          "sequences": [
+            {
+              "type": "block",
+              "block": "fragment",
+              "variant": null,
+              "content": "/fragments/pharma-notice"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "title": "Vind een kliniek | Juvéderm® Netherlands",
+        "description": "Find the right clinic for you",
+        "template": "clinic-finder"
+      }
+    },
+
+    "contact": {
+      "edsPath": "/nl/contact-us",
+      "description": "Simple contact information page. Minimal blocks — mostly default content.",
+      "sections": [
+        {
+          "name": "contact-info",
+          "style": null,
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "H2: 'NEEM CONTACT OP'. Company name, address (Wegalaan 9, 2132 JD Hoofddorp), phone (+31 (0) 88 322 2843), email (infonederland@abbvie.com). Side effect reporting information."
+            }
+          ]
+        },
+        {
+          "name": "pharma-notice",
+          "style": "pharma-notice",
+          "layout": "full-width",
+          "sequences": [
+            {
+              "type": "block",
+              "block": "fragment",
+              "variant": null,
+              "content": "/fragments/pharma-notice"
+            }
+          ]
+        },
+        {
+          "name": "legal-footer-text",
+          "style": "references",
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "Allergan Aesthetics/AbbVie legal notices, model disclaimers, document reference (NL-JUV-230072)."
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "title": "Neem contact op",
+        "description": "",
+        "template": "contact"
+      }
+    },
+
+    "legal": {
+      "edsPath": "/nl/disclaimer",
+      "description": "Long-form legal text pages. Covers /nl/disclaimer and /nl/algemene-voorwaarden-kliniekzoeker. No interactive blocks.",
+      "sections": [
+        {
+          "name": "legal-content",
+          "style": null,
+          "layout": "contained",
+          "sequences": [
+            {
+              "type": "default-content",
+              "content": "H2: page-specific title (e.g., 'Disclaimer'). Multiple paragraphs of legal text. All default content — no blocks needed."
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "title": "Social media disclaimer | Juvéderm® Netherlands",
+        "description": "",
+        "template": "legal"
+      }
+    }
+  },
+
+  "pageToArchetypeMapping": {
+    "https://www.juvederm.nl": {"archetype": "homepage", "edsPath": "/", "note": "Root URL redirects to /nl. Create as redirect in redirects.xlsx."},
+    "https://www.juvederm.nl/nl": {"archetype": "homepage", "edsPath": "/nl"},
+    "https://www.juvederm.nl/nl/treatment/lips": {"archetype": "treatment-page", "edsPath": "/nl/treatment/lips"},
+    "https://www.juvederm.nl/nl/treatment/eye-area": {"archetype": "treatment-page", "edsPath": "/nl/treatment/eye-area"},
+    "https://www.juvederm.nl/nl/treatment/enhance": {"archetype": "treatment-page", "edsPath": "/nl/treatment/enhance"},
+    "https://www.juvederm.nl/nl/treatment/restore": {"archetype": "treatment-page", "edsPath": "/nl/treatment/restore"},
+    "https://www.juvederm.nl/nl/treatment/male": {"archetype": "treatment-page", "edsPath": "/nl/treatment/male"},
+    "https://www.juvederm.nl/nl/qa": {"archetype": "faq", "edsPath": "/nl/qa"},
+    "https://www.juvederm.nl/nl/find-a-clinic": {"archetype": "clinic-finder", "edsPath": "/nl/find-a-clinic"},
+    "https://www.juvederm.nl/nl/clinics": {"archetype": "clinic-finder", "edsPath": "/nl/clinics", "note": "Clinic results page. Same template as find-a-clinic with location query param."},
+    "https://www.juvederm.nl/nl/clinic": {"archetype": "clinic-finder", "edsPath": "/nl/clinic", "note": "Single clinic detail page. May need separate clinic-detail archetype if content differs."},
+    "https://www.juvederm.nl/nl/disclaimer": {"archetype": "legal", "edsPath": "/nl/disclaimer"},
+    "https://www.juvederm.nl/nl/contact-us": {"archetype": "contact", "edsPath": "/nl/contact-us"},
+    "https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker": {"archetype": "legal", "edsPath": "/nl/algemene-voorwaarden-kliniekzoeker"}
+  },
+
+  "globalElements": {
+    "navigation": {
+      "path": "/nav",
+      "description": "Global navigation loaded by header block",
+      "structure": {
+        "sections": [
+          {
+            "name": "brand-bar",
+            "content": "Logo image (JUVÉDERM® logo) linked to /nl. Nav brand bar."
+          },
+          {
+            "name": "primary-nav",
+            "content": "Unordered list of treatment links: Lippen (/nl/treatment/lips), Ogen (/nl/treatment/eye-area), Accentueren (/nl/treatment/enhance), Herstel (/nl/treatment/restore), Man (/nl/treatment/male)"
+          },
+          {
+            "name": "faq-dropdown",
+            "content": "Dropdown menu label: 'FAQ'. Submenu links: Over Juvéderm® (/nl/qa#about-juvederm), Kosten (/nl/qa#duration), Langdurige resultaten (/nl/qa#results), Veiligheid (/nl/qa#side-effects), Zones van het gezicht (/nl/qa#facial-areas)"
+          },
+          {
+            "name": "cta",
+            "content": "CTA button: 'Vind je kliniek' → /nl/find-a-clinic (primary-outline style)"
+          }
+        ]
+      }
+    },
+    "footer": {
+      "path": "/footer",
+      "description": "Global footer built from pseudo-footer content that lives in each page body (accordion + navigation-list). The AEM <footer> element is empty.",
+      "structure": {
+        "sections": [
+          {
+            "name": "footer-nav",
+            "content": "Accordion block with 2 groups: 'Behandeling' (treatment links: Lippen, Ogen, Accentueren, Herstel, Man) and 'FAQ' (anchor links to FAQ sections: Over Juvéderm®, Kosten, Langdurige resultaten, Veiligheid, Zones van het gezicht)"
+          },
+          {
+            "name": "legal-bar",
+            "content": "Default content: Allergan Aesthetics logo linked to allerganaesthetics.nl. Links: Neem contact op (/nl/contact-us), Privacy beleid (https://www.abbvie.nl/privacy.html)"
+          },
+          {
+            "name": "social-copyright",
+            "content": "Social links: Instagram (instagram.com/juvederm.nl), Facebook (facebook.com/juvederm.nl). Copyright: 'Materialen geleverd door Allergan Aesthetics, een bedrijf van AbbVie...'"
+          }
+        ]
+      },
+      "migrationNote": "AEM footer element is empty. Footer content is actually rendered inside the page body as an accordion and navigation-list components. Extract this content and author it as the /footer document in EDS."
+    },
+    "metadataDefaults": {
+      "all": {
+        "og:type": "website",
+        "og:site_name": "JUVÉDERM® Netherlands",
+        "og:locale": "nl_NL",
+        "twitter:card": "summary_large_image"
+      },
+      "homepage": {
+        "template": "homepage"
+      },
+      "treatment-page": {
+        "template": "treatment-page"
+      },
+      "faq": {
+        "template": "faq"
+      },
+      "clinic-finder": {
+        "template": "clinic-finder",
+        "robots": "noindex"
+      },
+      "contact": {
+        "template": "contact"
+      },
+      "legal": {
+        "template": "legal"
+      }
+    },
+    "bulkMetadata": {
+      "path": "/metadata.xlsx",
+      "rules": [
+        {"urlPattern": "/**", "og:site_name": "JUVÉDERM® Netherlands", "og:locale": "nl_NL"},
+        {"urlPattern": "/nl/treatment/**", "template": "treatment-page"},
+        {"urlPattern": "/nl/qa", "template": "faq"},
+        {"urlPattern": "/nl/find-a-clinic", "template": "clinic-finder"},
+        {"urlPattern": "/nl/clinics", "template": "clinic-finder"},
+        {"urlPattern": "/nl/contact-us", "template": "contact"},
+        {"urlPattern": "/nl/disclaimer", "template": "legal"},
+        {"urlPattern": "/nl/algemene-voorwaarden-kliniekzoeker", "template": "legal"}
+      ]
+    }
+  },
+
+  "fragments": {
+    "inventory": [
+      {
+        "name": "treatment-tabs",
+        "path": "/fragments/treatment-tabs",
+        "usedBy": ["homepage", "treatment-page (all 5)"],
+        "description": "Female/Male treatment area explorer. Tabs block with VROUWELIJK/MANNELIJK labels. Each tab panel contains treatment area cards (image + heading + text + link). Content is identical across all pages.",
+        "content": {
+          "blocks": ["tabs"],
+          "defaultContent": ["H2 section heading: 'Jouw behandeling met JUVÉDERM®'"]
+        }
+      },
+      {
+        "name": "clinic-finder-cta",
+        "path": "/fragments/clinic-finder-cta",
+        "usedBy": ["homepage", "treatment-page (all 5)"],
+        "description": "Compact clinic finder widget as page CTA. Includes heading and clinic-finder (compact) block.",
+        "content": {
+          "blocks": ["clinic-finder (compact)"],
+          "defaultContent": ["H2: 'Vind een kliniek bij jou in de buurt'"]
+        }
+      },
+      {
+        "name": "pharma-notice",
+        "path": "/fragments/pharma-notice",
+        "usedBy": ["homepage", "treatment-page (all 5)", "faq", "clinic-finder", "contact"],
+        "description": "Required pharmaceutical disclaimer. Warning icon + text. Identical on all pages. Section style: pharma-notice.",
+        "content": {
+          "blocks": [],
+          "defaultContent": ["Warning icon image", "Disclaimer text: 'Kijk uit. Jezelf mooier maken kan lelijk uitpakken. Een geslaagde ingreep begint bij een goede arts.'"],
+          "sectionStyle": "pharma-notice"
+        }
+      }
+    ]
+  },
+
+  "migrationRules": {
+    "componentToBlockMapping": [
+      {"aemComponent": "teaser", "edsBlock": "hero", "notes": "Teaser component with background image becomes hero block. Content cell: H1 + text + optional CTA."},
+      {"aemComponent": "title + text (in container)", "edsBlock": "columns (highlights)", "notes": "Multiple title+text pairs in a grid container become columns block. Section style 'highlight' for branded background."},
+      {"aemComponent": "carousel + card", "edsBlock": "carousel (product-cards)", "notes": "Card components inside carousel become carousel block rows. Each slide: image | H4 + text."},
+      {"aemComponent": "comparison-slider", "edsBlock": "before-after", "notes": "Custom block. Each slider pair becomes one row: before-image | after-image."},
+      {"aemComponent": "tabs", "edsBlock": "tabs", "notes": "Tab labels map to column 1, tab content to column 2. One row per tab."},
+      {"aemComponent": "accordion", "edsBlock": "accordion (faq)", "notes": "Accordion items: label as column 1, body as column 2. One row per item."},
+      {"aemComponent": "location-services", "edsBlock": "clinic-finder", "notes": "Configuration block. Key-value rows for heading, placeholder, API key, country."},
+      {"aemComponent": "navigation-list (footer)", "edsBlock": "accordion (in /footer)", "notes": "Footer navigation-list groups become accordion block inside /footer document."},
+      {"aemComponent": "navigation-list (topic)", "edsBlock": "topic-menu", "notes": "FAQ topic navigation becomes topic-menu custom block with anchor link list."},
+      {"aemComponent": "embed / video-plyr", "edsBlock": "hero (video) or auto-block", "notes": "Vimeo URLs in hero context use hero (video) variant. Standalone Vimeo URLs auto-block as embed."},
+      {"aemComponent": "scrollreveal", "edsBlock": null, "notes": "CSS-only. Apply section style 'scroll-reveal'. Implement via IntersectionObserver in scripts.js."},
+      {"aemComponent": "modal", "edsBlock": null, "notes": "Modals (OneTrust cookie, privacy) are handled outside EDS content layer. OneTrust loaded via delayed.js."},
+      {"aemComponent": "header / navigation", "edsBlock": "header (boilerplate)", "notes": "Auto-loaded from /nav document. No block table needed in page content."},
+      {"aemComponent": "container (generic)", "edsBlock": null, "notes": "AEM containers map to EDS sections via --- separator. Style metadata applied as section metadata."}
+    ],
+    "contentTransformations": [
+      {
+        "rule": "superscript-references",
+        "description": "Superscript reference markers (e.g., ®, †, ‡, 1-28) appear inline in headings and paragraphs. Preserve as <sup> elements in authored content. Example: 'Langdurige resultaten*<sup>4</sup>'.",
+        "implementation": "Author uses superscript formatting in Google Docs/Word. EDS preserves <sup> tags."
+      },
+      {
+        "rule": "pharma-disclaimer",
+        "description": "Regulatory disclaimer is identical on all pages. Migrate as /fragments/pharma-notice fragment. Include via fragment block.",
+        "implementation": "Create fragment document once. Reference from each page using Fragment block."
+      },
+      {
+        "rule": "trademark-symbols",
+        "description": "JUVÉDERM® brand name includes ® symbol consistently. Preserve in all authored content.",
+        "implementation": "Authors type ® directly. No special handling needed."
+      },
+      {
+        "rule": "dutch-language",
+        "description": "All content is in Dutch. Placeholders sheet (placeholders.xlsx) should contain Dutch UI strings.",
+        "implementation": "Create /placeholders.xlsx with Dutch translations for: 'Voor' (Before), 'Na' (After), 'Meer informatie' (More info), 'Vind je kliniek' (Find your clinic), etc."
+      },
+      {
+        "rule": "footnote-references",
+        "description": "Footnote sections contain numbered references (1-28+). These are page-specific and differ per treatment page.",
+        "implementation": "Author as default content in a section with style 'references'. Each page has its own footnotes, not a fragment."
+      },
+      {
+        "rule": "privacy-banner-text",
+        "description": "OneTrust cookie consent and 'See our new privacy terms' modal. Not part of page content.",
+        "implementation": "Load OneTrust via delayed.js. Remove privacy banner text from page content during migration."
+      }
+    ],
+    "imageHandling": {
+      "strategy": "download-and-convert",
+      "rules": [
+        {
+          "type": "hero-backgrounds",
+          "source": "Adobe Dynamic Media (dm-aid--*)",
+          "action": "Download at max quality (width=1600, quality=85). Convert to WebP. Store in page folder.",
+          "naming": "{page-slug}-hero.webp"
+        },
+        {
+          "type": "product-images",
+          "source": "Adobe Dynamic Media",
+          "action": "Download at appropriate size. Store in page folder.",
+          "naming": "{product-name}.webp"
+        },
+        {
+          "type": "before-after-images",
+          "source": "Adobe Dynamic Media",
+          "action": "Download both before and after at matched dimensions. Store in page folder.",
+          "naming": "{treatment}-before-{n}.webp, {treatment}-after-{n}.webp"
+        },
+        {
+          "type": "icons",
+          "source": "Adobe Dynamic Media (PNG)",
+          "action": "Download as PNG. Consider SVG replacement for scalability. Store in shared /icons/ folder.",
+          "naming": "{icon-name}.png or .svg"
+        },
+        {
+          "type": "logos",
+          "source": "Adobe Dynamic Media",
+          "action": "Download. Store in root or /icons/.",
+          "naming": "juvederm-logo.svg, allergan-aesthetics-logo.svg"
+        }
+      ],
+      "dynamicMediaNotes": "All images come from Adobe Dynamic Media CDN (/adobe/dynamicmedia/deliver/dm-aid--*). Download with preferwebp=true for WebP format. These URLs will break post-migration, so all images must be downloaded and stored locally in the EDS content repository."
+    },
+    "linkTransformations": [
+      {
+        "rule": "internal-links",
+        "from": "/nl/treatment/lips",
+        "to": "/nl/treatment/lips",
+        "notes": "Internal links already use relative paths starting with /nl/. Preserve as-is. EDS will resolve them correctly."
+      },
+      {
+        "rule": "anchor-links",
+        "from": "/nl/qa#about-juvederm",
+        "to": "/nl/qa#about-juvederm",
+        "notes": "FAQ anchor links reference section IDs. Ensure corresponding sections have matching ID metadata in EDS."
+      },
+      {
+        "rule": "clinic-location-links",
+        "from": "/nl/clinics?location=AMSTERDAM,%20NL",
+        "to": "/nl/clinics?location=AMSTERDAM,%20NL",
+        "notes": "Clinic quick-links use query parameters. These are handled by the clinic-finder block JS, not content links."
+      },
+      {
+        "rule": "external-links",
+        "from": "https://www.allerganaesthetics.nl/",
+        "to": "https://www.allerganaesthetics.nl/",
+        "notes": "External links (AbbVie, Allergan, social media) preserved as-is. Add target=_blank for social links."
+      },
+      {
+        "rule": "root-redirect",
+        "from": "https://www.juvederm.nl",
+        "to": "/nl",
+        "notes": "Root URL redirects to /nl. Add to redirects.xlsx: / → /nl"
+      }
+    ]
+  },
+
+  "siteConventions": {
+    "sectionStyles": [
+      {
+        "name": "pharma-notice",
+        "description": "Dark/branded background with warning icon for pharmaceutical disclaimer. Used as fragment.",
+        "css": "Background color (dark brand), centered text, warning icon left-aligned, regulatory emphasis."
+      },
+      {
+        "name": "references",
+        "description": "Footnotes/citations with reduced typography. Muted, compact.",
+        "css": "Smaller font-size (0.75rem), muted text color, compact line-height, reduced margin/padding."
+      },
+      {
+        "name": "highlight",
+        "description": "Emphasized sections with brand background color for benefits/key messages.",
+        "css": "Brand primary background color, white/contrast text, additional vertical padding."
+      },
+      {
+        "name": "scroll-reveal",
+        "description": "Scroll-triggered fade-in animation. Homepage only.",
+        "css": "Initial opacity:0 + translateY(20px). IntersectionObserver triggers transition to opacity:1 + translateY(0)."
+      }
+    ],
+    "ctaPattern": {
+      "primary": "'Vind je kliniek' button (primary-outline) linking to /nl/find-a-clinic — appears in header nav and as page CTAs.",
+      "secondary": "'Meer informatie' text links within treatment cards linking to specific treatment pages.",
+      "social": "Instagram + Facebook buttons (primary-filled) in footer.",
+      "faqLink": "'Meer' link to /nl/qa on treatment pages after FAQ accordion teaser."
+    },
+    "imageStrategy": "download-and-convert",
+    "typography": {
+      "fontFamily": "Adobe Typekit (sic6ayn) — brand typography",
+      "loadStrategy": "Consider self-hosting for performance. Load via eager phase.",
+      "note": "Evaluate whether self-hosted WOFF2 files provide better LCP than Typekit CDN."
+    },
+    "externalScripts": {
+      "oneTrust": "Cookie consent banner. Load via delayed.js.",
+      "googleMaps": "Load only on clinic-finder pages. Use delayed loading phase."
+    }
+  },
+
+  "redirects": [
+    {"source": "/", "destination": "/nl", "note": "Root to language root"},
+    {"source": "/nl/clinic", "destination": "/nl/find-a-clinic", "note": "Consolidate clinic pages if /nl/clinic has no unique content"}
+  ],
+
+  "placeholders": {
+    "path": "/placeholders.xlsx",
+    "entries": [
+      {"key": "beforeLabel", "text": "Voor"},
+      {"key": "afterLabel", "text": "Na"},
+      {"key": "moreInfo", "text": "Meer informatie"},
+      {"key": "findClinic", "text": "Vind je kliniek"},
+      {"key": "searchPlaceholder", "text": "Voer je postcode of stad in"},
+      {"key": "female", "text": "VROUWELIJK"},
+      {"key": "male", "text": "MANNELIJK"}
+    ]
+  }
+}
