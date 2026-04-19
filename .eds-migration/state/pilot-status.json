@@ -1,49 +1,71 @@
 {
-  "lastRetry": "2026-04-19T23:10:00Z",
-  "platformIssue": "EDS_TOKEN expired on every run. Token created_at=2026-04-18T09:47:55Z, expires_in=86400s → expired 2026-04-19T09:47:55Z. All 3 chunks + retries confirmed HTTP 401 from admin.da.live. All HTML artifacts are committed to branch and ready for upload once a fresh token is provided.",
+  "site": "https://www.juvederm.nl",
+  "org": "jmffraiz",
+  "repo": "jv-test-5",
+  "lastRetry": "2026-04-19T22:40:00Z",
+  "platformIssue": "EDS_TOKEN expired on every run. Token created_at=2026-04-18T09:47:55Z, expires_in=86400s → expired 2026-04-19T09:47:55Z. Chunk-1 retry #3 confirmed 401 from admin.da.live at 22:40Z (12h52m past expiry). AEM_TOKEN env var not set. No alternative auth available. All HTML artifacts committed to branch under .eds-migration/pages/ — ready for upload once a fresh token is provided.",
+  "tokenExpiry": "2026-04-19T09:47:55Z",
   "pages": [
     {
       "url": "https://www.juvederm.nl/nl",
-      "edsPath": "/nl",
-      "htmlArtifact": ".eds-migration/pages/nl/index.html",
+      "path": "/nl",
+      "archetype": "homepage",
       "status": "html-ready",
-      "failureReason": "EDS_TOKEN expired. Upload blocked by 401."
+      "daUploaded": false,
+      "htmlArtifact": ".eds-migration/pages/nl/index.html",
+      "retryAttempts": 3,
+      "failureReason": "EDS_TOKEN expired (401). Token expired 2026-04-19T09:47:55Z, now 2026-04-19T22:40Z. No alternative token available."
     },
     {
       "url": "https://www.juvederm.nl/nl/treatment/lips",
-      "edsPath": "/nl/treatment/lips",
-      "htmlArtifact": ".eds-migration/pages/nl/treatment/lips/index.html",
+      "path": "/nl/treatment/lips",
+      "archetype": "treatment-page",
       "status": "html-ready",
-      "failureReason": "EDS_TOKEN expired. Upload blocked by 401."
+      "daUploaded": false,
+      "htmlArtifact": ".eds-migration/pages/nl/treatment/lips/index.html",
+      "retryAttempts": 3,
+      "failureReason": "EDS_TOKEN expired (401). Token expired 2026-04-19T09:47:55Z, now 2026-04-19T22:40Z. No alternative token available."
     },
     {
       "url": "https://www.juvederm.nl/nl/qa",
-      "edsPath": "/nl/qa",
-      "htmlArtifact": ".eds-migration/pages/nl/qa.html",
+      "path": "/nl/qa",
+      "archetype": "faq-page",
       "status": "html-ready",
-      "failureReason": "EDS_TOKEN expired. Upload blocked by 401."
+      "daUploaded": false,
+      "htmlArtifact": ".eds-migration/pages/nl/qa.html",
+      "retryAttempts": 0,
+      "failureReason": "EDS_TOKEN expired. Not retried in chunk 1/3 scope."
     },
     {
       "url": "https://www.juvederm.nl/nl/find-a-clinic",
-      "edsPath": "/nl/find-a-clinic",
-      "htmlArtifact": ".eds-migration/pages/nl/find-a-clinic.html",
+      "path": "/nl/find-a-clinic",
+      "archetype": "find-a-clinic",
       "status": "html-ready",
-      "failureReason": "EDS_TOKEN expired. Upload blocked by 401."
+      "daUploaded": false,
+      "htmlArtifact": ".eds-migration/pages/nl/find-a-clinic.html",
+      "retryAttempts": 0,
+      "failureReason": "EDS_TOKEN expired. Not retried in chunk 1/3 scope."
     },
     {
       "url": "https://www.juvederm.nl/nl/disclaimer",
-      "edsPath": "/nl/disclaimer",
-      "htmlArtifact": ".eds-migration/pages/nl/disclaimer.html",
+      "path": "/nl/disclaimer",
+      "archetype": "legal-page",
       "status": "html-ready",
-      "failureReason": "EDS_TOKEN expired. Upload blocked by 401."
+      "daUploaded": false,
+      "htmlArtifact": ".eds-migration/pages/nl/disclaimer.html",
+      "retryAttempts": 0,
+      "failureReason": "EDS_TOKEN expired. Not retried in chunk 1/3 scope."
     },
     {
       "url": "https://www.juvederm.nl/nl/contact-us",
-      "edsPath": "/nl/contact-us",
-      "htmlArtifact": ".eds-migration/pages/nl/contact-us.html",
+      "path": "/nl/contact-us",
+      "archetype": "contact-page",
       "status": "html-ready",
-      "failureReason": "EDS_TOKEN expired. Upload blocked by 401."
+      "daUploaded": false,
+      "htmlArtifact": ".eds-migration/pages/nl/contact-us.html",
+      "retryAttempts": 0,
+      "failureReason": "EDS_TOKEN expired. Not retried in chunk 1/3 scope."
     }
   ],
-  "actionRequired": "Provide a fresh EDS_TOKEN (valid IMS access token for jmffraiz/jv-test-5). All 6 HTML artifacts are committed to .eds-migration/pages/nl/ and ready to upload."
+  "resolution": "Provide a fresh EDS_TOKEN / AEM_TOKEN with scope aem.frontend.all. All HTML artifacts are committed and ready. Re-run upload-only task once token is refreshed."
 }

@@ -9,15 +9,15 @@
   "imageRatio": 0.82,
   "published": false,
   "daUploaded": false,
-  "failureReason": "EDS_TOKEN expired on all attempts. Token created_at=2026-04-18T09:47:55Z, expires_in=86400s → expired 2026-04-19T09:47:55Z. Retry chunk1 attempted 2026-04-19T22:38Z (13h past expiry). da.live Source API returns HTTP 401. HTML artifact committed to branch at .eds-migration/pages/nl/index.html — ready for upload once a fresh token is provided.",
+  "failureReason": "EDS_TOKEN expired on all attempts. Token created_at=2026-04-18T09:47:55Z, expires_in=86400s → expired 2026-04-19T09:47:55Z. Chunk1 retry #3 attempted 2026-04-19T22:40Z (12h52m past expiry). da.live Source API returns HTTP 401. No alternative token (AEM_TOKEN not set). HTML artifact committed to branch at .eds-migration/pages/nl/index.html — ready for upload once a fresh token is provided.",
   "artifactPath": ".eds-migration/pages/nl/index.html",
-  "retryAttempts": 2,
-  "lastRetry": "2026-04-19T22:38:00Z",
+  "retryAttempts": 3,
+  "lastRetry": "2026-04-19T22:40:00Z",
   "blocksUsed": ["hero", "columns (highlights)", "before-after", "tabs", "clinic-finder (compact)", "fragment", "metadata"],
   "selfCheck": {
     "textLenRatio": 1.13,
     "imageRatio": 0.82,
     "pass": true,
-    "notes": "Text ratio >1 (generated includes more formatted text). Image ratio 0.82 (9/11 unique dm-aid images). No console errors checked - could not render preview due to token expiry."
+    "notes": "Text ratio >1 (generated includes more formatted text). Image ratio 0.82 (9/11 unique dm-aid images). Preview render skipped — could not upload due to token expiry."
   }
 }

@@ -9,15 +9,15 @@
   "imageRatio": 0.92,
   "published": false,
   "daUploaded": false,
-  "failureReason": "EDS_TOKEN expired on all attempts. Token created_at=2026-04-18T09:47:55Z, expires_in=86400s → expired 2026-04-19T09:47:55Z. Retry chunk1 attempted 2026-04-19T22:38Z (13h past expiry). da.live Source API returns HTTP 401. HTML artifact committed to branch at .eds-migration/pages/nl/treatment/lips/index.html — ready for upload once a fresh token is provided.",
+  "failureReason": "EDS_TOKEN expired on all attempts. Token created_at=2026-04-18T09:47:55Z, expires_in=86400s → expired 2026-04-19T09:47:55Z. Chunk1 retry #3 attempted 2026-04-19T22:40Z (12h52m past expiry). da.live Source API returns HTTP 401. No alternative token (AEM_TOKEN not set). HTML artifact committed to branch at .eds-migration/pages/nl/treatment/lips/index.html — ready for upload once a fresh token is provided.",
   "artifactPath": ".eds-migration/pages/nl/treatment/lips/index.html",
-  "retryAttempts": 2,
-  "lastRetry": "2026-04-19T22:38:00Z",
+  "retryAttempts": 3,
+  "lastRetry": "2026-04-19T22:40:00Z",
   "blocksUsed": ["hero", "carousel", "before-after", "carousel (product-cards)", "accordion (faq)", "tabs", "clinic-finder (compact)", "fragment", "metadata"],
   "selfCheck": {
     "textLenRatio": 0.68,
     "imageRatio": 0.92,
     "pass": true,
-    "notes": "Text ratio 0.68 (above 0.50 threshold). Source page has large repeated reference lists and navigation chrome that inflate the source text count. Image ratio 0.92 (12/13). No console errors checked - could not render preview due to token expiry."
+    "notes": "Text ratio 0.68 (above 0.50 threshold). Image ratio 0.92 (12/13). Preview render skipped — could not upload due to token expiry."
   }
 }
