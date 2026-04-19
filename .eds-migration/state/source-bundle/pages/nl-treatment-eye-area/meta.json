@@ -1,0 +1,65 @@
+{
+  "url": "https://www.juvederm.nl/nl/treatment/eye-area",
+  "finalUrl": "https://www.juvederm.nl/nl/treatment/eye-area",
+  "title": " Juvederm en ogen | Juvéderm® Netherlands",
+  "metaDescription": "As time goes by, our skin’s hydration and natural elasticity decrease, and you may start to notice fine lines and crow’s feet begin to form. To express who you truly are, JUVÉDERM® facial fillers can help refresh your face, softening fine lines around your mouth, and eyes, and reducing folds for a bright, youthful appearance.",
+  "archetype": "treatment-page",
+  "httpStatus": 200,
+  "slug": "nl-treatment-eye-area",
+  "priority": "high",
+  "viewport_sizes": {
+    "desktop": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "settle_strategy": "domcontentloaded + networkidle + main.textLength stable 500ms x2, dismissed #onetrust-accept-btn-handler",
+  "captured_at": "2026-04-19T20:53:35.901Z",
+  "redirects": [
+    {
+      "from": "https://14175604.fls.doubleclick.net/activityi;src=14175604;type=invmedia;cat=rmk-j0;rcb=18;ord=2210265596909;npa=0;auiddc=1560767349.1776632005;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115616986~115938466~115938469~117266401;epver=2;dc_random=1776632004_-c62j8ol9dw8IcAOLKxGyc6XSn2JLCNNmA;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area?",
+      "status": 302,
+      "to": "https://14175604.fls.doubleclick.net/activityi;dc_pre=CLa9oPzl-pMDFb7e9QIdQo8eaQ;src=14175604;type=invmedia;cat=rmk-j0;rcb=18;ord=2210265596909;npa=0;auiddc=1560767349.1776632005;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115616986~115938466~115938469~117266401;epver=2;dc_random=1776632004_-c62j8ol9dw8IcAOLKxGyc6XSn2JLCNNmA;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;src=14175604;type=invmedia;cat=rmk-j0;rcb=18;ord=2210265596909;npa=0;auiddc=1560767349.1776632005;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616986~115938466~115938469~117266401;epver=2;dc_random=1776632004_-c62j8ol9dw8IcAOLKxGyc6XSn2JLCNNmA;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area?",
+      "status": 302,
+      "to": "https://ad.doubleclick.net/activity;dc_pre=CL-EoPzl-pMDFQKwAAAdUu0DlA;src=14175604;type=invmedia;cat=rmk-j0;rcb=18;ord=2210265596909;npa=0;auiddc=1560767349.1776632005;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616986~115938466~115938469~117266401;epver=2;dc_random=1776632004_-c62j8ol9dw8IcAOLKxGyc6XSn2JLCNNmA;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area?"
+    },
+    {
+      "from": "https://14175604.fls.doubleclick.net/activityi;src=14175604;type=invmedia;cat=rmk-j0;rcb=18;ord=9247510765362;npa=0;auiddc=1560767349.1776632005;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115616986~115938466~115938469~117266401;epver=2;dc_random=1776632007_8NL7AUxS0wOtM8Wqh-KBHvEkUjfWvrCw7g;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area?",
+      "status": 302,
+      "to": "https://14175604.fls.doubleclick.net/activityi;dc_pre=COrJvf3l-pMDFRnVTwIdgzgnDw;src=14175604;type=invmedia;cat=rmk-j0;rcb=18;ord=9247510765362;npa=0;auiddc=1560767349.1776632005;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115616986~115938466~115938469~117266401;epver=2;dc_random=1776632007_8NL7AUxS0wOtM8Wqh-KBHvEkUjfWvrCw7g;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;src=14175604;type=invmedia;cat=rmk-j0;rcb=18;ord=9247510765362;npa=0;auiddc=1560767349.1776632005;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616986~115938466~115938469~117266401;epver=2;dc_random=1776632007_8NL7AUxS0wOtM8Wqh-KBHvEkUjfWvrCw7g;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area?",
+      "status": 302,
+      "to": "https://ad.doubleclick.net/activity;dc_pre=CLeWvf3l-pMDFX_ATwId0yIhrQ;src=14175604;type=invmedia;cat=rmk-j0;rcb=18;ord=9247510765362;npa=0;auiddc=1560767349.1776632005;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616986~115938466~115938469~117266401;epver=2;dc_random=1776632007_8NL7AUxS0wOtM8Wqh-KBHvEkUjfWvrCw7g;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;dc_pre=CLeWvf3l-pMDFX_ATwId0yIhrQ;src=14175604;type=invmedia;cat=rmk-j0;rcb=18;ord=9247510765362;npa=0;auiddc=1560767349.1776632005;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616986~115938466~115938469~117266401;epver=2;dc_random=1776632007_8NL7AUxS0wOtM8Wqh-KBHvEkUjfWvrCw7g;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area?",
+      "status": 302,
+      "to": "https://www.google.com/gmp/conversion/_dc_unique_id=3366585421751590968;_dc_ptd=ChAI8PqRzwYQoc-Wq-Xxl9F9EisAmcZ9DM05GmNAOQP2UR00mE0MgT_smFc153Fspaiuk0WSUJcOKZOd4uAJ;_dc_time=1776632007;cid=CAQS1gEABaugfQu6CwUpAQAM1B52r5IEiaerR5yTNXlAuSEPswgorRpPyDXCWdflxyCtWMkv2yueUWpWDzkmbdti3iScqQOtrkMl1g7J-ehK-MaMabcry29XybrNKDLqHus41p99Bvm2Z74zz0G3PDiGFas18BEe4mp0voLNNVyWn9UYS3u_wk1UKqnr_wJqPUBsn7W5d_Rsfnr2ZtmSAUt5JfPZ1oZqWmvCzAhXXO1jcgFWyAp3OhiyHMCTnsZO2hhaR5aSC80bkWJ-LGwCNKuEjdMoM8x8A5yd;eps=AHas8cBMDD42trs8ekeLO3_HrCRiCTyXn5iWiIlPvZ2AMzAeKd2_8A8-pBYO4GS7CdMNX6IvoZEieXvC9CsBlWquOFFy3KCf7ItvmSXq9I7MVmI;dc_pre=CLeWvf3l-pMDFX_ATwId0yIhrQ;src=14175604;type=invmedia;cat=rmk-j0;rcb=18;ord=9247510765362;npa=0;auiddc=1560767349.1776632005;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616986~115938466~115938469~117266401;epver=2;dc_random=1776632007_8NL7AUxS0wOtM8Wqh-KBHvEkUjfWvrCw7g;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area?"
+    },
+    {
+      "from": "https://9846055.fls.doubleclick.net/activityi;src=9846055;type=verif0;cat=verif0;rcb=18;ord=1;num=9186357132785;npa=0;auiddc=1560767349.1776632005;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115616985~115938466~115938468~117266400~117884344;epver=2;dc_random=1776632007_hu2UvLOGSIwxFMmX1IMsaT3hu_INGs0drQ;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area?",
+      "status": 302,
+      "to": "https://9846055.fls.doubleclick.net/activityi;dc_pre=CM7F0_3l-pMDFULXTwIdV808Yw;src=9846055;type=verif0;cat=verif0;rcb=18;ord=1;num=9186357132785;npa=0;auiddc=1560767349.1776632005;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115616985~115938466~115938468~117266400~117884344;epver=2;dc_random=1776632007_hu2UvLOGSIwxFMmX1IMsaT3hu_INGs0drQ;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;src=9846055;type=verif0;cat=verif0;rcb=18;ord=1;num=9186357132785;npa=0;auiddc=1560767349.1776632005;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616985~115938466~115938468~117266400~117884344;epver=2;dc_random=1776632007_hu2UvLOGSIwxFMmX1IMsaT3hu_INGs0drQ;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area?",
+      "status": 302,
+      "to": "https://ad.doubleclick.net/activity;dc_pre=CKbT0v3l-pMDFTCiAAAdsWMu9g;src=9846055;type=verif0;cat=verif0;rcb=18;ord=1;num=9186357132785;npa=0;auiddc=1560767349.1776632005;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616985~115938466~115938468~117266400~117884344;epver=2;dc_random=1776632007_hu2UvLOGSIwxFMmX1IMsaT3hu_INGs0drQ;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;dc_pre=CKbT0v3l-pMDFTCiAAAdsWMu9g;src=9846055;type=verif0;cat=verif0;rcb=18;ord=1;num=9186357132785;npa=0;auiddc=1560767349.1776632005;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616985~115938466~115938468~117266400~117884344;epver=2;dc_random=1776632007_hu2UvLOGSIwxFMmX1IMsaT3hu_INGs0drQ;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area?",
+      "status": 302,
+      "to": "https://www.google.com/gmp/conversion/_dc_unique_id=13904668954529477896;_dc_ptd=ChAI8PqRzwYQoc-Wq-Xxl9F9EisAmcZ9DHrvAuhaPc7_ctYeCYHjrEFdDgNfGEPPlTN7LF90hWwCxHYm_sZc;_dc_time=1776632007;cid=CAQS1gEABaugfeddcXmEaioFqYXPcCe5DDc-f7Ft33yNE2-9wxOziCeQRscBonJKpJvdr3wYIcZ-BaMQjQJwiYU3FEVn55NEEBu6kwWEFGv3Qw2p71ICilQsWC9YlqIimy6Nbkpq1sy_wFv9eD15eezd6qbusTpAFTRpsHXJSz0ntnJ_c6Dyc-aqWFw1jn7U1jtXaw4d-rLLBf2txzVN_gEB3jlyMrjfmIZChJ0xMmus3tvlcIgmsQEXgAaci59-3bqZlIUZ229NDkOLqnl9FMN5MyjBWuTAixdO;eps=AHas8cBehDr1oJtyneQeXXXWLVf5SKZYKMkn1j6jdWanPYoXqgsAL8qgXRmTak77XPCih0NWkW68f6GUv5YK3nvP7R1YS1B5THcVAin0mMXO_99ODg;dc_pre=CKbT0v3l-pMDFTCiAAAdsWMu9g;src=9846055;type=verif0;cat=verif0;rcb=18;ord=1;num=9186357132785;npa=0;auiddc=1560767349.1776632005;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616985~115938466~115938468~117266400~117884344;epver=2;dc_random=1776632007_hu2UvLOGSIwxFMmX1IMsaT3hu_INGs0drQ;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ftreatment%2Feye-area?"
+    }
+  ],
+  "problem": null
+}

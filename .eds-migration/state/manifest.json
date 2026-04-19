@@ -1,0 +1,380 @@
+{
+  "site": "https://juvederm.nl",
+  "canonicalBase": "https://www.juvederm.nl",
+  "crawledAt": "2026-04-19T20:55:40.243Z",
+  "totalPages": 14,
+  "pages": [
+    {
+      "url": "https://www.juvederm.nl",
+      "finalUrl": "https://www.juvederm.nl/",
+      "title": "JUVÉDERM Nederlands",
+      "metaDescription": "Juvéderm® facial fillers help to enhance, restore or hydrate your features. Embrace what makes you, you.",
+      "archetype": "homepage",
+      "httpStatus": 200,
+      "slug": "homepage",
+      "depth": -1,
+      "priority": "high",
+      "screenshots": {
+        "desktop": "source-bundle/pages/homepage/desktop.png",
+        "mobile": "source-bundle/pages/homepage/mobile.png"
+      },
+      "problem": null
+    },
+    {
+      "url": "https://www.juvederm.nl/nl",
+      "finalUrl": "https://www.juvederm.nl/nl",
+      "title": "JUVÉDERM Nederlands",
+      "metaDescription": "Juvéderm® facial fillers help to enhance, restore or hydrate your features. Embrace what makes you, you.",
+      "archetype": "homepage",
+      "httpStatus": 200,
+      "slug": "nl",
+      "depth": 0,
+      "priority": "high",
+      "screenshots": {
+        "desktop": "source-bundle/pages/nl/desktop.png",
+        "mobile": "source-bundle/pages/nl/mobile.png"
+      },
+      "problem": null
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/treatment/lips",
+      "finalUrl": "https://www.juvederm.nl/nl/treatment/lips",
+      "title": " Juvederm en lippen | Juvéderm® Netherlands",
+      "metaDescription": "Beautiful lips come in all shapes and sizes, from extra full to more delicately contoured and everything in between. Whatever your desired look, products within the JUVÉDERM® range can be used to help enhance your lips by adding definition and volume without losing distinctive features.",
+      "archetype": "treatment-page",
+      "httpStatus": 200,
+      "slug": "nl-treatment-lips",
+      "depth": 2,
+      "priority": "high",
+      "screenshots": {
+        "desktop": "source-bundle/pages/nl-treatment-lips/desktop.png",
+        "mobile": "source-bundle/pages/nl-treatment-lips/mobile.png"
+      },
+      "problem": null
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/treatment/eye-area",
+      "finalUrl": "https://www.juvederm.nl/nl/treatment/eye-area",
+      "title": " Juvederm en ogen | Juvéderm® Netherlands",
+      "metaDescription": "As time goes by, our skin’s hydration and natural elasticity decrease, and you may start to notice fine lines and crow’s feet begin to form. To express who you truly are, JUVÉDERM® facial fillers can help refresh your face, softening fine lines around your mouth, and eyes, and reducing folds for a bright, youthful appearance.",
+      "archetype": "treatment-page",
+      "httpStatus": 200,
+      "slug": "nl-treatment-eye-area",
+      "depth": 2,
+      "priority": "high",
+      "screenshots": {
+        "desktop": "source-bundle/pages/nl-treatment-eye-area/desktop.png",
+        "mobile": "source-bundle/pages/nl-treatment-eye-area/mobile.png"
+      },
+      "problem": null
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/treatment/enhance",
+      "finalUrl": "https://www.juvederm.nl/nl/treatment/enhance",
+      "title": " Accentueren met Juvederm | Juvéderm® Netherlands",
+      "metaDescription": "From your cupids bow to your playful pout, your elegant contours to your charming dimples, it’s the little things that make you, you. But how do you emphasize the little wonders of you? Whether it’s a lift, plump, or volume restoration, the hyaluronic acid in JUVÉDERM® binds to water in your skin, embracing and accentuating your natural features.",
+      "archetype": "treatment-page",
+      "httpStatus": 200,
+      "slug": "nl-treatment-enhance",
+      "depth": 2,
+      "priority": "high",
+      "screenshots": {
+        "desktop": "source-bundle/pages/nl-treatment-enhance/desktop.png",
+        "mobile": "source-bundle/pages/nl-treatment-enhance/mobile.png"
+      },
+      "problem": null
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/treatment/restore",
+      "finalUrl": "https://www.juvederm.nl/nl/treatment/restore",
+      "title": " Herstel met Juvederm | Juvéderm® Netherlands",
+      "metaDescription": "Ready for a refresh? Our skin’s natural elasticity decreases over time, and as it does, you may start to notice a few volume changes across your face. Whether you’re looking to achieve a more youthful appearance or simply enhance the things that make you, you, the JUVÉDERM® range of fillers can delicately plump your lips, add volume to your cheeks, contour your chin and jawline and smooth fine lines.",
+      "archetype": "treatment-page",
+      "httpStatus": 200,
+      "slug": "nl-treatment-restore",
+      "depth": 2,
+      "priority": "high",
+      "screenshots": {
+        "desktop": "source-bundle/pages/nl-treatment-restore/desktop.png",
+        "mobile": "source-bundle/pages/nl-treatment-restore/mobile.png"
+      },
+      "problem": null
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/treatment/male",
+      "finalUrl": "https://www.juvederm.nl/nl/treatment/male",
+      "title": " Juvederm en mannen | Juvéderm® Netherlands",
+      "metaDescription": "Whether you’re looking to smooth, lift, or volumize, JUVÉDERM® can help. Crafted with hyaluronic acid, you can embrace and define your natural features in the way that you want.",
+      "archetype": "treatment-page",
+      "httpStatus": 200,
+      "slug": "nl-treatment-male",
+      "depth": 2,
+      "priority": "high",
+      "screenshots": {
+        "desktop": "source-bundle/pages/nl-treatment-male/desktop.png",
+        "mobile": "source-bundle/pages/nl-treatment-male/mobile.png"
+      },
+      "problem": null
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/qa",
+      "finalUrl": "https://www.juvederm.nl/nl/qa",
+      "title": "Veelgestelde vragen Juvederm | Juvéderm® Netherlands",
+      "metaDescription": "JUVÉDERM® is a collection of injectable facial fillers that can help enhance your facial features by plumping lips, smoothing wrinkles, or restoring lost facial volume. JUVÉDERM® delivers results that look and feel natural as its active ingredient, hyaluronic acid, is naturally occurring in our skin.",
+      "archetype": "faq",
+      "httpStatus": 200,
+      "slug": "nl-qa",
+      "depth": 1,
+      "priority": "medium",
+      "screenshots": {
+        "desktop": "source-bundle/pages/nl-qa/desktop.png",
+        "mobile": "source-bundle/pages/nl-qa/mobile.png"
+      },
+      "problem": null
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/find-a-clinic",
+      "finalUrl": "https://www.juvederm.nl/nl/find-a-clinic",
+      "title": " Vind een kliniek | Juvéderm® Netherlands",
+      "metaDescription": "Find the right clinic for you",
+      "archetype": "clinic-finder",
+      "httpStatus": 200,
+      "slug": "nl-find-a-clinic",
+      "depth": 1,
+      "priority": "medium",
+      "screenshots": {
+        "desktop": "source-bundle/pages/nl-find-a-clinic/desktop.png",
+        "mobile": "source-bundle/pages/nl-find-a-clinic/mobile.png"
+      },
+      "problem": null
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/disclaimer",
+      "finalUrl": "https://www.juvederm.nl/nl/disclaimer",
+      "title": "Social media disclaimer | Juvéderm® Netherlands",
+      "metaDescription": "",
+      "archetype": "legal",
+      "httpStatus": 200,
+      "slug": "nl-disclaimer",
+      "depth": 1,
+      "priority": "low",
+      "screenshots": {
+        "desktop": "source-bundle/pages/nl-disclaimer/desktop.png",
+        "mobile": "source-bundle/pages/nl-disclaimer/mobile.png"
+      },
+      "problem": null
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/contact-us",
+      "finalUrl": "https://www.juvederm.nl/nl/contact-us",
+      "title": "Neem contact op",
+      "metaDescription": "",
+      "archetype": "contact",
+      "httpStatus": 200,
+      "slug": "nl-contact-us",
+      "depth": 1,
+      "priority": "medium",
+      "screenshots": {
+        "desktop": "source-bundle/pages/nl-contact-us/desktop.png",
+        "mobile": "source-bundle/pages/nl-contact-us/mobile.png"
+      },
+      "problem": null
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/clinics",
+      "finalUrl": "https://www.juvederm.nl/nl/clinics",
+      "title": " Vind een kliniek | Juvéderm® Netherlands",
+      "metaDescription": "Find the right clinic for you",
+      "archetype": "clinic-finder",
+      "httpStatus": 200,
+      "slug": "nl-clinics",
+      "depth": 1,
+      "priority": "medium",
+      "screenshots": {
+        "desktop": "source-bundle/pages/nl-clinics/desktop.png",
+        "mobile": "source-bundle/pages/nl-clinics/mobile.png"
+      },
+      "problem": null
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/clinic",
+      "finalUrl": "https://www.juvederm.nl/nl/clinic",
+      "title": " Vind een kliniek | Juvéderm® Netherlands",
+      "metaDescription": "Find the right clinic for you",
+      "archetype": "clinic-finder",
+      "httpStatus": 200,
+      "slug": "nl-clinic",
+      "depth": 1,
+      "priority": "medium",
+      "screenshots": {
+        "desktop": "source-bundle/pages/nl-clinic/desktop.png",
+        "mobile": "source-bundle/pages/nl-clinic/mobile.png"
+      },
+      "problem": null
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker",
+      "finalUrl": "https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker",
+      "title": "General Terms and Conditions Clinic Finder | Juvéderm® Netherlands",
+      "metaDescription": "",
+      "archetype": "legal",
+      "httpStatus": 200,
+      "slug": "nl-algemene-voorwaarden-kliniekzoeker",
+      "depth": 1,
+      "priority": "low",
+      "screenshots": {
+        "desktop": "source-bundle/pages/nl-algemene-voorwaarden-kliniekzoeker/desktop.png",
+        "mobile": "source-bundle/pages/nl-algemene-voorwaarden-kliniekzoeker/mobile.png"
+      },
+      "problem": null
+    }
+  ],
+  "archetypes": [
+    {
+      "name": "homepage",
+      "count": 2,
+      "sampleUrls": [
+        "https://www.juvederm.nl",
+        "https://www.juvederm.nl/nl"
+      ]
+    },
+    {
+      "name": "treatment-page",
+      "count": 5,
+      "sampleUrls": [
+        "https://www.juvederm.nl/nl/treatment/lips",
+        "https://www.juvederm.nl/nl/treatment/eye-area",
+        "https://www.juvederm.nl/nl/treatment/enhance"
+      ]
+    },
+    {
+      "name": "faq",
+      "count": 1,
+      "sampleUrls": [
+        "https://www.juvederm.nl/nl/qa"
+      ]
+    },
+    {
+      "name": "clinic-finder",
+      "count": 3,
+      "sampleUrls": [
+        "https://www.juvederm.nl/nl/find-a-clinic",
+        "https://www.juvederm.nl/nl/clinics",
+        "https://www.juvederm.nl/nl/clinic"
+      ]
+    },
+    {
+      "name": "legal",
+      "count": 2,
+      "sampleUrls": [
+        "https://www.juvederm.nl/nl/disclaimer",
+        "https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker"
+      ]
+    },
+    {
+      "name": "contact",
+      "count": 1,
+      "sampleUrls": [
+        "https://www.juvederm.nl/nl/contact-us"
+      ]
+    }
+  ],
+  "navigation": {
+    "header": [
+      {
+        "text": "JUVÉDERM® logo",
+        "href": "https://www.juvederm.nl/nl",
+        "role": "logo"
+      },
+      {
+        "text": "Lippen",
+        "href": "https://www.juvederm.nl/nl/treatment/lips"
+      },
+      {
+        "text": "Ogen",
+        "href": "https://www.juvederm.nl/nl/treatment/eye-area"
+      },
+      {
+        "text": "Accentueren",
+        "href": "https://www.juvederm.nl/nl/treatment/enhance"
+      },
+      {
+        "text": "Herstel",
+        "href": "https://www.juvederm.nl/nl/treatment/restore"
+      },
+      {
+        "text": "Man",
+        "href": "https://www.juvederm.nl/nl/treatment/male"
+      },
+      {
+        "text": "Over Juvéderm®",
+        "href": "https://www.juvederm.nl/nl/qa#about-juvederm",
+        "parent": "FAQ"
+      },
+      {
+        "text": "Kosten",
+        "href": "https://www.juvederm.nl/nl/qa#duration",
+        "parent": "FAQ"
+      },
+      {
+        "text": "Langdurige resultaten",
+        "href": "https://www.juvederm.nl/nl/qa#results",
+        "parent": "FAQ"
+      },
+      {
+        "text": "Veiligheid",
+        "href": "https://www.juvederm.nl/nl/qa#side-effects",
+        "parent": "FAQ"
+      },
+      {
+        "text": "Zones van het gezicht",
+        "href": "https://www.juvederm.nl/nl/qa#facial-areas",
+        "parent": "FAQ"
+      },
+      {
+        "text": "Vind je kliniek",
+        "href": "https://www.juvederm.nl/nl/find-a-clinic",
+        "role": "cta-button"
+      }
+    ],
+    "footer": [],
+    "footerNote": "The AEM footer element (.aaaem-card__footer) is empty - no footer links are rendered on this site. Legal links (disclaimer, privacy policy, terms) are referenced in page body content only.",
+    "legalLinks": [
+      {
+        "text": "Disclaimer",
+        "href": "https://www.juvederm.nl/nl/disclaimer"
+      },
+      {
+        "text": "Contacteer ons",
+        "href": "https://www.juvederm.nl/nl/contact-us"
+      },
+      {
+        "text": "Algemene Voorwaarden Kliniekzoeker",
+        "href": "https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker"
+      },
+      {
+        "text": "AbbVie Privacy Policy",
+        "href": "https://privacy.abbvie/"
+      }
+    ]
+  },
+  "assets": {
+    "favicon": "https://www.juvederm.nl/favicon.ico",
+    "fonts": [],
+    "globalImages": []
+  },
+  "redirects": {
+    "https://juvederm.nl/": "https://www.juvederm.nl/ (301)"
+  },
+  "sitemapUrl": "https://www.juvederm.nl/sitemap.xml",
+  "crawlNotes": [
+    "juvederm.nl redirects to www.juvederm.nl via HTTP 301",
+    "Site has SSL certificate issues in headless browser - bypassed with ignoreHTTPSErrors",
+    "OneTrust cookie consent banner present (Dutch) - dismissed via #onetrust-accept-btn-handler",
+    "Primary content language: Dutch (/nl/ path prefix)",
+    "Sitemap at /sitemap.xml contained 13 canonical URLs",
+    "Dynamic parameterized URLs (clinic location queries) excluded - same template as /nl/clinic",
+    "Site appears to use Adobe AEM/CQ as backend (/content/juvederm-ous/ paths visible)",
+    "Site is pharmaceutical/medical aesthetics brand (Allergan/AbbVie - JUVEDERM)"
+  ]
+}

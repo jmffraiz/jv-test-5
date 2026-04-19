@@ -1,0 +1,70 @@
+{
+  "url": "https://www.juvederm.nl/nl/qa",
+  "finalUrl": "https://www.juvederm.nl/nl/qa",
+  "title": "Veelgestelde vragen Juvederm | Juvéderm® Netherlands",
+  "metaDescription": "JUVÉDERM® is a collection of injectable facial fillers that can help enhance your facial features by plumping lips, smoothing wrinkles, or restoring lost facial volume. JUVÉDERM® delivers results that look and feel natural as its active ingredient, hyaluronic acid, is naturally occurring in our skin.",
+  "archetype": "faq",
+  "httpStatus": 200,
+  "slug": "nl-qa",
+  "priority": "medium",
+  "viewport_sizes": {
+    "desktop": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "settle_strategy": "domcontentloaded + networkidle + main.textLength stable 500ms x2, dismissed #onetrust-accept-btn-handler",
+  "captured_at": "2026-04-19T20:54:26.780Z",
+  "redirects": [
+    {
+      "from": "https://14175604.fls.doubleclick.net/activityi;src=14175604;type=invmedia;cat=rmk-j0;rcb=11;ord=7641823746243;npa=0;auiddc=1944788019.1776632055;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115616985~115938465~115938468~117266400~117884344;epver=2;dc_random=1776632055_v59u84EpJRckFBPMUx5nlLnSN3Vv0laUlA;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?",
+      "status": 302,
+      "to": "https://14175604.fls.doubleclick.net/activityi;dc_pre=CNS_tJTm-pMDFemrAAAdlXwSKg;src=14175604;type=invmedia;cat=rmk-j0;rcb=11;ord=7641823746243;npa=0;auiddc=1944788019.1776632055;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115616985~115938465~115938468~117266400~117884344;epver=2;dc_random=1776632055_v59u84EpJRckFBPMUx5nlLnSN3Vv0laUlA;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;src=14175604;type=invmedia;cat=rmk-j0;rcb=11;ord=7641823746243;npa=0;auiddc=1944788019.1776632055;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616985~115938465~115938468~117266400~117884344;epver=2;dc_random=1776632055_v59u84EpJRckFBPMUx5nlLnSN3Vv0laUlA;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?",
+      "status": 302,
+      "to": "https://ad.doubleclick.net/activity;dc_pre=CMjDtJTm-pMDFTHN9QIdWaovtg;src=14175604;type=invmedia;cat=rmk-j0;rcb=11;ord=7641823746243;npa=0;auiddc=1944788019.1776632055;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616985~115938465~115938468~117266400~117884344;epver=2;dc_random=1776632055_v59u84EpJRckFBPMUx5nlLnSN3Vv0laUlA;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;dc_pre=CMjDtJTm-pMDFTHN9QIdWaovtg;src=14175604;type=invmedia;cat=rmk-j0;rcb=11;ord=7641823746243;npa=0;auiddc=1944788019.1776632055;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616985~115938465~115938468~117266400~117884344;epver=2;dc_random=1776632055_v59u84EpJRckFBPMUx5nlLnSN3Vv0laUlA;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?",
+      "status": 302,
+      "to": "https://www.google.com/gmp/conversion/_dc_unique_id=3462506860333928677;_dc_ptd=ChAI8PqRzwYQoc-Wq-Xxl9F9EisAmcZ9DJN6Gk1ONxr62JkepEbJH_Z9YAJtyo9Z8g7MMhDzgp0GHXDW7a5H;_dc_time=1776632055;dc_pre=CMjDtJTm-pMDFTHN9QIdWaovtg;src=14175604;type=invmedia;cat=rmk-j0;rcb=11;ord=7641823746243;npa=0;auiddc=1944788019.1776632055;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616985~115938465~115938468~117266400~117884344;epver=2;dc_random=1776632055_v59u84EpJRckFBPMUx5nlLnSN3Vv0laUlA;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?"
+    },
+    {
+      "from": "https://14175604.fls.doubleclick.net/activityi;src=14175604;type=invmedia;cat=rmk-j0;rcb=11;ord=6896431400379;npa=0;auiddc=1944788019.1776632055;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115616985~115938465~115938468~117266400~117884344;epver=2;dc_random=1776632057_nQCErak5mes1id-ty9dwVoL1fXe-4M7vww;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?",
+      "status": 302,
+      "to": "https://14175604.fls.doubleclick.net/activityi;dc_pre=CNzGt5Xm-pMDFRGqAAAdG08oug;src=14175604;type=invmedia;cat=rmk-j0;rcb=11;ord=6896431400379;npa=0;auiddc=1944788019.1776632055;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115616985~115938465~115938468~117266400~117884344;epver=2;dc_random=1776632057_nQCErak5mes1id-ty9dwVoL1fXe-4M7vww;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?"
+    },
+    {
+      "from": "https://9846055.fls.doubleclick.net/activityi;src=9846055;type=verif0;cat=verif0;rcb=17;ord=1;num=5688894084111;npa=0;auiddc=1944788019.1776632055;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115938465~115938469~117266400~117384406~118128923;epver=2;dc_random=1776632057_193b1AalDrn02PNOECRU2ohJxspV0Pi49g;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?",
+      "status": 302,
+      "to": "https://9846055.fls.doubleclick.net/activityi;dc_pre=CO2Py5Xm-pMDFRnVTwIdgzgnDw;src=9846055;type=verif0;cat=verif0;rcb=17;ord=1;num=5688894084111;npa=0;auiddc=1944788019.1776632055;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115938465~115938469~117266400~117384406~118128923;epver=2;dc_random=1776632057_193b1AalDrn02PNOECRU2ohJxspV0Pi49g;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;src=9846055;type=verif0;cat=verif0;rcb=17;ord=1;num=5688894084111;npa=0;auiddc=1944788019.1776632055;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115938465~115938469~117266400~117384406~118128923;epver=2;dc_random=1776632057_193b1AalDrn02PNOECRU2ohJxspV0Pi49g;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?",
+      "status": 302,
+      "to": "https://ad.doubleclick.net/activity;dc_pre=CI_-yZXm-pMDFQqLAAAdDCM2EA;src=9846055;type=verif0;cat=verif0;rcb=17;ord=1;num=5688894084111;npa=0;auiddc=1944788019.1776632055;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115938465~115938469~117266400~117384406~118128923;epver=2;dc_random=1776632057_193b1AalDrn02PNOECRU2ohJxspV0Pi49g;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;dc_pre=CI_-yZXm-pMDFQqLAAAdDCM2EA;src=9846055;type=verif0;cat=verif0;rcb=17;ord=1;num=5688894084111;npa=0;auiddc=1944788019.1776632055;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115938465~115938469~117266400~117384406~118128923;epver=2;dc_random=1776632057_193b1AalDrn02PNOECRU2ohJxspV0Pi49g;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?",
+      "status": 302,
+      "to": "https://www.google.com/gmp/conversion/_dc_unique_id=494928415171050085;_dc_ptd=ChAI8PqRzwYQoc-Wq-Xxl9F9EisAmcZ9DLnq2_iVbn6533amZUYAsk2Muu36R8eC02zkW91agr9dtKPuDs3Q;_dc_time=1776632057;cid=CAQS1gEABaugfbU8-caqFQNAKIU2oUzmLU1lR04C_UymtlIOdEYx3hAE3QsX_aAR0e2yFJs-z3u-LncUgmquXHeqWD2wNy6-3Jt1OiJgB9CcBcay4ATU2egjpGFGfGi7RxA7ch4ozHroQ7wdX3PjxUOMH-RwTLssvS9qUhlzwyuiPtaeu6woUj7f58Bff9x4zclvuEa5pWo3dngOkHB3C1GGjW7tdmCXmYY-DKYDP23Rjab1-A8A-TtHaSM6weQEbCRbGcnY9dUrkdhfJLqOY05Bl6Ynvy5I4qSS;eps=AHas8cChLIoBtvQq0B2KfAEIPnmWUdzIW8TrLVJ0_g9K8EHa-sJzd6RM2pQdA8ESEdNuiIa7KPwznUnQL6eso_saB1CXmbgGEf6fBAH8-b0aTO0;dc_pre=CI_-yZXm-pMDFQqLAAAdDCM2EA;src=9846055;type=verif0;cat=verif0;rcb=17;ord=1;num=5688894084111;npa=0;auiddc=1944788019.1776632055;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115938465~115938469~117266400~117384406~118128923;epver=2;dc_random=1776632057_193b1AalDrn02PNOECRU2ohJxspV0Pi49g;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;src=14175604;type=invmedia;cat=rmk-j0;rcb=11;ord=6896431400379;npa=0;auiddc=1944788019.1776632055;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616985~115938465~115938468~117266400~117884344;epver=2;dc_random=1776632057_nQCErak5mes1id-ty9dwVoL1fXe-4M7vww;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?",
+      "status": 302,
+      "to": "https://ad.doubleclick.net/activity;dc_pre=CL7_tpXm-pMDFVKPAAAdUGQOPA;src=14175604;type=invmedia;cat=rmk-j0;rcb=11;ord=6896431400379;npa=0;auiddc=1944788019.1776632055;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616985~115938465~115938468~117266400~117884344;epver=2;dc_random=1776632057_nQCErak5mes1id-ty9dwVoL1fXe-4M7vww;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;dc_pre=CL7_tpXm-pMDFVKPAAAdUGQOPA;src=14175604;type=invmedia;cat=rmk-j0;rcb=11;ord=6896431400379;npa=0;auiddc=1944788019.1776632055;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616985~115938465~115938468~117266400~117884344;epver=2;dc_random=1776632057_nQCErak5mes1id-ty9dwVoL1fXe-4M7vww;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?",
+      "status": 302,
+      "to": "https://www.google.com/gmp/conversion/_dc_unique_id=6178423382614971885;_dc_ptd=ChAI8PqRzwYQoc-Wq-Xxl9F9EisAmcZ9DM6DKs31Cz20TpwFy9QcAIZj1HgNU-2iS5yo7Pb4wLfN0uP29wTo;_dc_time=1776632057;cid=CAQS1gEABaugfRRIXBgyMSTT5vj5iSVHRb7RgOwEiw8T98miCYKZv4QxA7gZ_5p2Y03Pbqkg7xBR8qHEVsBAs4Uzs9Uyj04iLuvlJpoWFSn9Q3DY37HYdU-vjShXLrcikOGwuKNmjIkAIiHowEPUehktVlAbBzG3IhMILPTTnpV_RVK-9LNYWpDfE2W5v6UOsfxfPZZ_lbDrgu46hSwZUTDIfnqiL2OiS0JE9gfHX52TU32wvazuTX-oTQGcVT04JRnX1TWViXp5ZemJisHQVzsuJCsHtfPcgink;eps=AHas8cBYqssdFP7cdBLxtbDln2RiWo2uKdmYQjO1QlGIZfIpYWGEaJwLB6t4dC06vPvzEfkybt68w4BwZq7ref2ecOB54tLL1RXX_tc7IRXByX4;dc_pre=CL7_tpXm-pMDFVKPAAAdUGQOPA;src=14175604;type=invmedia;cat=rmk-j0;rcb=11;ord=6896431400379;npa=0;auiddc=1944788019.1776632055;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616985~115938465~115938468~117266400~117884344;epver=2;dc_random=1776632057_nQCErak5mes1id-ty9dwVoL1fXe-4M7vww;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Fqa?"
+    }
+  ],
+  "problem": null
+}

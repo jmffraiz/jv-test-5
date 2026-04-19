@@ -1,0 +1,65 @@
+{
+  "url": "https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker",
+  "finalUrl": "https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker",
+  "title": "General Terms and Conditions Clinic Finder | Juvéderm® Netherlands",
+  "metaDescription": "",
+  "archetype": "legal",
+  "httpStatus": 200,
+  "slug": "nl-algemene-voorwaarden-kliniekzoeker",
+  "priority": "low",
+  "viewport_sizes": {
+    "desktop": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "settle_strategy": "domcontentloaded + networkidle + main.textLength stable 500ms x2, dismissed #onetrust-accept-btn-handler",
+  "captured_at": "2026-04-19T20:55:40.178Z",
+  "redirects": [
+    {
+      "from": "https://14175604.fls.doubleclick.net/activityi;src=14175604;type=invmedia;cat=rmk-j0;rcb=15;ord=9815574382315;npa=0;auiddc=606113547.1776632131;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1h1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115616986~115938466~115938468~117266401;epver=2;dc_random=1776632131_FPmN29Qa6hC98xjEnuFtRYwjgiBvGdPZcw;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker?",
+      "status": 302,
+      "to": "https://14175604.fls.doubleclick.net/activityi;dc_pre=CJKFxbjm-pMDFYH09QIdSCIsDA;src=14175604;type=invmedia;cat=rmk-j0;rcb=15;ord=9815574382315;npa=0;auiddc=606113547.1776632131;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1h1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115616986~115938466~115938468~117266401;epver=2;dc_random=1776632131_FPmN29Qa6hC98xjEnuFtRYwjgiBvGdPZcw;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;src=14175604;type=invmedia;cat=rmk-j0;rcb=15;ord=9815574382315;npa=0;auiddc=606113547.1776632131;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1h1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616986~115938466~115938468~117266401;epver=2;dc_random=1776632131_FPmN29Qa6hC98xjEnuFtRYwjgiBvGdPZcw;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker?",
+      "status": 302,
+      "to": "https://ad.doubleclick.net/activity;dc_pre=CK7zxLjm-pMDFWnt9QIdW58P9Q;src=14175604;type=invmedia;cat=rmk-j0;rcb=15;ord=9815574382315;npa=0;auiddc=606113547.1776632131;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1h1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616986~115938466~115938468~117266401;epver=2;dc_random=1776632131_FPmN29Qa6hC98xjEnuFtRYwjgiBvGdPZcw;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;dc_pre=CK7zxLjm-pMDFWnt9QIdW58P9Q;src=14175604;type=invmedia;cat=rmk-j0;rcb=15;ord=9815574382315;npa=0;auiddc=606113547.1776632131;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1h1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616986~115938466~115938468~117266401;epver=2;dc_random=1776632131_FPmN29Qa6hC98xjEnuFtRYwjgiBvGdPZcw;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker?",
+      "status": 302,
+      "to": "https://www.google.com/gmp/conversion/_dc_unique_id=14934361786723988377;_dc_ptd=ChAI8PqRzwYQoc-Wq-Xxl9F9EisAmcZ9DFdYYxyx9J0Bcj9iuaCKgdgv41jaZcdBdRiVwOtgAmSp59tEtDb4;_dc_time=1776632131;dc_pre=CK7zxLjm-pMDFWnt9QIdW58P9Q;src=14175604;type=invmedia;cat=rmk-j0;rcb=15;ord=9815574382315;npa=0;auiddc=606113547.1776632131;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1h1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616986~115938466~115938468~117266401;epver=2;dc_random=1776632131_FPmN29Qa6hC98xjEnuFtRYwjgiBvGdPZcw;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker?"
+    },
+    {
+      "from": "https://14175604.fls.doubleclick.net/activityi;src=14175604;type=invmedia;cat=rmk-j0;rcb=15;ord=1906455260499;npa=0;auiddc=606113547.1776632131;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1h1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115616986~115938466~115938468~117266401;epver=2;dc_random=1776632133_1yrOFXaiGoi9tvRN93dcQueSf2xqPrUH3A;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker?",
+      "status": 302,
+      "to": "https://14175604.fls.doubleclick.net/activityi;dc_pre=CJjKx7nm-pMDFbKpAAAdGVcYug;src=14175604;type=invmedia;cat=rmk-j0;rcb=15;ord=1906455260499;npa=0;auiddc=606113547.1776632131;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1h1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115616986~115938466~115938468~117266401;epver=2;dc_random=1776632133_1yrOFXaiGoi9tvRN93dcQueSf2xqPrUH3A;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;src=14175604;type=invmedia;cat=rmk-j0;rcb=15;ord=1906455260499;npa=0;auiddc=606113547.1776632131;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1h1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616986~115938466~115938468~117266401;epver=2;dc_random=1776632133_1yrOFXaiGoi9tvRN93dcQueSf2xqPrUH3A;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker?",
+      "status": 302,
+      "to": "https://ad.doubleclick.net/activity;dc_pre=CJeCx7nm-pMDFQqLAAAdDCM2EA;src=14175604;type=invmedia;cat=rmk-j0;rcb=15;ord=1906455260499;npa=0;auiddc=606113547.1776632131;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1h1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616986~115938466~115938468~117266401;epver=2;dc_random=1776632133_1yrOFXaiGoi9tvRN93dcQueSf2xqPrUH3A;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;dc_pre=CJeCx7nm-pMDFQqLAAAdDCM2EA;src=14175604;type=invmedia;cat=rmk-j0;rcb=15;ord=1906455260499;npa=0;auiddc=606113547.1776632131;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1h1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616986~115938466~115938468~117266401;epver=2;dc_random=1776632133_1yrOFXaiGoi9tvRN93dcQueSf2xqPrUH3A;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker?",
+      "status": 302,
+      "to": "https://www.google.com/gmp/conversion/_dc_unique_id=8514548649590715819;_dc_ptd=ChAI8PqRzwYQoc-Wq-Xxl9F9EisAmcZ9DCA8l4LnqU4ugwfl2pQndx_8kD5ap4XRK6LRm--t9r_FC4wOAHNX;_dc_time=1776632133;cid=CAQS1gEABaugfYudxY8Z7uQhJXTfw6hF9mb4Xc1B8RtpQZwBdrqEKxOz1g7cCoReQaqzIEBmBFtiGH2oT0-xbtUi-FNGo1N1W5EkydPuVzdbmB7J2XFsSyic5n8DecoP35bd0WRE_WxfJtc9nflGOE9kcGimirRbHc7aNUVA8T8PazvSt7-IaE4lI5UusaurdAONyJMJxB7wsiQdL5kHAJDMeGO3KhHeg_FqkxM-1cebgyQVwCihrBP5XlHsEwV67YJwZkUEiKFmoNHhv0JsE2WkaUu-JYQ8OG6H;eps=AHas8cAR_jEbZubIzIbBZQYKCVixbailRKQtb_k0OBUJtaTroSUmLnxZ86twY3vy4rdvs9rVfluLPAk7qRDjGrGYtBeLx98Eh_sKvF37GVJxBdY;dc_pre=CJeCx7nm-pMDFQqLAAAdDCM2EA;src=14175604;type=invmedia;cat=rmk-j0;rcb=15;ord=1906455260499;npa=0;auiddc=606113547.1776632131;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1h1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616986~115938466~115938468~117266401;epver=2;dc_random=1776632133_1yrOFXaiGoi9tvRN93dcQueSf2xqPrUH3A;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker?"
+    },
+    {
+      "from": "https://9846055.fls.doubleclick.net/activityi;src=9846055;type=verif0;cat=verif0;rcb=1;ord=1;num=344792339442;npa=0;auiddc=606113547.1776632131;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1h1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115616986~115938466~115938468~117266401;epver=2;dc_random=1776632133_9iLw5VwFgfP8frK3o_DFYjyLvPdOo26boA;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker?",
+      "status": 302,
+      "to": "https://9846055.fls.doubleclick.net/activityi;dc_pre=CMK93Lnm-pMDFYDB9QIdI_czug;src=9846055;type=verif0;cat=verif0;rcb=1;ord=1;num=344792339442;npa=0;auiddc=606113547.1776632131;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1h1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115616986~115938466~115938468~117266401;epver=2;dc_random=1776632133_9iLw5VwFgfP8frK3o_DFYjyLvPdOo26boA;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;src=9846055;type=verif0;cat=verif0;rcb=1;ord=1;num=344792339442;npa=0;auiddc=606113547.1776632131;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1h1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616986~115938466~115938468~117266401;epver=2;dc_random=1776632133_9iLw5VwFgfP8frK3o_DFYjyLvPdOo26boA;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker?",
+      "status": 302,
+      "to": "https://ad.doubleclick.net/activity;dc_pre=CISv27nm-pMDFcudAAAdHGoZzQ;src=9846055;type=verif0;cat=verif0;rcb=1;ord=1;num=344792339442;npa=0;auiddc=606113547.1776632131;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1h1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115616986~115938466~115938468~117266401;epver=2;dc_random=1776632133_9iLw5VwFgfP8frK3o_DFYjyLvPdOo26boA;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Falgemene-voorwaarden-kliniekzoeker?"
+    }
+  ],
+  "problem": null
+}

@@ -1,0 +1,70 @@
+{
+  "url": "https://www.juvederm.nl/nl/find-a-clinic",
+  "finalUrl": "https://www.juvederm.nl/nl/find-a-clinic",
+  "title": " Vind een kliniek | Juvéderm® Netherlands",
+  "metaDescription": "Find the right clinic for you",
+  "archetype": "clinic-finder",
+  "httpStatus": 200,
+  "slug": "nl-find-a-clinic",
+  "priority": "medium",
+  "viewport_sizes": {
+    "desktop": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "settle_strategy": "domcontentloaded + networkidle + main.textLength stable 500ms x2, dismissed #onetrust-accept-btn-handler",
+  "captured_at": "2026-04-19T20:54:37.370Z",
+  "redirects": [
+    {
+      "from": "https://14175604.fls.doubleclick.net/activityi;src=14175604;type=invmedia;cat=rmk-j0;rcb=1;ord=9716995912889;npa=0;auiddc=957117298.1776632068;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115938466~115938468~117266400~118128922;epver=2;dc_random=1776632068_GtZoYXkIVMMF4QdzndktZ2NxxZJo6KYCjg;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?",
+      "status": 302,
+      "to": "https://14175604.fls.doubleclick.net/activityi;dc_pre=COmXzJrm-pMDFYDB9QIdI_czug;src=14175604;type=invmedia;cat=rmk-j0;rcb=1;ord=9716995912889;npa=0;auiddc=957117298.1776632068;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115938466~115938468~117266400~118128922;epver=2;dc_random=1776632068_GtZoYXkIVMMF4QdzndktZ2NxxZJo6KYCjg;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;src=14175604;type=invmedia;cat=rmk-j0;rcb=1;ord=9716995912889;npa=0;auiddc=957117298.1776632068;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115938466~115938468~117266400~118128922;epver=2;dc_random=1776632068_GtZoYXkIVMMF4QdzndktZ2NxxZJo6KYCjg;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?",
+      "status": 302,
+      "to": "https://ad.doubleclick.net/activity;dc_pre=CJGJzJrm-pMDFTquAAAdoVImJg;src=14175604;type=invmedia;cat=rmk-j0;rcb=1;ord=9716995912889;npa=0;auiddc=957117298.1776632068;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115938466~115938468~117266400~118128922;epver=2;dc_random=1776632068_GtZoYXkIVMMF4QdzndktZ2NxxZJo6KYCjg;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;dc_pre=CJGJzJrm-pMDFTquAAAdoVImJg;src=14175604;type=invmedia;cat=rmk-j0;rcb=1;ord=9716995912889;npa=0;auiddc=957117298.1776632068;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115938466~115938468~117266400~118128922;epver=2;dc_random=1776632068_GtZoYXkIVMMF4QdzndktZ2NxxZJo6KYCjg;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?",
+      "status": 302,
+      "to": "https://www.google.com/gmp/conversion/_dc_unique_id=1726083166347224467;_dc_ptd=ChAI8PqRzwYQoc-Wq-Xxl9F9EisAmcZ9DCo_mBbvV03Yt9chB8jWI2tvtl4lhb_yal1YBY1JmzwgSedIrrfL;_dc_time=1776632068;dc_pre=CJGJzJrm-pMDFTquAAAdoVImJg;src=14175604;type=invmedia;cat=rmk-j0;rcb=1;ord=9716995912889;npa=0;auiddc=957117298.1776632068;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115938466~115938468~117266400~118128922;epver=2;dc_random=1776632068_GtZoYXkIVMMF4QdzndktZ2NxxZJo6KYCjg;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?"
+    },
+    {
+      "from": "https://14175604.fls.doubleclick.net/activityi;src=14175604;type=invmedia;cat=rmk-j0;rcb=1;ord=1619661313371;npa=0;auiddc=957117298.1776632068;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115938466~115938468~117266400~118128922;epver=2;dc_random=1776632070_q4jGAHPHM_CCs4UD_1S2obX5UXCXE6aj_A;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?",
+      "status": 302,
+      "to": "https://14175604.fls.doubleclick.net/activityi;dc_pre=CKOd0pvm-pMDFTmXAAAdG3I1PA;src=14175604;type=invmedia;cat=rmk-j0;rcb=1;ord=1619661313371;npa=0;auiddc=957117298.1776632068;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115938466~115938468~117266400~118128922;epver=2;dc_random=1776632070_q4jGAHPHM_CCs4UD_1S2obX5UXCXE6aj_A;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;src=14175604;type=invmedia;cat=rmk-j0;rcb=1;ord=1619661313371;npa=0;auiddc=957117298.1776632068;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115938466~115938468~117266400~118128922;epver=2;dc_random=1776632070_q4jGAHPHM_CCs4UD_1S2obX5UXCXE6aj_A;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?",
+      "status": 302,
+      "to": "https://ad.doubleclick.net/activity;dc_pre=CIXK0Zvm-pMDFT_YTwIdyb0O9g;src=14175604;type=invmedia;cat=rmk-j0;rcb=1;ord=1619661313371;npa=0;auiddc=957117298.1776632068;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115938466~115938468~117266400~118128922;epver=2;dc_random=1776632070_q4jGAHPHM_CCs4UD_1S2obX5UXCXE6aj_A;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;dc_pre=CIXK0Zvm-pMDFT_YTwIdyb0O9g;src=14175604;type=invmedia;cat=rmk-j0;rcb=1;ord=1619661313371;npa=0;auiddc=957117298.1776632068;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115938466~115938468~117266400~118128922;epver=2;dc_random=1776632070_q4jGAHPHM_CCs4UD_1S2obX5UXCXE6aj_A;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?",
+      "status": 302,
+      "to": "https://www.google.com/gmp/conversion/_dc_unique_id=17377402017735514195;_dc_ptd=ChAI8PqRzwYQoc-Wq-Xxl9F9EisAmcZ9DGvVYFk6pZ1sjjhsAq6SWg_MTdGdFXlWSmv3zMwEU5FqB-4yKq_a;_dc_time=1776632070;cid=CAQS1gEABaugffoNdsfwhwsF8rwtgafcB13fJXqsbVWROy5NiHwutODb-_a5RfAPjSa_OyQ2ZOZfRccLTRWxrBTNjKhKEztURcRPTPuzrEjByaYTTuRp-dDA_aU6zHm7t66YXKlf3Qgo5WRFzeJK9QMJ2IL3pcDhSHl6d-V4MI9j3HccvkWogcCyCTEqG3cmRiFEOsRR0b5O007Af02fpkBpmZwtSVMKIFJk91zFDbg3K-QmEShzwwQXTF0gnH-Me6BrPdmPzWru7x3yWArsP4cOPP7dLBFE2HSi;eps=AHas8cDl-SxIC-y4WgoVnZRc-nhr78blzf-W0uOoG7XmEwrdzvO6N5rCtgZS3XoAZET1djwyXjWJrrJsyxmyQeqPGfq2TTQsS-onj6IAPOkadqQ;dc_pre=CIXK0Zvm-pMDFT_YTwIdyb0O9g;src=14175604;type=invmedia;cat=rmk-j0;rcb=1;ord=1619661313371;npa=0;auiddc=957117298.1776632068;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe64f1v9190782326z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115938466~115938468~117266400~118128922;epver=2;dc_random=1776632070_q4jGAHPHM_CCs4UD_1S2obX5UXCXE6aj_A;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?"
+    },
+    {
+      "from": "https://9846055.fls.doubleclick.net/activityi;src=9846055;type=verif0;cat=verif0;rcb=17;ord=1;num=2313888359173;npa=0;auiddc=957117298.1776632068;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115938466~115938468~117266401~117884344;epver=2;dc_random=1776632070_Vv6Xx5_hUyVyuHvO3bnkzPM_Xa8XNK7Xkg;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?",
+      "status": 302,
+      "to": "https://9846055.fls.doubleclick.net/activityi;dc_pre=CLm_55vm-pMDFQfR9QIdFRsuiA;src=9846055;type=verif0;cat=verif0;rcb=17;ord=1;num=2313888359173;npa=0;auiddc=957117298.1776632068;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=2;tag_exp=0~115938466~115938468~117266401~117884344;epver=2;dc_random=1776632070_Vv6Xx5_hUyVyuHvO3bnkzPM_Xa8XNK7Xkg;_dc_test=1;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;src=9846055;type=verif0;cat=verif0;rcb=17;ord=1;num=2313888359173;npa=0;auiddc=957117298.1776632068;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115938466~115938468~117266401~117884344;epver=2;dc_random=1776632070_Vv6Xx5_hUyVyuHvO3bnkzPM_Xa8XNK7Xkg;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?",
+      "status": 302,
+      "to": "https://ad.doubleclick.net/activity;dc_pre=CICu5pvm-pMDFZydAAAdmDQk-A;src=9846055;type=verif0;cat=verif0;rcb=17;ord=1;num=2313888359173;npa=0;auiddc=957117298.1776632068;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115938466~115938468~117266401~117884344;epver=2;dc_random=1776632070_Vv6Xx5_hUyVyuHvO3bnkzPM_Xa8XNK7Xkg;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?"
+    },
+    {
+      "from": "https://ad.doubleclick.net/activity;dc_pre=CICu5pvm-pMDFZydAAAdmDQk-A;src=9846055;type=verif0;cat=verif0;rcb=17;ord=1;num=2313888359173;npa=0;auiddc=957117298.1776632068;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115938466~115938468~117266401~117884344;epver=2;dc_random=1776632070_Vv6Xx5_hUyVyuHvO3bnkzPM_Xa8XNK7Xkg;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?",
+      "status": 302,
+      "to": "https://www.google.com/gmp/conversion/_dc_unique_id=10578343831005649331;_dc_ptd=ChAI8PqRzwYQoc-Wq-Xxl9F9EisAmcZ9DDLiy0unlcZ4fgiF09nim2kSpQcM2s8VLsmBVj2YKCPKNWgAbVSn;_dc_time=1776632070;cid=CAQS1gEABaugfe6XqY8lZia6yYHtL075Jq24EazqQM3keqz8JIIt59Nl9kc0fE0_Y9-oBx0ECrHACOXG_s7pYphWY-CYpIr2j_hUCoVnD-L8jkSYTcKs1gWnpfVurmqj_ylkJDO1FvbS5pwYHYxd7M8oIf0_OFNqBlcY3JbobVGLxPH20WhE-Pe4Iw4L1IbtGIgpwzLhdnCKyakug-6caXRKsHNdbvqNab2aF6uYUUMn60smaOT5_ijRWmXuDOwx0hw4gYZDce5hMTXs2k4xQ_cxZFtZL8Kil0w5;eps=AHas8cAIsyuqaxO1MqVTM-ICtUt3XFdoCsHeJ6fs6NL3oNDVZLFvaZRkyKcpILV4FxY1C8tTmOIv_GRxVINBfqG5ckMT1QE5uygNDR6SNkQ8ciM;dc_pre=CICu5pvm-pMDFZydAAAdmDQk-A;src=9846055;type=verif0;cat=verif0;rcb=17;ord=1;num=2313888359173;npa=0;auiddc=957117298.1776632068;u1=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic;uaa=x86;uab=64;uafvl=HeadlessChrome%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.15;uamb=0;uam=;uap=macOS;uapv=10.15.7;uaw=0;pscdl=noapi;frm=0;_tu=KJA;gtm=45fe64f1v9190739570z8810915096za20gzb810915096zd810915096xea;gcd=13l3l3l3l1l1;dma=0;dc_fmt=3;tag_exp=0~115938466~115938468~117266401~117884344;epver=2;dc_random=1776632070_Vv6Xx5_hUyVyuHvO3bnkzPM_Xa8XNK7Xkg;~oref=https%3A%2F%2Fwww.juvederm.nl%2Fnl%2Ffind-a-clinic?"
+    }
+  ],
+  "problem": null
+}
