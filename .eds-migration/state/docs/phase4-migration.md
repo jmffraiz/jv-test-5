@@ -289,3 +289,40 @@ Both HTML files are committed to the branch and have passed self-checks:
 ### Action Required
 
 Provide a fresh EDS_TOKEN (less than 24h old) to unblock all 6 pilot pages. No HTML regeneration needed — all artifacts are committed and ready.
+## Chunk 3/3 — Retry Run (2026-04-19T22:33Z)
+
+### Pages Handled
+- `https://www.juvederm.nl/nl/disclaimer` → `/nl/disclaimer` (archetype: legal)
+- `https://www.juvederm.nl/nl/contact-us` → `/nl/contact-us` (archetype: contact)
+
+### HTML Generation
+Both pages were generated from source bundle data at `.eds-migration/state/source-bundle/pages/`:
+- `nl-disclaimer/index.html` → `.eds-migration/pages/nl/disclaimer.html`
+- `nl-contact-us/index.html` → `.eds-migration/pages/nl/contact-us.html`
+
+**Disclaimer page**: Legal archetype, 1 section of default content. Contains full disclaimer text with paragraphs and a bulleted list of reasons content may be removed. Legal footer with pharma/model disclaimers.
+
+**Contact-us page**: Contact archetype, 3 sections: (1) contact info with address/phone/email, (2) Fragment block pointing to `/fragments/pharma-notice`, (3) legal references footer with document reference NL-JUV-230072.
+
+### Upload Status
+**BLOCKED — EDS token expired:**
+- Token `created_at`: 2026-04-18T09:47:55Z  
+- Token `expires_in`: 86400000ms (24h)  
+- Token expired: 2026-04-19T09:47:55Z  
+- Current time: 2026-04-19T22:33Z  
+- Expired ~12.75 hours before this run  
+- `admin.da.live` Source API returns 401 for all requests  
+
+### Resolution Required
+A fresh IMS access token is needed to complete:
+1. PUT `.eds-migration/pages/nl/disclaimer.html` → `https://admin.da.live/source/jmffraiz/jv-test-5/nl/disclaimer.html`
+2. PUT `.eds-migration/pages/nl/contact-us.html` → `https://admin.da.live/source/jmffraiz/jv-test-5/nl/contact-us.html`
+3. POST preview for both paths at `admin.hlx.page`
+4. Screenshot captures and self-check validation
+
+### Artifacts Committed
+- `.eds-migration/pages/nl/disclaimer.html` — full EDS content markup
+- `.eds-migration/pages/nl/contact-us.html` — full EDS content markup
+- `.eds-migration/state/status/861579f2a8ff54d0249f6ecf0fa75a97.json` — disclaimer status
+- `.eds-migration/state/status/a86b3ad7f4afd0d71366562db8368e65.json` — contact-us status
+
