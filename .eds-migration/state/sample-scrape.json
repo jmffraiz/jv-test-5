@@ -1,0 +1,2513 @@
+{
+  "scrapeDate": "2026-04-19",
+  "sourceMethod": "bundle-reuse",
+  "notes": "All pages sourced from crawler's Playwright-rendered source bundle. No re-scraping needed. HTML is post-hydration with OneTrust dismissed.",
+  "samplePages": {
+    "nl": {
+      "url": "https://www.juvederm.nl/nl",
+      "title": "JUVÉDERM Nederlands",
+      "metaDescription": "Juvéderm® facial fillers help to enhance, restore or hydrate your features. Embrace what makes you, you.",
+      "archetype": "homepage",
+      "source": "bundle",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Jouw unieke schoonheid",
+          "parentClass": "cmp-teaser__description"
+        },
+        {
+          "level": 2,
+          "text": "Accentueer je mooiste gezichtskenmerken met JUVÉDERM®",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default juvederm-brandsta"
+        },
+        {
+          "level": 1,
+          "text": "Waarom JUVÉDERM®?",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 3,
+          "text": "Een natuurlijke uitstraling én gevoel†12,13",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 3,
+          "text": "Toonaangevend",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 3,
+          "text": "Langdurige resultaten*4",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 3,
+          "text": "Hoge patiënt tevredenheid‡17",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 2,
+          "text": "Bekijk de mogelijkheden van JÚVEDERM®",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 2,
+          "text": "Jouw behandeling met JUVÉDERM®",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 3,
+          "text": "Versterk contouren",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Stralende oogopslag",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Herstel volume",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Vollere lippen4,6,7,12",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Stralende oogopslag",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Herstel volume",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 2,
+          "text": "Vind een kliniek bij jou in de buurt",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default c-find-the-clinic"
+        }
+      ],
+      "images": [
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--1837f3c6-df22-47f8-aa8e-d5d380f2e340/2024-key-visual-sofie-01803-rgb-lr.jpg?preferwebp=true&width=1600&quality=85",
+          "alt": "Discover beauty that's true to you",
+          "role": "content",
+          "parentClass": "emu-image__link cmp-image__link"
+        },
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--78e7086f-fbda-4358-b44e-c873a5d715b2/2024-key-visual-lily-s01-00465-rgb-lr.jpg?preferwebp=true&width=1600&quality=85",
+          "alt": "woman",
+          "role": "content",
+          "parentClass": "emu-image aaaem-image cmp-image"
+        },
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--32a21521-b4a2-44d3-aaed-2f5c707b83bd/2024-incidental-lily-00439-rgb-lr-treatment-area-section.jpg?preferwebp=true&&quality=80",
+          "alt": "",
+          "role": "interactive-image",
+          "parentClass": "emu-image-map emu-image aaaem-image cmp-image"
+        },
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--29c13e32-5ae5-4711-b56e-aa51e6f2be38/2024-key-visual-stefan-02608-rgb-lr-treatment-area-section.jpg?preferwebp=true&&quality=80",
+          "alt": "",
+          "role": "interactive-image",
+          "parentClass": "emu-image-map emu-image aaaem-image cmp-image"
+        },
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--721086fc-bf03-4770-a1ca-9f0ead9b9ad0/icon-kijk-uit-melding-white.png?preferwebp=true&quality=80",
+          "alt": "",
+          "role": "icon",
+          "parentClass": "emu-image aaaem-image cmp-image"
+        }
+      ],
+      "ctaLinks": [
+        {
+          "href": "/nl/find-a-clinic",
+          "text": "Vind je kliniek",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-outline juvederm-navigation-findaclinic"
+        },
+        {
+          "href": "https://www.instagram.com/juvederm.nl/",
+          "text": "Instagram",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        },
+        {
+          "href": "https://www.facebook.com/juvederm.nl",
+          "text": "Facebook",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        }
+      ],
+      "contentLinks": [
+        {
+          "href": "https://privacy.abbvie/",
+          "text": "https://privacy.abbvie/.",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl",
+          "text": "",
+          "isCta": false,
+          "classes": "emu-image__link cmp-image__link"
+        },
+        {
+          "href": "/nl/treatment/lips",
+          "text": "Lippen",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/eye-area",
+          "text": "Ogen",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/enhance",
+          "text": "Accentueren",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/restore",
+          "text": "Herstel",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/male",
+          "text": "Man",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#about-juvederm",
+          "text": "Over Juvéderm®",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#duration",
+          "text": "Kosten",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#results",
+          "text": "Langdurige resultaten",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#side-effects",
+          "text": "Veiligheid",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#facial-areas",
+          "text": "Zones van het gezicht",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "https://www.allerganaesthetics.nl/",
+          "text": "",
+          "isCta": false,
+          "classes": "emu-image__link cmp-image__link"
+        },
+        {
+          "href": "/nl/contact-us",
+          "text": "Neem contact op",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "https://www.abbvie.nl/privacy.html",
+          "text": "Privacy beleid",
+          "isCta": false,
+          "classes": ""
+        }
+      ],
+      "paragraphs": [
+        "See our new privacy terms athttps://privacy.abbvie/.",
+        "JUVÉDERM® is wereldwijd het meest toonaangevende merk in fillers*1. Of je nu een gedeelte van je gezicht wiltopvullen4-6of versterken7,8. Ons assortiment hyaluronzuurfillers helpt je jouw doelen te bereiken. Het kan zorgen voor hydratatie9, herstel van volume2,3,7en extra definitie4-6,8van jouw gezi",
+        "JUVÉDERM® wordt gemaakt op basis van hyaluronzuur2-9. Deze stof komt van nature voor in onze huid en ons bindweefsel14-16. Het kan je helpen bij het behalen van een resultaat dat natuurlijk oogt en voelt.†12,13",
+        "JUVÉDERM® is wereldwijd het meest toonaangevende merk in hyaluronzuurfillers voor het gezicht *1. De producten zijn geschikt voor een breed scala aan gepersonaliseerde behandelingen2-9.",
+        "Het resultaat blijft 9 tot 24 maanden zichtbaar. De exacte duur is afhankelijk van de gekozen behandeling en product(en)10,11",
+        "In een recente studie deden wij onderzoek naar de ervaringen van behandelde patiënten. Ruim 91% was tevreden met hun uitstraling een maand na de behandeling.‡17",
+        "*Gebaseerd op marktonderzoek waarbij meer dan 1.700 beroepsbeoefenaars in de gezondheidszorg werden gevolgd in 16 internationale markten.1†In het open-label onderzoek werd gedurende een periode van 12 maanden het gebruik van Juvéderm® VOLBELLA met lidocaïne bij lipvergroting beoordeeld.12",
+        "‡Gebaseerd op FACE-Q Satisfaction with Skin-score van 90,8% (N=131) na maand 1. Reacties werden beoordeeld op een 4-puntsschaal (1: zeer ontevreden; 4: zeer tevreden). FACE-Q Satisfaction with Skin-score werd berekend door de antwoorden op de 12 items op te tellen en om te zetten in een schaalscore ",
+        "Jouw natuurlijke gezichtskenmerken zijn de sleutel tot een jeugdige uitstraling. In het JUVÉDERM®assortiment vind je hyaluronzuurfillers. Die kunnen de contouren van je kin en kaaklijn2,27,28versterken en volume aan de wangen toevoegen.3,7",
+        "De natuurlijke hydratatie en elasticiteit van je huid neemt af als je wat ouder wordt.14,20-22Je ontdekt fijne lijntjes20, kraaienpootjes20,23of verslapping van de huid21,24,25rond je ogen. Met behulp van JUVÉDERM®kun je het gebied rondom je ogen weer gladstrijken.4,26"
+      ],
+      "textLength": 8016,
+      "aemComponents": {
+        "container": 46,
+        "header": 1,
+        "image": 25,
+        "button": 13,
+        "navigation-list": 5,
+        "navigation": 1,
+        "modal": 1,
+        "teaser": 1,
+        "title": 8,
+        "text": 26,
+        "scrollreveal": 1,
+        "card": 4,
+        "carousel": 1,
+        "comparison-slider": 5,
+        "tabs": 1,
+        "location-services": 1,
+        "accordion": 1
+      },
+      "interactive": [
+        {
+          "type": "accordion",
+          "count": 1,
+          "items": [
+            "Behandeling",
+            "Behandeling",
+            "FAQ",
+            "FAQ"
+          ]
+        },
+        {
+          "type": "carousel",
+          "count": 1
+        },
+        {
+          "type": "tabs",
+          "count": 1,
+          "labels": [
+            "VROUWELIJKMANNELIJK",
+            "VROUWELIJK",
+            "MANNELIJK",
+            "Versterk contourenJouw natuurlijke gezichtskenmerken zijn de sleutel tot een jeugdige uitstraling. In het JUVÉDERM®assortiment vind je hyaluronzuurfillers. Die kunnen de contouren van je kin en kaaklijn2,27,28versterken en volume aan de wangen toevoegen.3,7Meer informatieStralende oogopslagDe natuurlijke hydratatie en elasticiteit van je huid neemt af als je wat ouder wordt.14,20-22Je ontdekt fijne lijntjes20, kraaienpootjes20,23of verslapping van de huid21,24,25rond je ogen. Met behulp van JUVÉDERM®kun je het gebied rondom je ogen weer gladstrijken.4,26Meer informatieHerstel volumeNaarmate je ouder wordt, verliest je huid geleidelijk wat volume en elasticiteit20,21. Deze veranderingen komen op verschillende gebieden van je gezicht voor20,21.Meer informatieVollere lippen4,6,7,12Mooie lippen zijn er in allerlei soorten en maten. Van extra vol tot subtiel gevormd en alles daartussenin.19JUVÉDERM®kan jou helpen door bijvoorbeeld definitie aan te brengen of volume toe te voegen4,6,7,12.Uiteraard zonder dat jouw unieke kenmerken verloren gaan.Meer informatieStralende oogopslagDe natuurlijke hydratatie en elasticiteit van je huid neemt af als je wat ouder wordt.14,20-22Je ontdekt fijne lijntjes20, kraaienpootjes20,23of verslapping van de huid21,24,25rond je ogen. Met behulp van JUVÉDERM®kun je het gebied rondom je ogen weer gladstrijken.4,26Meer informatieHerstel volumeJouw natuurlijke gezichtskenmerken zijn de sleutel tot een jeugdige uitstraling. In het JUVÉDERM®assortiment vind je hyaluronzuurfillers. Die kunnen de contouren van je kin en kaaklijn2,27,28versterken en volume aan de wangen toevoegen.3,7Meer informatie",
+            "Versterk contourenJouw natuurlijke gezichtskenmerken zijn de sleutel tot een jeugdige uitstraling. In het JUVÉDERM®assortiment vind je hyaluronzuurfillers. Die kunnen de contouren van je kin en kaaklijn2,27,28versterken en volume aan de wangen toevoegen.3,7Meer informatieStralende oogopslagDe natuurlijke hydratatie en elasticiteit van je huid neemt af als je wat ouder wordt.14,20-22Je ontdekt fijne lijntjes20, kraaienpootjes20,23of verslapping van de huid21,24,25rond je ogen. Met behulp van JUVÉDERM®kun je het gebied rondom je ogen weer gladstrijken.4,26Meer informatieHerstel volumeNaarmate je ouder wordt, verliest je huid geleidelijk wat volume en elasticiteit20,21. Deze veranderingen komen op verschillende gebieden van je gezicht voor20,21.Meer informatieVollere lippen4,6,7,12Mooie lippen zijn er in allerlei soorten en maten. Van extra vol tot subtiel gevormd en alles daartussenin.19JUVÉDERM®kan jou helpen door bijvoorbeeld definitie aan te brengen of volume toe te voegen4,6,7,12.Uiteraard zonder dat jouw unieke kenmerken verloren gaan.Meer informatie",
+            "Stralende oogopslagDe natuurlijke hydratatie en elasticiteit van je huid neemt af als je wat ouder wordt.14,20-22Je ontdekt fijne lijntjes20, kraaienpootjes20,23of verslapping van de huid21,24,25rond je ogen. Met behulp van JUVÉDERM®kun je het gebied rondom je ogen weer gladstrijken.4,26Meer informatieHerstel volumeJouw natuurlijke gezichtskenmerken zijn de sleutel tot een jeugdige uitstraling. In het JUVÉDERM®assortiment vind je hyaluronzuurfillers. Die kunnen de contouren van je kin en kaaklijn2,27,28versterken en volume aan de wangen toevoegen.3,7Meer informatie"
+          ]
+        },
+        {
+          "type": "location-services",
+          "count": 1
+        },
+        {
+          "type": "comparison-slider",
+          "count": 5
+        },
+        {
+          "type": "modal",
+          "count": 1
+        },
+        {
+          "type": "scrollreveal",
+          "count": 1
+        },
+        {
+          "type": "navigation-list",
+          "count": 5
+        }
+      ],
+      "teasers": [
+        {
+          "title": "Jouw unieke schoonheid",
+          "description": "Jouw unieke schoonheid",
+          "hasImage": true,
+          "imageSrc": "/adobe/dynamicmedia/deliver/dm-aid--1837f3c6-df22-47f8-aa8e-d5d380f2e340/2024-key-visual-sofie-01803-rgb-lr.jpg?preferwebp=true&width=1600&quality=85",
+          "ctaText": null
+        }
+      ],
+      "cards": [
+        {
+          "title": "Een natuurlijke uitstraling én gevoel†12,13",
+          "hasImage": false,
+          "bodyText": "JUVÉDERM® wordt gemaakt op basis van hyaluronzuur2-9. Deze stof komt van nature voor in onze huid en ons bindweefsel14-16. Het kan je helpen bij het behalen van een resultaat dat natuurlijk oogt en vo"
+        },
+        {
+          "title": "Toonaangevend",
+          "hasImage": false,
+          "bodyText": "JUVÉDERM® is wereldwijd het meest toonaangevende merk in hyaluronzuurfillers voor het gezicht *1. De producten zijn geschikt voor een breed scala aan gepersonaliseerde behandelingen2-9."
+        },
+        {
+          "title": "Langdurige resultaten*4",
+          "hasImage": false,
+          "bodyText": "Het resultaat blijft 9 tot 24 maanden zichtbaar. De exacte duur is afhankelijk van de gekozen behandeling en product(en)10,11"
+        },
+        {
+          "title": "Hoge patiënt tevredenheid‡17",
+          "hasImage": false,
+          "bodyText": "In een recente studie deden wij onderzoek naar de ervaringen van behandelde patiënten. Ruim 91% was tevreden met hun uitstraling een maand na de behandeling.‡17"
+        }
+      ],
+      "disclaimer": "Kijk uit. Jezelf mooier maken kan lelijk uitpakken. Een geslaagde ingreep begint bij een goede arts."
+    },
+    "nl-treatment-lips": {
+      "url": "https://www.juvederm.nl/nl/treatment/lips",
+      "title": " Juvederm en lippen | Juvéderm® Netherlands",
+      "metaDescription": "Beautiful lips come in all shapes and sizes, from extra full to more delicately contoured and everything in between. Whatever your desired look, products within the JUVÉDERM® range can be used to help enhance your lips by adding definition and volume without losing distinctive features.",
+      "archetype": "treatment-page",
+      "source": "bundle",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Aantrekkelijke lippen",
+          "parentClass": "cmp-teaser__description"
+        },
+        {
+          "level": 2,
+          "text": "Vollere lippen dankzij JUVÉDERM®1-4",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "Lippen met een natuurlijk gevoel en uitstraling4",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "Langdurig resultaat*4",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "Een uniek en gepersonaliseerd behandelplan10",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 2,
+          "text": "JUVÉDERM® maakt het verschil",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default juvederm-beforeaf"
+        },
+        {
+          "level": 3,
+          "text": "Versterk je gelaatstrekken met JUVÉDERM® fillers",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default juvederm-products"
+        },
+        {
+          "level": 4,
+          "text": "JUVÉDERM® VOLBELLA met lidocaïne",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "JUVÉDERM® VOLIFT met lidocaïne",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "JUVÉDERM®ULTRA 4",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "JUVÉDERM® ULTRA 3",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "JUVÉDERM® ULTRA 2",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 5,
+          "text": "Ontdek het antwoord op je vraag",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 2,
+          "text": "Jouw behandeling met JUVÉDERM®",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 3,
+          "text": "Versterk contouren",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Stralende oogopslag",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Herstel volume",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Vollere lippen4,6,7,12",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Stralende oogopslag",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Herstel volume",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 2,
+          "text": "Vind een kliniek bij jou in de buurt",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default c-find-the-clinic"
+        }
+      ],
+      "images": [
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--c609ee82-ee50-4227-8a24-74e317f72757/2024-incidental-sofie-02353-rgb-lr-lips.jpg?preferwebp=true&width=1600&quality=85",
+          "alt": "",
+          "role": "content",
+          "parentClass": "emu-image aaaem-image cmp-image"
+        },
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--32a21521-b4a2-44d3-aaed-2f5c707b83bd/2024-incidental-lily-00439-rgb-lr-treatment-area-section.jpg?preferwebp=true&&quality=80",
+          "alt": "",
+          "role": "interactive-image",
+          "parentClass": "emu-image-map emu-image aaaem-image cmp-image"
+        },
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--29c13e32-5ae5-4711-b56e-aa51e6f2be38/2024-key-visual-stefan-02608-rgb-lr-treatment-area-section.jpg?preferwebp=true&&quality=80",
+          "alt": "",
+          "role": "interactive-image",
+          "parentClass": "emu-image-map emu-image aaaem-image cmp-image"
+        },
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--721086fc-bf03-4770-a1ca-9f0ead9b9ad0/icon-kijk-uit-melding-white.png?preferwebp=true&quality=80",
+          "alt": "",
+          "role": "icon",
+          "parentClass": "emu-image aaaem-image cmp-image"
+        }
+      ],
+      "ctaLinks": [
+        {
+          "href": "/nl/find-a-clinic",
+          "text": "Vind je kliniek",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-outline juvederm-navigation-findaclinic"
+        },
+        {
+          "href": "/nl/qa",
+          "text": "Meer",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        },
+        {
+          "href": "https://www.instagram.com/juvederm.nl/",
+          "text": "Instagram",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        },
+        {
+          "href": "https://www.facebook.com/juvederm.nl",
+          "text": "Facebook",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        }
+      ],
+      "contentLinks": [
+        {
+          "href": "https://privacy.abbvie/",
+          "text": "https://privacy.abbvie/.",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl",
+          "text": "",
+          "isCta": false,
+          "classes": "emu-image__link cmp-image__link"
+        },
+        {
+          "href": "/nl/treatment/lips",
+          "text": "Lippen",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/eye-area",
+          "text": "Ogen",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/enhance",
+          "text": "Accentueren",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/restore",
+          "text": "Herstel",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/male",
+          "text": "Man",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#about-juvederm",
+          "text": "Over Juvéderm®",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#duration",
+          "text": "Kosten",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#results",
+          "text": "Langdurige resultaten",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#side-effects",
+          "text": "Veiligheid",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#facial-areas",
+          "text": "Zones van het gezicht",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "https://www.allerganaesthetics.nl/",
+          "text": "",
+          "isCta": false,
+          "classes": "emu-image__link cmp-image__link"
+        },
+        {
+          "href": "/nl/contact-us",
+          "text": "Neem contact op",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "https://www.abbvie.nl/privacy.html",
+          "text": "Privacy beleid",
+          "isCta": false,
+          "classes": ""
+        }
+      ],
+      "paragraphs": [
+        "See our new privacy terms athttps://privacy.abbvie/.",
+        "Lippen zijn er in allerlei soorten en maten. Van extra vol tot subtiel gevormd en alles daartussenin5. Door volume toe te voegen of te zorgen voor meer definitie van je lipcontour kan JÚVEDERM® helpen jouw lippen nóg mooier te maken.1-4Uiteraard zonder verlies van jouw unieke kenmerken.",
+        "JUVÉDERM maakt gebruik van hyaluronzuur. Door opname in het omliggende weefsel draagt het bij aan een natuurlijke uitstraling.9",
+        "De resultaten van de lipbehandeling van JUVÉDERM® houden tot 12 maanden lang aan.*4",
+        "Wat je ook wilt laten doen met je lippen. Bij de behandeling wordt rekening gehouden met jouw gezichtsbalans†10-12.",
+        "*In het open-label onderzoek werd - gedurende een periode van 12 maanden - het gebruik van JUVÉDERM® VOLBELLA met lidocaïne bij lipvergroting beoordeeld.4",
+        "†Dergelijke behandelbeslissingen dienen te worden beoordeeld en besproken als onderdeel van het overleg tussen zorgverlener en patiënt voordat een behandeling wordt toegepast.",
+        "JUVÉDERM® VOLBELLA met lidocaïne wordt gebruikt om fijne lijntjes en het traangebied te behandelen, de lippen te accentueren en asymmetrische kenmerken te verminderen.2",
+        "JUVÉDERM® VOLIFT met lidocaïne wordt gebruikt om diepe rimpels en lijntjes op te vullen en om de lippen (extra) vorm te geven.1",
+        "JUVÉDERM® ULTRA 4 wordt gebruikt om lijnen en rimpels te behandelen, lippen te benadrukken en jukbeenderen te verhogen.13"
+      ],
+      "textLength": 9727,
+      "aemComponents": {
+        "container": 58,
+        "header": 1,
+        "image": 20,
+        "button": 14,
+        "navigation-list": 5,
+        "navigation": 1,
+        "modal": 2,
+        "teaser": 1,
+        "title": 14,
+        "text": 27,
+        "carousel": 2,
+        "comparison-slider": 1,
+        "card": 5,
+        "accordion": 2,
+        "tabs": 1,
+        "location-services": 1,
+        "embed": 1,
+        "video-plyr": 1
+      },
+      "interactive": [
+        {
+          "type": "accordion",
+          "count": 2,
+          "items": [
+            "Wat kan ik verwachten tijdens mijn consult?",
+            "Wat kan ik verwachten tijdens mijn consult?",
+            "Zijn er bijwerkingen?",
+            "Zijn er bijwerkingen?",
+            "Hoe werken fillers precies?",
+            "Hoe werken fillers precies?",
+            "Hoe snel zie ik resultaat?",
+            "Hoe snel zie ik resultaat?",
+            "Behandeling",
+            "Behandeling"
+          ]
+        },
+        {
+          "type": "carousel",
+          "count": 2
+        },
+        {
+          "type": "tabs",
+          "count": 1,
+          "labels": [
+            "VROUWELIJKMANNELIJK",
+            "VROUWELIJK",
+            "MANNELIJK",
+            "Versterk contourenJouw natuurlijke gezichtskenmerken zijn de sleutel tot een jeugdige uitstraling. In het JUVÉDERM®assortiment vind je hyaluronzuurfillers. Die kunnen de contouren van je kin en kaaklijn2,27,28versterken en volume aan de wangen toevoegen.3,7Meer informatieStralende oogopslagDe natuurlijke hydratatie en elasticiteit van je huid neemt af als je wat ouder wordt.14,20-22Je ontdekt fijne lijntjes20, kraaienpootjes20,23of verslapping van de huid21,24,25rond je ogen. Met behulp van JUVÉDERM®kun je het gebied rondom je ogen weer gladstrijken.4,26Meer informatieHerstel volumeNaarmate je ouder wordt, verliest je huid geleidelijk wat volume en elasticiteit20,21. Deze veranderingen komen op verschillende gebieden van je gezicht voor20,21.Meer informatieVollere lippen4,6,7,12Mooie lippen zijn er in allerlei soorten en maten. Van extra vol tot subtiel gevormd en alles daartussenin.19JUVÉDERM®kan jou helpen door bijvoorbeeld definitie aan te brengen of volume toe te voegen4,6,7,12.Uiteraard zonder dat jouw unieke kenmerken verloren gaan.Meer informatieStralende oogopslagDe natuurlijke hydratatie en elasticiteit van je huid neemt af als je wat ouder wordt.14,20-22Je ontdekt fijne lijntjes20, kraaienpootjes20,23of verslapping van de huid21,24,25rond je ogen. Met behulp van JUVÉDERM®kun je het gebied rondom je ogen weer gladstrijken.4,26Meer informatieHerstel volumeJouw natuurlijke gezichtskenmerken zijn de sleutel tot een jeugdige uitstraling. In het JUVÉDERM®assortiment vind je hyaluronzuurfillers. Die kunnen de contouren van je kin en kaaklijn2,27,28versterken en volume aan de wangen toevoegen.3,7Meer informatie",
+            "Versterk contourenJouw natuurlijke gezichtskenmerken zijn de sleutel tot een jeugdige uitstraling. In het JUVÉDERM®assortiment vind je hyaluronzuurfillers. Die kunnen de contouren van je kin en kaaklijn2,27,28versterken en volume aan de wangen toevoegen.3,7Meer informatieStralende oogopslagDe natuurlijke hydratatie en elasticiteit van je huid neemt af als je wat ouder wordt.14,20-22Je ontdekt fijne lijntjes20, kraaienpootjes20,23of verslapping van de huid21,24,25rond je ogen. Met behulp van JUVÉDERM®kun je het gebied rondom je ogen weer gladstrijken.4,26Meer informatieHerstel volumeNaarmate je ouder wordt, verliest je huid geleidelijk wat volume en elasticiteit20,21. Deze veranderingen komen op verschillende gebieden van je gezicht voor20,21.Meer informatieVollere lippen4,6,7,12Mooie lippen zijn er in allerlei soorten en maten. Van extra vol tot subtiel gevormd en alles daartussenin.19JUVÉDERM®kan jou helpen door bijvoorbeeld definitie aan te brengen of volume toe te voegen4,6,7,12.Uiteraard zonder dat jouw unieke kenmerken verloren gaan.Meer informatie",
+            "Stralende oogopslagDe natuurlijke hydratatie en elasticiteit van je huid neemt af als je wat ouder wordt.14,20-22Je ontdekt fijne lijntjes20, kraaienpootjes20,23of verslapping van de huid21,24,25rond je ogen. Met behulp van JUVÉDERM®kun je het gebied rondom je ogen weer gladstrijken.4,26Meer informatieHerstel volumeJouw natuurlijke gezichtskenmerken zijn de sleutel tot een jeugdige uitstraling. In het JUVÉDERM®assortiment vind je hyaluronzuurfillers. Die kunnen de contouren van je kin en kaaklijn2,27,28versterken en volume aan de wangen toevoegen.3,7Meer informatie"
+          ]
+        },
+        {
+          "type": "location-services",
+          "count": 1
+        },
+        {
+          "type": "comparison-slider",
+          "count": 1
+        },
+        {
+          "type": "modal",
+          "count": 2
+        },
+        {
+          "type": "navigation-list",
+          "count": 5
+        }
+      ],
+      "teasers": [
+        {
+          "title": "Aantrekkelijke lippen",
+          "description": "Aantrekkelijke lippen",
+          "hasImage": true,
+          "imageSrc": "/adobe/dynamicmedia/deliver/dm-aid--c609ee82-ee50-4227-8a24-74e317f72757/2024-incidental-sofie-02353-rgb-lr-lips.jpg?preferwebp=true&width=1600&qualit",
+          "ctaText": null
+        }
+      ],
+      "cards": [
+        {
+          "title": "JUVÉDERM® VOLBELLA met lidocaïne",
+          "hasImage": true,
+          "bodyText": "JUVÉDERM® VOLBELLA met lidocaïne wordt gebruikt om fijne lijntjes en het traangebied te behandelen, de lippen te accentueren en asymmetrische kenmerken te verminderen.2"
+        },
+        {
+          "title": "JUVÉDERM® VOLIFT met lidocaïne",
+          "hasImage": true,
+          "bodyText": "JUVÉDERM® VOLIFT met lidocaïne wordt gebruikt om diepe rimpels en lijntjes op te vullen en om de lippen (extra) vorm te geven.1"
+        },
+        {
+          "title": "JUVÉDERM®ULTRA 4",
+          "hasImage": true,
+          "bodyText": "JUVÉDERM® ULTRA 4 wordt gebruikt om lijnen en rimpels te behandelen, lippen te benadrukken en jukbeenderen te verhogen.13"
+        },
+        {
+          "title": "JUVÉDERM® ULTRA 3",
+          "hasImage": true,
+          "bodyText": "JUVÉDERM® ULTRA 3 wordt gebruikt om middelmatige of diepe lijnen en rimpels te behandelen en om de huid en lippen te definiëren of benadrukken.11"
+        },
+        {
+          "title": "JUVÉDERM® ULTRA 2",
+          "hasImage": true,
+          "bodyText": "JUVÉDERM® ULTRA 2 wordt gebruikt om middelmatige lijnen en rimpels te behandelen en om de lippen beter te definiëren35."
+        }
+      ],
+      "disclaimer": "Kijk uit. Jezelf mooier maken kan lelijk uitpakken. Een geslaagde ingreep begint bij een goede arts."
+    },
+    "nl-treatment-restore": {
+      "url": "https://www.juvederm.nl/nl/treatment/restore",
+      "title": " Herstel met Juvederm | Juvéderm® Netherlands",
+      "metaDescription": "Ready for a refresh? Our skin’s natural elasticity decreases over time, and as it does, you may start to notice a few volume changes across your face. Whether you’re looking to achieve a more youthful appearance or simply enhance the things that make you, you, the JUVÉDERM® range of fillers can delicately plump your lips, add volume to your cheeks, contour your chin and jawline and smooth fine lines.",
+      "archetype": "treatment-page",
+      "source": "bundle",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Herstel jouw unieke gezichtskenmerken",
+          "parentClass": "cmp-teaser__description"
+        },
+        {
+          "level": 2,
+          "text": "Voeg volume toe,1,2strijk fijne lijntjes glad3,4en herstel de balans in je gezicht1-3,5",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "Geef je gelaatstrekken meer volume1,2,12",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 4,
+          "text": "Ontdek langdurige resultaten,*,10,14,15",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 4,
+          "text": "Accentueer jouw sterke punten met een op maat gemaakt plan",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 2,
+          "text": "JUVÉDERM® fillers maken het verschil",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default juvederm-beforeaf"
+        },
+        {
+          "level": 3,
+          "text": "JUVÉDERM® fillers versterken jouw gelaatstrekken",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default juvederm-products"
+        },
+        {
+          "level": 4,
+          "text": "Juvéderm® ULTRA 4",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "Juvéderm®VOLBELLA met lidocaïne",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "Juvéderm® VOLIFT met lidocaïne",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "Juvéderm® VOLUMA met lidocaïne",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "Juvéderm® VOLUX",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "JUVÉDERM® VOLITE",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 5,
+          "text": "Ontdek het antwoord op je vraag",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 2,
+          "text": "Jouw behandeling met JUVÉDERM®",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 3,
+          "text": "Versterk contouren",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Stralende oogopslag",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Herstel volume",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Vollere lippen4,6,7,12",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Stralende oogopslag",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Herstel volume",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 2,
+          "text": "Vind een kliniek bij jou in de buurt",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default c-find-the-clinic"
+        }
+      ],
+      "images": [
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--1837f3c6-df22-47f8-aa8e-d5d380f2e340/2024-key-visual-sofie-01803-rgb-lr.jpg?preferwebp=true&width=1600&quality=85",
+          "alt": "",
+          "role": "content",
+          "parentClass": "emu-image aaaem-image cmp-image"
+        },
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--32a21521-b4a2-44d3-aaed-2f5c707b83bd/2024-incidental-lily-00439-rgb-lr-treatment-area-section.jpg?preferwebp=true&&quality=80",
+          "alt": "",
+          "role": "interactive-image",
+          "parentClass": "emu-image-map emu-image aaaem-image cmp-image"
+        },
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--29c13e32-5ae5-4711-b56e-aa51e6f2be38/2024-key-visual-stefan-02608-rgb-lr-treatment-area-section.jpg?preferwebp=true&&quality=80",
+          "alt": "",
+          "role": "interactive-image",
+          "parentClass": "emu-image-map emu-image aaaem-image cmp-image"
+        },
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--721086fc-bf03-4770-a1ca-9f0ead9b9ad0/icon-kijk-uit-melding-white.png?preferwebp=true&quality=80",
+          "alt": "",
+          "role": "icon",
+          "parentClass": "emu-image aaaem-image cmp-image"
+        }
+      ],
+      "ctaLinks": [
+        {
+          "href": "/nl/find-a-clinic",
+          "text": "Vind je kliniek",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-outline juvederm-navigation-findaclinic"
+        },
+        {
+          "href": "/nl/qa",
+          "text": "Meer",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        },
+        {
+          "href": "https://www.instagram.com/juvederm.nl/",
+          "text": "Instagram",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        },
+        {
+          "href": "https://www.facebook.com/juvederm.nl",
+          "text": "Facebook",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        }
+      ],
+      "contentLinks": [
+        {
+          "href": "https://privacy.abbvie/",
+          "text": "https://privacy.abbvie/.",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl",
+          "text": "",
+          "isCta": false,
+          "classes": "emu-image__link cmp-image__link"
+        },
+        {
+          "href": "/nl/treatment/lips",
+          "text": "Lippen",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/eye-area",
+          "text": "Ogen",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/enhance",
+          "text": "Accentueren",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/restore",
+          "text": "Herstel",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/male",
+          "text": "Man",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#about-juvederm",
+          "text": "Over Juvéderm®",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#duration",
+          "text": "Kosten",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#results",
+          "text": "Langdurige resultaten",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#side-effects",
+          "text": "Veiligheid",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#facial-areas",
+          "text": "Zones van het gezicht",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "https://www.allerganaesthetics.nl/",
+          "text": "",
+          "isCta": false,
+          "classes": "emu-image__link cmp-image__link"
+        },
+        {
+          "href": "/nl/contact-us",
+          "text": "Neem contact op",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "https://www.abbvie.nl/privacy.html",
+          "text": "Privacy beleid",
+          "isCta": false,
+          "classes": ""
+        }
+      ],
+      "paragraphs": [
+        "See our new privacy terms athttps://privacy.abbvie/.",
+        "De natuurlijke elasticiteit van je huid neemt in de loop van de tijd af6. Wil je graag een jeugdiger uiterlijk of simpelweg een paar van je unieke eigenschappen verbeteren? Onze fillers zijn geschikt om op subtiele wijze te zorgen voor vollere lippen2,3,9,10, meer volume aan je wangen te geven1,2, d",
+        "*In klinisch onderzoek werd het lagere deel van het gezicht zoals het kin- en kaakgebied beoordeeld.11",
+        "Zodra het hyaluronzuur zich bindt aan de watermoleculen in je huid13zie je direct resultaat.14",
+        "De fillers van JUVÉDERM®bieden resultaten die tot 9 tot 24 maanden lang aanhouden16,17.",
+        "JUVÉDERM® fillers kunnen helpen je natuurlijke gelaatstrekken te accentueren.1-5,9,18,19",
+        "JUVÉDERM®ULTRA 4 wordt gebruikt om lijnen en rimpels te behandelen en om de lippen en jeukbeenderen te benadrukken.18",
+        "Juvéderm® VOLBELLA  met lidocaïne wordt gebruikt om fijne lijntjes en de traangoot te behandelen, de lippen te accentueren en asymmetrische kenmerken te verminderen1.",
+        "Juvéderm® VOLIFT met lidocaïne wordt gebruikt om diepe rimpels en lijntjes op te vullen en de lippen vorm te geven2.",
+        "JUVÉDERM® VOLUMA met lidocaïne wordt gebruikt om het gezichtsvolume te herstellen1."
+      ],
+      "textLength": 9038,
+      "aemComponents": {
+        "container": 58,
+        "header": 1,
+        "image": 21,
+        "button": 14,
+        "navigation-list": 5,
+        "navigation": 1,
+        "modal": 1,
+        "teaser": 1,
+        "title": 12,
+        "text": 27,
+        "carousel": 2,
+        "comparison-slider": 1,
+        "card": 6,
+        "accordion": 2,
+        "tabs": 1,
+        "location-services": 1
+      },
+      "interactive": [
+        {
+          "type": "accordion",
+          "count": 2,
+          "items": [
+            "Wat kan ik verwachten tijdens mijn consult?",
+            "Wat kan ik verwachten tijdens mijn consult?",
+            "Wat gebeurt er tijdens een behandeling?",
+            "Wat gebeurt er tijdens een behandeling?",
+            "Hoelang blijven de resultaten zichtbaar?",
+            "Hoelang blijven de resultaten zichtbaar?",
+            "Hoe werkt JUVÉDERM® precies?",
+            "Hoe werkt JUVÉDERM® precies?",
+            "Behandeling",
+            "Behandeling"
+          ]
+        },
+        {
+          "type": "carousel",
+          "count": 2
+        },
+        {
+          "type": "tabs",
+          "count": 1,
+          "labels": [
+            "VROUWELIJKMANNELIJK",
+            "VROUWELIJK",
+            "MANNELIJK",
+            "Versterk contourenJouw natuurlijke gezichtskenmerken zijn de sleutel tot een jeugdige uitstraling. In het JUVÉDERM®assortiment vind je hyaluronzuurfillers. Die kunnen de contouren van je kin en kaaklijn2,27,28versterken en volume aan de wangen toevoegen.3,7Meer informatieStralende oogopslagDe natuurlijke hydratatie en elasticiteit van je huid neemt af als je wat ouder wordt.14,20-22Je ontdekt fijne lijntjes20, kraaienpootjes20,23of verslapping van de huid21,24,25rond je ogen. Met behulp van JUVÉDERM®kun je het gebied rondom je ogen weer gladstrijken.4,26Meer informatieHerstel volumeNaarmate je ouder wordt, verliest je huid geleidelijk wat volume en elasticiteit20,21. Deze veranderingen komen op verschillende gebieden van je gezicht voor20,21.Meer informatieVollere lippen4,6,7,12Mooie lippen zijn er in allerlei soorten en maten. Van extra vol tot subtiel gevormd en alles daartussenin.19JUVÉDERM®kan jou helpen door bijvoorbeeld definitie aan te brengen of volume toe te voegen4,6,7,12.Uiteraard zonder dat jouw unieke kenmerken verloren gaan.Meer informatieStralende oogopslagDe natuurlijke hydratatie en elasticiteit van je huid neemt af als je wat ouder wordt.14,20-22Je ontdekt fijne lijntjes20, kraaienpootjes20,23of verslapping van de huid21,24,25rond je ogen. Met behulp van JUVÉDERM®kun je het gebied rondom je ogen weer gladstrijken.4,26Meer informatieHerstel volumeJouw natuurlijke gezichtskenmerken zijn de sleutel tot een jeugdige uitstraling. In het JUVÉDERM®assortiment vind je hyaluronzuurfillers. Die kunnen de contouren van je kin en kaaklijn2,27,28versterken en volume aan de wangen toevoegen.3,7Meer informatie",
+            "Versterk contourenJouw natuurlijke gezichtskenmerken zijn de sleutel tot een jeugdige uitstraling. In het JUVÉDERM®assortiment vind je hyaluronzuurfillers. Die kunnen de contouren van je kin en kaaklijn2,27,28versterken en volume aan de wangen toevoegen.3,7Meer informatieStralende oogopslagDe natuurlijke hydratatie en elasticiteit van je huid neemt af als je wat ouder wordt.14,20-22Je ontdekt fijne lijntjes20, kraaienpootjes20,23of verslapping van de huid21,24,25rond je ogen. Met behulp van JUVÉDERM®kun je het gebied rondom je ogen weer gladstrijken.4,26Meer informatieHerstel volumeNaarmate je ouder wordt, verliest je huid geleidelijk wat volume en elasticiteit20,21. Deze veranderingen komen op verschillende gebieden van je gezicht voor20,21.Meer informatieVollere lippen4,6,7,12Mooie lippen zijn er in allerlei soorten en maten. Van extra vol tot subtiel gevormd en alles daartussenin.19JUVÉDERM®kan jou helpen door bijvoorbeeld definitie aan te brengen of volume toe te voegen4,6,7,12.Uiteraard zonder dat jouw unieke kenmerken verloren gaan.Meer informatie",
+            "Stralende oogopslagDe natuurlijke hydratatie en elasticiteit van je huid neemt af als je wat ouder wordt.14,20-22Je ontdekt fijne lijntjes20, kraaienpootjes20,23of verslapping van de huid21,24,25rond je ogen. Met behulp van JUVÉDERM®kun je het gebied rondom je ogen weer gladstrijken.4,26Meer informatieHerstel volumeJouw natuurlijke gezichtskenmerken zijn de sleutel tot een jeugdige uitstraling. In het JUVÉDERM®assortiment vind je hyaluronzuurfillers. Die kunnen de contouren van je kin en kaaklijn2,27,28versterken en volume aan de wangen toevoegen.3,7Meer informatie"
+          ]
+        },
+        {
+          "type": "location-services",
+          "count": 1
+        },
+        {
+          "type": "comparison-slider",
+          "count": 1
+        },
+        {
+          "type": "modal",
+          "count": 1
+        },
+        {
+          "type": "navigation-list",
+          "count": 5
+        }
+      ],
+      "teasers": [
+        {
+          "title": "Herstel jouw unieke gezichtskenmerken",
+          "description": "Herstel jouw unieke gezichtskenmerken",
+          "hasImage": true,
+          "imageSrc": "/adobe/dynamicmedia/deliver/dm-aid--1837f3c6-df22-47f8-aa8e-d5d380f2e340/2024-key-visual-sofie-01803-rgb-lr.jpg?preferwebp=true&width=1600&quality=85",
+          "ctaText": null
+        }
+      ],
+      "cards": [
+        {
+          "title": "Juvéderm® ULTRA 4",
+          "hasImage": true,
+          "bodyText": "JUVÉDERM®ULTRA 4 wordt gebruikt om lijnen en rimpels te behandelen en om de lippen en jeukbeenderen te benadrukken.18"
+        },
+        {
+          "title": "Juvéderm®VOLBELLA met lidocaïne",
+          "hasImage": true,
+          "bodyText": "Juvéderm® VOLBELLA  met lidocaïne wordt gebruikt om fijne lijntjes en de traangoot te behandelen, de lippen te accentueren en asymmetrische kenmerken te verminderen1."
+        },
+        {
+          "title": "Juvéderm® VOLIFT met lidocaïne",
+          "hasImage": true,
+          "bodyText": "Juvéderm® VOLIFT met lidocaïne wordt gebruikt om diepe rimpels en lijntjes op te vullen en de lippen vorm te geven2."
+        },
+        {
+          "title": "Juvéderm® VOLUMA met lidocaïne",
+          "hasImage": true,
+          "bodyText": "JUVÉDERM® VOLUMA met lidocaïne wordt gebruikt om het gezichtsvolume te herstellen1."
+        },
+        {
+          "title": "Juvéderm® VOLUX",
+          "hasImage": true,
+          "bodyText": "Juvéderm® VOLUX wordt gebruikt om het volume in het kin- en kaakgebied te herstellen of juist te creëren*5,11."
+        }
+      ],
+      "disclaimer": "Kijk uit. Jezelf mooier maken kan lelijk uitpakken. Een geslaagde ingreep begint bij een goede arts."
+    },
+    "nl-qa": {
+      "url": "https://www.juvederm.nl/nl/qa",
+      "title": "Veelgestelde vragen Juvederm | Juvéderm® Netherlands",
+      "metaDescription": "JUVÉDERM® is a collection of injectable facial fillers that can help enhance your facial features by plumping lips, smoothing wrinkles, or restoring lost facial volume. JUVÉDERM® delivers results that look and feel natural as its active ingredient, hyaluronic acid, is naturally occurring in our skin.",
+      "archetype": "faq",
+      "source": "bundle",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Ontdek het antwoord op je vraag",
+          "parentClass": "cmp-teaser__description"
+        },
+        {
+          "level": 2,
+          "text": "Wat is JUVÉDERM®?",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "JUVÉDERM® is ontwikkeld om in allerlei behoeften te voorzien.",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 4,
+          "text": "Langdurige resultaten15,16",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 4,
+          "text": "Een uniek behandelplan",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 4,
+          "text": "Hoge kwaliteit",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Wat zijn fillers?",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "Fillers zijn injecteerbare gels die worden gebruikt om bepaalde gebieden in je gezicht te herstellen1,6,7of om volume toe te voegen1,2,6,7.",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Wat is hyaluronzuur?",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "Hyaluronzuur is een stof die van nature in je huid voorkomt11-13. Het houdt de hydratatie van je huid in stand door zich te binden aan watermoleculen11,22.",
+          "parentClass": "cmp-text text aaaem-text"
+        },
+        {
+          "level": 3,
+          "text": "Belangrijkste leerpunten",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 2,
+          "text": "Voorbereiding op jouw behandeling met JUVÉDERM®",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 3,
+          "text": "Zijn er bijwerkingen van JUVÉDERM®?",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 3,
+          "text": "Belangrijkste leerpunten",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 2,
+          "text": "Wat kan ik verwachten tijdens mijn consult?",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 3,
+          "text": "Hoe ziet een behandelproces eruit?",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 3,
+          "text": "Zijn de behandelingen pijnlijk?",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "JUVÉDERM® fillers bevatten lidocaïne, dit zorgt voor een plaatselijke verdoving om eventuele ongemakken tijdens de behandeling te verzachten.1-3,5-8,10",
+          "parentClass": "cmp-text text aaaem-text text-highlighted"
+        },
+        {
+          "level": 3,
+          "text": "Belangrijkste leerpunten",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 2,
+          "text": "Hoeveel kost een JUVÉDERM® behandeling?",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 3,
+          "text": "Hoelang blijven de resultaten zichtbaar?",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "De resultaten van JUVÉDERM® fillers houden 9 tot 24 maanden aan15,16",
+          "parentClass": "cmp-text text aaaem-text text-highlighted"
+        },
+        {
+          "level": 3,
+          "text": "Zijn de resultaten blijvend?",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 3,
+          "text": "Belangrijkste leerpunten",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 2,
+          "text": "Waar in mijn gezicht kunnen fillers van JUVÉDERM® worden gebruikt?",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 4,
+          "text": "Het assortiment fillers van JUVÉDERM® is zorgvuldig ontwikkeld om verschillende gebieden van het gezicht te behandelen1-3,5-8,10en je te helpen jouw schoonheidsdoelen te bereiken.",
+          "parentClass": "cmp-text text aaaem-text"
+        }
+      ],
+      "images": [
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--f82ec3f1-5756-46c1-a0ca-f30501e4516a/2024-key-visual-lily-00404-rgb-lr.jpg?preferwebp=true&width=1600&quality=85",
+          "alt": "",
+          "role": "content",
+          "parentClass": "emu-image aaaem-image cmp-image"
+        },
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--f82ec3f1-5756-46c1-a0ca-f30501e4516a/2024-key-visual-lily-00404-rgb-lr.jpg?preferwebp=true&width=320&quality=85",
+          "alt": "",
+          "role": "content",
+          "parentClass": "emu-image aaaem-image cmp-image"
+        },
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--721086fc-bf03-4770-a1ca-9f0ead9b9ad0/icon-kijk-uit-melding-white.png?preferwebp=true&quality=80",
+          "alt": "",
+          "role": "icon",
+          "parentClass": "emu-image aaaem-image cmp-image"
+        }
+      ],
+      "ctaLinks": [
+        {
+          "href": "/nl/find-a-clinic",
+          "text": "Vind je kliniek",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-outline juvederm-navigation-findaclinic"
+        },
+        {
+          "href": "https://www.instagram.com/juvederm.nl/",
+          "text": "Instagram",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        },
+        {
+          "href": "https://www.facebook.com/juvederm.nl",
+          "text": "Facebook",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        }
+      ],
+      "contentLinks": [
+        {
+          "href": "https://privacy.abbvie/",
+          "text": "https://privacy.abbvie/.",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl",
+          "text": "",
+          "isCta": false,
+          "classes": "emu-image__link cmp-image__link"
+        },
+        {
+          "href": "/nl/treatment/lips",
+          "text": "Lippen",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/eye-area",
+          "text": "Ogen",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/enhance",
+          "text": "Accentueren",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/restore",
+          "text": "Herstel",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/male",
+          "text": "Man",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#about-juvederm",
+          "text": "Over Juvéderm®",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#duration",
+          "text": "Kosten",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#results",
+          "text": "Langdurige resultaten",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#side-effects",
+          "text": "Veiligheid",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#facial-areas",
+          "text": "Zones van het gezicht",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#expectation",
+          "text": "Wat je kunt verwachten",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "https://allergan-web-us-prod.azurewebsites.net/products/quality.aspx",
+          "text": "https://allergan-web-us-prod.azurewebsites.net/products/quality.aspx",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "https://www.nhs.uk/conditions/cosmetic-procedures/dermal-fillers/",
+          "text": "https://www.nhs.uk/conditions/cosmetic-procedures/dermal-fillers/",
+          "isCta": false,
+          "classes": ""
+        }
+      ],
+      "paragraphs": [
+        "See our new privacy terms athttps://privacy.abbvie/.",
+        "JUVÉDERM® is een assortiment injecteerbare fillers die bijdragen aan het verbeteren van gelaatstrekken door te zorgen voor vollere lippen1-4, rimpels glad te strijken2,5of verloren gezichtsvolume te herstellen.1,6-8JUVÉDERM® kan zorgen voor resultaten die er natuurlijk uitzien en aanvoelen*4,9omdat ",
+        "*In een in vivo-onderzoek bleek dat een filler die in het weefsel is geïntegreerd, er natuurlijk kan uitzien en natuurlijk kan aanvoelen.14",
+        "In klinische onderzoeken hebben producten binnen het JUVEDÉRM® assortiment de langst bewezen werkingsduur. Dit is afhankelijk van het gekozen product.**17Resultaten houden 9 tot 24 maanden aan, afhankelijk van de behandeling en de gekozen producten.15,16",
+        "Je arts neemt de tijd om inzicht te krijgen in jouw doel en stelt een uniek behandelplan op met daarin al je schoonheidsdoelen18.",
+        "Het assortiment van JUVEDÉRM® fillers is gebouwd op een lange geschiedenis van kwaliteit, wetenschap en innovatie van JUVEDÉRM® producten Allergan Aesthetics.",
+        "**Gebaseerd op een zoekopdracht in november 2019 naar gepubliceerde klinische onderzoeken naar fillers met hyaluronzuur. Voor JUVÉDERM® VOLUMA met lidocaïne werd een duur van 24 maanden vastgesteld, afhankelijk van het gekozen behandelgebied.17",
+        "Er zijn verschillende fillers voor allerlei behandelingen11. Denk aan het creëren van een frissere look2,3,6-8, het versterken van contouren1,10, het realiseren van symmetrie1, het opvullen van lijnen of diepe plooien2,3,5,8,10en het accentueren van een bepaald onderdeel van het gezicht, zoals de li",
+        "Naarmate je ouder wordt, vernieuwt onze huid zich steeds.19-21Dit is deels te wijten aan een verlies van hyaluronzuur19,21, collageen en elastine.19-21Dit kan resulteren in een droge, dunne huid en het verschijnen van rimpels en plooien.19-21",
+        "Fillers met hyaluronzuur, zoals JUVÉDERM®, bevatten een vorm van hyaluronzuur1-3,5-8,10,11,22die rechtstreeks in de huid wordt geïnjecteerd. Hiermee worden tekenen van veroudering verminderd24-26of volume toegevoegd.1,6-8In het laatste geval gaat het om herstel van volume dat in de loop der tijd ver"
+      ],
+      "textLength": 20723,
+      "aemComponents": {
+        "container": 50,
+        "header": 1,
+        "image": 18,
+        "button": 7,
+        "navigation-list": 6,
+        "navigation": 1,
+        "modal": 1,
+        "teaser": 1,
+        "text": 48,
+        "title": 16,
+        "carousel": 1,
+        "accordion": 1
+      },
+      "interactive": [
+        {
+          "type": "accordion",
+          "count": 1,
+          "items": [
+            "Behandeling",
+            "Behandeling",
+            "FAQ",
+            "FAQ"
+          ]
+        },
+        {
+          "type": "carousel",
+          "count": 1
+        },
+        {
+          "type": "modal",
+          "count": 1
+        },
+        {
+          "type": "navigation-list",
+          "count": 6
+        }
+      ],
+      "teasers": [
+        {
+          "title": "Ontdek het antwoord op je vraag",
+          "description": "Ontdek het antwoord op je vraag",
+          "hasImage": true,
+          "imageSrc": "/adobe/dynamicmedia/deliver/dm-aid--f82ec3f1-5756-46c1-a0ca-f30501e4516a/2024-key-visual-lily-00404-rgb-lr.jpg?preferwebp=true&width=1600&quality=85",
+          "ctaText": null
+        }
+      ],
+      "cards": [],
+      "disclaimer": "Kijk uit. Jezelf mooier maken kan lelijk uitpakken. Een geslaagde ingreep begint bij een goede arts."
+    },
+    "nl-find-a-clinic": {
+      "url": "https://www.juvederm.nl/nl/find-a-clinic",
+      "title": " Vind een kliniek | Juvéderm® Netherlands",
+      "metaDescription": "Find the right clinic for you",
+      "archetype": "clinic-finder",
+      "source": "bundle",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Vind een kliniek bij jou in de buurt",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 2,
+          "text": "Zoek op plaatsnaam",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        },
+        {
+          "level": 2,
+          "text": "Of vul je locatie in",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-default"
+        }
+      ],
+      "images": [
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--f48d3ea7-c126-4acb-b55b-c3262272e37c/2024-key-visual-carmen-01160-rgb-lr.jpg?preferwebp=true&width=480&quality=85",
+          "alt": "",
+          "role": "content",
+          "parentClass": "emu-image aaaem-image cmp-image"
+        },
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--721086fc-bf03-4770-a1ca-9f0ead9b9ad0/icon-kijk-uit-melding-white.png?preferwebp=true&quality=80",
+          "alt": "",
+          "role": "icon",
+          "parentClass": "emu-image aaaem-image cmp-image"
+        }
+      ],
+      "ctaLinks": [
+        {
+          "href": "/nl/find-a-clinic",
+          "text": "Vind je kliniek",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-outline juvederm-navigation-findaclinic"
+        },
+        {
+          "href": "/nl/clinics?location=AMSTERDAM,%20NL",
+          "text": "AMSTERDAM",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        },
+        {
+          "href": "/nl/clinics?location=ROTTERDAM,%20NL",
+          "text": "ROTTERDAM",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        },
+        {
+          "href": "/nl/clinics?location=DEN%20HAAG,%20NL",
+          "text": "DEN HAAG",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        },
+        {
+          "href": "/nl/clinics?location=UTRECHT,%20NL",
+          "text": "UTRECHT",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        },
+        {
+          "href": "https://www.instagram.com/juvederm.nl/",
+          "text": "Instagram",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        },
+        {
+          "href": "https://www.facebook.com/juvederm.nl",
+          "text": "Facebook",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        }
+      ],
+      "contentLinks": [
+        {
+          "href": "https://privacy.abbvie/",
+          "text": "https://privacy.abbvie/.",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl",
+          "text": "",
+          "isCta": false,
+          "classes": "emu-image__link cmp-image__link"
+        },
+        {
+          "href": "/nl/treatment/lips",
+          "text": "Lippen",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/eye-area",
+          "text": "Ogen",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/enhance",
+          "text": "Accentueren",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/restore",
+          "text": "Herstel",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/male",
+          "text": "Man",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#about-juvederm",
+          "text": "Over Juvéderm®",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#duration",
+          "text": "Kosten",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#results",
+          "text": "Langdurige resultaten",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#side-effects",
+          "text": "Veiligheid",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#facial-areas",
+          "text": "Zones van het gezicht",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "https://www.allerganaesthetics.nl/",
+          "text": "",
+          "isCta": false,
+          "classes": "emu-image__link cmp-image__link"
+        },
+        {
+          "href": "/nl/contact-us",
+          "text": "Neem contact op",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "https://www.abbvie.nl/privacy.html",
+          "text": "Privacy beleid",
+          "isCta": false,
+          "classes": ""
+        }
+      ],
+      "paragraphs": [
+        "See our new privacy terms athttps://privacy.abbvie/.",
+        "Kijk uit. Jezelf mooier maken kan lelijk uitpakken. Een geslaagde ingreep begint bij een goede arts.",
+        "Materialen geleverd door Allergan Aesthetics, een bedrijf van AbbVie onder een licentieovereenkomst. Deze informatie is uitsluitend bestemd voor Nederlandse volwassenen (>18 jaar). Je doet er goed aan altijd een zorgverlener te raadplegen ter ondersteuning van je beslissing of Juvéderm® geschikt voo",
+        "Modellen zijn behandeld met verschillende JUVÉDERM®fillers. Beelden zijn ter illustratie beschikbaar gesteld door dr. Mauricio DeMaio. Resultaten kunnen per persoon verschillen. De informatie op deze website is alleen bedoeld als informatie en educatie en is niet bedoeld als vervanging voor advies v",
+        "Abbvie B.V. | NL-JUV-230072 | Juni 2023"
+      ],
+      "textLength": 3871,
+      "aemComponents": {
+        "container": 32,
+        "header": 1,
+        "image": 8,
+        "button": 11,
+        "navigation-list": 5,
+        "navigation": 1,
+        "modal": 1,
+        "title": 3,
+        "location-services": 2,
+        "text": 3,
+        "accordion": 1
+      },
+      "interactive": [
+        {
+          "type": "accordion",
+          "count": 1,
+          "items": [
+            "Behandeling",
+            "Behandeling",
+            "FAQ",
+            "FAQ"
+          ]
+        },
+        {
+          "type": "location-services",
+          "count": 2
+        },
+        {
+          "type": "modal",
+          "count": 1
+        },
+        {
+          "type": "navigation-list",
+          "count": 5
+        }
+      ],
+      "teasers": [],
+      "cards": [],
+      "disclaimer": "Kijk uit. Jezelf mooier maken kan lelijk uitpakken. Een geslaagde ingreep begint bij een goede arts."
+    },
+    "nl-contact-us": {
+      "url": "https://www.juvederm.nl/nl/contact-us",
+      "title": "Neem contact op",
+      "metaDescription": "",
+      "archetype": "contact",
+      "source": "bundle",
+      "headings": [
+        {
+          "level": 2,
+          "text": "NEEM CONTACT OP",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-center"
+        }
+      ],
+      "images": [
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--721086fc-bf03-4770-a1ca-9f0ead9b9ad0/icon-kijk-uit-melding-white.png?preferwebp=true&quality=80",
+          "alt": "",
+          "role": "icon",
+          "parentClass": "emu-image aaaem-image cmp-image"
+        }
+      ],
+      "ctaLinks": [
+        {
+          "href": "/nl/find-a-clinic",
+          "text": "Vind je kliniek",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-outline juvederm-navigation-findaclinic"
+        },
+        {
+          "href": "https://www.instagram.com/juvederm.nl/",
+          "text": "Instagram",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        },
+        {
+          "href": "https://www.facebook.com/juvederm.nl",
+          "text": "Facebook",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        }
+      ],
+      "contentLinks": [
+        {
+          "href": "https://privacy.abbvie/",
+          "text": "https://privacy.abbvie/.",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl",
+          "text": "",
+          "isCta": false,
+          "classes": "emu-image__link cmp-image__link"
+        },
+        {
+          "href": "/nl/treatment/lips",
+          "text": "Lippen",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/eye-area",
+          "text": "Ogen",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/enhance",
+          "text": "Accentueren",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/restore",
+          "text": "Herstel",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/male",
+          "text": "Man",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#about-juvederm",
+          "text": "Over Juvéderm®",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#duration",
+          "text": "Kosten",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#results",
+          "text": "Langdurige resultaten",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#side-effects",
+          "text": "Veiligheid",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#facial-areas",
+          "text": "Zones van het gezicht",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "mailto:infonederland@abbvie.com",
+          "text": "infonederland@abbvie.com",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "mailto:ProductSurveillance_EAME@Abbvie.com",
+          "text": "ProductSurveillance_EAME@Abbvie.com",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "https://www.allerganaesthetics.nl/",
+          "text": "",
+          "isCta": false,
+          "classes": "emu-image__link cmp-image__link"
+        }
+      ],
+      "paragraphs": [
+        "See our new privacy terms athttps://privacy.abbvie/.",
+        "Allergan Aesthetics, een AbbVie ondernemingBezoekersadres:Wegalaan 92132 JD Hoofddorp+31 (0) 88 322 2843infonederland@abbvie.comBijwerkingen kunnen worden gemeld bij uw lokale autoriteiten en ons Allergan Aesthetics kantoor viaProductSurveillance_EAME@Abbvie.com",
+        "Kijk uit. Jezelf mooier maken kan lelijk uitpakken. Een geslaagde ingreep begint bij een goede arts.",
+        "Materialen geleverd door Allergan Aesthetics, een bedrijf van AbbVie onder een licentieovereenkomst. Deze informatie is uitsluitend bestemd voor Nederlandse volwassenen (>18 jaar). Je doet er goed aan altijd een zorgverlener te raadplegen ter ondersteuning van je beslissing of Juvéderm® geschikt voo",
+        "Modellen zijn behandeld met verschillende JUVÉDERM®fillers. Beelden zijn ter illustratie beschikbaar gesteld door dr. Mauricio DeMaio. Resultaten kunnen per persoon verschillen. De informatie op deze website is alleen bedoeld als informatie en educatie en is niet bedoeld als vervanging voor advies v",
+        "Abbvie B.V. | NL-JUV-230072 | Juni 2023"
+      ],
+      "textLength": 2404,
+      "aemComponents": {
+        "container": 21,
+        "header": 1,
+        "image": 7,
+        "button": 7,
+        "navigation-list": 5,
+        "navigation": 1,
+        "modal": 1,
+        "title": 1,
+        "text": 3,
+        "accordion": 1
+      },
+      "interactive": [
+        {
+          "type": "accordion",
+          "count": 1,
+          "items": [
+            "Behandeling",
+            "Behandeling",
+            "FAQ",
+            "FAQ"
+          ]
+        },
+        {
+          "type": "modal",
+          "count": 1
+        },
+        {
+          "type": "navigation-list",
+          "count": 5
+        }
+      ],
+      "teasers": [],
+      "cards": [],
+      "disclaimer": "Kijk uit. Jezelf mooier maken kan lelijk uitpakken. Een geslaagde ingreep begint bij een goede arts."
+    },
+    "nl-disclaimer": {
+      "url": "https://www.juvederm.nl/nl/disclaimer",
+      "title": "Social media disclaimer | Juvéderm® Netherlands",
+      "metaDescription": "",
+      "archetype": "legal",
+      "source": "bundle",
+      "headings": [
+        {
+          "level": 2,
+          "text": "Disclaimer",
+          "parentClass": "emu-title cmp-title aaaem-title aaaem-title__alignment-center"
+        }
+      ],
+      "images": [
+        {
+          "src": "/adobe/dynamicmedia/deliver/dm-aid--721086fc-bf03-4770-a1ca-9f0ead9b9ad0/icon-kijk-uit-melding-white.png?preferwebp=true&quality=80",
+          "alt": "",
+          "role": "icon",
+          "parentClass": "emu-image aaaem-image cmp-image"
+        }
+      ],
+      "ctaLinks": [
+        {
+          "href": "/nl/find-a-clinic",
+          "text": "Vind je kliniek",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-outline juvederm-navigation-findaclinic"
+        },
+        {
+          "href": "https://www.instagram.com/juvederm.nl/",
+          "text": "Instagram",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        },
+        {
+          "href": "https://www.facebook.com/juvederm.nl",
+          "text": "Facebook",
+          "isCta": true,
+          "classes": "emu-button cmp-button aaaem-button aaaem-button__primary-filled"
+        }
+      ],
+      "contentLinks": [
+        {
+          "href": "https://privacy.abbvie/",
+          "text": "https://privacy.abbvie/.",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl",
+          "text": "",
+          "isCta": false,
+          "classes": "emu-image__link cmp-image__link"
+        },
+        {
+          "href": "/nl/treatment/lips",
+          "text": "Lippen",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/eye-area",
+          "text": "Ogen",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/enhance",
+          "text": "Accentueren",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/restore",
+          "text": "Herstel",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/treatment/male",
+          "text": "Man",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#about-juvederm",
+          "text": "Over Juvéderm®",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#duration",
+          "text": "Kosten",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#results",
+          "text": "Langdurige resultaten",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#side-effects",
+          "text": "Veiligheid",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "/nl/qa#facial-areas",
+          "text": "Zones van het gezicht",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "https://www.juvederm.nl/",
+          "text": "www.juvederm.nl",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "mailto:ProductSurveillance_EAME@Abbvie.com",
+          "text": "ProductSurveillance_EAME@Abbvie.com.",
+          "isCta": false,
+          "classes": ""
+        },
+        {
+          "href": "mailto:infonederland@allergan.com",
+          "text": "infonederland@allergan.com.",
+          "isCta": false,
+          "classes": ""
+        }
+      ],
+      "paragraphs": [
+        "See our new privacy terms athttps://privacy.abbvie/.",
+        "Deze Facebookpagina, Instagrampagina of Youtube-kanaal is uitsluitend bedoeld voor Nederland en alleen geschikt voor volwassenen >18 jaar. De inhoud dient niet ter vervanging van het advies van een arts of andere gekwalificeerde professional uit de gezondheidszorg. Raadpleeg altijd een arts om je te",
+        "Door dezeFacebookpagina, Instagrampagina of Youtube-kanaal te liken/volgen, raadplegen en/of te gebruiken, erken je dat je de algemene gebruiksvoorwaarden hebt gelezen, begrepen en aanvaard. Wil je meer weten over de algemene voorwaarden, producten en/of eventuele bijwerkingen dan kun je terecht opw",
+        "Bijwerkingen dienen te worden gemeld bij je lokale autoriteiten en ons Allergan Aesthetics kantoor viaProductSurveillance_EAME@Abbvie.com.",
+        "Richtlijnen Social media",
+        "Er zijn een aantal dingen die je moet weten wanneer je ons kanaal bezoekt, reageert of een bericht plaatst. Door deze pagina’s te gebruiken en/of te openen, ga je akkoord met de algemene voorwaarden vanFacebook, Instagram en Youtube.",
+        "Alle opmerkingen, foto’s, video's en andere soorten visuals geplaatst door bezoekers op het account van Juvéderm en/of andere social mediakanalen weerspiegelen niet noodzakelijkerwijs de meningen en/of ideeën van Allergan Aesthetics, haar werknemers of gelieerde ondernemingen. We moedigen positieve ",
+        "De inhoud van onze social mediakanalen moet voldoen aan de gebruiksvoorwaarden van het desbetreffende platform. De content mag niet gereproduceerd, gedistribueerd, overgedragen, bewaard of op andere manieren worden gebruikt, tenzij er vooraf schriftelijke toestemming is verkregen van Allergan Aesthe",
+        "Onze social mediakanalen hebben als doel om nieuws, updates en andere gebeurtenissen met je te delen over Juvéderm en Juvéderm producent; Allergan Aesthetics. We staan open voor suggesties en horen graag je mening, maar het zou kunnen zijn dat we een post of comment moeten verwijderen (weigeren) of ",
+        "We doen er alles aan om de lijst met bovenstaande redenen zo actueel mogelijk te houden en te updaten zodra hier aanleiding toe is."
+      ],
+      "textLength": 7028,
+      "aemComponents": {
+        "container": 21,
+        "header": 1,
+        "image": 7,
+        "button": 7,
+        "navigation-list": 5,
+        "navigation": 1,
+        "modal": 1,
+        "title": 1,
+        "text": 3,
+        "accordion": 1
+      },
+      "interactive": [
+        {
+          "type": "accordion",
+          "count": 1,
+          "items": [
+            "Behandeling",
+            "Behandeling",
+            "FAQ",
+            "FAQ"
+          ]
+        },
+        {
+          "type": "modal",
+          "count": 1
+        },
+        {
+          "type": "navigation-list",
+          "count": 5
+        }
+      ],
+      "teasers": [],
+      "cards": [],
+      "disclaimer": "Kijk uit. Jezelf mooier maken kan lelijk uitpakken. Een geslaagde ingreep begint bij een goede arts."
+    }
+  },
+  "chrome": {
+    "header": {
+      "logo": {
+        "type": "svg-inline",
+        "alt": "JUVÉDERM® logo",
+        "linkTo": "/nl"
+      },
+      "primaryNav": [
+        {
+          "text": "Lippen",
+          "href": "/nl/treatment/lips",
+          "type": "direct-link"
+        },
+        {
+          "text": "Ogen",
+          "href": "/nl/treatment/eye-area",
+          "type": "direct-link"
+        },
+        {
+          "text": "Accentueren",
+          "href": "/nl/treatment/enhance",
+          "type": "direct-link"
+        },
+        {
+          "text": "Herstel",
+          "href": "/nl/treatment/restore",
+          "type": "direct-link"
+        },
+        {
+          "text": "Man",
+          "href": "/nl/treatment/male",
+          "type": "direct-link"
+        }
+      ],
+      "dropdownNav": [
+        {
+          "label": "FAQ",
+          "children": [
+            {
+              "text": "Over Juvéderm®",
+              "href": "/nl/qa#about-juvederm"
+            },
+            {
+              "text": "Kosten",
+              "href": "/nl/qa#duration"
+            },
+            {
+              "text": "Langdurige resultaten",
+              "href": "/nl/qa#results"
+            },
+            {
+              "text": "Veiligheid",
+              "href": "/nl/qa#side-effects"
+            },
+            {
+              "text": "Zones van het gezicht",
+              "href": "/nl/qa#facial-areas"
+            }
+          ]
+        }
+      ],
+      "ctaButton": {
+        "text": "Vind je kliniek",
+        "href": "/nl/find-a-clinic",
+        "style": "primary-outline"
+      },
+      "hasMobileMenu": true,
+      "hasSkipToContent": true
+    },
+    "footer": {
+      "note": "AEM footer element is empty. Site uses a page-body accordion + navigation-list pattern at the bottom of every page as a pseudo-footer.",
+      "pseudoFooterStructure": {
+        "accordion": {
+          "sections": [
+            {
+              "label": "Behandeling",
+              "links": [
+                {
+                  "text": "Lippen",
+                  "href": "/nl/treatment/lips"
+                },
+                {
+                  "text": "Ogen",
+                  "href": "/nl/treatment/eye-area"
+                },
+                {
+                  "text": "Accentueren",
+                  "href": "/nl/treatment/enhance"
+                },
+                {
+                  "text": "Herstel",
+                  "href": "/nl/treatment/restore"
+                },
+                {
+                  "text": "Man",
+                  "href": "/nl/treatment/male"
+                }
+              ]
+            },
+            {
+              "label": "FAQ",
+              "links": [
+                {
+                  "text": "Over Juvéderm®",
+                  "href": "/nl/qa#about-juvederm"
+                },
+                {
+                  "text": "Kosten",
+                  "href": "/nl/qa#duration"
+                },
+                {
+                  "text": "Langdurige resultaten",
+                  "href": "/nl/qa#results"
+                },
+                {
+                  "text": "Veiligheid",
+                  "href": "/nl/qa#side-effects"
+                },
+                {
+                  "text": "Zones van het gezicht",
+                  "href": "/nl/qa#facial-areas"
+                }
+              ]
+            }
+          ]
+        },
+        "legalLinks": [
+          {
+            "text": "Neem contact op",
+            "href": "/nl/contact-us"
+          },
+          {
+            "text": "Privacy beleid",
+            "href": "https://www.abbvie.nl/privacy.html"
+          },
+          {
+            "text": "Algemene voorwaarden",
+            "href": "https://www.abbvie.nl/termsofuse.html"
+          },
+          {
+            "text": "Social media disclaimer",
+            "href": "/nl/disclaimer"
+          },
+          {
+            "text": "Cookies settings",
+            "href": "#onetrust"
+          },
+          {
+            "text": "Algemene voorwaarden kliniekzoeker",
+            "href": "/nl/algemene-voorwaarden-kliniekzoeker"
+          }
+        ],
+        "socialLinks": [
+          {
+            "platform": "Instagram",
+            "href": "https://www.instagram.com/juvederm.nl/"
+          },
+          {
+            "platform": "Facebook",
+            "href": "https://www.facebook.com/juvederm.nl"
+          }
+        ],
+        "pharmaDisclaimer": "Kijk uit. Jezelf mooier maken kan lelijk uitpakken. Een geslaagde ingreep begint bij een goede arts.",
+        "copyrightNotice": "Materialen geleverd door Allergan Aesthetics, een bedrijf van AbbVie onder een licentieovereenkomst."
+      }
+    }
+  },
+  "contentPatterns": {
+    "heroSection": {
+      "description": "Full-width teaser with background image, H1 title, optional description. Used on homepage and treatment pages.",
+      "aemComponent": "teaser",
+      "occurrences": [
+        "homepage",
+        "treatment-page",
+        "faq"
+      ],
+      "structure": {
+        "backgroundImage": "Adobe Dynamic Media deliver URL",
+        "title": "H1 inside cmp-teaser__description",
+        "ctaButton": "Optional CTA link"
+      }
+    },
+    "treatmentCardsCarousel": {
+      "description": "Carousel of product cards (JUVÉDERM® product variants). Each card has product image, H4 title, body text. Only on treatment pages.",
+      "aemComponent": "carousel + card",
+      "occurrences": [
+        "treatment-page"
+      ],
+      "structure": {
+        "cards": "5-6 product cards per page",
+        "cardFields": [
+          "product-image",
+          "H4-title",
+          "body-text"
+        ],
+        "examples": [
+          "JUVÉDERM® VOLBELLA met lidocaïne",
+          "JUVÉDERM® VOLIFT met lidocaïne",
+          "JUVÉDERM® ULTRA 4"
+        ]
+      }
+    },
+    "comparisonSlider": {
+      "description": "Before/after comparison slider for treatment results. Shows two images (before/after) with interactive slider.",
+      "aemComponent": "comparison-slider",
+      "occurrences": [
+        "homepage (5)",
+        "treatment-page (1)"
+      ],
+      "note": "Used inside tabs component for male/female variants"
+    },
+    "benefitsSection": {
+      "description": "Grid of H4 headings with supporting text, typically 3 items. Used to highlight key benefits (natural results, long-lasting, personalized plan).",
+      "aemComponent": "title + text in container",
+      "occurrences": [
+        "homepage",
+        "treatment-page"
+      ],
+      "structure": {
+        "items": "3 H4 headings with paragraph text, arranged in columns"
+      }
+    },
+    "treatmentTabs": {
+      "description": "Tab component with VROUWELIJK (Female) / MANNELIJK (Male) tabs. Contains treatment area cards with images, titles, descriptions and CTA links.",
+      "aemComponent": "tabs",
+      "occurrences": [
+        "homepage",
+        "treatment-page"
+      ],
+      "structure": {
+        "tabs": [
+          "VROUWELIJK",
+          "MANNELIJK"
+        ],
+        "contentPerTab": "Treatment cards (H3 titles: Versterk contouren, Stralende oogopslag, Herstel volume, Vollere lippen)"
+      }
+    },
+    "clinicFinder": {
+      "description": "Location-based clinic search with Google Maps integration. Search by city/location. Two variants: full-page and inline widget.",
+      "aemComponent": "location-services",
+      "occurrences": [
+        "homepage (inline)",
+        "clinic-finder (full-page)"
+      ],
+      "dynamicContent": true,
+      "note": "Google Maps API integration - will need embed or custom block in EDS"
+    },
+    "faqAccordion": {
+      "description": "Expandable accordion with FAQ questions. Treatment pages have treatment-specific Q&A. Distinct from footer accordion.",
+      "aemComponent": "accordion",
+      "occurrences": [
+        "treatment-page (content FAQ)",
+        "all pages (footer nav)"
+      ],
+      "examples": [
+        "Wat kan ik verwachten tijdens mijn consult?",
+        "Zijn er bijwerkingen?",
+        "Hoe werken fillers precies?",
+        "Hoe snel zie ik resultaat?"
+      ]
+    },
+    "footerAccordion": {
+      "description": "Bottom-of-page accordion that serves as the site footer navigation. Present on every page. Contains Behandeling and FAQ link groups.",
+      "aemComponent": "accordion + navigation-list",
+      "occurrences": [
+        "all pages"
+      ],
+      "note": "This replaces the traditional footer. The AEM footer element is empty."
+    },
+    "pharmaNotice": {
+      "description": "Required Dutch pharmaceutical disclaimer: 'Kijk uit. Jezelf mooier maken kan lelijk uitpakken.' with warning icon. Appears near bottom of content pages.",
+      "occurrences": [
+        "homepage",
+        "treatment-page",
+        "faq"
+      ],
+      "structure": {
+        "icon": "icon-kijk-uit-melding-white.png",
+        "text": "Kijk uit. Jezelf mooier maken kan lelijk uitpakken. Een geslaagde ingreep begint bij een goede arts."
+      }
+    },
+    "videoEmbed": {
+      "description": "Video player component using Plyr. Found on some treatment pages.",
+      "aemComponent": "video-plyr / embed",
+      "occurrences": [
+        "treatment-page (lips)"
+      ],
+      "note": "Only on some treatment pages, not universal"
+    },
+    "scrollReveal": {
+      "description": "Scroll-triggered content reveal animation. Wraps content sections.",
+      "aemComponent": "scrollreveal",
+      "occurrences": [
+        "homepage"
+      ],
+      "note": "Decorative/animation only, content is inside"
+    },
+    "referenceSection": {
+      "description": "Long footnote/reference text block with superscript numbers. Required for pharma compliance.",
+      "occurrences": [
+        "homepage",
+        "treatment-page",
+        "faq"
+      ],
+      "structure": "Numbered references (1-28+) in small text at bottom"
+    }
+  },
+  "imageAssets": {
+    "strategy": "Adobe Dynamic Media delivery URLs (/adobe/dynamicmedia/deliver/dm-aid--{uuid}/filename.jpg?preferwebp=true)",
+    "types": [
+      {
+        "role": "hero-background",
+        "format": "JPG via Dynamic Media",
+        "example": "2024-key-visual-sofie-01803-rgb-lr.jpg",
+        "usage": "Full-width hero/teaser backgrounds on homepage and treatment pages"
+      },
+      {
+        "role": "treatment-model",
+        "format": "JPG via Dynamic Media",
+        "example": "2024-key-visual-lily-s01-00465-rgb-lr.jpg",
+        "usage": "Model photography for comparison sliders, treatment area illustrations"
+      },
+      {
+        "role": "product-card",
+        "format": "JPG/PNG via Dynamic Media",
+        "example": "Product images for JUVÉDERM® variants (VOLBELLA, VOLIFT, etc.)",
+        "usage": "Product card images in treatment page carousel"
+      },
+      {
+        "role": "interactive-image-map",
+        "format": "JPG via Dynamic Media",
+        "example": "Treatment area image maps showing face zones",
+        "usage": "Image maps highlighting treatment zones on face (tabs content)"
+      },
+      {
+        "role": "icon",
+        "format": "PNG via Dynamic Media",
+        "example": "icon-kijk-uit-melding-white.png",
+        "usage": "Warning icons, UI icons"
+      }
+    ],
+    "totalUniqueImages": {
+      "homepage": 5,
+      "treatment-lips": 4,
+      "treatment-restore": 4,
+      "faq": 3,
+      "clinic-finder": 2,
+      "contact": 1,
+      "legal": 1
+    }
+  },
+  "archetypeAnalysis": {
+    "homepage": {
+      "selectedSamples": [
+        "nl"
+      ],
+      "sectionFlow": [
+        "Hero teaser (H1: Jouw unieke schoonheid)",
+        "Benefits grid (3x H3: natural results, leading brand, long-lasting, satisfaction)",
+        "Comparison slider section (5 sliders, scroll-reveal animated)",
+        "Treatment tabs (Female/Male, with treatment area cards)",
+        "Clinic finder inline widget",
+        "Pharma disclaimer notice",
+        "Footer accordion + legal links + social + copyright"
+      ],
+      "uniqueComponents": [
+        "scrollreveal",
+        "comparison-slider (x5)",
+        "tabs"
+      ],
+      "contentDensity": "high"
+    },
+    "treatment-page": {
+      "selectedSamples": [
+        "nl-treatment-lips",
+        "nl-treatment-restore"
+      ],
+      "sectionFlow": [
+        "Hero teaser (H1: treatment-specific title)",
+        "Benefits grid (3x H4: treatment-specific benefits)",
+        "Product comparison carousel (5-6 JUVÉDERM® product cards)",
+        "Comparison slider (1, before/after)",
+        "FAQ accordion (treatment-specific questions)",
+        "Treatment tabs (shared: Female/Male with treatment area cards)",
+        "Clinic finder inline widget",
+        "Pharma disclaimer notice",
+        "Footer accordion + legal links + social + copyright"
+      ],
+      "uniqueComponents": [
+        "carousel (product cards)",
+        "comparison-slider",
+        "accordion (FAQ)",
+        "video-plyr (some pages)",
+        "embed (some pages)"
+      ],
+      "contentDensity": "high",
+      "note": "5 pages follow same template with treatment-specific content"
+    },
+    "faq": {
+      "selectedSamples": [
+        "nl-qa"
+      ],
+      "sectionFlow": [
+        "Hero teaser (H1: Ontdek het antwoord op je vraag)",
+        "FAQ Section: Wat is JUVÉDERM® (H2 + content blocks)",
+        "FAQ Section: Voorbereiding behandeling (H2 + content blocks)",
+        "FAQ Section: Consult verwachtingen (H2 + content blocks)",
+        "FAQ Section: Kosten (H2 + content blocks)",
+        "FAQ Section: Gezichtszones (H2 + content blocks)",
+        "Each section has H3 subsections with detailed text",
+        "'Belangrijkste leerpunten' summaries per section",
+        "Footer accordion + legal links"
+      ],
+      "uniqueComponents": [
+        "extensive text blocks",
+        "no cards/sliders"
+      ],
+      "contentDensity": "very-high (text-heavy)",
+      "note": "Anchor-linked sections (#about-juvederm, #duration, etc.) from nav dropdown"
+    },
+    "clinic-finder": {
+      "selectedSamples": [
+        "nl-find-a-clinic"
+      ],
+      "sectionFlow": [
+        "H1: Vind een kliniek bij jou in de buurt",
+        "Search by city (location-services)",
+        "Search by location (location-services with map)",
+        "Footer accordion + legal links"
+      ],
+      "uniqueComponents": [
+        "location-services (x2)",
+        "Google Maps embed"
+      ],
+      "contentDensity": "low",
+      "note": "3 clinic pages (find-a-clinic, clinics, clinic) use same template. Dynamic Google Maps content."
+    },
+    "contact": {
+      "selectedSamples": [
+        "nl-contact-us"
+      ],
+      "sectionFlow": [
+        "H2: NEEM CONTACT OP",
+        "Contact details (address, phone, email)",
+        "Adverse event reporting info",
+        "Pharma disclaimer",
+        "Copyright/legal text",
+        "Footer accordion + legal links"
+      ],
+      "uniqueComponents": [],
+      "contentDensity": "low",
+      "note": "Simple text-only page with contact information"
+    },
+    "legal": {
+      "selectedSamples": [
+        "nl-disclaimer"
+      ],
+      "sectionFlow": [
+        "H2: Disclaimer",
+        "Legal text content (multiple paragraphs)",
+        "Social media guidelines",
+        "Footer accordion + legal links"
+      ],
+      "uniqueComponents": [],
+      "contentDensity": "low",
+      "note": "2 legal pages with long-form text content"
+    }
+  },
+  "crossCuttingPatterns": {
+    "sharedSections": {
+      "headerNav": "Present on all pages - identical structure",
+      "footerAccordion": "Present on all pages - accordion with Behandeling/FAQ nav links",
+      "legalLinksBar": "Present on all pages - contact, privacy, terms, disclaimer, cookies, clinic terms",
+      "socialLinks": "Present on all pages - Instagram + Facebook",
+      "pharmaDisclaimer": "Present on content pages (homepage, treatment, FAQ) - 'Kijk uit' warning",
+      "copyrightNotice": "Present on all pages - Allergan Aesthetics / AbbVie attribution"
+    },
+    "sharedComponents": {
+      "treatmentTabs": "Shared between homepage and all treatment pages - Female/Male treatment area explorer",
+      "clinicFinderWidget": "Shared between homepage and treatment pages as inline CTA + full clinic-finder page"
+    },
+    "textPatterns": {
+      "superscriptReferences": "Heavy use of superscript reference numbers (e.g., †12,13 *4 ‡17) - pharma compliance requirement",
+      "footnotes": "Long reference blocks at section/page bottom",
+      "language": "Dutch (nl) primary, some English in meta/titles"
+    }
+  }
+}
