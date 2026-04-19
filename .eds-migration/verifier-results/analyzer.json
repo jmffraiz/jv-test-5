@@ -1,0 +1,46 @@
+{
+  "verdict": "PASS",
+  "issues": [
+    {
+      "severity": "medium",
+      "criterion": "content-model-detail",
+      "details": "Block content models are type labels only (no row/cell structure): ['hero', 'columns', 'carousel', 'before-after', 'tabs', 'accordion', 'cards', 'clinic-finder', 'topic-menu', 'fragment']",
+      "remediation": "Content models should include row/cell authoring structure per Davids Model. The block-inventory contentPatternMapping has detailed models that could be referenced."
+    }
+  ],
+  "evidence": [
+    {
+      "page": "manifest-coverage",
+      "source_artifact": ".eds-migration/state/manifest.json",
+      "preview_artifact": ".eds-migration/state/blueprint.json",
+      "render_strategy": "JSON structural comparison, no rendering needed",
+      "viewports": [],
+      "finding": "All 14 manifest pages mapped to archetypes in blueprint. 6 archetypes (homepage, treatment-page, faq, clinic-finder, contact, legal) all have >=1 section defined. 10 content blocks in palette matching all 10 non-chrome local blocks. 3 fragments (treatment-tabs, clinic-finder-cta, pharma-notice) with paths defined. Chrome (nav=/nav, footer=/footer) fully modelled in globalElements with section structure."
+    },
+    {
+      "page": "archetype-section-coverage",
+      "source_artifact": ".eds-migration/state/source-bundle/pages/",
+      "preview_artifact": ".eds-migration/state/blueprint.json#archetypeBlueprints",
+      "render_strategy": "Structural count verification against source-bundle page inventory",
+      "viewports": [],
+      "finding": "homepage=7 sections, treatment-page=10 sections, faq=8 sections, clinic-finder=2 sections, contact=3 sections, legal=1 section. Each archetype uses sequences with typed entries (block or default-content). Section styles reused consistently: 'highlight' for benefits, 'references' for footnotes, 'pharma-notice' for disclaimers, 'scroll-reveal' for brand intro."
+    },
+    {
+      "page": "page-to-archetype-mapping",
+      "source_artifact": ".eds-migration/state/manifest.json",
+      "preview_artifact": ".eds-migration/state/blueprint.json#pageToArchetypeMapping",
+      "render_strategy": "Count and key comparison",
+      "viewports": [],
+      "finding": "14/14 manifest pages mapped. Distribution: 1 homepage redirect, 1 homepage, 5 treatment-page, 1 faq, 3 clinic-finder, 1 contact, 2 legal. Root URL (juvederm.nl) correctly noted as redirect to /nl."
+    },
+    {
+      "page": "chrome-modeling",
+      "source_artifact": ".eds-migration/state/source-bundle/chrome/header.html",
+      "preview_artifact": ".eds-migration/state/blueprint.json#globalElements",
+      "render_strategy": "Structural comparison of chrome source vs blueprint model",
+      "viewports": [],
+      "finding": "Navigation modelled with 4 sections (brand-bar, primary-nav, faq-dropdown, cta). Footer modelled with 3 sections (footer-nav with accordion, legal-bar, social-copyright). Both have EDS paths (/nav, /footer). Chrome source HTML files exist in source-bundle."
+    }
+  ],
+  "summary": "Blueprint PASS: 14 pages mapped to 6 archetypes, 10 content blocks in palette, 3 fragments with paths, chrome fully modelled. 1 medium issue: content models lack detailed row/cell structure."
+}
