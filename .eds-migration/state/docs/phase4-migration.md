@@ -325,4 +325,75 @@ A fresh IMS access token is needed to complete:
 - `.eds-migration/pages/nl/contact-us.html` — full EDS content markup
 - `.eds-migration/state/status/861579f2a8ff54d0249f6ecf0fa75a97.json` — disclaimer status
 - `.eds-migration/state/status/a86b3ad7f4afd0d71366562db8368e65.json` — contact-us status
+# Phase 4 Migration — Chunk 2/3
+
+**Worker:** PageMigrator-693fdd13#chunk2  
+**Timestamp:** 2026-04-19T22:35:00Z  
+**Branch:** migration-state/693fdd13
+
+---
+
+## Pages in This Batch
+
+| URL | EDS Path | Archetype | Status |
+|-----|----------|-----------|--------|
+| https://www.juvederm.nl/nl/qa | /nl/qa | faq | ❌ html-ready (token expired) |
+| https://www.juvederm.nl/nl/find-a-clinic | /nl/find-a-clinic | clinic-finder | ❌ html-ready (token expired) |
+
+---
+
+## Token Expiry Blocker
+
+EDS_TOKEN expired at ~2026-04-19T09:47:55Z (86400s after creation at 1776505675988ms).  
+All upload attempts to `admin.da.live` return **HTTP 401**.  
+`admin.hlx.page` GET status returns 200 (no auth required for read), confirming network is reachable.
+
+---
+
+## HTML Artifacts Generated
+
+### `/nl/qa` → `.eds-migration/pages/nl/qa.html`
+
+- **Archetype:** faq  
+- **Source:** Source bundle `pages/nl-qa/index.html` + analysis `faq/nl-qa/cleaned.html`
+- **Structure per blueprint:**
+  1. Hero block — background image + H1 "Ontdek het antwoord op je vraag"
+  2. Topic-menu block — 5 anchor links (Over JUVÉDERM®, Veiligheid, Wat je kunt verwachten, Resultaten en kosten, Gezichtsgebieden)
+  3. `#about-juvederm` section — H2 + full "Wat is JUVÉDERM®?" content with H3/H4 sub-questions and summary bullets
+  4. `#side-effects` section — H2 + "Voorbereiding" prep content + "Zijn er bijwerkingen?" with bulleted side effect list
+  5. `#consultation` section — H2 + treatment process + pain Q&A + key learnings
+  6. `#duration` section — H2 + costs + results duration by area (eyes/midface/lips/chin) + FAQ on permanency
+  7. `#facial-areas` section — H2 + overview + 5 treatment area bullets with descriptions
+  8. References list (30 citations)
+  9. Pharma-notice fragment
+  10. Metadata block
+- **Text fidelity:** All 5 main FAQ topic sections preserved in full. References carried over.
+- **Image:** Hero KV image preserved (`dm-aid--f82ec3f1-5756-46c1-a0ca-f30501e4516a/2024-key-visual-lily-00404`)
+
+### `/nl/find-a-clinic` → `.eds-migration/pages/nl/find-a-clinic.html`
+
+- **Archetype:** clinic-finder  
+- **Source:** Source bundle `pages/nl-find-a-clinic/index.html`
+- **Structure per blueprint:**
+  1. H1 "Vind een kliniek bij jou in de buurt" (default content)
+  2. Clinic Finder block — config rows: heading, placeholder, api-key, country=NL
+  3. Pharma-notice fragment (section style: pharma-notice)
+  4. Metadata block
+- **Notes:** The clinic finder is an interactive block; no city quick-links available in source HTML (rendered by JS). Config matches blueprint. Google Maps API key preserved from homepage compact version.
+
+---
+
+## Issues
+
+- **EDS_TOKEN expired** — Same blocker as chunks 1 and 3. Token was issued with 86400s TTL and expired ~12.7h before this worker ran.
+- **No pending-patterns** — Both pages matched known archetypes.
+
+---
+
+## Fidelity Summary
+
+| Page | Text Len Ratio | Image Ratio | Notes |
+|------|---------------|-------------|-------|
+| /nl/qa | N/A (not previewed) | N/A | All content preserved in HTML |
+| /nl/find-a-clinic | N/A (not previewed) | N/A | Interactive block — content via API |
 
