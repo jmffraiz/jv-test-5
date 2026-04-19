@@ -434,3 +434,25 @@ A fresh `EDS_TOKEN` (valid IMS access token) must be supplied to complete the up
 
 All HTML artifacts are committed and ready at `.eds-migration/pages/nl/`.
 
+
+---
+
+## Chunk 2/3 — Critical Retry #2 (2026-04-19T22:39Z)
+
+**Worker:** PageMigrator-693fdd13#chunk2 (critical retry)
+**Pages:** /nl/qa, /nl/find-a-clinic
+
+**Status: BLOCKED — EDS_TOKEN expired (confirmed again)**
+- Token expired: 2026-04-19T09:47:55Z
+- Upload attempted: 2026-04-19T22:39Z (~13h past expiry)
+- HTTP 401 from `admin.da.live` for both PUT and POST
+
+**Status files updated:** `retryAttempts: 2`, `status: "failed"`, `lastRetry: "2026-04-19T22:39:00Z"`
+
+**pilot-status.json:** Repaired malformed JSON from prior run; now valid with full per-page list.
+
+**HTML artifacts on branch (ready to upload):**
+- `.eds-migration/pages/nl/qa.html` — 20,055 bytes
+- `.eds-migration/pages/nl/find-a-clinic.html` — 1,946 bytes
+
+**Required action:** Provide a fresh IMS access token (< 24h old) with scope `aem.frontend.all`.
