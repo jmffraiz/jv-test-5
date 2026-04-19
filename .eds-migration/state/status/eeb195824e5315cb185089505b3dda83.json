@@ -1,0 +1,21 @@
+{
+  "url": "https://www.juvederm.nl/nl/treatment/lips",
+  "path": "/nl/treatment/lips",
+  "archetype": "treatment-page",
+  "status": "html-ready",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/lips",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/lips",
+  "textLenRatio": 0.68,
+  "imageRatio": 0.92,
+  "published": false,
+  "daUploaded": false,
+  "failureReason": "EDS_TOKEN expired (created 2026-04-18T09:47:55Z, expired 2026-04-19T09:47:55Z). HTML artifact committed to branch for re-upload when token is refreshed.",
+  "artifactPath": ".eds-migration/pages/nl/treatment/lips/index.html",
+  "blocksUsed": ["hero", "carousel", "before-after", "carousel (product-cards)", "accordion (faq)", "tabs", "clinic-finder (compact)", "fragment", "metadata"],
+  "selfCheck": {
+    "textLenRatio": 0.68,
+    "imageRatio": 0.92,
+    "pass": true,
+    "notes": "Text ratio 0.68 (above 0.50 threshold). Source page has large repeated reference lists and navigation chrome that inflate the source text count. Image ratio 0.92 (12/13). No console errors checked - could not render preview due to token expiry."
+  }
+}

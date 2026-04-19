@@ -1,10 +1,44 @@
 {
   "runId": "693fdd13",
-  "chunk": "3/3",
-  "worker": "PageMigrator-693fdd13#chunk3",
-  "timestamp": "2026-04-19T22:22:00Z",
+  "chunks": [
+    "1/3",
+    "3/3"
+  ],
+  "timestamp": "2026-04-19T22:25:00Z",
   "platformIssue": "admin.da.live + content.da.live + aem.page CDN all returning 503 DNS cache overflow (Cloudflare platform outage). admin.hlx.page preview API still responds to GET status checks but POST preview returns 401 (content-bus unavailable).",
   "pages": [
+    {
+      "url": "https://www.juvederm.nl/nl",
+      "edsPath": "/nl",
+      "archetype": "homepage",
+      "status": "html-ready",
+      "htmlArtifact": ".eds-migration/pages/nl/index.html",
+      "failureReason": "EDS_TOKEN expired (created 2026-04-18T09:47:55Z, expired 2026-04-19T09:47:55Z). HTML artifact committed to branch.",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl",
+      "uploaded": false,
+      "previewed": false,
+      "published": false,
+      "textLenRatio": 1.13,
+      "imageRatio": 0.82,
+      "screenshotDesktop": null,
+      "screenshotMobile": null
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/treatment/lips",
+      "edsPath": "/nl/treatment/lips",
+      "archetype": "treatment-page",
+      "status": "html-ready",
+      "htmlArtifact": ".eds-migration/pages/nl/treatment/lips/index.html",
+      "failureReason": "EDS_TOKEN expired (created 2026-04-18T09:47:55Z, expired 2026-04-19T09:47:55Z). HTML artifact committed to branch.",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/lips",
+      "uploaded": false,
+      "previewed": false,
+      "published": false,
+      "textLenRatio": 0.68,
+      "imageRatio": 0.92,
+      "screenshotDesktop": null,
+      "screenshotMobile": null
+    },
     {
       "url": "https://www.juvederm.nl/nl/disclaimer",
       "edsPath": "/nl/disclaimer",
@@ -35,8 +69,9 @@
     }
   ],
   "summary": {
-    "total": 2,
+    "total": 4,
     "migrated": 0,
+    "htmlReady": 2,
     "failed": 2,
     "pendingPatterns": 0
   }

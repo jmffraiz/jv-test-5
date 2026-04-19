@@ -1,0 +1,21 @@
+{
+  "url": "https://www.juvederm.nl/nl",
+  "path": "/nl",
+  "archetype": "homepage",
+  "status": "html-ready",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl",
+  "textLenRatio": 1.13,
+  "imageRatio": 0.82,
+  "published": false,
+  "daUploaded": false,
+  "failureReason": "EDS_TOKEN expired (created 2026-04-18T09:47:55Z, expired 2026-04-19T09:47:55Z). HTML artifact committed to branch for re-upload when token is refreshed.",
+  "artifactPath": ".eds-migration/pages/nl/index.html",
+  "blocksUsed": ["hero", "columns (highlights)", "before-after", "tabs", "clinic-finder (compact)", "fragment", "metadata"],
+  "selfCheck": {
+    "textLenRatio": 1.13,
+    "imageRatio": 0.82,
+    "pass": true,
+    "notes": "Text ratio >1 (generated includes more formatted text). Image ratio 0.82 (9/11 unique dm-aid images). No console errors checked - could not render preview due to token expiry."
+  }
+}
