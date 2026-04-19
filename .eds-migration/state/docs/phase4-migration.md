@@ -397,3 +397,40 @@ All upload attempts to `admin.da.live` return **HTTP 401**.
 | /nl/qa | N/A (not previewed) | N/A | All content preserved in HTML |
 | /nl/find-a-clinic | N/A (not previewed) | N/A | Interactive block — content via API |
 
+
+---
+
+## Chunk 3/3 — CRITICAL RETRY (2026-04-19T23:10:00Z)
+
+**Worker:** PageMigrator-693fdd13#chunk3 (retry)  
+**Pages:** `/nl/disclaimer`, `/nl/contact-us`
+
+### Upload Attempt Results
+
+Both pages attempted PUT upload to `admin.da.live` — both returned **HTTP 401**.
+
+The token provided in this retry is the same expired token:
+- `created_at`: 2026-04-18T09:47:55Z  
+- `expires_in`: 86400s  
+- **Expired**: 2026-04-19T09:47:55Z  
+- **Retry attempted**: 2026-04-19T23:10:00Z (~13h past expiry)
+
+### Status
+
+| Page | HTML Artifact | Upload | Preview | Status |
+|------|--------------|--------|---------|--------|
+| /nl/disclaimer | `.eds-migration/pages/nl/disclaimer.html` | ❌ 401 | ❌ Blocked | failed |
+| /nl/contact-us | `.eds-migration/pages/nl/contact-us.html` | ❌ 401 | ❌ Blocked | failed |
+
+### Resolution Required
+
+A fresh `EDS_TOKEN` (valid IMS access token) must be supplied to complete the upload for all 6 pages:
+- `/nl` (chunk 1)
+- `/nl/treatment/lips` (chunk 1)
+- `/nl/qa` (chunk 2)
+- `/nl/find-a-clinic` (chunk 2)
+- `/nl/disclaimer` (chunk 3)
+- `/nl/contact-us` (chunk 3)
+
+All HTML artifacts are committed and ready at `.eds-migration/pages/nl/`.
+
