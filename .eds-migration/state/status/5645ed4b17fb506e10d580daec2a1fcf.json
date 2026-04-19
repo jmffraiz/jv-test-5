@@ -1,0 +1,15 @@
+{
+  "url": "https://www.juvederm.nl/nl/find-a-clinic",
+  "edsPath": "/nl/find-a-clinic",
+  "archetype": "clinic-finder",
+  "status": "failed",
+  "previewUrl": "",
+  "publishUrl": "",
+  "textLenRatio": 0.0,
+  "imageRatio": 0.0,
+  "published": false,
+  "failureReason": "da.live upload failed: EDS_TOKEN expired (token created_at=1776505675988, expires_in=86400000ms, expired ~12h before upload attempt)",
+  "htmlGeneratedAt": "/home/claude/migration-workspace/nl/find-a-clinic.html",
+  "htmlInGit": "nl/find-a-clinic.html",
+  "uploadAttempted": true
+}

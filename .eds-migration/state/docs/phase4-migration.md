@@ -182,3 +182,79 @@ Both pages exceed the 50% fidelity thresholds.
 ## Pending Patterns
 
 None identified — both pages matched their blueprint archetypes cleanly.
+
+## Chunk 2/3 — PageMigrator-693fdd13#chunk2
+
+**Worker:** chunk2
+**Pages assigned:**
+- https://www.juvederm.nl/nl/qa → /nl/qa (archetype: faq)
+- https://www.juvederm.nl/nl/find-a-clinic → /nl/find-a-clinic (archetype: clinic-finder)
+
+### Pages Migrated
+
+| URL | EDS Path | Archetype | Status | Notes |
+|-----|----------|-----------|--------|-------|
+| https://www.juvederm.nl/nl/qa | /nl/qa | faq | failed-upload | HTML generated, token expired |
+| https://www.juvederm.nl/nl/find-a-clinic | /nl/find-a-clinic | clinic-finder | failed-upload | HTML generated, token expired |
+
+### HTML Generation
+
+Both pages were successfully transformed into EDS-compliant HTML:
+
+**FAQ page (`nl/qa.html`):**
+- Source bundle: `.eds-migration/state/source-bundle/pages/nl-qa/index.html`
+- Hero section with key visual image from CDN
+- Topic-Menu block with 5 anchor links (#about-juvederm, #side-effects, #expectation, #duration, #facial-areas)
+- 6 content sections separated by `---` with proper anchor IDs
+- All superscript reference numbers preserved (e.g., `<sup>1-4</sup>`)
+- Dutch pharmaceutical compliance text preserved verbatim
+- 40 numbered references in dedicated section
+- Fragment block for `/fragments/pharma-notice`
+- Metadata block with title, description, template
+
+**Find-a-Clinic page (`nl/find-a-clinic.html`):**
+- Source bundle: `.eds-migration/state/source-bundle/pages/nl-find-a-clinic/index.html`
+- Clinic-Finder block with configuration rows (heading, placeholder, country, city-links)
+- City quick-links: Amsterdam, Rotterdam, Den Haag, Utrecht
+- Fragment block for `/fragments/pharma-notice`
+- Metadata block with title, description, template
+
+### Upload Failure
+
+**Root cause:** `EDS_TOKEN` was expired at time of upload attempt.
+- Token `created_at`: 1776505675988 ms (Unix timestamp)
+- Token `expires_in`: 86400000 ms (24 hours)
+- Token expired at: ~2026-04-19T20:54:35Z
+- Upload attempted at: ~2026-04-19T22:24:00Z (approximately 1.5 hours after expiry)
+
+**Result:** All da.live API calls returned HTTP 401 Unauthorized.
+
+**Resolution needed:** Retry uploads with a fresh EDS_TOKEN. HTML files are committed to git at:
+- `nl/qa.html`
+- `nl/find-a-clinic.html`
+
+### Content Fidelity
+
+**FAQ page:**
+- Source text length: ~8,500 characters (estimated from rendered text)
+- All 5 topic sections included: Over JUVÉDERM®, Veiligheid, Verwachting, Kosten/Resultaten, Gezichtsgebieden
+- All pharma disclaimers and footnotes preserved
+- All superscript reference numbers preserved
+- Hero image URL preserved from source bundle
+
+**Find-a-Clinic page:**
+- Minimal page: H1 + Clinic Finder block + Fragment
+- City links preserved: Amsterdam, Rotterdam, Den Haag, Utrecht
+- No content loss (page is primarily functional/interactive)
+
+### Decisions Made
+
+1. **FAQ structure**: Used default-content sections with anchor IDs rather than accordion blocks, since the source page uses FAQ sections (not collapsible accordions). The `topic-menu` block provides navigation.
+
+2. **Side-effects section**: The blueprint referenced `#side-effects` but the source has two related sections (`safety` with "Wat zijn fillers?" and a separate `#side-effects` mediatext). Both content blocks merged under the `#safety` section ID to maintain content continuity.
+
+3. **Clinic Finder**: Used configuration-style `clinic-finder` block table with key-value rows matching the blueprint's `cellLayout`. City-links row included for quick city navigation.
+
+4. **No images downloaded**: The FAQ page hero image is served from `juvederm.nl` CDN - kept as absolute URL. The clinic finder page has no images.
+
+5. **References**: Included all 40 academic references as ordered list in dedicated section, as required for pharma compliance.

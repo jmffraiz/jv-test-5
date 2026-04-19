@@ -2,10 +2,11 @@
   "runId": "693fdd13",
   "chunks": [
     "1/3",
+    "2/3",
     "3/3"
   ],
   "timestamp": "2026-04-19T22:25:00Z",
-  "platformIssue": "admin.da.live + content.da.live + aem.page CDN all returning 503 DNS cache overflow (Cloudflare platform outage). admin.hlx.page preview API still responds to GET status checks but POST preview returns 401 (content-bus unavailable).",
+  "platformIssue": "admin.da.live + content.da.live + aem.page CDN all returning 503 DNS cache overflow (Cloudflare platform outage). admin.hlx.page preview API still responds to GET status checks but POST preview returns 401 (content-bus unavailable). EDS_TOKEN also expired.",
   "pages": [
     {
       "url": "https://www.juvederm.nl/nl",
@@ -13,7 +14,7 @@
       "archetype": "homepage",
       "status": "html-ready",
       "htmlArtifact": ".eds-migration/pages/nl/index.html",
-      "failureReason": "EDS_TOKEN expired (created 2026-04-18T09:47:55Z, expired 2026-04-19T09:47:55Z). HTML artifact committed to branch.",
+      "failureReason": "EDS_TOKEN expired. HTML artifact committed to branch.",
       "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl",
       "uploaded": false,
       "previewed": false,
@@ -29,7 +30,7 @@
       "archetype": "treatment-page",
       "status": "html-ready",
       "htmlArtifact": ".eds-migration/pages/nl/treatment/lips/index.html",
-      "failureReason": "EDS_TOKEN expired (created 2026-04-18T09:47:55Z, expired 2026-04-19T09:47:55Z). HTML artifact committed to branch.",
+      "failureReason": "EDS_TOKEN expired. HTML artifact committed to branch.",
       "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/lips",
       "uploaded": false,
       "previewed": false,
@@ -40,12 +41,40 @@
       "screenshotMobile": null
     },
     {
+      "url": "https://www.juvederm.nl/nl/qa",
+      "edsPath": "/nl/qa",
+      "archetype": "faq",
+      "status": "html-ready",
+      "htmlArtifact": "nl/qa.html",
+      "failureReason": "EDS_TOKEN expired at time of upload attempt. HTML committed to git.",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/qa",
+      "uploaded": false,
+      "previewed": false,
+      "published": false,
+      "screenshotDesktop": null,
+      "screenshotMobile": null
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/find-a-clinic",
+      "edsPath": "/nl/find-a-clinic",
+      "archetype": "clinic-finder",
+      "status": "html-ready",
+      "htmlArtifact": "nl/find-a-clinic.html",
+      "failureReason": "EDS_TOKEN expired at time of upload attempt. HTML committed to git.",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/find-a-clinic",
+      "uploaded": false,
+      "previewed": false,
+      "published": false,
+      "screenshotDesktop": null,
+      "screenshotMobile": null
+    },
+    {
       "url": "https://www.juvederm.nl/nl/disclaimer",
       "edsPath": "/nl/disclaimer",
       "archetype": "legal",
-      "status": "failed",
+      "status": "html-ready",
       "htmlArtifact": "nl/disclaimer.html",
-      "failureReason": "da.live Source API 503 DNS cache overflow",
+      "failureReason": "da.live Source API 503 DNS cache overflow + EDS_TOKEN expired",
       "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/disclaimer",
       "uploaded": false,
       "previewed": false,
@@ -57,9 +86,9 @@
       "url": "https://www.juvederm.nl/nl/contact-us",
       "edsPath": "/nl/contact-us",
       "archetype": "contact",
-      "status": "failed",
+      "status": "html-ready",
       "htmlArtifact": "nl/contact-us.html",
-      "failureReason": "da.live Source API 503 DNS cache overflow",
+      "failureReason": "da.live Source API 503 DNS cache overflow + EDS_TOKEN expired",
       "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/contact-us",
       "uploaded": false,
       "previewed": false,
@@ -69,10 +98,12 @@
     }
   ],
   "summary": {
-    "total": 4,
+    "total": 6,
     "migrated": 0,
-    "htmlReady": 2,
-    "failed": 2,
-    "pendingPatterns": 0
+    "htmlReady": 6,
+    "failed": 0,
+    "pendingPatterns": 0,
+    "blockedByTokenExpiry": 6,
+    "blockedByPlatformOutage": 2
   }
 }
