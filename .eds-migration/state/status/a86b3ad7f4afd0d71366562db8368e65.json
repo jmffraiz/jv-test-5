@@ -1,0 +1,17 @@
+{
+  "url": "https://www.juvederm.nl/nl/contact-us",
+  "edsPath": "/nl/contact-us",
+  "archetype": "contact",
+  "status": "failed",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/contact-us",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/contact-us",
+  "textLenRatio": null,
+  "imageRatio": null,
+  "published": false,
+  "htmlArtifact": "nl/contact-us.html",
+  "failureReason": "admin.da.live Source API returned 503 DNS cache overflow — Cloudflare platform outage. HTML artifact saved to nl/contact-us.html on branch for retry when service recovers.",
+  "uploadAttempts": 3,
+  "uploadHttpStatus": 503,
+  "worker": "chunk3",
+  "timestamp": "2026-04-19T22:22:00Z"
+}

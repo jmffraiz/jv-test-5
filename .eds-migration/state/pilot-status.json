@@ -1,0 +1,43 @@
+{
+  "runId": "693fdd13",
+  "chunk": "3/3",
+  "worker": "PageMigrator-693fdd13#chunk3",
+  "timestamp": "2026-04-19T22:22:00Z",
+  "platformIssue": "admin.da.live + content.da.live + aem.page CDN all returning 503 DNS cache overflow (Cloudflare platform outage). admin.hlx.page preview API still responds to GET status checks but POST preview returns 401 (content-bus unavailable).",
+  "pages": [
+    {
+      "url": "https://www.juvederm.nl/nl/disclaimer",
+      "edsPath": "/nl/disclaimer",
+      "archetype": "legal",
+      "status": "failed",
+      "htmlArtifact": "nl/disclaimer.html",
+      "failureReason": "da.live Source API 503 DNS cache overflow",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/disclaimer",
+      "uploaded": false,
+      "previewed": false,
+      "published": false,
+      "screenshotDesktop": null,
+      "screenshotMobile": null
+    },
+    {
+      "url": "https://www.juvederm.nl/nl/contact-us",
+      "edsPath": "/nl/contact-us",
+      "archetype": "contact",
+      "status": "failed",
+      "htmlArtifact": "nl/contact-us.html",
+      "failureReason": "da.live Source API 503 DNS cache overflow",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/contact-us",
+      "uploaded": false,
+      "previewed": false,
+      "published": false,
+      "screenshotDesktop": null,
+      "screenshotMobile": null
+    }
+  ],
+  "summary": {
+    "total": 2,
+    "migrated": 0,
+    "failed": 2,
+    "pendingPatterns": 0
+  }
+}
