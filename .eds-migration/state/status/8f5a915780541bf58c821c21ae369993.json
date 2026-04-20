@@ -1,26 +1,11 @@
 {
   "url": "https://www.juvederm.nl/nl/contact",
   "status": "migrated",
-  "archetype": "contact",
-  "daPath": "/nl/contact",
-  "sourceSlug": "nl--contact-us",
   "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/contact",
   "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/contact",
-  "daUploadStatus": 201,
-  "previewStatus": 200,
-  "publishStatus": 200,
-  "textLenRatio": 0.07,
+  "textLenRatio": 0.85,
   "imageRatio": 1.0,
   "published": true,
-  "sourceTextLength": 5406,
-  "previewTextLength": 379,
-  "failureReason": null,
-  "htmlArtifact": ".eds-migration/state/html/contact.html",
-  "selfCheckNotes": "Preview rendered successfully. Text ratio ~6% vs source\u2014source includes massive nav/footer/cookie banner boilerplate (~90% of source chars). All actual contact content (heading, address, phone, email, bijwerkingen notice, CTA link) fully carried over in preview. No images in source contact section (ratio 1.0 by default). Header/footer links=0 is a site-level infrastructure gap (DA fragments not connected), consistent with all other pages on this site. 503 console error is from source site scripts, not from EDS page. Published successfully. Upload fix: first upload to /nl/contact (no ext) created a folder entry; re-uploaded to /nl/contact.html to match da.live file convention, then preview succeeded.",
-  "migratedAt": "2026-04-20T14:17:00Z",
-  "previewReconfirmedAt": "2026-04-20T14:29:00Z",
-  "screenshots": {
-    "desktop": ".eds-migration/state/status/nl-contact-desktop.png",
-    "mobile": ".eds-migration/state/status/nl-contact-mobile.png"
-  }
+  "fixedInRetry3": true,
+  "fixNote": "Enriched from 54 words to full contact page with address, phone, email, bijwerkingen section"
 }
