@@ -1,0 +1,13 @@
+{
+  "url": "https://www.juvederm.nl/nl/qa",
+  "title": "Veelgestelde vragen Juvederm | Juvéderm® Netherlands",
+  "metaDescription": "JUVÉDERM® is a collection of injectable facial fillers that can help enhance your facial features by plumping lips, smoothing wrinkles, or restoring lost facial volume. JUVÉDERM® delivers results that look and feel natural as its active ingredient, hyaluronic acid, is naturally occurring in our skin.",
+  "archetype": "faq",
+  "viewport_sizes": [
+    "1440x900",
+    "390x844"
+  ],
+  "settle_strategy": "networkidle + main.textLength stable 500ms x2; dismissed overlays",
+  "captured_at": "2026-04-20T10:32:42.075Z",
+  "http_status": 200
+}

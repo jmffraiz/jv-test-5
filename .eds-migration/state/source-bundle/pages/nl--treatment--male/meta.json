@@ -1,0 +1,13 @@
+{
+  "url": "https://www.juvederm.nl/nl/treatment/male",
+  "title": " Juvederm en mannen | Juvéderm® Netherlands",
+  "metaDescription": "Whether you’re looking to smooth, lift, or volumize, JUVÉDERM® can help. Crafted with hyaluronic acid, you can embrace and define your natural features in the way that you want.",
+  "archetype": "treatment-page",
+  "viewport_sizes": [
+    "1440x900",
+    "390x844"
+  ],
+  "settle_strategy": "networkidle + main.textLength stable 500ms x2; dismissed overlays",
+  "captured_at": "2026-04-20T10:32:29.458Z",
+  "http_status": 200
+}

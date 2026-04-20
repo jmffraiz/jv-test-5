@@ -1,0 +1,13 @@
+{
+  "url": "https://www.juvederm.nl/nl/treatment/lips",
+  "title": " Juvederm en lippen | Juvéderm® Netherlands",
+  "metaDescription": "Beautiful lips come in all shapes and sizes, from extra full to more delicately contoured and everything in between. Whatever your desired look, products within the JUVÉDERM® range can be used to help enhance your lips by adding definition and volume without losing distinctive features.",
+  "archetype": "treatment-page",
+  "viewport_sizes": [
+    "1440x900",
+    "390x844"
+  ],
+  "settle_strategy": "networkidle + main.textLength stable 500ms x2; dismissed overlays",
+  "captured_at": "2026-04-20T10:31:52.914Z",
+  "http_status": 200
+}

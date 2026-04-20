@@ -1,0 +1,13 @@
+{
+  "url": "https://www.juvederm.nl/",
+  "title": "JUVÉDERM Nederlands",
+  "metaDescription": "Juvéderm® facial fillers help to enhance, restore or hydrate your features. Embrace what makes you, you.",
+  "archetype": "homepage",
+  "viewport_sizes": [
+    "1440x900",
+    "390x844"
+  ],
+  "settle_strategy": "networkidle + main.textLength stable 500ms x2; dismissed overlays",
+  "captured_at": "2026-04-20T10:31:41.555Z",
+  "http_status": 200
+}

@@ -1,0 +1,13 @@
+{
+  "url": "https://www.juvederm.nl/nl/treatment/enhance",
+  "title": " Accentueren met Juvederm | Juvéderm® Netherlands",
+  "metaDescription": "From your cupids bow to your playful pout, your elegant contours to your charming dimples, it’s the little things that make you, you. But how do you emphasize the little wonders of you? Whether it’s a lift, plump, or volume restoration, the hyaluronic acid in JUVÉDERM® binds to water in your skin, embracing and accentuating your natural features.",
+  "archetype": "treatment-page",
+  "viewport_sizes": [
+    "1440x900",
+    "390x844"
+  ],
+  "settle_strategy": "networkidle + main.textLength stable 500ms x2; dismissed overlays",
+  "captured_at": "2026-04-20T10:32:11.563Z",
+  "http_status": 200
+}

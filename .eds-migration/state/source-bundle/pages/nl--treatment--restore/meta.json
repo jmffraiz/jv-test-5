@@ -1,0 +1,13 @@
+{
+  "url": "https://www.juvederm.nl/nl/treatment/restore",
+  "title": " Herstel met Juvederm | Juvéderm® Netherlands",
+  "metaDescription": "Ready for a refresh? Our skin’s natural elasticity decreases over time, and as it does, you may start to notice a few volume changes across your face. Whether you’re looking to achieve a more youthful appearance or simply enhance the things that make you, you, the JUVÉDERM® range of fillers can delicately plump your lips, add volume to your cheeks, contour your chin and jawline and smooth fine lines.",
+  "archetype": "treatment-page",
+  "viewport_sizes": [
+    "1440x900",
+    "390x844"
+  ],
+  "settle_strategy": "networkidle + main.textLength stable 500ms x2; dismissed overlays",
+  "captured_at": "2026-04-20T10:32:20.509Z",
+  "http_status": 200
+}

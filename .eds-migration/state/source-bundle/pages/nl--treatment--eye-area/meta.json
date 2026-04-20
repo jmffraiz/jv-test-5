@@ -1,0 +1,13 @@
+{
+  "url": "https://www.juvederm.nl/nl/treatment/eye-area",
+  "title": " Juvederm en ogen | Juvéderm® Netherlands",
+  "metaDescription": "As time goes by, our skin’s hydration and natural elasticity decrease, and you may start to notice fine lines and crow’s feet begin to form. To express who you truly are, JUVÉDERM® facial fillers can help refresh your face, softening fine lines around your mouth, and eyes, and reducing folds for a bright, youthful appearance.",
+  "archetype": "treatment-page",
+  "viewport_sizes": [
+    "1440x900",
+    "390x844"
+  ],
+  "settle_strategy": "networkidle + main.textLength stable 500ms x2; dismissed overlays",
+  "captured_at": "2026-04-20T10:32:02.459Z",
+  "http_status": 200
+}
