@@ -1,0 +1,981 @@
+{
+  "schemaVersion": "1.0",
+  "site": "https://www.juvederm.nl",
+  "generatedAt": "2026-04-20T11:45:00.000Z",
+  "runId": "75030df9",
+
+  "blockPalette": [
+    {
+      "name": "hero",
+      "source": "block-collection",
+      "contentModel": "standalone",
+      "usedByArchetypes": ["homepage", "treatment-page", "faq", "clinic-finder"],
+      "variants": ["default", "video"],
+      "definition": {
+        "description": "Full-width banner with background image or video, overlay heading, body text, and optional CTA button.",
+        "rows": [
+          { "cells": ["Background media: image (picture element) or video URL"], "notes": "For video variant, author pastes an MP4 URL. For image variant, author inserts a picture." },
+          { "cells": ["Overlay content: h1 heading, paragraph text, optional CTA link (bold link = primary button)"], "notes": "All overlay content in a single cell. Bold link renders as primary CTA button." }
+        ],
+        "variantNotes": {
+          "default": "Hero block table header is just 'Hero'. Background image with text overlay.",
+          "video": "Hero (video) — background autoplays muted MP4 video. Image serves as poster/fallback."
+        }
+      },
+      "css": {
+        "fullBleed": true,
+        "minHeight": "70vh on desktop, 50vh on mobile",
+        "overlayGradient": "linear-gradient with semi-transparent dark layer for text readability",
+        "textColor": "#FFFFFF",
+        "desktopImagePosition": "center center, cover",
+        "mobileImagePosition": "separate mobile-optimized crop"
+      },
+      "js": {
+        "videoAutoplay": "Muted autoplay with poster image fallback (homepage only)",
+        "lazyLoad": "Eager load for LCP — hero is always in first section"
+      },
+      "sourceMapping": {
+        "selector": ".emu-teaser.hero-teaser",
+        "desktopImage": ".cmp-teaser__image--desktop img[src]",
+        "mobileImage": ".cmp-teaser__image--mobile img[src]",
+        "heading": ".emu-teaser__description h1",
+        "bodyText": ".emu-teaser__description p",
+        "cta": ".emu-teaser__action-container a.emu-button",
+        "video": ".emu-teaser__video source[data-src]"
+      }
+    },
+    {
+      "name": "cards",
+      "source": "block-collection",
+      "contentModel": "collection",
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "variants": ["default"],
+      "definition": {
+        "description": "Grid of treatment area cards with image, title, description, and link. One row per card.",
+        "rows": [
+          { "cells": ["Image (picture)", "Content: h3 heading, paragraph, link"], "notes": "Each row is one card. Image in col 1, all text content in col 2." }
+        ],
+        "example": "| Cards |\n| --- | --- |\n| ![lips](/images/lips.jpg) | **Lippen** Mooie lippen in alle vormen... [Lees meer](/nl/treatment/lips) |"
+      },
+      "css": {
+        "layout": "CSS Grid, 2-3 columns on desktop, 1 column mobile",
+        "cardStyle": "Image top, text below, rounded corners, subtle shadow",
+        "hoverEffect": "Slight scale transform on hover"
+      },
+      "js": {
+        "notes": "Minimal JS — decoration only, no interactivity needed"
+      },
+      "sourceMapping": {
+        "selector": ".emu-card, .aaaem-card",
+        "image": ".emu-card__wrapper img",
+        "title": ".emu-card__title",
+        "body": ".emu-card__body",
+        "link": ".emu-card__footer a"
+      }
+    },
+    {
+      "name": "carousel",
+      "source": "block-collection",
+      "contentModel": "collection",
+      "usedByArchetypes": ["homepage", "treatment-page", "faq"],
+      "variants": ["default", "products"],
+      "definition": {
+        "description": "Rotating slideshow with navigation. Each row is one slide containing image and/or text content.",
+        "rows": [
+          { "cells": ["Slide content: image + text, or image-only, or text-only"], "notes": "Single-column collection. Each row = one slide." }
+        ],
+        "variantNotes": {
+          "default": "Standard carousel with dots/arrows, 1 visible slide.",
+          "products": "Carousel (products) — shows 3-4 items visible at once with prev/next arrows. Used for product showcase sections."
+        }
+      },
+      "css": {
+        "indicators": "Dot indicators below carousel",
+        "controls": "Prev/next arrow buttons",
+        "transition": "Slide transition, 300ms"
+      },
+      "js": {
+        "library": "Tiny Slider (tns) pattern from Block Collection carousel",
+        "autoplay": "Optional autoplay with 5s delay",
+        "loop": true,
+        "responsive": "1 item mobile, 3-4 items desktop for products variant"
+      },
+      "sourceMapping": {
+        "selector": ".emu-carousel",
+        "slides": ".emu-carousel__item",
+        "slideContent": ".emu-carousel__item-container"
+      }
+    },
+    {
+      "name": "accordion",
+      "source": "block-collection",
+      "contentModel": "collection",
+      "usedByArchetypes": ["treatment-page", "faq"],
+      "variants": ["default"],
+      "definition": {
+        "description": "Expandable Q&A sections. Each row is one item: col 1 = question/label, col 2 = answer/body.",
+        "rows": [
+          { "cells": ["Question text (h3 or plain text)", "Answer content (paragraphs, lists, links)"], "notes": "Two-column collection. First column = clickable header, second = expandable body." }
+        ]
+      },
+      "css": {
+        "border": "Bottom border between items",
+        "icon": "Chevron/plus toggle icon on right side of header",
+        "animation": "Smooth expand/collapse transition"
+      },
+      "js": {
+        "behavior": "Click to toggle, one open at a time (optional)",
+        "a11y": "ARIA expanded/collapsed states, keyboard navigation"
+      },
+      "sourceMapping": {
+        "selector": ".aaaem-accordion, .js-badger-accordion",
+        "items": ".emu-accordion__panel",
+        "question": ".emu-accordion__header button",
+        "answer": ".emu-accordion__body"
+      }
+    },
+    {
+      "name": "columns",
+      "source": "block-collection",
+      "contentModel": "standalone",
+      "usedByArchetypes": ["homepage", "treatment-page", "faq"],
+      "variants": ["default", "3-col"],
+      "definition": {
+        "description": "Side-by-side content layout. Single row with 2 or 3 columns.",
+        "rows": [
+          { "cells": ["Column 1 (image or text)", "Column 2 (text or image)", "Column 3 (optional)"], "notes": "2 columns for media-text layouts. 3 columns for 3-up grids. Column order determines LTR/RTL appearance." }
+        ],
+        "variantNotes": {
+          "default": "2-column layout. Image in one column, text content in the other. Author controls order by placing image left or right.",
+          "3-col": "Columns (3-col) — three equal columns, each with image + text. Used for product info grids on treatment pages."
+        }
+      },
+      "css": {
+        "layout": "CSS Grid or Flexbox, equal or auto-sized columns",
+        "gap": "30px between columns",
+        "responsive": "Stack vertically on mobile",
+        "verticalAlign": "Center-aligned vertically"
+      },
+      "js": {
+        "notes": "Pure CSS — no JS needed"
+      },
+      "sourceMapping": {
+        "mediaTextSelector": ".juvederm-mediatext",
+        "threeUpSelector": ".juvederm-3up",
+        "rtlClass": "juvederm-mediatext--rtl",
+        "ltrClass": "juvederm-mediatext--ltr"
+      }
+    },
+    {
+      "name": "tabs",
+      "source": "block-collection",
+      "contentModel": "auto-blocked",
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "variants": ["default"],
+      "definition": {
+        "description": "Tabbed content panels auto-blocked from consecutive sections. Each section with an H2 becomes a tab panel; the H2 text becomes the tab label.",
+        "autoBlockingRule": "Sections within a tabs-container section. Section metadata style=tabs triggers auto-blocking. Each H2 heading = tab label.",
+        "rows": [
+          { "cells": ["Tab label (text)", "Tab panel content (any blocks/default content)"], "notes": "Each row = one tab. Col 1 = label text, col 2 = panel content. Alternatively auto-blocked from sections." }
+        ]
+      },
+      "css": {
+        "tabBar": "Horizontal tab buttons, active state with bottom border accent color",
+        "panel": "Content area below tab bar, smooth show/hide"
+      },
+      "js": {
+        "behavior": "Click tab to switch panel, URL hash update for deep linking",
+        "a11y": "ARIA tablist/tab/tabpanel roles, keyboard arrow navigation"
+      },
+      "sourceMapping": {
+        "selector": ".emu-tabs, .aaaem-tabs",
+        "tabButtons": ".emu-tabs__tab button",
+        "tabPanels": ".emu-tabs__tabpanel"
+      }
+    },
+    {
+      "name": "before-after",
+      "source": "custom",
+      "contentModel": "collection",
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "variants": ["default", "carousel"],
+      "definition": {
+        "description": "Image comparison slider showing before/after treatment results. Each row = one comparison pair.",
+        "rows": [
+          { "cells": ["Before image (picture)", "After image (picture)"], "notes": "Two-column collection. Each row is a pair. Heading/disclaimer text goes in a preceding default content section." }
+        ],
+        "variantNotes": {
+          "default": "Single comparison pair with draggable slider divider.",
+          "carousel": "Before-after (carousel) — multiple pairs in a carousel with dot navigation. Used on homepage."
+        }
+      },
+      "css": {
+        "layout": "Square aspect ratio container (1:1)",
+        "slider": "Vertical divider line with drag handle",
+        "labels": "Before/After text labels on each side"
+      },
+      "js": {
+        "interaction": "Drag slider to reveal before/after. Touch and mouse support.",
+        "component": "Custom implementation using img-comparison-slider Web Component pattern or pointer events.",
+        "a11y": "Keyboard accessible slider (arrow keys), appropriate ARIA roles"
+      },
+      "sourceMapping": {
+        "selector": ".emu-comparison-slider",
+        "beforeImage": ".emu-comparison-slider__slider__slot--first img",
+        "afterImage": ".emu-comparison-slider__slider__slot--second img"
+      }
+    },
+    {
+      "name": "clinic-finder",
+      "source": "custom",
+      "contentModel": "configuration",
+      "usedByArchetypes": ["homepage", "treatment-page", "clinic-finder"],
+      "variants": ["compact", "full-page"],
+      "definition": {
+        "description": "Clinic search widget with Google Maps Places autocomplete. Configuration block with key-value rows.",
+        "rows": [
+          { "cells": ["heading", "Vind een kliniek bij jou in de buurt"], "notes": "Section heading text" },
+          { "cells": ["placeholder", "Vul je locatie in"], "notes": "Search input placeholder text" },
+          { "cells": ["api-key", "(Google Maps API key reference)"], "notes": "Reference to env config, not hardcoded" },
+          { "cells": ["results-url", "/nl/find-a-clinic"], "notes": "URL to redirect for full results (compact variant only)" }
+        ],
+        "variantNotes": {
+          "compact": "Clinic-finder (compact) — inline search bar with heading, used on treatment pages. Redirects to full results page.",
+          "full-page": "Clinic-finder (full-page) — full search with map, list view, and detailed clinic cards."
+        }
+      },
+      "css": {
+        "compact": "Centered search bar with gradient background section",
+        "fullPage": "Split layout: map on one side, results list on other"
+      },
+      "js": {
+        "googleMaps": "Places Autocomplete API for address search",
+        "geolocation": "Browser geolocation API for 'use my location' feature",
+        "iclFeed": "Integration with Allergan ICL clinic feed for results",
+        "apiKey": "AIzaSyALkGGfcTisYYtZuo-kd-vY2mQ3oDUuWEQ (migrate to server-side proxy)"
+      },
+      "sourceMapping": {
+        "selector": ".emu-location-services, .c-find-the-clinic-video",
+        "searchInput": ".emu-location-services__search-input",
+        "mapContainer": ".emu-google-maps"
+      }
+    },
+    {
+      "name": "embed",
+      "source": "block-collection",
+      "contentModel": "auto-blocked",
+      "usedByArchetypes": ["treatment-page"],
+      "variants": ["vimeo"],
+      "definition": {
+        "description": "Video embed auto-blocked from Vimeo URLs. Author simply pastes a Vimeo link as default content; the embed block auto-detects and wraps it.",
+        "autoBlockingRule": "Any standalone link to vimeo.com is auto-blocked into an embed block.",
+        "rows": [
+          { "cells": ["Vimeo URL (e.g., https://vimeo.com/875984424)"], "notes": "Single cell with the video URL. Block Collection embed handles oEmbed resolution." }
+        ]
+      },
+      "css": {
+        "aspectRatio": "16:9 responsive container",
+        "maxWidth": "100% of section width"
+      },
+      "js": {
+        "oEmbed": "Fetches Vimeo oEmbed data to create responsive iframe",
+        "lazyLoad": "Load iframe only when scrolled into view"
+      },
+      "sourceMapping": {
+        "selector": ".emu-embed, .aaaem-embed",
+        "vimeoIds": ["875984424", "875983691"],
+        "iframeSrc": "iframe[src*='vimeo']"
+      }
+    },
+    {
+      "name": "image-map",
+      "source": "custom",
+      "contentModel": "standalone",
+      "usedByArchetypes": ["homepage", "treatment-page"],
+      "variants": ["default"],
+      "definition": {
+        "description": "Interactive face image with positioned markers linking to treatment areas. Custom block — must be built from scratch.",
+        "rows": [
+          { "cells": ["Base image (face/body photo)"], "notes": "Row 1: The background image with treatment area markers overlaid." },
+          { "cells": ["Marker label", "Link URL"], "notes": "Row 2+: Each row defines one marker. Label is the treatment area name, link URL is the target page. Coordinates are determined by CSS positioning per marker index or authored as percentages." }
+        ],
+        "alternativeModel": "Could also be modeled as a single-cell block with a list of links, where JS positions markers based on link text matching predefined coordinate data."
+      },
+      "css": {
+        "layout": "Relative-positioned container with absolute-positioned markers",
+        "markers": "Circular pulsing markers with tooltip labels on hover",
+        "responsive": "Markers reposition proportionally on resize"
+      },
+      "js": {
+        "positioning": "Percentage-based coordinates for each marker",
+        "interaction": "Hover to show label, click to navigate to treatment page",
+        "responsive": "Recalculate positions on window resize"
+      },
+      "sourceMapping": {
+        "selector": ".emu-image-map",
+        "baseImage": ".emu-image-map img",
+        "markers": ".emu-mapping-marker",
+        "markerLabel": ".emu-image-map__map-marker-container span",
+        "markerLink": ".emu-mapping-marker a"
+      }
+    },
+    {
+      "name": "topic-menu",
+      "source": "custom",
+      "contentModel": "standalone",
+      "usedByArchetypes": ["faq"],
+      "variants": ["default"],
+      "definition": {
+        "description": "Sticky horizontal anchor navigation for in-page sections. Author creates a list of anchor links.",
+        "rows": [
+          { "cells": ["Unordered list of anchor links: e.g., - [Over JUVÉDERM®](#about-juvederm)\\n- [Veiligheid](#side-effects)\\n..."], "notes": "Single cell with a bulleted list of links. Each link points to a section ID on the same page." }
+        ]
+      },
+      "css": {
+        "position": "position: sticky; top: 0 (below header)",
+        "layout": "Horizontal scrollable list of links",
+        "activeState": "Underline/highlight for the currently-visible section's link",
+        "background": "#FFFFFF with bottom border"
+      },
+      "js": {
+        "scrollSpy": "IntersectionObserver to detect which section is in view and highlight corresponding link",
+        "smoothScroll": "Click link to smooth-scroll to target section",
+        "horizontalScroll": "Scroll the active link into view on mobile"
+      },
+      "sourceMapping": {
+        "selector": ".juvederm-topicmenu",
+        "links": ".juvederm-topicmenu nav ul li a"
+      }
+    }
+  ],
+
+  "archetypeBlueprints": {
+    "homepage": {
+      "description": "Main landing page with video hero, brand statement, scroll-reveal cards, before/after carousel, treatment areas (tabs+cards+image-map), clinic finder CTA, and footnotes.",
+      "sections": [
+        {
+          "name": "hero",
+          "style": "",
+          "sequences": ["hero (video variant)"],
+          "notes": "Full-bleed video hero with autoplay MP4 background, heading 'Jouw unieke schoonheid', and CTA."
+        },
+        {
+          "name": "brand-statement",
+          "style": "brand-statement",
+          "sequences": ["default-content (h2 heading + paragraph + image)"],
+          "notes": "Centered brand statement text with supporting lifestyle image. No block needed — default content with section style."
+        },
+        {
+          "name": "key-features",
+          "style": "key-features",
+          "sequences": ["columns (3-col variant)"],
+          "notes": "Three columns with icon + stat + description (natural results, satisfaction, longevity, calendar). Originally a scroll-reveal animation — simplified to columns in EDS."
+        },
+        {
+          "name": "footnotes-1",
+          "style": "footnotes",
+          "sequences": ["default-content (small text)"],
+          "notes": "Legal footnote references for the statistics section above."
+        },
+        {
+          "name": "before-after",
+          "style": "before-after-section",
+          "sequences": ["default-content (h2 heading + paragraph)", "before-after (carousel variant)"],
+          "notes": "Heading text followed by carousel of 3 before/after comparison pairs."
+        },
+        {
+          "name": "treatment-areas",
+          "style": "treatment-areas",
+          "sequences": ["tabs"],
+          "notes": "Tabbed section with image-map and treatment cards. Tab 1 = face image map, Tab 2+ = card grids. Complex section — may simplify to cards-only in EDS."
+        },
+        {
+          "name": "clinic-finder-cta",
+          "style": "clinic-finder-section",
+          "sequences": ["clinic-finder (compact variant)"],
+          "notes": "Compact clinic search with video/image background and 'Vind een kliniek' heading."
+        },
+        {
+          "name": "footnotes-2",
+          "style": "footnotes",
+          "sequences": ["default-content (small text)"],
+          "notes": "Page-level legal references and disclaimers."
+        }
+      ],
+      "metadata": {
+        "template": "homepage",
+        "og:image": "/content/dam/juvederm-ous/common/allergan_header_04_16by9_001.png",
+        "description": "Juvéderm® facial fillers help to enhance, restore or hydrate your features."
+      }
+    },
+    "treatment-page": {
+      "description": "Treatment detail pages (lips, eye-area, enhance, restore, male) with hero, media-text intro, 3-up product info, before/after comparison, product showcase carousel, FAQ accordion, treatment area cards, clinic finder CTA, and optional video embed.",
+      "sections": [
+        {
+          "name": "hero",
+          "style": "",
+          "sequences": ["hero (default image variant)"],
+          "notes": "Treatment-specific hero image with h1 heading and optional subtext."
+        },
+        {
+          "name": "intro-media-text",
+          "style": "media-text",
+          "sequences": ["columns (2-col, image + text)"],
+          "notes": "Image on one side, introductory paragraph on the other. RTL or LTR depending on the treatment page."
+        },
+        {
+          "name": "product-info",
+          "style": "product-info",
+          "sequences": ["columns (3-col variant)"],
+          "notes": "Three product/benefit columns with icons and descriptions."
+        },
+        {
+          "name": "footnotes-1",
+          "style": "footnotes",
+          "sequences": ["default-content (small text)"],
+          "notes": "Footnotes for product claims."
+        },
+        {
+          "name": "before-after",
+          "style": "before-after-section",
+          "sequences": ["default-content (h2 heading + paragraph)", "before-after (default single-pair)"],
+          "notes": "Heading, description, and single before/after comparison slider."
+        },
+        {
+          "name": "product-showcase",
+          "style": "product-showcase",
+          "sequences": ["default-content (h2 heading)", "carousel (products variant)"],
+          "notes": "Heading followed by multi-item product carousel (4 visible on desktop)."
+        },
+        {
+          "name": "video-embed",
+          "style": "",
+          "sequences": ["embed (vimeo)"],
+          "notes": "Optional — only on lips and eye-area pages. Vimeo video embed.",
+          "optional": true
+        },
+        {
+          "name": "faq-short",
+          "style": "faq-section",
+          "sequences": ["default-content (h2 heading)", "accordion"],
+          "notes": "3-5 FAQ items relevant to this treatment area."
+        },
+        {
+          "name": "treatment-areas",
+          "style": "treatment-areas",
+          "sequences": ["default-content (h2 heading)", "cards"],
+          "notes": "Cross-links to other treatment area pages as card grid."
+        },
+        {
+          "name": "clinic-finder-cta",
+          "style": "clinic-finder-section",
+          "sequences": ["clinic-finder (compact variant)"],
+          "notes": "Compact clinic finder search bar."
+        },
+        {
+          "name": "footnotes-2",
+          "style": "footnotes",
+          "sequences": ["default-content (small text)"],
+          "notes": "Page-level disclaimers."
+        }
+      ],
+      "metadata": {
+        "template": "treatment",
+        "og:image": "(treatment-specific image)",
+        "description": "(treatment-specific description)"
+      }
+    },
+    "faq": {
+      "description": "FAQ/QA page with hero, sticky topic menu, multiple Q&A sections with accordions, media-text blocks, key takeaways, and footnotes.",
+      "sections": [
+        {
+          "name": "hero",
+          "style": "",
+          "sequences": ["hero (default image variant)"],
+          "notes": "Hero with h1 'Ontdek het antwoord op je vraag'."
+        },
+        {
+          "name": "topic-navigation",
+          "style": "topic-menu-section",
+          "sequences": ["topic-menu"],
+          "notes": "Sticky horizontal anchor nav with 5 topic links."
+        },
+        {
+          "name": "qa-section-about",
+          "style": "qa-section",
+          "sequences": ["columns (2-col, image + text)", "accordion", "default-content (footnotes)"],
+          "notes": "About JUVÉDERM® section with intro media-text, Q&A accordion, and footnotes. Section ID: about-juvederm."
+        },
+        {
+          "name": "key-takeaways",
+          "style": "key-takeaways",
+          "sequences": ["columns (3-col variant)"],
+          "notes": "Three highlight items side by side with icons and text."
+        },
+        {
+          "name": "qa-section-safety",
+          "style": "qa-section",
+          "sequences": ["columns (2-col)", "accordion", "default-content (footnotes)"],
+          "notes": "Safety section. Section ID: side-effects."
+        },
+        {
+          "name": "qa-section-expectations",
+          "style": "qa-section",
+          "sequences": ["columns (2-col)", "accordion"],
+          "notes": "What to expect section. Section ID: expectation."
+        },
+        {
+          "name": "qa-section-results",
+          "style": "qa-section",
+          "sequences": ["accordion", "default-content (footnotes)"],
+          "notes": "Results and costs section. Section ID: duration."
+        },
+        {
+          "name": "qa-section-facial-areas",
+          "style": "qa-section",
+          "sequences": ["columns (2-col)", "accordion"],
+          "notes": "Facial areas section. Section ID: facial-areas."
+        },
+        {
+          "name": "clinic-finder-cta",
+          "style": "clinic-finder-section",
+          "sequences": ["clinic-finder (compact variant)"],
+          "notes": "Compact clinic finder CTA."
+        },
+        {
+          "name": "footnotes",
+          "style": "footnotes",
+          "sequences": ["default-content (small text)"],
+          "notes": "Page-level references."
+        }
+      ],
+      "metadata": {
+        "template": "faq",
+        "og:image": "(FAQ hero image)",
+        "description": "JUVÉDERM® is a collection of injectable facial fillers..."
+      }
+    },
+    "clinic-finder": {
+      "description": "Full clinic search page with hero and full-page clinic finder widget.",
+      "sections": [
+        {
+          "name": "hero",
+          "style": "",
+          "sequences": ["hero (default image variant)"],
+          "notes": "Hero with 'Vind een kliniek' heading."
+        },
+        {
+          "name": "clinic-search",
+          "style": "",
+          "sequences": ["clinic-finder (full-page variant)"],
+          "notes": "Full clinic search with map, list toggle, and detailed results."
+        }
+      ],
+      "metadata": {
+        "template": "clinic-finder",
+        "description": "Find the right clinic for you"
+      }
+    },
+    "legal": {
+      "description": "Simple legal/disclaimer page with default content only.",
+      "sections": [
+        {
+          "name": "content",
+          "style": "legal-content",
+          "sequences": ["default-content (headings + paragraphs)"],
+          "notes": "Pure text content — headings and paragraphs. No blocks needed."
+        }
+      ],
+      "metadata": {
+        "template": "legal"
+      }
+    },
+    "contact": {
+      "description": "Contact page with heading and contact information.",
+      "sections": [
+        {
+          "name": "content",
+          "style": "contact-content",
+          "sequences": ["default-content (headings + paragraphs + links)"],
+          "notes": "Contact details as default content. reCAPTCHA form handled via delayed.js integration if needed."
+        }
+      ],
+      "metadata": {
+        "template": "contact"
+      }
+    },
+    "informational": {
+      "description": "General terms and conditions page — legal text content.",
+      "sections": [
+        {
+          "name": "content",
+          "style": "legal-content",
+          "sequences": ["default-content (headings + paragraphs + lists)"],
+          "notes": "Same pattern as legal archetype. Plain text content."
+        }
+      ],
+      "metadata": {
+        "template": "informational"
+      }
+    }
+  },
+
+  "globalConfiguration": {
+    "navigation": {
+      "header": {
+        "logo": {
+          "asset": "/content/dam/juvederm-ous/nl/Juvederm.svg",
+          "alt": "Juvéderm logo",
+          "link": "/nl"
+        },
+        "mainNav": [
+          {
+            "label": "Behandeling",
+            "children": [
+              { "label": "Lippen", "href": "/nl/treatment/lips" },
+              { "label": "Ogen", "href": "/nl/treatment/eye-area" },
+              { "label": "Accentueren", "href": "/nl/treatment/enhance" },
+              { "label": "Herstel", "href": "/nl/treatment/restore" },
+              { "label": "Man", "href": "/nl/treatment/male" }
+            ]
+          },
+          {
+            "label": "FAQ",
+            "children": [
+              { "label": "Over Juvéderm®", "href": "/nl/qa#about-juvederm" },
+              { "label": "Kosten", "href": "/nl/qa#duration" },
+              { "label": "Langdurige resultaten", "href": "/nl/qa#results" },
+              { "label": "Veiligheid", "href": "/nl/qa#side-effects" },
+              { "label": "Zones van het gezicht", "href": "/nl/qa#facial-areas" }
+            ]
+          }
+        ],
+        "cta": {
+          "label": "Vind je kliniek",
+          "href": "/nl/find-a-clinic",
+          "style": "primary-outline"
+        },
+        "mobileMenu": {
+          "trigger": "Hamburger button with 'MENU' label",
+          "behavior": "Full-screen overlay modal on mobile"
+        },
+        "sticky": true,
+        "uniqueLinks": 14
+      },
+      "footer": {
+        "sections": [
+          {
+            "name": "actions",
+            "items": [
+              { "label": "Vind je kliniek", "href": "/nl/find-a-clinic", "style": "button" },
+              { "label": "Instagram", "href": "https://www.instagram.com/juvederm.nl/", "icon": "instagram" },
+              { "label": "Facebook", "href": "https://www.facebook.com/juvederm.nl", "icon": "facebook" }
+            ]
+          },
+          {
+            "name": "logos",
+            "items": [
+              { "label": "Juvéderm", "href": "/nl", "image": "Juvederm.svg" },
+              { "label": "Allergan Aesthetics", "href": "https://www.allerganaesthetics.nl/", "image": "allergan-aesthetics-logo.svg" }
+            ]
+          },
+          {
+            "name": "site-links",
+            "items": [
+              { "label": "Lippen", "href": "/nl/treatment/lips" },
+              { "label": "Ogen", "href": "/nl/treatment/eye-area" },
+              { "label": "Accentueren", "href": "/nl/treatment/enhance" },
+              { "label": "Herstel", "href": "/nl/treatment/restore" },
+              { "label": "Man", "href": "/nl/treatment/male" },
+              { "label": "Over Juvéderm®", "href": "/nl/qa#about-juvederm" },
+              { "label": "Kosten", "href": "/nl/qa#duration" },
+              { "label": "Langdurige resultaten", "href": "/nl/qa#results" },
+              { "label": "Veiligheid", "href": "/nl/qa#side-effects" },
+              { "label": "Zones van het gezicht", "href": "/nl/qa#facial-areas" }
+            ]
+          },
+          {
+            "name": "legal-links",
+            "items": [
+              { "label": "Neem contact op", "href": "/nl/contact-us" },
+              { "label": "Privacy beleid", "href": "https://www.abbvie.nl/privacy.html" },
+              { "label": "Algemene voorwaarden", "href": "https://www.abbvie.nl/termsofuse.html" },
+              { "label": "Social media disclaimer", "href": "/nl/disclaimer" },
+              { "label": "Cookies settings", "href": "#onetrust" },
+              { "label": "Algemene voorwaarden kliniekzoeker", "href": "/nl/algemene-voorwaarden-kliniekzoeker" }
+            ]
+          }
+        ],
+        "copyright": "© AbbVie. NL-JUV-240022",
+        "mobileAccordion": true,
+        "totalLinks": 21
+      }
+    },
+    "typography": {
+      "primaryFont": {
+        "family": "proxima-nova, sans-serif",
+        "source": "Adobe Typekit",
+        "loadUrl": "https://use.typekit.net/sic6ayn.css",
+        "weights": ["300", "400", "600", "700"],
+        "usage": "Headings, body text, navigation, buttons"
+      },
+      "secondaryFont": {
+        "family": "Assistant, sans-serif",
+        "source": "Google Fonts",
+        "loadUrl": "https://fonts.googleapis.com/css?family=Assistant",
+        "weights": ["400", "600"],
+        "usage": "Accent text, specific UI elements"
+      },
+      "sizes": {
+        "h1": "clamp(2rem, 4vw, 3.5rem)",
+        "h2": "clamp(1.5rem, 3vw, 2.5rem)",
+        "h3": "clamp(1.25rem, 2vw, 1.75rem)",
+        "body": "1rem (16px)",
+        "small": "0.875rem (14px)",
+        "footnotes": "0.75rem (12px)"
+      }
+    },
+    "colorPalette": {
+      "brand": {
+        "purple-dark": "#4B2552",
+        "purple-medium": "#461A4E",
+        "purple-light": "#AB7FB6",
+        "magenta": "#A2258C",
+        "orange-peach": "#FAB073",
+        "brown-dark": "#52212D"
+      },
+      "ui": {
+        "text-primary": "#4B4B4B",
+        "text-dark": "#333333",
+        "text-white": "#FFFFFF",
+        "background-white": "#FFFFFF",
+        "background-light-gray": "#F8F8F8",
+        "background-warm-gray": "#F2F1F1",
+        "border-light": "#E4E4E4",
+        "border-medium": "#7D7D7D"
+      },
+      "buttons": {
+        "primary-filled": {
+          "background": "linear-gradient(135deg, #A2258C, #461A4E)",
+          "text": "#FFFFFF",
+          "hoverBackground": "#4B2552"
+        },
+        "primary-outline": {
+          "background": "transparent",
+          "border": "#FFFFFF or #4B2552",
+          "text": "#FFFFFF or #4B2552"
+        },
+        "secondary-filled": {
+          "background": "#4B2552",
+          "text": "#FFFFFF"
+        }
+      }
+    },
+    "breakpoints": {
+      "mobile": "0px",
+      "tablet": "600px",
+      "desktop": "900px",
+      "wide": "1200px"
+    },
+    "language": {
+      "primary": "nl",
+      "htmlLang": "nl",
+      "dir": "ltr",
+      "pathPrefix": "/nl/"
+    }
+  },
+
+  "migrationRules": {
+    "homepage": {
+      "sourceUrl": "https://www.juvederm.nl/nl",
+      "contentSelectors": {
+        "heroTeaser": ".juvederm-home > .teaser .emu-teaser.hero-teaser",
+        "brandStatement": ".juvederm-brandstatements",
+        "scrollReveal": ".juvederm-scrollreveal",
+        "baCarousel": ".juvederm-ba-carousel",
+        "treatmentAreas": "emu-tabs within treatment-areas section",
+        "clinicFinder": ".c-find-the-clinic-video"
+      },
+      "imageHandling": {
+        "heroDesktop": "Download from data-cmp-src, convert to WebP",
+        "heroMobile": "Download mobile crop separately",
+        "heroVideo": "Download MP4 from /content/dam/juvederm-ous/nl/Juvederm_Hellana_PP001_G02_ProRes_2K.mp4",
+        "baImages": "Download all before/after pairs",
+        "cardImages": "Download treatment area card images",
+        "brandImage": "Download lifestyle image from brand statement section"
+      },
+      "specialHandling": [
+        "Video hero: Extract MP4 source URL from video source element",
+        "Scroll-reveal section: Simplify to static 3-col columns block (animation not critical)",
+        "BA carousel: Extract all 3 comparison pairs from carousel slides",
+        "Treatment area tabs: Flatten if image-map is deferred; otherwise keep tabs structure"
+      ]
+    },
+    "treatment-page": {
+      "sourceUrlPattern": "https://www.juvederm.nl/nl/treatment/{slug}",
+      "contentSelectors": {
+        "hero": ".emu-teaser.hero-teaser",
+        "mediaText": ".juvederm-mediatext",
+        "threeUp": ".juvederm-3up .emu-carousel",
+        "beforeAfter": ".juvederm-ba-image-comparator .emu-comparison-slider",
+        "productShowcase": ".juvederm-productsshowcase .emu-carousel",
+        "faqAccordion": ".juvederm-faqshort .aaaem-accordion",
+        "treatmentCards": ".emu-card",
+        "clinicFinder": ".c-find-the-clinic-video, .emu-location-services",
+        "videoEmbed": ".emu-embed iframe[src*='vimeo']",
+        "footnotes": ".juvederm-footnotes"
+      },
+      "imageHandling": {
+        "strategy": "download-and-convert",
+        "heroImages": "Download desktop + mobile crops from data-cmp-src URLs",
+        "productImages": "Download from carousel slide images",
+        "baImages": "Download before/after pairs",
+        "namingConvention": "{treatment-slug}-{purpose}-{index}.webp"
+      },
+      "specialHandling": [
+        "3-up section uses emu-carousel with data-items=3 in static mode — extract as 3 columns block",
+        "Product showcase carousel: Extract individual product items as carousel slides",
+        "Vimeo embeds: Extract video ID, create plain Vimeo URL for auto-blocking",
+        "Media-text RTL/LTR: Column order in block table determines layout direction"
+      ]
+    },
+    "faq": {
+      "sourceUrl": "https://www.juvederm.nl/nl/qa",
+      "contentSelectors": {
+        "hero": ".emu-teaser.hero-teaser",
+        "topicMenu": ".juvederm-topicmenu nav ul",
+        "qaSections": ".qa-section",
+        "qaContainers": ".juvederm-qacontainer",
+        "accordions": ".aaaem-accordion",
+        "mediaText": ".juvederm-mediatext",
+        "keyTakeaways": ".juvederm-keytakeaways",
+        "footnotes": ".juvederm-footnotes"
+      },
+      "specialHandling": [
+        "Topic menu: Extract anchor links from nav ul, map to section IDs",
+        "Multiple QA sections: Each .qa-section becomes an EDS section with section metadata ID",
+        "Key takeaways: Extract 3 items from static carousel, model as columns (3-col)",
+        "Accordion within QA containers: Extract question from header button text, answer from body content"
+      ]
+    },
+    "clinic-finder": {
+      "sourceUrl": "https://www.juvederm.nl/nl/find-a-clinic",
+      "contentSelectors": {
+        "hero": ".juvederm-findaclinic-hero .emu-teaser",
+        "clinicSearch": ".emu-location-services"
+      },
+      "specialHandling": [
+        "Google Maps API key must be migrated to environment config",
+        "ICL feed integration requires backend proxy — document as Phase 3+ work",
+        "Three URL variants (/find-a-clinic, /clinics, /clinic) should be consolidated to one page with redirects"
+      ]
+    },
+    "legal": {
+      "sourceUrl": "https://www.juvederm.nl/nl/disclaimer",
+      "contentSelectors": {
+        "content": "main .aaaem-container p, main .aaaem-container h1, main .aaaem-container h2"
+      },
+      "specialHandling": ["Pure text extraction — no blocks needed"]
+    },
+    "contact": {
+      "sourceUrl": "https://www.juvederm.nl/nl/contact-us",
+      "contentSelectors": {
+        "content": "main .aaaem-container"
+      },
+      "specialHandling": [
+        "reCAPTCHA-protected form — may need to convert to a simple mailto link or external form service integration"
+      ]
+    },
+    "informational": {
+      "sourceUrl": "https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker",
+      "contentSelectors": {
+        "content": "main .aaaem-container"
+      },
+      "specialHandling": ["Pure text extraction — no blocks needed"]
+    }
+  },
+
+  "siteConventions": {
+    "sectionStyles": [
+      "brand-statement",
+      "key-features",
+      "footnotes",
+      "before-after-section",
+      "treatment-areas",
+      "clinic-finder-section",
+      "media-text",
+      "product-info",
+      "product-showcase",
+      "faq-section",
+      "topic-menu-section",
+      "qa-section",
+      "key-takeaways",
+      "legal-content",
+      "contact-content"
+    ],
+    "ctaPattern": {
+      "primary": "Bold link text renders as filled gradient button (purple/magenta). Used for 'Vind een kliniek', 'Lees meer'.",
+      "secondary": "Regular link text renders as outlined/bordered button. Used for secondary actions.",
+      "convention": "Author creates **[CTA Text](url)** for primary CTA, plain [CTA Text](url) for secondary."
+    },
+    "imageStrategy": "download-and-convert",
+    "imageNotes": {
+      "sources": [
+        "/content/dam/juvederm-ous/nl/",
+        "/content/dam/juvederm-ous/common/",
+        "/adobe/dynamicmedia/deliver/"
+      ],
+      "format": "Download originals, serve as WebP via EDS automatic optimization",
+      "responsive": "EDS handles responsive images via picture element and width parameters",
+      "heroImages": "Separate desktop and mobile crops where available"
+    },
+    "thirdPartyIntegrations": {
+      "migrate": [
+        { "name": "Google Tag Manager", "id": "GTM-TNZCH6P", "approach": "Load in delayed.js" },
+        { "name": "Google Analytics", "id": "G-X7KVQE27P4", "approach": "Via GTM" },
+        { "name": "OneTrust", "approach": "Cookie consent in delayed.js" }
+      ],
+      "evaluate": [
+        { "name": "Facebook Pixel", "ids": ["147087147235490", "711032609301003"], "approach": "Via GTM if still needed" },
+        { "name": "DoubleClick/Floodlight", "approach": "Via GTM if still needed" }
+      ],
+      "custom": [
+        { "name": "Google Maps Places API", "key": "AIzaSyALkGGfcTisYYtZuo-kd-vY2mQ3oDUuWEQ", "approach": "Load in clinic-finder block JS only, consider server proxy" },
+        { "name": "Vimeo Player", "approach": "Handled by embed block auto-loading" }
+      ],
+      "alreadyPresent": [
+        { "name": "Adobe Helix RUM", "notes": "Already included in EDS boilerplate" }
+      ]
+    }
+  },
+
+  "blocksToCreate": [
+    {
+      "name": "image-map",
+      "priority": "medium",
+      "effort": "complex",
+      "notes": "Interactive face image with positioned markers. No Block Collection equivalent. Must be custom built with percentage-based positioning and responsive recalculation."
+    }
+  ],
+
+  "blocksToAdd": [
+    {
+      "name": "embed",
+      "source": "block-collection",
+      "url": "https://github.com/adobe/aem-block-collection/tree/main/blocks/embed",
+      "priority": "low",
+      "notes": "Only used on 2 treatment pages (lips, eye-area). Copy from Block Collection."
+    }
+  ],
+
+  "consolidationNotes": {
+    "duplicatePages": {
+      "homepage": "https://www.juvederm.nl/ and /nl are the same — use /nl as canonical, redirect / to /nl",
+      "clinicFinder": "/nl/find-a-clinic, /nl/clinics, /nl/clinic are same page — use /nl/find-a-clinic as canonical, redirect others"
+    },
+    "totalUniquePages": 10,
+    "totalBlocks": 11,
+    "customBlocksToCreate": 1,
+    "blockCollectionBlocksToAdd": 1
+  }
+}
