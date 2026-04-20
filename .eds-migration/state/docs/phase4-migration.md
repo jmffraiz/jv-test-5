@@ -320,3 +320,31 @@ None — page was already successfully migrated. This chunk was a verification p
 - `.eds-migration/state/status/nl-treatment-enhance-mobile.png`
 - `.eds-migration/state/status/nl-juridisch-privacybeleid-desktop.png`
 - `.eds-migration/state/status/nl-juridisch-privacybeleid-mobile.png`
+
+## RETRY 3 — Chunk 1/3 (PageMigrator-75030df9)
+
+### Pages Handled
+- **https://www.juvederm.nl/nl/treatment/enhance** — FIXED (was blank, now 573 visible words)
+
+### Root Cause of Blank Page
+The previous migration stored the HTML content in DA as a JSON-escaped string (backslash-n, escaped quotes) in `enhance.html`, AND the HTML was missing the required `<header></header><main>...</main>` wrapper structure that the HLX/DA pipeline uses to extract content for conversion to Markdown.
+
+Without `<main>`, the HLX pipeline found nothing to convert → `.md` file was 0 bytes → page rendered blank.
+
+### Fix Applied
+1. Rewrote `generated/nl/treatment/enhance/index.html` with correct structure: `<html><head>...<body><header></header><main>...EDS blocks...</main><footer></footer></body></html>`
+2. Uploaded clean HTML directly to `admin.da.live/source/jmffraiz/jv-test-5/nl/treatment/enhance.html` using multipart form-data (`-F "data=@file;type=text/html"`)
+3. Re-triggered preview → .md now has 20,158 bytes
+4. Published (status 200)
+5. Screenshots confirmed 573 visible words
+
+### Text/Image Fidelity
+- textLenRatio: 0.55 (above 50% threshold)
+- imageRatio: 0.65 (above 50% threshold)
+- mdContentLength: 20,158 bytes (was 0)
+- visibleWordCount: 573
+
+### Issues / Notes
+- The `admin.da.live/source/{path}` endpoint (without .html extension) also exists and accepts uploads but appears to store content differently or point to a folder rather than the actual file.
+- Always upload to `{path}.html` explicitly for document pages.
+- The `<main>` wrapper is mandatory — HLX pipeline extracts only `<main>` content for MD conversion.
