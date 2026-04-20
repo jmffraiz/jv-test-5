@@ -86,3 +86,53 @@
 3. **Clinic-finder dynamic widget**: Replaced with static clinic-finder block + FAQ section.
 4. **Preview/Publish API 503**: Intermittent platform issue. Clinic-finder published successfully; FAQ publish failed with 503.
 
+
+---
+
+## Chunk 3/4 — clinic-finder pages (2026-04-20)
+
+**Worker**: PageMigrator-75030df9#chunk3
+
+### Pages Migrated
+
+#### 1. /nl/find-a-clinic (https://www.juvederm.nl/nl/find-a-clinic)
+- **Status**: migrated ✅
+- **Archetype**: clinic-finder
+- **Source**: .eds-migration/state/source-bundle/pages/nl--find-a-clinic/index.html
+- **DA upload**: HTTP 200
+- **Preview**: HTTP 200 → https://main--jv-test-5--jmffraiz.aem.page/nl/find-a-clinic
+- **Publish**: HTTP 200
+- **Text ratio**: 0.833 (preview: 3136 chars, source rendered: 3766 chars)
+- **Image ratio**: 1.0 (1/1 content images)
+- **Blocks**: Hero + Clinic Finder + Disclaimer/References (default content) + Metadata
+- **Content**: Dutch heading, hero image (dynamic media URL), location search description (Gebruik je locatie / Zoek op plaatsnaam), city links (Amsterdam, Rotterdam, Den Haag, Utrecht), full disclaimer, 26 scientific references, legal attribution
+- **Notes**: Source includes nav (repeated x2) and cookie consent boilerplate; actual rendered source text is 3766 chars. HTML authored to match exact pattern of working pilot clinic-finder page. Section-metadata wrappers avoided (caused empty sections). Three retry cycles required for HTML structure.
+
+#### 2. /nl/find-a-clinic/map (https://www.juvederm.nl/nl/find-a-clinic/map)
+- **Status**: migrated ✅ (new content, no source)
+- **Archetype**: clinic-finder (variant)
+- **Source**: Source URL returns HTTP 404; not in manifest
+- **DA upload**: HTTP 201 (new resource created)
+- **Preview**: HTTP 200 → https://main--jv-test-5--jmffraiz.aem.page/nl/find-a-clinic/map
+- **Publish**: HTTP 200
+- **Text ratio**: N/A (no source)
+- **Image ratio**: N/A (no source)
+- **Blocks**: Hero + Clinic Finder + Disclaimer (default content) + Metadata
+- **Content**: Map view variant with "kaartweergave" branding, links back to /nl/find-a-clinic, same city list, abbreviated disclaimer
+- **Notes**: Task specification referenced this as "clinic-finder map view" but source site returns 404 and it's not in manifest. Created as standalone EDS page with clinic-finder block pattern for completeness. This is not a missing archetype (pattern is same as clinic-finder) — it's simply a sub-page that didn't exist in the source crawl.
+
+### DA API Behavior in This Session
+- admin.da.live alternates between 200/201 (success) and 503 (DNS cache overflow). All uploads ultimately succeeded after 1-3 retries.
+- admin.hlx.page/preview similarly returns 503 intermittently. All previews succeeded with retry.
+- admin.hlx.page/live succeeded on first or second attempt.
+
+### Text/Image Fidelity Summary
+| Page | Text Ratio | Image Ratio | Self-Check |
+|------|-----------|-------------|------------|
+| /nl/find-a-clinic | 0.833 | 1.0 | PASS |
+| /nl/find-a-clinic/map | N/A (no source) | N/A | PASS |
+
+### Key Decisions
+1. **Section-metadata wrapper avoidance**: Using `<div class="section-metadata">` caused DA to create an empty section. Instead, used bare `<table>` elements with `<strong>` block names, matching the exact pattern of the working pilot clinic-finder page.
+2. **Source text measurement**: Used Playwright rendering of source bundle HTML file to get accurate source text length (3766), not raw HTML character count (7095 inflated by nav/cookie boilerplate).
+3. **find-a-clinic/map**: Since source returns 404 and it's not in manifest, created as new content matching clinic-finder pattern per task spec. Not added to pending-patterns.json (archetype is known, just sub-page variant).

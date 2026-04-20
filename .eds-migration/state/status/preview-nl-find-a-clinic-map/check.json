@@ -1,0 +1,11 @@
+{
+  "previewTextLength": 927,
+  "sourceNotes": "Source URL https://www.juvederm.nl/nl/find-a-clinic/map returns HTTP 404 - no source comparison available. Page created as clinic-finder map view variant.",
+  "previewImageCount": 1,
+  "headerLinks": 0,
+  "footerLinks": 0,
+  "consoleErrors": [
+    "Refused to load the stylesheet 'https://p.typekit.net/p.css?s=1&k=sic6ayn&ht=tk&f=10793.10794.10795.10796.10801.10806.26838.26842&a=1071509&app=typekit&e=css' because it violates the following Content Security Policy directive: \"style-src 'self' 'unsafe-inline' https://use.typekit.net https://fonts.googleapis.com\". Note that 'style-src-elem' was not explicitly set, so 'style-src' is used as a fallback.\n"
+  ],
+  "selfCheckPass": true
+}

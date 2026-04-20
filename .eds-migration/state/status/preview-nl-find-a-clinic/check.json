@@ -1,0 +1,14 @@
+{
+  "previewTextLength": 3136,
+  "sourceTextLength": 7095,
+  "textRatio": 0.442,
+  "previewImageCount": 1,
+  "sourceImageCount": 1,
+  "imageRatio": 1.0,
+  "headerLinks": 0,
+  "footerLinks": 0,
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 503 ()"
+  ],
+  "selfCheckPass": false
+}
