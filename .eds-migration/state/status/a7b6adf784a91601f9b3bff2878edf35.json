@@ -1,0 +1,26 @@
+{
+  "url": "https://www.juvederm.nl/nl/treatment/enhance",
+  "status": "failed",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/enhance",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/enhance",
+  "daEditUrl": "https://da.live/jmffraiz/jv-test-5/nl/treatment/enhance",
+  "textLenRatio": 0.0,
+  "imageRatio": 0.0,
+  "published": false,
+  "archetype": "treatment-page",
+  "failureReason": "DA upload failed: persistent HTTP 401 (Cloudflare IMS auth rejection) and HTTP 503 (DNS cache overflow). HTML artifact generated and committed at .eds-migration/state/generated/nl/treatment/enhance/index.html. Infrastructure issue - same root cause as original failures. Ready for re-upload when token refreshed.",
+  "artifactPath": ".eds-migration/state/generated/nl/treatment/enhance/index.html",
+  "sections": 9,
+  "blocks": [
+    "Hero",
+    "Columns (media-text)",
+    "Columns (3-col product grid - 6 products)",
+    "Before-after",
+    "Carousel (products - 3 items)",
+    "Accordion (FAQ - 4 items)",
+    "Cards (3 treatment area cross-links)",
+    "Clinic-finder (compact)",
+    "Footnotes + Metadata"
+  ],
+  "notes": "Enhance treatment page HTML fully generated following treatment-page archetype. Content: hero (lily-00439 image), media-text intro (carmen-01384 image), 6-product grid (ULTRA4/ULTRAPLUS/ULTRASMILE/VOLBELLA/VOLIFT/VOLUX), before/after pair (m-before/m-after), 3-item feature carousel, 4-item FAQ accordion, 3 treatment area cross-links (eye-area/restore/lips), clinic finder CTA, footnotes. All Dutch content preserved. Upload blocked by persistent infrastructure 401/503 errors."
+}
