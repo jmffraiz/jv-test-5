@@ -1,0 +1,109 @@
+/* Image Map block — interactive markers on a base image */
+.image-map .image-map-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.image-map .image-map-base {
+  position: relative;
+  line-height: 0;
+}
+
+.image-map .image-map-base picture,
+.image-map .image-map-base img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.image-map .image-map-markers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.image-map .image-map-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.image-map .image-map-marker:hover {
+  z-index: 2;
+}
+
+.image-map .image-map-marker-dot {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--brand-primary, #4b2552);
+  border: 3px solid var(--background-color, #fff);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
+  transition: transform 0.2s, background-color 0.2s;
+  animation: image-map-pulse 2s ease-in-out infinite;
+}
+
+.image-map .image-map-marker:hover .image-map-marker-dot {
+  transform: scale(1.3);
+  background: var(--brand-accent, #a2258c);
+  animation: none;
+}
+
+.image-map .image-map-marker-label {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  background: var(--brand-primary, #4b2552);
+  color: var(--background-color, #fff);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.image-map .image-map-marker:hover .image-map-marker-label,
+.image-map .image-map-marker:focus .image-map-marker-label {
+  opacity: 1;
+}
+
+.image-map .image-map-marker-label::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--brand-primary, #4b2552);
+}
+
+@keyframes image-map-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(75 37 82 / 40%);
+  }
+
+  50% {
+    box-shadow: 0 0 0 8px rgb(75 37 82 / 0%);
+  }
+}
+
+@media (width >= 900px) {
+  .image-map .image-map-container {
+    max-width: 700px;
+  }
+
+  .image-map .image-map-marker-dot {
+    width: 24px;
+    height: 24px;
+  }
+}

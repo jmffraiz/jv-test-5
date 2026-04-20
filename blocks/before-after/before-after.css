@@ -1,3 +1,4 @@
+/* Before/After comparison slider block */
 main .before-after {
   padding: 2rem 0;
 }
@@ -9,43 +10,119 @@ main .before-after .before-after-container {
 
 main .before-after .before-after-slide {
   display: none;
-  gap: 1rem;
-  justify-content: center;
 }
 
 main .before-after .before-after-slide.active {
-  display: flex;
-  flex-direction: column;
+  display: block;
+}
+
+/* Slider overlay layout */
+main .before-after .before-after-slider {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: col-resize;
+  user-select: none;
 }
 
 main .before-after .before-after-before,
 main .before-after .before-after-after {
-  position: relative;
-  flex: 1;
-  max-width: 400px;
+  position: absolute;
+  inset: 0;
 }
 
 main .before-after .before-after-before img,
 main .before-after .before-after-after img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  border-radius: 8px;
+}
+
+main .before-after .before-after-after {
+  clip-path: inset(0 0 0 50%);
 }
 
 main .before-after .before-after-label {
   position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
+  bottom: 0.75rem;
   background: rgb(0 0 0 / 60%);
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 4px;
   font-size: var(--body-font-size-xs);
   font-weight: 600;
-  z-index: 1;
+  z-index: 2;
+  pointer-events: none;
 }
 
+main .before-after .before-after-before .before-after-label {
+  left: 0.75rem;
+}
+
+main .before-after .before-after-after .before-after-label {
+  right: 0.75rem;
+}
+
+/* Slider handle */
+main .before-after .before-after-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  z-index: 3;
+  transform: translateX(-50%);
+}
+
+main .before-after .before-after-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: var(--background-color);
+  box-shadow: 0 0 4px rgb(0 0 0 / 30%);
+}
+
+main .before-after .before-after-grip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--background-color);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 30%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+main .before-after .before-after-arrow-left,
+main .before-after .before-after-arrow-right {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+
+main .before-after .before-after-arrow-left {
+  border-right: 8px solid var(--brand-primary, #4b2552);
+}
+
+main .before-after .before-after-arrow-right {
+  border-left: 8px solid var(--brand-primary, #4b2552);
+}
+
+/* Navigation dots */
 main .before-after .before-after-nav {
   display: flex;
   justify-content: center;
@@ -57,18 +134,20 @@ main .before-after .before-after-dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid var(--text-color);
+  border: 2px solid var(--brand-primary, #4b2552);
   background: transparent;
   cursor: pointer;
   padding: 0;
+  transition: background-color 0.2s;
 }
 
-main .before-after .before-after-dot.active {
-  background: var(--text-color);
+main .before-after .before-after-dot.active,
+main .before-after .before-after-dot:hover {
+  background: var(--brand-primary, #4b2552);
 }
 
 @media (width >= 600px) {
-  main .before-after .before-after-slide.active {
-    flex-direction: row;
+  main .before-after .before-after-slider {
+    max-width: 700px;
   }
 }

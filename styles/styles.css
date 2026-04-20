@@ -11,37 +11,40 @@
  */
 
 :root {
-  /* Juvéderm brand colors */
-  --brand-primary: #6b2fa0;
-  --brand-primary-dark: #522180;
+  /* Juvéderm brand colors — from blueprint palette */
+  --brand-primary: #4b2552;
+  --brand-primary-dark: #461a4e;
   --brand-primary-light: #f3ebfa;
-  --brand-secondary: #d4145a;
-  --brand-accent: #e91e8c;
+  --brand-secondary: #a2258c;
+  --brand-accent: #a2258c;
+  --brand-purple-light: #ab7fb6;
+  --brand-orange-peach: #fab073;
+  --brand-brown-dark: #52212d;
 
   /* colors */
   --background-color: #fff;
-  --light-color: #f6f4f8;
-  --dark-color: #3c3c3c;
-  --text-color: #2d2d2d;
-  --link-color: #6b2fa0;
-  --link-hover-color: #522180;
+  --light-color: #f8f8f8;
+  --dark-color: #4b4b4b;
+  --text-color: #4b4b4b;
+  --link-color: #4b2552;
+  --link-hover-color: #461a4e;
 
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  /* fonts — Proxima Nova via Adobe Typekit, Assistant via Google Fonts */
+  --body-font-family: 'proxima-nova', 'Assistant', sans-serif;
+  --heading-font-family: 'proxima-nova', 'Assistant', sans-serif;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  --body-font-size-m: 1rem;
+  --body-font-size-s: 0.875rem;
+  --body-font-size-xs: 0.75rem;
 
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  /* heading sizes — fluid scale */
+  --heading-font-size-xxl: clamp(2rem, 4vw, 3.5rem);
+  --heading-font-size-xl: clamp(1.5rem, 3vw, 2.5rem);
+  --heading-font-size-l: clamp(1.25rem, 2vw, 1.75rem);
+  --heading-font-size-m: 1.25rem;
+  --heading-font-size-s: 1.125rem;
+  --heading-font-size-xs: 1rem;
 
   /* nav height */
   --nav-height: 64px;
@@ -49,31 +52,16 @@
 
 /* fallback fonts */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
+  font-family: proxima-nova-fallback;
+  size-adjust: 99%;
   src: local('Arial');
 }
 
 @media (width >= 900px) {
   :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
+    --heading-font-size-m: 1.375rem;
+    --heading-font-size-s: 1.25rem;
+    --heading-font-size-xs: 1.125rem;
   }
 }
 
@@ -189,7 +177,7 @@ button.button {
   border-radius: 2.4em;
   padding: 0.5em 1.2em;
   font: inherit;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.25;
   text-decoration: none;
   cursor: pointer;
@@ -208,7 +196,7 @@ button.button:disabled {
 a.button.primary,
 button.button.primary {
   border-color: var(--brand-primary);
-  background-color: var(--brand-primary);
+  background: linear-gradient(135deg, var(--brand-secondary), var(--brand-primary));
   color: var(--background-color);
 }
 
@@ -217,7 +205,7 @@ a.button.primary:focus-visible,
 button.button.primary:hover,
 button.button.primary:focus-visible {
   border-color: var(--brand-primary-dark);
-  background-color: var(--brand-primary-dark);
+  background: var(--brand-primary-dark);
   color: var(--background-color);
 }
 
@@ -227,7 +215,7 @@ a.button.primary[aria-disabled="true"]:focus-visible,
 button.button.primary:disabled,
 button.button.primary:disabled:hover,
 button.button.primary:disabled:focus-visible {
-  background-color: var(--light-color);
+  background: var(--light-color);
   border-color: var(--light-color);
   color: var(--dark-color);
 }
@@ -376,7 +364,7 @@ main .section.cta-band p {
 }
 
 main .section.cta-band a.button.primary {
-  background-color: var(--background-color);
+  background: var(--background-color);
   border-color: var(--background-color);
   color: var(--brand-primary);
 }
@@ -393,6 +381,118 @@ main .section.qa-section {
   margin: 0;
   padding: 32px 0;
   border-bottom: 1px solid #e8e4eb;
+}
+
+/* Clinic-finder section with gradient background */
+main .section.clinic-finder-section {
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+  color: var(--background-color);
+  margin: 0;
+  padding: 48px 0;
+}
+
+main .section.clinic-finder-section h2,
+main .section.clinic-finder-section h3,
+main .section.clinic-finder-section p {
+  color: var(--background-color);
+}
+
+/* Before-after section */
+main .section.before-after-section {
+  background-color: var(--light-color);
+  margin: 0;
+  padding: 48px 0;
+}
+
+/* Brand-statement section — centered with larger text */
+main .section.brand-statement {
+  text-align: center;
+  margin: 0;
+  padding: 48px 0;
+}
+
+main .section.brand-statement > div {
+  max-width: 800px;
+}
+
+main .section.brand-statement h2 {
+  color: var(--brand-primary);
+}
+
+/* Key-features section */
+main .section.key-features {
+  background-color: var(--light-color);
+  margin: 0;
+  padding: 48px 0;
+  text-align: center;
+}
+
+/* Treatment-areas section */
+main .section.treatment-areas {
+  margin: 0;
+  padding: 48px 0;
+}
+
+/* Product-info section */
+main .section.product-info {
+  background-color: var(--light-color);
+  margin: 0;
+  padding: 48px 0;
+}
+
+/* Product-showcase section */
+main .section.product-showcase {
+  margin: 0;
+  padding: 48px 0;
+}
+
+/* FAQ section heading */
+main .section.faq-section {
+  margin: 0;
+  padding: 32px 0;
+}
+
+/* Topic-menu section */
+main .section.topic-menu-section {
+  margin: 0;
+  padding: 0;
+}
+
+/* Key takeaways */
+main .section.key-takeaways {
+  background-color: var(--brand-primary);
+  color: var(--background-color);
+  margin: 0;
+  padding: 48px 0;
+  text-align: center;
+}
+
+main .section.key-takeaways h2,
+main .section.key-takeaways h3,
+main .section.key-takeaways p {
+  color: var(--background-color);
+}
+
+/* Legal / informational content */
+main .section.legal-content {
+  margin: 0;
+  padding: 32px 0;
+}
+
+main .section.legal-content > div {
+  max-width: 900px;
+}
+
+/* Contact content */
+main .section.contact-content {
+  margin: 0;
+  padding: 32px 0;
+}
+
+/* Media-text section */
+main .section.media-text {
+  margin: 0;
+  padding: 48px 0;
 }
 
 /* Footnotes section */
