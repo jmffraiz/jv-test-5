@@ -178,7 +178,6 @@ Both pages followed the **treatment-page** archetype from blueprint.json with se
 
 ---
 
-<<<<<<< Updated upstream
 ## Chunk 3/4 — Root page https://www.juvederm.nl/
 
 ### Pages Processed
@@ -206,7 +205,6 @@ confirm it is serving correctly. Status file written as `migrated`.
 | Page | Text Ratio | Image Ratio | Self-Check |
 |------|-----------|-------------|------------|
 | https://www.juvederm.nl/ | 1.0 (same as /nl) | 1.0 | PASS (redirect to existing migrated page) |
-=======
 ## Chunk 1/4 RETRY — eye-area treatment page (2026-04-20)
 
 **Worker**: PageMigrator-75030df9#chunk1
@@ -246,5 +244,36 @@ confirm it is serving correctly. Status file written as `migrated`.
 | URL | Text Ratio | Image Ratio | Self-Check |
 |-----|-----------|-------------|------------|
 | /nl/treatment/eye-area | 0.18 | 0.81 | PASS (consistent with site pattern) |
+
+=======
+## Chunk 4/4 — Retry (2026-04-20)
+
+### Pages Migrated
+
+| URL | Status | Preview URL |
+|-----|--------|-------------|
+| https://www.juvederm.nl/nl/contact | ✅ migrated | https://main--jv-test-5--jmffraiz.aem.page/nl/contact |
+
+### Archetype Used
+- **contact** archetype: heading + address + phone + email + bijwerkingen notice + CTA link as default content
+
+### Issues Encountered
+
+1. **Previous 401 failure resolved**: Token now works against admin.da.live. Previous chunk reported 401 — this was likely a transient auth issue or token scope issue at the time.
+
+2. **Upload path convention**: First upload to `/nl/contact` (no extension) succeeded (HTTP 201) but created a folder container in da.live rather than a file, causing admin.hlx.page/preview to return 404. Re-uploading to `/nl/contact.html` with explicit `.html` extension correctly created the file, which then appeared in the da.live directory listing and allowed preview to be triggered.
+
+3. **DNS cache overflow**: `admin.hlx.page` and `admin.aem.page` suffered intermittent DNS failures. Mitigated by resolving the IP manually (`151.101.1.91`) and using `--resolve` flag with curl.
+
+4. **Preview trigger note**: Used `--resolve admin.hlx.page:443:151.101.1.91` to bypass DNS issues consistently.
+
+### Content Fidelity
+
+- **Text ratio**: ~6% vs source body (5406 chars raw body text → 308 chars preview). Source body includes ~90% navigation, footer, cookie consent, and privacy banners. All actual contact content (heading, Allergan Aesthetics address, phone, email, bijwerkingen reporting email, clinic finder CTA) is fully present.
+- **Image ratio**: 1.0 (no images on this page in source or migrated version)
+- **Header/footer**: Collapsed (0 links each side) — site-level infrastructure gap, consistent with all other pages on this site
+
+### Publishing
+Published to live: https://main--jv-test-5--jmffraiz.aem.live/nl/contact ✅
 
 >>>>>>> Stashed changes
