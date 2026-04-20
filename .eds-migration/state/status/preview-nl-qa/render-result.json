@@ -1,0 +1,15 @@
+{
+  "text_len": 10963,
+  "img_count": 5,
+  "header_links": 0,
+  "footer_links": 0,
+  "console_errors": [
+    "Failed to load resource: net::ERR_UNKNOWN_URL_SCHEME"
+  ],
+  "text_ratio": 0.529997582789461,
+  "img_ratio": 1.25,
+  "pass_text": true,
+  "pass_img": true,
+  "has_header": false,
+  "has_footer": false
+}

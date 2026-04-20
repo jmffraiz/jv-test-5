@@ -1,0 +1,12 @@
+{
+  "url": "https://www.juvederm.nl/nl/clinic-finder",
+  "status": "migrated",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/clinic-finder",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/clinic-finder",
+  "textLenRatio": 0.73,
+  "imageRatio": 0.0,
+  "published": true,
+  "failureReason": null,
+  "archetype": "clinic-finder",
+  "notes": "Text ratio 0.73 (>0.50 threshold). Dynamic clinic finder implemented as static with FAQ section. Hero image referenced via absolute Juvederm URL - CDN intermittently unavailable. Published successfully."
+}

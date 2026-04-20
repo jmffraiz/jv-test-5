@@ -1,10 +1,1 @@
-[
-  {
-    "url": "https://www.juvederm.nl/nl/juridisch/privacybeleid",
-    "daPath": "/nl/juridisch/privacybeleid",
-    "patternDescription": "Privacy policy page that does not exist on the source site (returns HTTP 404). The site's footer 'Privacy beleid' link points to the external AbbVie corporate privacy page at https://www.abbvie.nl/privacy.html. A new EDS page should be created that either embeds or redirects to the external privacy policy, or contains localized privacy content if available from AbbVie.",
-    "suggestedArchetype": "legal",
-    "discoveredBy": "PageMigrator-75030df9#chunk3",
-    "discoveredAt": "2026-04-20T12:00:00Z"
-  }
-]
+[]

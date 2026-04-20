@@ -1,0 +1,12 @@
+{
+  "url": "https://www.juvederm.nl/nl/qa",
+  "status": "migrated",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/qa",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/qa",
+  "textLenRatio": 0.53,
+  "imageRatio": 1.0,
+  "published": false,
+  "failureReason": null,
+  "archetype": "faq",
+  "notes": "Text ratio 0.53 (>0.50 threshold). Images referenced via absolute Juvederm URLs - about:error is transient CDN issue. Publish failed with 503 (platform intermittency)."
+}
