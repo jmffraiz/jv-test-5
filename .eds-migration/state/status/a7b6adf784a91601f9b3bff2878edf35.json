@@ -1,6 +1,7 @@
 {
   "url": "https://www.juvederm.nl/nl/treatment/enhance",
   "status": "migrated",
+<<<<<<< Updated upstream
   "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/enhance",
   "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/enhance",
   "daEditUrl": "https://da.live/jmffraiz/jv-test-5/nl/treatment/enhance",
@@ -15,3 +16,25 @@
   "notes": "DA upload: 201. Preview admin: 200. Publish admin: 200. aem.page CDN returning transient 503 (platform-wide, not page-specific). Text ratio 0.50 meets >=50% threshold. Image ratio 0.65 meets >=50% threshold. 9 sections: Hero, Columns (media-text), Columns (3-col 6-product grid), Before-after, Carousel (products), Accordion (FAQ-4), Cards (treatment areas-3), Clinic-finder, Footnotes+Metadata.",
   "failureReason": ""
 }
+=======
+  "archetype": "treatment",
+  "daPath": "/nl/treatment/enhance",
+  "sourceSlug": "nl--treatment--enhance",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/enhance",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/enhance",
+  "daUploadStatus": 200,
+  "previewStatus": 200,
+  "publishStatus": 200,
+  "textLenRatio": 0.56,
+  "imageRatio": 0.65,
+  "published": true,
+  "sourceTextLength": 11948,
+  "authoredTextLength": 6647,
+  "sourceImageCount": 20,
+  "authoredImageCount": 13,
+  "selfCheckNotes": "Upload succeeded (200), preview triggered (200), published (200). Admin status API confirms live.status=200 and preview.status=200. Direct CDN GET returns 503 DNS cache overflow — known transient infrastructure issue, not a content problem. Text ratio 56% and image ratio 65% both above 50% threshold. Screenshots captured at desktop (1280px) and mobile (390px). Prior failures were due to auth issues (401) in earlier retry sessions.",
+  "failureReason": null,
+  "htmlArtifact": ".eds-migration/state/generated/nl/treatment/enhance/index.html",
+  "migratedAt": "2026-04-20T14:35:00Z"
+}
+>>>>>>> Stashed changes

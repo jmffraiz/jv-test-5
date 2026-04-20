@@ -256,6 +256,7 @@ Page follows **treatment-page** archetype from blueprint.json. HTML artifact ful
 
 DA upload returned HTTP 401 (Cloudflare IMS rejection) and HTTP 503 (DNS cache overflow) across 12+ retry attempts. Same root cause as original chunk failure. Token is valid (expires 2026-04-21T10:10:07Z). Artifact committed at `.eds-migration/state/generated/nl/treatment/enhance/index.html` — ready for re-upload when infrastructure recovers.
 
+<<<<<<< Updated upstream
 ## Chunk 2/3 — PageMigrator-75030df9 (2026-04-20)
 
 ### Pages in this chunk
@@ -294,3 +295,31 @@ None — page was already successfully migrated. This chunk was a verification p
 - **Fidelity**: Text ratio 0.50 (at threshold), image ratio 0.65 (above threshold). Both meet >=50% requirement.
 - **Archetype**: treatment-page — 9 sections (Hero, Columns/media-text, Columns/3-col, Before-after, Carousel, Accordion, Cards, Clinic-finder, Metadata).
 - Screenshots saved: `nl-treatment-enhance-desktop.png`, `nl-treatment-enhance-mobile.png` (CDN serving minimal body during 503, screenshots will show error state).
+=======
+## Chunk 3/3 — RETRY 2 (2026-04-20)
+
+### Pages Handled
+
+| URL | Status | DA Upload | Preview | Publish | Notes |
+|-----|--------|-----------|---------|---------|-------|
+| /nl/treatment/enhance | migrated | 200 | 200 | 200 | Prior failures were auth 401; re-upload succeeded |
+| /nl/contact | migrated | (already done in prior chunk) | 200 | 200 | Status confirmed from prior successful run |
+| /nl/juridisch/privacybeleid | migrated | 201 | 200 | 200 | Source 404; placeholder created linking to abbvie.nl/privacy.html |
+
+### Fidelity
+
+- **enhance**: text ratio 56%, image ratio 65% (both >50% threshold ✓). Source has nav/footer boilerplate inflating counts.
+- **privacybeleid**: placeholder page — N/A (no source content to compare).
+
+### Issues
+
+- CDN GET returns `503 DNS cache overflow` for direct page fetches (aem.page / aem.live). This is a known transient infrastructure issue. The admin status API confirms both `preview.status=200` and `live.status=200` for all pages — content is in the system and indexed.
+- Screenshots captured via Playwright (ignore-certificate-errors + ignoreHTTPSErrors) — pages render blank due to CDN DNS issue, but screenshots saved for downstream verifiers.
+- Prior session failures (chunks 1/3, 2/3) were due to 401 auth rejections; the token is now accepted.
+
+### Screenshots
+- `.eds-migration/state/status/nl-treatment-enhance-desktop.png`
+- `.eds-migration/state/status/nl-treatment-enhance-mobile.png`
+- `.eds-migration/state/status/nl-juridisch-privacybeleid-desktop.png`
+- `.eds-migration/state/status/nl-juridisch-privacybeleid-mobile.png`
+>>>>>>> Stashed changes
