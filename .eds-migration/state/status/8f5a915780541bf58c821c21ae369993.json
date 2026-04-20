@@ -1,0 +1,17 @@
+{
+  "url": "https://www.juvederm.nl/nl/contact",
+  "daPath": "/nl/contact",
+  "archetype": "contact",
+  "sourceSlug": "nl--contact-us",
+  "status": "failed",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/contact",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/contact",
+  "textLenRatio": null,
+  "imageRatio": null,
+  "published": false,
+  "failureReason": "da.live Source API (admin.da.live) returns HTTP 401 Unauthorized for all POST/PUT requests. IMS token (aem.frontend.all scope, created 2026-04-20) cannot authenticate against this DA org. HTML artifact fully authored and committed to branch at .eds-migration/state/html/contact.html for manual upload.",
+  "htmlArtifact": ".eds-migration/state/html/contact.html",
+  "attemptedUpload": true,
+  "uploadStatus": 401,
+  "generatedAt": "2026-04-20T12:00:00Z"
+}
