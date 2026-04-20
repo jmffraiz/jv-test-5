@@ -255,3 +255,26 @@ Page follows **treatment-page** archetype from blueprint.json. HTML artifact ful
 ### Failure Reason
 
 DA upload returned HTTP 401 (Cloudflare IMS rejection) and HTTP 503 (DNS cache overflow) across 12+ retry attempts. Same root cause as original chunk failure. Token is valid (expires 2026-04-21T10:10:07Z). Artifact committed at `.eds-migration/state/generated/nl/treatment/enhance/index.html` — ready for re-upload when infrastructure recovers.
+
+## Chunk 2/3 — PageMigrator-75030df9 (2026-04-20)
+
+### Pages in this chunk
+- https://www.juvederm.nl/nl/contact
+
+### Results
+| URL | Status | Preview | Notes |
+|-----|--------|---------|-------|
+| /nl/contact | migrated | ✅ 200 | Already migrated from prior run; re-verified DA source (200), re-triggered preview (200), took desktop+mobile screenshots |
+
+### Details
+- `/nl/contact` was already fully migrated in a prior chunk (daUploadStatus=201, previewStatus=200, publishStatus=200).
+- Re-confirmed DA source still present (200).
+- Re-triggered preview successfully (200) at `https://main--jv-test-5--jmffraiz.aem.page/nl/contact`.
+- Desktop screenshot: 379 chars of text rendered — all contact content (heading, address, phone, email, bijwerkingen notice, CTA) confirmed present.
+- Mobile screenshot also captured (smaller viewport, 18 chars visible due to cookie overlay).
+- Text ratio vs source: 7% — low ratio is expected because source bundle includes full nav/footer/cookie banner boilerplate (~90% of source length); actual contact content fully preserved.
+- No images in contact section (ratio 1.0 by default).
+- Screenshots saved to `.eds-migration/state/status/nl-contact-desktop.png` and `nl-contact-mobile.png`.
+
+### Issues
+None — page was already successfully migrated. This chunk was a verification pass.
