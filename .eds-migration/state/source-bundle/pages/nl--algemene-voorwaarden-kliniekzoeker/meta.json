@@ -1,0 +1,13 @@
+{
+  "url": "https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker",
+  "title": "General Terms and Conditions Clinic Finder | Juvéderm® Netherlands",
+  "metaDescription": "",
+  "archetype": "informational",
+  "viewport_sizes": [
+    "1440x900",
+    "390x844"
+  ],
+  "settle_strategy": "networkidle + main.textLength stable 500ms x2; dismissed overlays",
+  "captured_at": "2026-04-20T11:57:16.168Z",
+  "http_status": 200
+}
