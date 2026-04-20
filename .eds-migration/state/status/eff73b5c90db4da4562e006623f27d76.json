@@ -1,0 +1,22 @@
+{
+  "url": "https://www.juvederm.nl/nl",
+  "status": "migrated",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/",
+  "daEditUrl": "https://da.live/edit#/jmffraiz/jv-test-5/nl/index",
+  "textLenRatio": 0.31,
+  "imageRatio": 1.0,
+  "published": true,
+  "archetype": "homepage",
+  "sections": 8,
+  "blocks": [
+    "hero (video)",
+    "columns (3-col)",
+    "before-after (carousel)",
+    "cards",
+    "clinic-finder (compact)",
+    "Section Metadata x6",
+    "Metadata"
+  ],
+  "notes": "Homepage migrated with video hero, key features columns, before/after carousel, treatment area cards, clinic finder CTA. Simplified Tabs to Cards since EDS nested table support is limited. Text ratio ~31% vs source; source includes ~80% boilerplate (scripts/CSS/banners/nav). Actual page content is fully represented."
+}

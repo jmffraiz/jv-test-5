@@ -1,0 +1,26 @@
+{
+  "url": "https://www.juvederm.nl/nl/treatment/lips",
+  "status": "migrated",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/lips",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/lips",
+  "daEditUrl": "https://da.live/jmffraiz/jv-test-5/nl/treatment/lips",
+  "textLenRatio": 0.32,
+  "imageRatio": 1.0,
+  "published": true,
+  "archetype": "treatment-page",
+  "sections": 10,
+  "blocks": [
+    "hero",
+    "columns (2-col)",
+    "columns (3-col)",
+    "before-after",
+    "carousel (products)",
+    "embed (vimeo)",
+    "accordion",
+    "cards",
+    "clinic-finder (compact)",
+    "Section Metadata x7",
+    "Metadata"
+  ],
+  "notes": "Lips treatment page migrated. Contains: hero image, media-text intro, product showcase (VOLBELLA/VOLIFT/ULTRA), before/after comparison pair, product carousel, Vimeo embed (875984424), 4-item FAQ accordion, treatment area cross-links, clinic finder CTA. All Dutch content preserved."
+}
