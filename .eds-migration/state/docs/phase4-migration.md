@@ -348,3 +348,34 @@ Without `<main>`, the HLX pipeline found nothing to convert → `.md` file was 0
 - The `admin.da.live/source/{path}` endpoint (without .html extension) also exists and accepts uploads but appears to store content differently or point to a folder rather than the actual file.
 - Always upload to `{path}.html` explicitly for document pages.
 - The `<main>` wrapper is mandatory — HLX pipeline extracts only `<main>` content for MD conversion.
+---
+
+## RETRY 3 — Chunk 2/3 Fix: /nl/juridisch/privacybeleid
+
+**Fixed at:** 2026-04-20T15:25:00Z
+
+### Issue
+Page was rendering blank (0 words). The `.md` content bus returned empty.
+
+### Root Cause
+The original upload at 14:29:59 stored a JSON-encoded HTML string in `content.da.live` (917 bytes) that contained an old HTML format with `<div>` (no `<main>`) and a bare metadata table using `<th>` headers. DA's HTML parser could not properly convert this to markdown, resulting in an empty `.md` file.
+
+Subsequent re-uploads via `POST admin.da.live/source/path` (without `.html` extension) were returning HTTP 200 but the `content.da.live` CDN was serving the cached version (etag unchanged, `last-modified: 14:29:59` persisting).
+
+### Fix Applied
+1. DELETE `admin.da.live/source/jmffraiz/jv-test-5/nl/juridisch/privacybeleid` → HTTP 204
+2. Re-upload to `admin.da.live/source/jmffraiz/jv-test-5/nl/juridisch/privacybeleid.html` with explicit `.html` extension
+3. HTML format matches `contact.html` working pattern: `<!DOCTYPE html>`, `<main>`, proper `<table><tbody>` for metadata blocks
+4. `content.da.live` CDN updated to `last-modified: 15:23:08`
+5. Re-trigger preview → `sourceLastModified: 15:23:08` (confirmed new content)
+6. `.md` verified: returns "# Privacybeleid" and link text (non-empty)
+7. Rendered page shows 20 words including heading and link
+8. Published (HTTP 200)
+
+### Screenshots
+- `status/nl-juridisch-privacybeleid-desktop-v2.png`
+- `status/nl-juridisch-privacybeleid-mobile-v2.png`
+
+### Key Finding
+When DA source upload returns HTTP 200 (not 201) AND `content.da.live last-modified` timestamp doesn't change, the CDN cache has NOT been invalidated. The fix is to DELETE the resource first, then re-create with explicit `.html` extension in the path.
+

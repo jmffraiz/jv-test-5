@@ -3,9 +3,22 @@
   "status": "migrated",
   "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/juridisch/privacybeleid",
   "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/juridisch/privacybeleid",
+  "daUploadStatus": 200,
+  "previewStatus": 200,
+  "publishStatus": 200,
   "textLenRatio": 1.0,
   "imageRatio": 1.0,
   "published": true,
   "fixedInRetry3": true,
-  "fixNote": "Previous upload stored JSON-encoded HTML string; fixed by forcing CDN cache invalidation and re-uploading proper HTML"
+  "sourceTextLength": 0,
+  "authoredTextLength": 20,
+  "sourceImageCount": 0,
+  "authoredImageCount": 0,
+  "selfCheckNotes": "RETRY3 FIX: content.da.live had Cloudflare CDN caching the original 917-byte JSON-encoded HTML string. Fixed by: (1) DELETE existing resource, (2) re-upload via admin.da.live/source/path.html with explicit .html extension and full HTML document format. sourceLastModified updated to 15:23:08. .md verified non-empty. Desktop render shows 20 words.",
+  "failureReason": null,
+  "sourceNote": "Source page returns 404. Privacy policy lives at external URL https://www.abbvie.nl/privacy.html. Placeholder page created.",
+  "htmlArtifact": ".eds-migration/state/generated/nl/juridisch/privacybeleid/index.html",
+  "fixedAt": "2026-04-20T15:25:00Z",
+  "fixNote": "Previous upload stored JSON-encoded HTML string; fixed by forcing CDN cache invalidation and re-uploading proper HTML",
+  "fixReason": "RETRY3: blank page fix - content.da.live CDN cache issue; re-uploaded with full HTML document format and explicit .html extension"
 }
