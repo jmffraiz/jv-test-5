@@ -1,0 +1,66 @@
+{
+  "verdict": "PASS",
+  "issues": [
+    {
+      "severity": "low",
+      "criterion": "Key naming convention",
+      "details": "Blueprint uses 'blockPalette' instead of 'blockDefinitions', 'archetypeBlueprints' instead of 'archetypeTemplates', and 'globalConfiguration' instead of 'designTokens'. Functionally equivalent content is present under these alternate keys.",
+      "remediation": "No action needed — names are semantically appropriate and content is structurally complete."
+    },
+    {
+      "severity": "low",
+      "criterion": "usedByArchetypes metadata accuracy",
+      "details": "5 of 11 blocks have mismatched usedByArchetypes claims vs actual section references: cards (claims homepage but unused there), carousel (claims faq/homepage but only in treatment-page), tabs (claims treatment-page but only in homepage), clinic-finder (missing faq), image-map (claims homepage/treatment-page but unreferenced in any section sequences).",
+      "remediation": "Update usedByArchetypes arrays to match actual archetype section sequences. Low priority — these are metadata annotations, not functional definitions."
+    },
+    {
+      "severity": "low",
+      "criterion": "Unreferenced block in palette",
+      "details": "The 'image-map' block is defined in blockPalette and listed in blocksToCreate but is never referenced in any archetype section's sequences array. The homepage treatment-areas section notes mention it ('may simplify to cards-only') but the sequence only lists 'tabs'.",
+      "remediation": "Either add image-map to the homepage treatment-areas section sequences or mark it explicitly as deferred/optional in the palette. Currently it's a phantom block definition."
+    }
+  ],
+  "evidence": [
+    {
+      "check": "blockPalette structure",
+      "finding": "PRESENT — 11 blocks defined: hero, cards, carousel, accordion, columns, tabs, before-after, clinic-finder, embed, image-map, topic-menu. All have name, source, contentModel, definition with rows, css, js, and sourceMapping. All rows ≤4 cells (David's Model compliant).",
+      "source_artifact": ".eds-migration/state/blueprint.json → blockPalette"
+    },
+    {
+      "check": "archetypeBlueprints structure",
+      "finding": "PRESENT — 7 archetypes: homepage (8 sections), treatment-page (11 sections), faq (10 sections), clinic-finder (2 sections), legal (1 section), contact (1 section), informational (1 section). All have description, sections array, and metadata. 100% coverage of manifest archetypes.",
+      "source_artifact": ".eds-migration/state/blueprint.json → archetypeBlueprints"
+    },
+    {
+      "check": "globalConfiguration (designTokens equivalent)",
+      "finding": "PRESENT — Contains navigation (header + footer fully modeled), typography (2 font families, 6 size tiers), colorPalette (brand purples/magenta, UI grays, 3 button styles), breakpoints (4 tiers), and language config (nl, ltr).",
+      "source_artifact": ".eds-migration/state/blueprint.json → globalConfiguration"
+    },
+    {
+      "check": "migrationRules structure",
+      "finding": "PRESENT — 7 rule sets matching all archetypes. Each includes sourceUrl/sourceUrlPattern, contentSelectors, imageHandling, and specialHandling arrays with concrete CSS selectors and migration instructions.",
+      "source_artifact": ".eds-migration/state/blueprint.json → migrationRules"
+    },
+    {
+      "check": "Chrome modeling",
+      "finding": "PASS — Header: logo, 2 mainNav groups (Behandeling with 5 children, FAQ with 5 children), primary CTA, sticky, mobile hamburger menu. Footer: 4 sections (actions with social links, logos, site-links, legal-links), copyright text, 21 total links. Matches source-bundle chrome artifacts (header.links.json: 27 links, footer.links.json: 21 links).",
+      "source_artifact": ".eds-migration/state/blueprint.json → globalConfiguration.navigation + source-bundle/chrome/"
+    },
+    {
+      "check": "Section style consistency",
+      "finding": "PASS — 15 section styles declared in siteConventions.sectionStyles. All 15 are used in at least one archetype. Zero undeclared styles used. Key reused styles: footnotes (5x), qa-section (5x), clinic-finder-section (3x), before-after-section (2x), treatment-areas (2x), legal-content (2x).",
+      "source_artifact": ".eds-migration/state/blueprint.json → siteConventions.sectionStyles + archetypeBlueprints"
+    },
+    {
+      "check": "Over-blocking assessment",
+      "finding": "PASS — Legal, contact, and informational archetypes correctly use default-content only (no blocks). Footnotes throughout all archetypes are default-content. Brand-statement on homepage is default-content with section style. No evidence of unnecessary block wrapping for simple heading/paragraph content.",
+      "source_artifact": ".eds-migration/state/blueprint.json → archetypeBlueprints (legal, contact, informational, footnotes sections)"
+    },
+    {
+      "check": "Manifest-to-blueprint alignment",
+      "finding": "PASS — All 7 unique archetypes from manifest.json are represented in archetypeBlueprints. All 14 crawled pages map to a defined archetype. Consolidation notes correctly identify duplicate pages (homepage ×2, clinic-finder ×3) and propose canonical URLs with redirects.",
+      "source_artifact": ".eds-migration/state/manifest.json + .eds-migration/state/blueprint.json"
+    }
+  ],
+  "summary": "Blueprint structurally complete: 11 blocks in blockPalette (≤4 cells/row, David's Model compliant), 7 archetypes covering all manifest pages, design tokens in globalConfiguration, migration rules for all archetypes, chrome fully modeled. Three low-severity issues found: alternate key names, usedByArchetypes metadata mismatches, and one unreferenced block (image-map). None are structural failures."
+}
