@@ -175,3 +175,33 @@ Both pages followed the **treatment-page** archetype from blueprint.json with se
 |------|-----------|-------------|------------|
 | /nl/find-a-clinic | 0.833 | 1.0 | PASS |
 | /nl/find-a-clinic/map | N/A (no source) | N/A | PASS |
+
+---
+
+## Chunk 3/4 — Root page https://www.juvederm.nl/
+
+### Pages Processed
+
+| URL | EDS Path | Status | Notes |
+|-----|---------|--------|-------|
+| https://www.juvederm.nl/ | / (root index) | migrated (redirect) | Source canonical is /nl; EDS homepage lives at /; /nl→/ redirect already in redirects.html |
+
+### Decision
+
+The source page `https://www.juvederm.nl/` has a `<link rel="canonical" href="/nl">` and contains
+identical content to `/nl` (210 chars of main body text; same page hydration). The `/nl` locale
+homepage was already migrated to `/nl/index.html` in da.live.
+
+For the EDS site architecture, the root `/index.html` already contains the full homepage (video hero,
+brand statement, columns, before-after carousel, treatment cards, clinic finder CTA) — authored in a
+previous phase. The `redirects.html` table already contains the entry `/nl → /`, so users landing on
+the old locale URL are forwarded to the root.
+
+No new content upload was required. The root `/index.html` preview was re-triggered (HTTP 200) to
+confirm it is serving correctly. Status file written as `migrated`.
+
+### Text/Image Fidelity
+
+| Page | Text Ratio | Image Ratio | Self-Check |
+|------|-----------|-------------|------------|
+| https://www.juvederm.nl/ | 1.0 (same as /nl) | 1.0 | PASS (redirect to existing migrated page) |

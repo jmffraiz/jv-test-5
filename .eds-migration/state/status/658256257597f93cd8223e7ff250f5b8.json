@@ -1,0 +1,13 @@
+{
+  "url": "https://www.juvederm.nl/",
+  "status": "migrated",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/",
+  "daEditUrl": "https://da.live/edit#/jmffraiz/jv-test-5/index",
+  "textLenRatio": 1.0,
+  "imageRatio": 1.0,
+  "published": true,
+  "archetype": "homepage",
+  "sections": 8,
+  "notes": "Root URL https://www.juvederm.nl/ maps to EDS path /index (root homepage). Source page canonical is /nl, but in EDS the homepage content lives at / and /nl redirects there via redirects.html. Root index.html already exists in da.live with full homepage content (video hero, brand statement, columns, before-after, cards, clinic-finder CTA). Redirects table entry /nl -> / already present. No additional content migration needed."
+}
