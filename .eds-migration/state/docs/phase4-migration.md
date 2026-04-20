@@ -256,7 +256,6 @@ Page follows **treatment-page** archetype from blueprint.json. HTML artifact ful
 
 DA upload returned HTTP 401 (Cloudflare IMS rejection) and HTTP 503 (DNS cache overflow) across 12+ retry attempts. Same root cause as original chunk failure. Token is valid (expires 2026-04-21T10:10:07Z). Artifact committed at `.eds-migration/state/generated/nl/treatment/enhance/index.html` — ready for re-upload when infrastructure recovers.
 
-<<<<<<< Updated upstream
 ## Chunk 2/3 — PageMigrator-75030df9 (2026-04-20)
 
 ### Pages in this chunk
@@ -295,7 +294,6 @@ None — page was already successfully migrated. This chunk was a verification p
 - **Fidelity**: Text ratio 0.50 (at threshold), image ratio 0.65 (above threshold). Both meet >=50% requirement.
 - **Archetype**: treatment-page — 9 sections (Hero, Columns/media-text, Columns/3-col, Before-after, Carousel, Accordion, Cards, Clinic-finder, Metadata).
 - Screenshots saved: `nl-treatment-enhance-desktop.png`, `nl-treatment-enhance-mobile.png` (CDN serving minimal body during 503, screenshots will show error state).
-=======
 ## Chunk 3/3 — RETRY 2 (2026-04-20)
 
 ### Pages Handled
@@ -322,4 +320,3 @@ None — page was already successfully migrated. This chunk was a verification p
 - `.eds-migration/state/status/nl-treatment-enhance-mobile.png`
 - `.eds-migration/state/status/nl-juridisch-privacybeleid-desktop.png`
 - `.eds-migration/state/status/nl-juridisch-privacybeleid-mobile.png`
->>>>>>> Stashed changes
