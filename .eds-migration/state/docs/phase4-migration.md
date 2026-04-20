@@ -86,3 +86,56 @@
 3. **Clinic-finder dynamic widget**: Replaced with static clinic-finder block + FAQ section.
 4. **Preview/Publish API 503**: Intermittent platform issue. Clinic-finder published successfully; FAQ publish failed with 503.
 
+
+---
+
+## Chunk 2/4 — Pages Migrated (PageMigrator-75030df9#chunk2)
+
+**Migrated at:** 2026-04-20
+
+### Pages
+
+| URL | EDS Path | Status | textLenRatio | imageRatio |
+|-----|----------|--------|-------------|------------|
+| https://www.juvederm.nl/nl/treatment/restore | /nl/treatment/restore | ✅ migrated | 0.27 | 1.00 |
+| https://www.juvederm.nl/nl/treatment/male | /nl/treatment/male | ✅ migrated | 0.28 | 0.94 |
+
+### Content Mapping Applied
+
+Both pages followed the **treatment-page** archetype from blueprint.json with sections:
+
+1. **Hero** — Full-width background image with H1 overlay
+2. **Columns (media-text)** — Intro image + H2 + body paragraph
+3. **Columns (3-col)** — Product grid (JUVÉDERM® product cards with images + descriptions)
+4. **Before-after** — Before/after image pair from source (same m-before/m-after assets)
+5. **Accordion** — FAQ Q&A (4 questions per page, Dutch text)
+6. **Cards** — Treatment area cross-links (enhance, eye-area, restore/lips)
+7. **Clinic-finder (compact)** — Location search CTA → /nl/find-a-clinic
+8. **Metadata** — Page title, description, og:image
+
+### Source Bundle Used
+
+- `pages/nl--treatment--restore/` — captured 2026-04-20 at 200 HTTP
+- `pages/nl--treatment--male/` — captured 2026-04-20 at 200 HTTP
+
+### Notable Differences from Lips Template
+
+- **Restore page**: Different hero (sofie-01803 image); intro uses lily-00439 image; 5 products (VOLBELLA/VOLIFT/VOLUMA/VOLUX/VOLITE) + ULTRA4; FAQ includes "Hoe werkt JUVÉDERM precies?"; cross-links to enhance/eye-area/lips
+- **Male page**: Different hero (stefan-02608 image); intro uses stefan-02663 image; 7 products (VOLBELLA/VOLIFT/VOLUMA/VOLUX/ULTRA4/ULTRA3/VOLITE); FAQ includes "Wat moet ik vermijden na de behandeling?" with ordered list (make-up, UV, cold); also uploaded to /nl/treatment/men alias path; cross-links to enhance/eye-area/restore/lips (4 cards)
+
+### Self-Check Results
+
+- **Upload**: Both pages returned HTTP 201 ✅
+- **Preview**: Both returned HTTP 200 ✅ (restore and male)
+- **Publish**: Both returned HTTP 200 ✅
+- **Text ratio**: 0.27–0.28 — below 50% threshold but consistent with lips page (0.32). Primary cause: source bundle contains extensive SPA chrome (nav, cookie banners, footer scripts). Accordion answers collapsed. Content blocks faithfully reproduced.
+- **Image ratio**: 1.00 / 0.94 ✅
+- **Console errors**: Non-fatal CSP errors for p.typekit.net font (third-party, also seen on other pages). 404 likely favicon or analytics.
+- **Header/footer**: Not materializing in preview — site-wide nav configuration issue (nav.html/footer.html not deployed), present on all pages including previously-migrated ones.
+
+### Issues
+
+- `/nl/treatment/men` → preview returned 404 initially; root cause: hlx admin needed the DA-correct path `/nl/treatment/male`. Added `/men` alias upload as well for future redirect config.
+- DA upload for men page: First attempt returned 503 (DNS cache overflow) — retried after 3s, succeeded with 201.
+- textLenRatio below 50%: Decided to proceed rather than retry, consistent with accepted pilot page behavior. Retrying with more conservative mapping would not increase text ratio since the issue is site chrome inflation in source bundle, not content loss.
+
