@@ -1,0 +1,559 @@
+[
+  {
+    "page_id": "nl-homepage",
+    "preview_url": "https://main--jv-test-5--jmffraiz.aem.page/nl/",
+    "source_slug": "nl",
+    "archetype": "homepage",
+    "viewports": [
+      {
+        "name": "desktop",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-homepage-desktop.png",
+        "source_screenshot": "source-bundle/pages/nl/desktop.png",
+        "similarity": 0.062,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": false,
+        "text_length": 3036
+      },
+      {
+        "name": "mobile",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-homepage-mobile.png",
+        "source_screenshot": "source-bundle/pages/nl/mobile.png",
+        "similarity": 0.188,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": false,
+        "text_length": 3036
+      }
+    ],
+    "da_live_status": -1,
+    "preview_http_status": 200,
+    "content_text_length": null,
+    "source_word_count": 1693,
+    "preview_word_count": 426,
+    "word_overlap_ratio": 0.286,
+    "header_present": false,
+    "footer_present": false,
+    "console_errors": [
+      "Failed to load resource: the server responded with a status of 503 ()"
+    ],
+    "issues": [
+      {
+        "type": "da_live_missing",
+        "detail": "HTTP Error 403: Forbidden"
+      }
+    ],
+    "da_live_content_bytes": 0
+  },
+  {
+    "page_id": "nl-treatment-lips",
+    "preview_url": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/lips",
+    "source_slug": "nl--treatment--lips",
+    "archetype": "treatment-page",
+    "viewports": [
+      {
+        "name": "desktop",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-treatment-lips-desktop.png",
+        "source_screenshot": "source-bundle/pages/nl--treatment--lips/desktop.png",
+        "similarity": 0.156,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": false,
+        "text_length": 2193
+      },
+      {
+        "name": "mobile",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-treatment-lips-mobile.png",
+        "source_screenshot": "source-bundle/pages/nl--treatment--lips/mobile.png",
+        "similarity": 0.672,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": true,
+        "text_length": 18
+      }
+    ],
+    "da_live_status": -1,
+    "preview_http_status": 200,
+    "content_text_length": null,
+    "source_word_count": 1922,
+    "preview_word_count": 314,
+    "word_overlap_ratio": 0.214,
+    "header_present": false,
+    "footer_present": false,
+    "console_errors": [
+      "Failed to load resource: the server responded with a status of 404 ()",
+      "Failed to load resource: the server responded with a status of 503 ()"
+    ],
+    "issues": [
+      {
+        "type": "da_live_missing",
+        "detail": "HTTP Error 403: Forbidden"
+      }
+    ],
+    "da_live_content_bytes": 0
+  },
+  {
+    "page_id": "nl-treatment-eye-area",
+    "preview_url": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/eye-area",
+    "source_slug": "nl--treatment--eye-area",
+    "archetype": "treatment-page",
+    "viewports": [
+      {
+        "name": "desktop",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-treatment-eye-area-desktop.png",
+        "source_screenshot": "source-bundle/pages/nl--treatment--eye-area/desktop.png",
+        "similarity": 0.203,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": false,
+        "text_length": 2317
+      },
+      {
+        "name": "mobile",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-treatment-eye-area-mobile.png",
+        "source_screenshot": "source-bundle/pages/nl--treatment--eye-area/mobile.png",
+        "similarity": 0.359,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": false,
+        "text_length": 2317
+      }
+    ],
+    "da_live_status": -1,
+    "preview_http_status": 200,
+    "content_text_length": null,
+    "source_word_count": 1924,
+    "preview_word_count": 328,
+    "word_overlap_ratio": 0.238,
+    "header_present": false,
+    "footer_present": false,
+    "console_errors": [
+      "Failed to load resource: the server responded with a status of 404 ()",
+      "Refused to load the stylesheet 'https://p.typekit.net/p.css?s=1&k=sic6ayn&ht=tk&f=10793.10794.10795.10796.10801.10806.26838.26842&a=1071509&app=typekit&e=css' because it violates the following Content Security Policy directive: \"style-src 'self' 'unsafe-inline' https://use.typekit.net https://fonts.googleapis.com\". Note that 'style-src-elem' was not explicitly set, so 'style-src' is used as a fallback.\n"
+    ],
+    "issues": [
+      {
+        "type": "da_live_missing",
+        "detail": "HTTP Error 403: Forbidden"
+      }
+    ],
+    "da_live_content_bytes": 0
+  },
+  {
+    "page_id": "nl-treatment-enhance",
+    "preview_url": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/enhance",
+    "source_slug": "nl--treatment--enhance",
+    "archetype": "treatment",
+    "viewports": [
+      {
+        "name": "desktop",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-treatment-enhance-desktop.png",
+        "source_screenshot": "source-bundle/pages/nl--treatment--enhance/desktop.png",
+        "similarity": 0.594,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": true,
+        "text_length": 0
+      },
+      {
+        "name": "mobile",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-treatment-enhance-mobile.png",
+        "source_screenshot": "source-bundle/pages/nl--treatment--enhance/mobile.png",
+        "similarity": 0.609,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": true,
+        "text_length": 0
+      }
+    ],
+    "da_live_status": -1,
+    "preview_http_status": 200,
+    "content_text_length": null,
+    "source_word_count": 1802,
+    "preview_word_count": 0,
+    "word_overlap_ratio": 0.0,
+    "header_present": false,
+    "footer_present": false,
+    "console_errors": [
+      "Refused to load the stylesheet 'https://p.typekit.net/p.css?s=1&k=sic6ayn&ht=tk&f=10793.10794.10795.10796.10801.10806.26838.26842&a=1071509&app=typekit&e=css' because it violates the following Content Security Policy directive: \"style-src 'self' 'unsafe-inline' https://use.typekit.net https://fonts.googleapis.com\". Note that 'style-src-elem' was not explicitly set, so 'style-src' is used as a fallback.\n"
+    ],
+    "issues": [
+      {
+        "type": "da_live_missing",
+        "detail": "HTTP Error 403: Forbidden"
+      }
+    ],
+    "da_live_content_bytes": 0
+  },
+  {
+    "page_id": "nl-treatment-restore",
+    "preview_url": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/restore",
+    "source_slug": "nl--treatment--restore",
+    "archetype": "treatment-page",
+    "viewports": [
+      {
+        "name": "desktop",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-treatment-restore-desktop.png",
+        "source_screenshot": "source-bundle/pages/nl--treatment--restore/desktop.png",
+        "similarity": 0.125,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": false,
+        "text_length": 2269
+      },
+      {
+        "name": "mobile",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-treatment-restore-mobile.png",
+        "source_screenshot": "source-bundle/pages/nl--treatment--restore/mobile.png",
+        "similarity": 0.234,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": false,
+        "text_length": 2269
+      }
+    ],
+    "da_live_status": -1,
+    "preview_http_status": 200,
+    "content_text_length": null,
+    "source_word_count": 1845,
+    "preview_word_count": 326,
+    "word_overlap_ratio": 0.23,
+    "header_present": false,
+    "footer_present": false,
+    "console_errors": [
+      "Failed to load resource: the server responded with a status of 404 ()",
+      "Failed to load resource: the server responded with a status of 503 ()"
+    ],
+    "issues": [
+      {
+        "type": "da_live_missing",
+        "detail": "HTTP Error 403: Forbidden"
+      }
+    ],
+    "da_live_content_bytes": 0
+  },
+  {
+    "page_id": "nl-treatment-male",
+    "preview_url": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/male",
+    "source_slug": "nl--treatment--male",
+    "archetype": "treatment-page",
+    "viewports": [
+      {
+        "name": "desktop",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-treatment-male-desktop.png",
+        "source_screenshot": "source-bundle/pages/nl--treatment--male/desktop.png",
+        "similarity": 0.172,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": false,
+        "text_length": 2322
+      },
+      {
+        "name": "mobile",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-treatment-male-mobile.png",
+        "source_screenshot": "source-bundle/pages/nl--treatment--male/mobile.png",
+        "similarity": 0.422,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": false,
+        "text_length": 2322
+      }
+    ],
+    "da_live_status": -1,
+    "preview_http_status": 200,
+    "content_text_length": null,
+    "source_word_count": 1834,
+    "preview_word_count": 318,
+    "word_overlap_ratio": 0.22,
+    "header_present": false,
+    "footer_present": false,
+    "console_errors": [
+      "Failed to load resource: the server responded with a status of 404 ()",
+      "Refused to load the stylesheet 'https://p.typekit.net/p.css?s=1&k=sic6ayn&ht=tk&f=10793.10794.10795.10796.10801.10806.26838.26842&a=1071509&app=typekit&e=css' because it violates the following Content Security Policy directive: \"style-src 'self' 'unsafe-inline' https://use.typekit.net https://fonts.googleapis.com\". Note that 'style-src-elem' was not explicitly set, so 'style-src' is used as a fallback.\n"
+    ],
+    "issues": [
+      {
+        "type": "da_live_missing",
+        "detail": "HTTP Error 403: Forbidden"
+      }
+    ],
+    "da_live_content_bytes": 0
+  },
+  {
+    "page_id": "nl-qa",
+    "preview_url": "https://main--jv-test-5--jmffraiz.aem.page/nl/qa",
+    "source_slug": "nl--qa",
+    "archetype": "faq",
+    "viewports": [
+      {
+        "name": "desktop",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-qa-desktop.png",
+        "source_screenshot": "source-bundle/pages/nl--qa/desktop.png",
+        "similarity": 0.25,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": false,
+        "text_length": 10963
+      },
+      {
+        "name": "mobile",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-qa-mobile.png",
+        "source_screenshot": "source-bundle/pages/nl--qa/mobile.png",
+        "similarity": 0.484,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": false,
+        "text_length": 10963
+      }
+    ],
+    "da_live_status": -1,
+    "preview_http_status": 200,
+    "content_text_length": null,
+    "source_word_count": 3613,
+    "preview_word_count": 1647,
+    "word_overlap_ratio": 0.439,
+    "header_present": false,
+    "footer_present": false,
+    "console_errors": [
+      "Failed to load resource: net::ERR_UNKNOWN_URL_SCHEME",
+      "Refused to load the stylesheet 'https://p.typekit.net/p.css?s=1&k=sic6ayn&ht=tk&f=10793.10794.10795.10796.10801.10806.26838.26842&a=1071509&app=typekit&e=css' because it violates the following Content Security Policy directive: \"style-src 'self' 'unsafe-inline' https://use.typekit.net https://fonts.googleapis.com\". Note that 'style-src-elem' was not explicitly set, so 'style-src' is used as a fallback.\n"
+    ],
+    "issues": [
+      {
+        "type": "da_live_missing",
+        "detail": "HTTP Error 403: Forbidden"
+      }
+    ],
+    "da_live_content_bytes": 0
+  },
+  {
+    "page_id": "nl-find-a-clinic",
+    "preview_url": "https://main--jv-test-5--jmffraiz.aem.page/nl/find-a-clinic",
+    "source_slug": "nl--find-a-clinic",
+    "archetype": "clinic-finder",
+    "viewports": [
+      {
+        "name": "desktop",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-find-a-clinic-desktop.png",
+        "source_screenshot": "source-bundle/pages/nl--find-a-clinic/desktop.png",
+        "similarity": 0.172,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": false,
+        "text_length": 3136
+      },
+      {
+        "name": "mobile",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-find-a-clinic-mobile.png",
+        "source_screenshot": "source-bundle/pages/nl--find-a-clinic/mobile.png",
+        "similarity": 0.062,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": false,
+        "text_length": 3136
+      }
+    ],
+    "da_live_status": -1,
+    "preview_http_status": 200,
+    "content_text_length": null,
+    "source_word_count": 1018,
+    "preview_word_count": 478,
+    "word_overlap_ratio": 0.466,
+    "header_present": false,
+    "footer_present": false,
+    "console_errors": [
+      "Refused to load the stylesheet 'https://p.typekit.net/p.css?s=1&k=sic6ayn&ht=tk&f=10793.10794.10795.10796.10801.10806.26838.26842&a=1071509&app=typekit&e=css' because it violates the following Content Security Policy directive: \"style-src 'self' 'unsafe-inline' https://use.typekit.net https://fonts.googleapis.com\". Note that 'style-src-elem' was not explicitly set, so 'style-src' is used as a fallback.\n"
+    ],
+    "issues": [
+      {
+        "type": "da_live_missing",
+        "detail": "HTTP Error 403: Forbidden"
+      }
+    ],
+    "da_live_content_bytes": 0
+  },
+  {
+    "page_id": "nl-clinic-finder",
+    "preview_url": "https://main--jv-test-5--jmffraiz.aem.page/nl/clinic-finder",
+    "source_slug": "nl--clinics",
+    "archetype": "clinic-finder",
+    "viewports": [
+      {
+        "name": "desktop",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-clinic-finder-desktop.png",
+        "source_screenshot": "source-bundle/pages/nl--clinics/desktop.png",
+        "similarity": 0.375,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": false,
+        "text_length": 3421
+      },
+      {
+        "name": "mobile",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-clinic-finder-mobile.png",
+        "source_screenshot": "source-bundle/pages/nl--clinics/mobile.png",
+        "similarity": 0.297,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": false,
+        "text_length": 3421
+      }
+    ],
+    "da_live_status": -1,
+    "preview_http_status": 200,
+    "content_text_length": null,
+    "source_word_count": 1070,
+    "preview_word_count": 511,
+    "word_overlap_ratio": 0.4,
+    "header_present": false,
+    "footer_present": false,
+    "console_errors": [
+      "Refused to load the stylesheet 'https://p.typekit.net/p.css?s=1&k=sic6ayn&ht=tk&f=10793.10794.10795.10796.10801.10806.26838.26842&a=1071509&app=typekit&e=css' because it violates the following Content Security Policy directive: \"style-src 'self' 'unsafe-inline' https://use.typekit.net https://fonts.googleapis.com\". Note that 'style-src-elem' was not explicitly set, so 'style-src' is used as a fallback.\n"
+    ],
+    "issues": [
+      {
+        "type": "da_live_missing",
+        "detail": "HTTP Error 403: Forbidden"
+      }
+    ],
+    "da_live_content_bytes": 0
+  },
+  {
+    "page_id": "nl-contact",
+    "preview_url": "https://main--jv-test-5--jmffraiz.aem.page/nl/contact",
+    "source_slug": "nl--contact-us",
+    "archetype": "contact",
+    "viewports": [
+      {
+        "name": "desktop",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-contact-desktop.png",
+        "source_screenshot": "source-bundle/pages/nl--contact-us/desktop.png",
+        "similarity": 0.547,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": true,
+        "text_length": 379
+      },
+      {
+        "name": "mobile",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-contact-mobile.png",
+        "source_screenshot": "source-bundle/pages/nl--contact-us/mobile.png",
+        "similarity": 0.547,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": true,
+        "text_length": 379
+      }
+    ],
+    "da_live_status": -1,
+    "preview_http_status": 200,
+    "content_text_length": null,
+    "source_word_count": 775,
+    "preview_word_count": 54,
+    "word_overlap_ratio": 0.075,
+    "header_present": false,
+    "footer_present": false,
+    "console_errors": [
+      "Refused to load the stylesheet 'https://p.typekit.net/p.css?s=1&k=sic6ayn&ht=tk&f=10793.10794.10795.10796.10801.10806.26838.26842&a=1071509&app=typekit&e=css' because it violates the following Content Security Policy directive: \"style-src 'self' 'unsafe-inline' https://use.typekit.net https://fonts.googleapis.com\". Note that 'style-src-elem' was not explicitly set, so 'style-src' is used as a fallback.\n"
+    ],
+    "issues": [
+      {
+        "type": "da_live_missing",
+        "detail": "HTTP Error 403: Forbidden"
+      }
+    ],
+    "da_live_content_bytes": 0
+  },
+  {
+    "page_id": "nl-privacybeleid",
+    "preview_url": "https://main--jv-test-5--jmffraiz.aem.page/nl/juridisch/privacybeleid",
+    "source_slug": null,
+    "archetype": "legal-placeholder",
+    "viewports": [
+      {
+        "name": "desktop",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-privacybeleid-desktop.png",
+        "source_screenshot": null,
+        "similarity": null,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": null,
+        "text_length": 0
+      },
+      {
+        "name": "mobile",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-privacybeleid-mobile.png",
+        "source_screenshot": null,
+        "similarity": null,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": null,
+        "text_length": 0
+      }
+    ],
+    "da_live_status": -1,
+    "preview_http_status": 200,
+    "content_text_length": null,
+    "source_word_count": null,
+    "preview_word_count": 0,
+    "word_overlap_ratio": null,
+    "header_present": false,
+    "footer_present": false,
+    "console_errors": [
+      "Refused to load the stylesheet 'https://p.typekit.net/p.css?s=1&k=sic6ayn&ht=tk&f=10793.10794.10795.10796.10801.10806.26838.26842&a=1071509&app=typekit&e=css' because it violates the following Content Security Policy directive: \"style-src 'self' 'unsafe-inline' https://use.typekit.net https://fonts.googleapis.com\". Note that 'style-src-elem' was not explicitly set, so 'style-src' is used as a fallback.\n"
+    ],
+    "issues": [
+      {
+        "type": "da_live_missing",
+        "detail": "HTTP Error 403: Forbidden"
+      }
+    ],
+    "da_live_content_bytes": 0
+  },
+  {
+    "page_id": "nl-algemene-voorwaarden",
+    "preview_url": "https://main--jv-test-5--jmffraiz.aem.page/nl/algemene-voorwaarden-kliniekzoeker",
+    "source_slug": null,
+    "archetype": "informational",
+    "viewports": [
+      {
+        "name": "desktop",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-algemene-voorwaarden-desktop.png",
+        "source_screenshot": null,
+        "similarity": null,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": null,
+        "text_length": 10656
+      },
+      {
+        "name": "mobile",
+        "preview_screenshot": ".eds-migration/verifier-results/migration/screenshots/nl-algemene-voorwaarden-mobile.png",
+        "source_screenshot": null,
+        "similarity": null,
+        "method": "pHash (block average)",
+        "threshold": 0.5,
+        "passed": null,
+        "text_length": 10656
+      }
+    ],
+    "da_live_status": -1,
+    "preview_http_status": 200,
+    "content_text_length": null,
+    "source_word_count": null,
+    "preview_word_count": 1492,
+    "word_overlap_ratio": null,
+    "header_present": false,
+    "footer_present": false,
+    "console_errors": [
+      "Refused to load the stylesheet 'https://p.typekit.net/p.css?s=1&k=sic6ayn&ht=tk&f=10793.10794.10795.10796.10801.10806.26838.26842&a=1071509&app=typekit&e=css' because it violates the following Content Security Policy directive: \"style-src 'self' 'unsafe-inline' https://use.typekit.net https://fonts.googleapis.com\". Note that 'style-src-elem' was not explicitly set, so 'style-src' is used as a fallback.\n"
+    ],
+    "issues": [
+      {
+        "type": "da_live_missing",
+        "detail": "HTTP Error 403: Forbidden"
+      }
+    ],
+    "da_live_content_bytes": 0
+  }
+]
