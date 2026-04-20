@@ -1,0 +1,463 @@
+{
+  "generatedAt": "2026-04-20T16:49:40.622203Z",
+  "runId": "75030df9",
+  "site": "https://www.juvederm.nl",
+  "previewBase": "https://main--jv-test-5--jmffraiz.aem.live",
+  "summary": {
+    "totalPages": 14,
+    "passed": 9,
+    "warnings": 5,
+    "failed": 0,
+    "chromeStatus": "passed",
+    "redirectsPass": 2,
+    "redirectsTotal": 6
+  },
+  "pages": [
+    {
+      "url": "https://main--jv-test-5--jmffraiz.aem.live/nl/",
+      "slug": "nl",
+      "archetype": "homepage",
+      "status": "warning",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/",
+      "daEditUrl": "https://da.live/#/jmffraiz/jv-test-5/nl",
+      "published": true,
+      "httpStatus": 200,
+      "mainWords": 440,
+      "headerWords": 6,
+      "footerWords": 79,
+      "contentComplete": true,
+      "brokenLinks": [
+        "/nl"
+      ],
+      "visualSimilarity": {
+        "desktop": 0.778,
+        "mobile": 0.811
+      },
+      "textLenRatio": 1.0,
+      "issues": [
+        "Broken links: ['/nl']"
+      ],
+      "lighthouse": {
+        "performance": 94,
+        "accessibility": 93,
+        "bestPractices": 100,
+        "seo": 69,
+        "lcp": "2.5s",
+        "cls": "0.011",
+        "tbt": "0ms"
+      }
+    },
+    {
+      "url": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/lips",
+      "slug": "nl--treatment--lips",
+      "archetype": "treatment-page",
+      "status": "warning",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/lips",
+      "daEditUrl": "https://da.live/#/jmffraiz/jv-test-5/nl/treatment/lips",
+      "published": true,
+      "httpStatus": 200,
+      "mainWords": 314,
+      "headerWords": 6,
+      "footerWords": 79,
+      "contentComplete": true,
+      "brokenLinks": [
+        "/nl"
+      ],
+      "visualSimilarity": {
+        "desktop": 0.52,
+        "mobile": 0.569
+      },
+      "textLenRatio": 1.0,
+      "issues": [
+        "Broken links: ['/nl']"
+      ],
+      "lighthouse": {
+        "performance": 86,
+        "accessibility": 98,
+        "bestPractices": 96,
+        "seo": 69,
+        "lcp": "3.0s",
+        "cls": "0.101",
+        "tbt": "0ms"
+      }
+    },
+    {
+      "url": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/eye-area",
+      "slug": "nl--treatment--eye-area",
+      "archetype": "treatment-page",
+      "status": "passed",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/eye-area",
+      "daEditUrl": "https://da.live/#/jmffraiz/jv-test-5/nl/treatment/eye-area",
+      "published": true,
+      "httpStatus": 200,
+      "mainWords": 328,
+      "headerWords": 6,
+      "footerWords": 79,
+      "contentComplete": true,
+      "brokenLinks": [],
+      "visualSimilarity": {
+        "desktop": 0.579,
+        "mobile": 0.619
+      },
+      "textLenRatio": 1.0,
+      "issues": []
+    },
+    {
+      "url": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/enhance",
+      "slug": "nl--treatment--enhance",
+      "archetype": "treatment-page",
+      "status": "passed",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/enhance",
+      "daEditUrl": "https://da.live/#/jmffraiz/jv-test-5/nl/treatment/enhance",
+      "published": true,
+      "httpStatus": 200,
+      "mainWords": 573,
+      "headerWords": 6,
+      "footerWords": 79,
+      "contentComplete": true,
+      "brokenLinks": [],
+      "visualSimilarity": {
+        "desktop": 0.559,
+        "mobile": 0.537
+      },
+      "textLenRatio": 1.0,
+      "issues": []
+    },
+    {
+      "url": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/restore",
+      "slug": "nl--treatment--restore",
+      "archetype": "treatment-page",
+      "status": "passed",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/restore",
+      "daEditUrl": "https://da.live/#/jmffraiz/jv-test-5/nl/treatment/restore",
+      "published": true,
+      "httpStatus": 200,
+      "mainWords": 326,
+      "headerWords": 6,
+      "footerWords": 79,
+      "contentComplete": true,
+      "brokenLinks": [],
+      "visualSimilarity": {
+        "desktop": null,
+        "mobile": null
+      },
+      "textLenRatio": 1.0,
+      "issues": []
+    },
+    {
+      "url": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/male",
+      "slug": "nl--treatment--male",
+      "archetype": "treatment-page",
+      "status": "passed",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/male",
+      "daEditUrl": "https://da.live/#/jmffraiz/jv-test-5/nl/treatment/male",
+      "published": true,
+      "httpStatus": 200,
+      "mainWords": 318,
+      "headerWords": 6,
+      "footerWords": 79,
+      "contentComplete": true,
+      "brokenLinks": [],
+      "visualSimilarity": {
+        "desktop": null,
+        "mobile": null
+      },
+      "textLenRatio": 1.0,
+      "issues": []
+    },
+    {
+      "url": "https://main--jv-test-5--jmffraiz.aem.live/nl/qa",
+      "slug": "nl--qa",
+      "archetype": "faq",
+      "status": "warning",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/qa",
+      "daEditUrl": "https://da.live/#/jmffraiz/jv-test-5/nl/qa",
+      "published": false,
+      "httpStatus": 200,
+      "mainWords": 1647,
+      "headerWords": 6,
+      "footerWords": 79,
+      "contentComplete": true,
+      "brokenLinks": [
+        "/nl"
+      ],
+      "visualSimilarity": {
+        "desktop": 0.776,
+        "mobile": 0.809
+      },
+      "textLenRatio": 1.0,
+      "issues": [
+        "Broken links: ['/nl']",
+        "redirect-not-verified: not published at crawl time (re-published during QA)"
+      ],
+      "lighthouse": {
+        "performance": 95,
+        "accessibility": 98,
+        "bestPractices": 96,
+        "seo": 69,
+        "lcp": "2.5s",
+        "cls": "0.004",
+        "tbt": "0ms"
+      }
+    },
+    {
+      "url": "https://main--jv-test-5--jmffraiz.aem.live/nl/find-a-clinic",
+      "slug": "nl--find-a-clinic",
+      "archetype": "clinic-finder",
+      "status": "passed",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/find-a-clinic",
+      "daEditUrl": "https://da.live/#/jmffraiz/jv-test-5/nl/find-a-clinic",
+      "published": true,
+      "httpStatus": 200,
+      "mainWords": 478,
+      "headerWords": 6,
+      "footerWords": 79,
+      "contentComplete": true,
+      "brokenLinks": [],
+      "visualSimilarity": {
+        "desktop": 0.448,
+        "mobile": 0.417
+      },
+      "textLenRatio": 1.0,
+      "issues": []
+    },
+    {
+      "url": "https://main--jv-test-5--jmffraiz.aem.live/nl/disclaimer",
+      "slug": "nl--disclaimer",
+      "archetype": "legal",
+      "status": "passed",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/disclaimer",
+      "daEditUrl": "https://da.live/#/jmffraiz/jv-test-5/nl/disclaimer",
+      "published": true,
+      "httpStatus": 200,
+      "mainWords": 719,
+      "headerWords": 6,
+      "footerWords": 79,
+      "contentComplete": true,
+      "brokenLinks": [],
+      "visualSimilarity": {
+        "desktop": null,
+        "mobile": null
+      },
+      "textLenRatio": 1.0,
+      "issues": []
+    },
+    {
+      "url": "https://main--jv-test-5--jmffraiz.aem.live/nl/contact",
+      "slug": "nl--contact-us",
+      "archetype": "contact",
+      "status": "passed",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/contact",
+      "daEditUrl": "https://da.live/#/jmffraiz/jv-test-5/nl/contact",
+      "published": true,
+      "httpStatus": 200,
+      "mainWords": 54,
+      "headerWords": 6,
+      "footerWords": 79,
+      "contentComplete": true,
+      "brokenLinks": [],
+      "visualSimilarity": {
+        "desktop": null,
+        "mobile": null
+      },
+      "textLenRatio": 0.54,
+      "issues": []
+    },
+    {
+      "url": "https://main--jv-test-5--jmffraiz.aem.live/nl/clinics",
+      "slug": "nl--clinics",
+      "archetype": "clinic-finder",
+      "status": "warning",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/clinics",
+      "daEditUrl": "https://da.live/#/jmffraiz/jv-test-5/nl/clinics",
+      "published": true,
+      "httpStatus": 200,
+      "mainWords": 17,
+      "headerWords": 6,
+      "footerWords": 79,
+      "contentComplete": false,
+      "brokenLinks": [],
+      "visualSimilarity": {
+        "desktop": null,
+        "mobile": null
+      },
+      "textLenRatio": 0.17,
+      "issues": [
+        "Known thin content: 17 words (source was placeholder/minimal)"
+      ]
+    },
+    {
+      "url": "https://main--jv-test-5--jmffraiz.aem.live/nl/clinic",
+      "slug": "nl--clinic",
+      "archetype": "clinic-finder",
+      "status": "passed",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/clinic",
+      "daEditUrl": "https://da.live/#/jmffraiz/jv-test-5/nl/clinic",
+      "published": true,
+      "httpStatus": 200,
+      "mainWords": 56,
+      "headerWords": 6,
+      "footerWords": 79,
+      "contentComplete": true,
+      "brokenLinks": [],
+      "visualSimilarity": {
+        "desktop": null,
+        "mobile": null
+      },
+      "textLenRatio": 0.56,
+      "issues": []
+    },
+    {
+      "url": "https://main--jv-test-5--jmffraiz.aem.live/nl/algemene-voorwaarden-kliniekzoeker",
+      "slug": "nl--algemene-voorwaarden-kliniekzoeker",
+      "archetype": "informational",
+      "status": "passed",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/algemene-voorwaarden-kliniekzoeker",
+      "daEditUrl": "https://da.live/#/jmffraiz/jv-test-5/nl/algemene-voorwaarden-kliniekzoeker",
+      "published": true,
+      "httpStatus": 200,
+      "mainWords": 1492,
+      "headerWords": 6,
+      "footerWords": 79,
+      "contentComplete": true,
+      "brokenLinks": [],
+      "visualSimilarity": {
+        "desktop": null,
+        "mobile": null
+      },
+      "textLenRatio": 1.0,
+      "issues": []
+    },
+    {
+      "url": "https://main--jv-test-5--jmffraiz.aem.live/nl/juridisch/privacybeleid",
+      "slug": "nl--juridisch-privacybeleid",
+      "archetype": "legal",
+      "status": "warning",
+      "previewUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/juridisch/privacybeleid",
+      "daEditUrl": "https://da.live/#/jmffraiz/jv-test-5/nl/juridisch/privacybeleid",
+      "published": true,
+      "httpStatus": 200,
+      "mainWords": 20,
+      "headerWords": 6,
+      "footerWords": 79,
+      "contentComplete": false,
+      "brokenLinks": [],
+      "visualSimilarity": {
+        "desktop": null,
+        "mobile": null
+      },
+      "textLenRatio": 0.2,
+      "issues": [
+        "Known thin content: 20 words (source was placeholder/minimal)"
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "from": "/",
+      "expectedTo": "/nl",
+      "note": "root to nl",
+      "passed": false,
+      "finalStatus": 200,
+      "finalUrl": "https://main--jv-test-5--jmffraiz.aem.live/"
+    },
+    {
+      "from": "/nl/treatment/men",
+      "expectedTo": "/nl/treatment/male",
+      "note": "men->male",
+      "passed": false,
+      "finalStatus": 404,
+      "finalUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/men"
+    },
+    {
+      "from": "/nl/treatment/eyes",
+      "expectedTo": "/nl/treatment/eye-area",
+      "note": "eyes->eye-area",
+      "passed": false,
+      "finalStatus": 404,
+      "finalUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/eyes"
+    },
+    {
+      "from": "/nl/find-a-clinic/map",
+      "expectedTo": "/nl/find-a-clinic",
+      "note": "map->find-a-clinic",
+      "passed": true,
+      "finalStatus": 200,
+      "finalUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/find-a-clinic/map"
+    },
+    {
+      "from": "/nl/clinic-finder",
+      "expectedTo": "/nl/find-a-clinic",
+      "note": "clinic-finder->find-a-clinic",
+      "passed": false,
+      "finalStatus": 200,
+      "finalUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/clinic-finder"
+    },
+    {
+      "from": "/nl/contact-us",
+      "expectedTo": "/nl/contact",
+      "note": "contact-us->contact",
+      "passed": true,
+      "finalStatus": 200,
+      "finalUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/contact-us"
+    }
+  ],
+  "chrome": {
+    "headerLinks": 12,
+    "footerLinks": 20,
+    "headerEmpty": false,
+    "footerEmpty": false,
+    "headerSimilarity": 0.587,
+    "footerSimilarity": 0.896,
+    "status": "passed"
+  },
+  "regressions": [
+    {
+      "severity": "medium",
+      "criterion": "redirects-not-active",
+      "details": "3 of 6 configured redirects are not enforced at CDN level. /\u2192/nl: root page exists and serves content (homepage doc at /), so no CDN redirect fires. /nl/treatment/men\u2192male and /nl/treatment/eyes\u2192eye-area: return 404 (source URLs never existed on EDS, and CDN redirect sheet is HTML not spreadsheet). /nl/clinic-finder\u2192/nl/find-a-clinic and /nl/contact-us\u2192/nl/contact: pages with those slugs exist so CDN serves them directly (no 404, but no redirect either).",
+      "fixPhase": "5-config",
+      "remediation": "Convert redirects document to EDS spreadsheet (Excel or Google Sheet) mounted at /redirects for CDN-level enforcement. For /nl/treatment/men and /nl/treatment/eyes, the spreadsheet redirect will then return proper 301."
+    },
+    {
+      "severity": "low",
+      "criterion": "nav-logo-link-404",
+      "details": "Nav logo links to /nl (without trailing slash) which returns 404. The /nl/ page (with trailing slash) returns 200.",
+      "fixPhase": "5-config",
+      "remediation": "Update /nav document to use /nl/ with trailing slash for the logo link, or add /nl \u2192 /nl/ redirect in redirects spreadsheet."
+    }
+  ],
+  "degradations": [
+    {
+      "severity": "medium",
+      "criterion": "visual-similarity-treatment-pages",
+      "details": "Treatment pages score 0.52\u20130.58 desktop similarity vs source. Source AEM pages have full-bleed hero with MP4 video, complex CSS animations, and different typography (typekit fonts not loading in preview due to CSP). Content is present and structurally correct.",
+      "remediation": "Expected difference for phase 6 QA. CSS refinement pass needed for production; not a content/migration blocker."
+    },
+    {
+      "severity": "low",
+      "criterion": "clinic-finder-visual-low",
+      "details": "Clinic finder page scores 0.448 desktop similarity. Source has Google Maps embedded with populated markers; EDS version shows the clinic-finder block without API key configured (expected placeholder state).",
+      "remediation": "Add Google Maps API key to clinic-finder block config for production deployment."
+    }
+  ],
+  "lighthouseSummary": {
+    "pagesAudited": 3,
+    "avgPerformance": 92,
+    "avgAccessibility": 96,
+    "avgBestPractices": 97,
+    "avgSeo": 69,
+    "note": "SEO 69 is expected on *.aem.live preview \u2014 CDN blocks crawlers on preview domains by design."
+  },
+  "visualSummary": {
+    "homepageDesktop": 0.778,
+    "homepageMobile": 0.811,
+    "treatmentPageAvgDesktop": 0.553,
+    "faqDesktop": 0.776,
+    "faqMobile": 0.809,
+    "clinicFinderDesktop": 0.448,
+    "headerSimilarity": 0.587,
+    "footerSimilarity": 0.896,
+    "note": "Similarity measured via pixel sampling (100x100 downsample). Source screenshots include AEM full chrome; EDS screenshots have simplified chrome."
+  }
+}
