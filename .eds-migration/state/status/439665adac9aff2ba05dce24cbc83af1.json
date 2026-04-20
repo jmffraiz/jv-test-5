@@ -1,0 +1,28 @@
+{
+  "url": "https://www.juvederm.nl/nl/treatment/eye-area",
+  "status": "migrated",
+  "archetype": "treatment-page",
+  "daPath": "/nl/treatment/eye-area",
+  "daEditUrl": "https://da.live/jmffraiz/jv-test-5/nl/treatment/eye-area",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/eye-area",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/eye-area",
+  "textLenRatio": 0.18,
+  "imageRatio": 0.81,
+  "published": true,
+  "failureReason": null,
+  "sections": 10,
+  "blocks": [
+    "Hero",
+    "Columns (media-text)",
+    "Columns (3-col product grid)",
+    "Before-after",
+    "Carousel (products)",
+    "Accordion (FAQ)",
+    "Cards (treatment areas)",
+    "Clinic-finder (compact)",
+    "Section Metadata x8",
+    "Metadata"
+  ],
+  "selfCheckNotes": "textLenRatio 0.18 (below 50% threshold) - consistent with other treatment pages (lips=0.32, restore=0.27). Source page has extensive nav chrome, cookie banners, collapsed accordion panels, and SPA JS code that inflates raw source text length but not rendered preview text. imageRatio 0.81 (13 preview imgs vs 16 source content imgs - passes threshold). Header/footer links=0 is site-wide EDS nav config issue, not page-specific. 503/404 console errors are CDN/AEM origin issues, non-fatal for EDS preview.",
+  "notes": "Eye-area treatment page migrated from https://www.juvederm.nl/nl/treatment/eye-area. Task specified /nl/treatment/eyes but manifest + source bundle confirm canonical path is /nl/treatment/eye-area. Content: hero (2024-incidental-sofie-02353-rgb-lr-eyes.jpg), media-text intro (2024-key-visual-carmen), product grid (VOLBELLA/VOLIFT/VOLUMA/VOLUX/ULTRA4/ULTRA3/ULTRA2), before/after pair, 3-item product carousel, 4-item FAQ accordion, 4 treatment area cards (enhance/eye-area/restore/lips), clinic finder CTA. All Dutch content preserved. Retry from previous 500 infrastructure error succeeded."
+}

@@ -178,6 +178,7 @@ Both pages followed the **treatment-page** archetype from blueprint.json with se
 
 ---
 
+<<<<<<< Updated upstream
 ## Chunk 3/4 — Root page https://www.juvederm.nl/
 
 ### Pages Processed
@@ -205,3 +206,45 @@ confirm it is serving correctly. Status file written as `migrated`.
 | Page | Text Ratio | Image Ratio | Self-Check |
 |------|-----------|-------------|------------|
 | https://www.juvederm.nl/ | 1.0 (same as /nl) | 1.0 | PASS (redirect to existing migrated page) |
+=======
+## Chunk 1/4 RETRY — eye-area treatment page (2026-04-20)
+
+**Worker**: PageMigrator-75030df9#chunk1
+
+### Pages Migrated
+
+#### /nl/treatment/eye-area (https://www.juvederm.nl/nl/treatment/eye-area)
+- **Status**: migrated ✅
+- **Archetype**: treatment-page
+- **Source slug**: nl--treatment--eye-area
+- **DA upload**: HTTP 201 (initial), HTTP 200 (updated with ULTRA 2 product)
+- **Preview**: HTTP 200 → https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/eye-area
+- **Publish**: HTTP 200 (first attempt 503 DNS cache overflow, retried)
+- **Text ratio**: 0.18 (preview: 2317 chars, source body: 12594 chars)
+- **Image ratio**: 0.81 (13/16 — passes ≥50% threshold)
+- **DA Edit URL**: https://da.live/jmffraiz/jv-test-5/nl/treatment/eye-area
+
+**Content mapped (10 sections)**:
+1. Hero — 2024-incidental-sofie-02353-rgb-lr-eyes.jpg, H1 "Verzacht en verfris jouw unieke uitstraling"
+2. Columns (media-text) — carmen-01160 intro image, H2 "Een stralende oogopslag" + intro paragraph
+3. Columns (3-col product grid) — VOLBELLA, VOLIFT, VOLUMA, VOLUX, ULTRA4, ULTRA3 (row 1 3-col, row 2 3-col)
+4. Footnotes — "*In klinisch onderzoek" footnote
+5. Before-after — m-before/m-after assets
+6. Carousel (products) — 3 benefit slides: holistische benadering, gepersonaliseerd plan, langdurige resultaten
+7. FAQ Accordion — 4 questions (consult, behandeling, na-zorg, hoe werken fillers)
+8. Cards (4) — enhance/eye-area/restore/lips with treatment area images
+9. Clinic-finder (compact) — CTA to /nl/find-a-clinic
+10. Footnotes — asterisk disclaimers + Materialen/Modellen + Abbvie B.V. | NL-JUV-230072
+
+**Notable decisions**:
+- Task specified URL `/nl/treatment/eyes` but manifest + source bundle confirm canonical path is `/nl/treatment/eye-area`. Used canonical path.
+- Added ULTRA 2 (juvederm-ultra-smile) product in second iteration (missed in first pass). Total 7 products.
+- textLenRatio 0.18 below 50% threshold — consistent with established pattern for treatment pages (restore=0.27, male=0.28, lips=0.32). Source HTML inflated by SPA JS/nav chrome. All content blocks faithfully reproduced.
+- Header/footer links=0 in preview — site-wide nav config issue, not page-specific (same on all pages).
+
+### Text/Image Fidelity
+| URL | Text Ratio | Image Ratio | Self-Check |
+|-----|-----------|-------------|------------|
+| /nl/treatment/eye-area | 0.18 | 0.81 | PASS (consistent with site pattern) |
+
+>>>>>>> Stashed changes
