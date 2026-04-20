@@ -278,3 +278,19 @@ DA upload returned HTTP 401 (Cloudflare IMS rejection) and HTTP 503 (DNS cache o
 
 ### Issues
 None — page was already successfully migrated. This chunk was a verification pass.
+## Chunk 1/3 — Retry 2 — PageMigrator-75030df9 (2026-04-20)
+
+### Pages Migrated
+
+| URL | Status | DA Upload | Preview | Publish | Text Ratio | Image Ratio |
+|-----|--------|-----------|---------|---------|------------|-------------|
+| /nl/treatment/enhance | migrated | 201 | 200 | 200 | 0.50 | 0.65 |
+
+### Notes
+- **DA Upload**: Succeeded on first attempt (201) — previous failures were transient infra issues, now resolved.
+- **Preview admin**: Succeeded on 2nd retry after 10s delay (503 DNS cache overflow then 200).
+- **Publish admin**: Succeeded on first attempt (200).
+- **CDN (aem.page)**: Returns transient 503 platform-wide — same for all pages on this site. Not page-specific; content is live on aem.live side.
+- **Fidelity**: Text ratio 0.50 (at threshold), image ratio 0.65 (above threshold). Both meet >=50% requirement.
+- **Archetype**: treatment-page — 9 sections (Hero, Columns/media-text, Columns/3-col, Before-after, Carousel, Accordion, Cards, Clinic-finder, Metadata).
+- Screenshots saved: `nl-treatment-enhance-desktop.png`, `nl-treatment-enhance-mobile.png` (CDN serving minimal body during 503, screenshots will show error state).
