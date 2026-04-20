@@ -1,17 +1,23 @@
 {
-  "verdict": "PASS",
+  "verdict": "FAIL",
   "issues": [
     {
       "severity": "medium",
-      "criterion": "Bundle completeness — README vs actual pages on disk",
-      "details": "README.md claims '14 Full captures (HTML + desktop + mobile screenshots): 14' and lists pages/nl--algemene-voorwaarden-kliniekzoeker/ in the 'Pages Captured (full)' section, but that directory does NOT exist in the bundle. Only 13 of 14 manifest pages have corresponding bundle entries.",
-      "remediation": "Either re-crawl and capture the missing page (https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker) into the bundle, or update README to accurately reflect it as a partial/metadata-only capture. The page is httpStatus:200 and publicly accessible (verified via Playwright — text_length=12719, title confirmed)."
+      "criterion": "Bundle completeness — nl--algemene-voorwaarden-kliniekzoeker missing from pages/",
+      "details": "manifest.json lists 14 pages including nl--algemene-voorwaarden-kliniekzoeker (httpStatus:200, archetype:informational). The bundle README.md claims '14 Full captures' with '0 Failed'. However, source-bundle/pages/ contains only 13 entries — pages/nl--algemene-voorwaarden-kliniekzoeker/ does NOT exist. Live Playwright verification confirmed the page is fully accessible with 12719 body chars and title 'General Terms and Conditions Clinic Finder | Juvéderm® Netherlands'. No bundle HTML, meta.json, desktop.png, or mobile.png for this page. README is inaccurate.",
+      "remediation": "Re-crawl https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker and add index.html, meta.json, desktop.png and mobile.png to source-bundle/pages/nl--algemene-voorwaarden-kliniekzoeker/. Update README to reflect actual capture count."
     },
     {
       "severity": "low",
-      "criterion": "Header links deduplication",
-      "details": "manifest.json navigation.header has 27 links but only 14 unique hrefs. The nav links appear twice because the site's header HTML contains both a desktop and mobile menu. This is expected behaviour for this site, but downstream agents should de-duplicate before generating nav blocks.",
-      "remediation": "De-duplicate header.links.json on href when building the EDS nav block. The 14 unique links are correct and sufficient."
+      "criterion": "sample-scrape.json missing (Phase 2a Analyzer artifact)",
+      "details": "The orchestrator post-Phase 2a notes require verification of .eds-migration/state/sample-scrape.json (to be written by the Analyzer). This file does not exist. Cannot verify archetype sampleUrl alignment, content pattern cataloguing, or AEM component class inventory against it.",
+      "remediation": "The Analyzer must write sample-scrape.json before Phase 2a verification can be completed. Each archetype's sampleUrl should have a corresponding entry with HTML and extracted patterns."
+    },
+    {
+      "severity": "low",
+      "criterion": "Visual similarity — consent gate visible in independent live renders",
+      "details": "pHash comparison between bundle screenshots and fresh Playwright captures yielded low similarity scores: nl desktop=0.469, nl--treatment--lips desktop=0.469, nl--qa desktop=0.562. Investigation shows this is because the bundle dismissed consent/OneTrust overlays correctly (bundle HTML has 9567+ visible chars) while live renders captured behind the gate (main.innerText=210 chars for homepage). This confirms the bundle captured richer post-gate content, but it makes direct screenshot-to-screenshot visual comparison unreliable as a fidelity signal.",
+      "remediation": "When verifiers re-run spot-checks, they must apply the same overlay-dismissal selectors documented in source-bundle/README.md (OneTrust, Cookiebot, Abbvie banner) and allow additional settle time post-dismissal before comparing."
     }
   ],
   "evidence": [
@@ -20,41 +26,51 @@
       "source_artifact": ".eds-migration/state/manifest.json",
       "preview_artifact": "n/a",
       "render_strategy": "static JSON parse",
-      "finding": "Manifest contains 14 pages (meets ≥10 requirement). All URLs use https://www.juvederm.nl (www prefix). 7 archetypes: homepage(2), treatment-page(5), faq(1), clinic-finder(3), legal(1), contact(1), informational(1). No infinite clinic-finder URL patterns detected (3 clinic pages, all short paths).",
+      "finding": "14 pages present (exceeds ≥10 minimum). Archetypes: homepage(2), treatment-page(5), faq(1), clinic-finder(3), legal(1), contact(1), informational(1). All URLs under www.juvederm.nl. No suspicious infinite-pattern URL sequences detected.",
       "viewports": []
     },
     {
       "page": "sitemap-crosscheck",
-      "source_artifact": "https://www.juvederm.nl/sitemap.xml",
+      "source_artifact": "https://www.juvederm.nl/sitemap.xml (fetched live)",
       "preview_artifact": ".eds-migration/state/manifest.json",
-      "render_strategy": "curl fetch of sitemap.xml",
-      "finding": "Sitemap has 13 URLs. Manifest has 14. Extra page (nl--algemene-voorwaarden-kliniekzoeker) was discovered via footer link — NOT a crawl truncation. Manifest covers all 13 sitemap URLs plus the late-discovered page.",
+      "render_strategy": "curl HTTP fetch of sitemap.xml — 13 <loc> entries returned",
+      "finding": "Sitemap has 13 URLs; manifest has 14. Extra URL (nl--algemene-voorwaarden-kliniekzoeker) was discovered via footer link crawling — not a sitemap entry. All 13 sitemap URLs are present in manifest. No crawl truncation detected.",
+      "viewports": []
+    },
+    {
+      "page": "archetype-nav-coverage",
+      "source_artifact": ".eds-migration/state/manifest.json navigation.header",
+      "preview_artifact": ".eds-migration/state/manifest.json archetypes",
+      "render_strategy": "static JSON parse",
+      "finding": "Header nav links cover treatment-page (Lippen/Ogen/Accentueren/Herstel/Man), faq (Over Juvéderm/Kosten/Langdurige resultaten/Veiligheid/Zones), clinic-finder (Vind je kliniek), homepage. All nav link archetypes are represented in the manifest. Duplication in header nav (27 entries, 14 unique hrefs) is expected — both desktop and mobile menus are captured. footer.links.json has 21 links matching manifest.navigation.footer.",
       "viewports": []
     },
     {
       "page": "https://www.juvederm.nl/nl",
       "source_artifact": "source-bundle/pages/nl/index.html",
       "preview_artifact": ".eds-migration/verifier-results/crawler/screenshots/nl-desktop.png",
-      "render_strategy": "Playwright Chromium headless, networkidle + body.innerText stable, dismissed OneTrust overlays, viewport 1440x900 (desktop) / 390x844 (mobile)",
-      "finding": "Live page renders correctly. Title confirmed 'JUVÉDERM Nederlands'. Body text length 7152 chars (live). Bundle HTML 388KB with matching content (keywords: lippen, JUVÉDERM, behandeling all present). No pre-hydration issue. Bundle desktop.png 1440x10466 full-page PNG (2.1MB, non-empty). Bundle mobile.png 390x12057 (940KB, non-empty).",
+      "render_strategy": "Playwright Chromium headless, networkidle + main.textLength stable 500ms x2, attempted OneTrust dismissal, viewport 1440x900 desktop / 390x844 mobile",
+      "finding": "Live page accessible, title confirmed 'JUVÉDERM Nederlands'. Bundle HTML is 388KB (388730 bytes) with 9567 visible chars. My live render shows body_text=5995 chars (consent gate partially blocking). Low pHash similarity (0.469) is explained by consent gate in live render vs gate-dismissed bundle capture. Bundle desktop.png=2.1MB, mobile.png=945KB — non-trivial sizes confirming full-page renders.",
       "viewports": [
         {
           "name": "desktop",
           "source_screenshot": "source-bundle/pages/nl/desktop.png",
           "preview_screenshot": ".eds-migration/verifier-results/crawler/screenshots/nl-desktop.png",
-          "similarity": 0.88,
-          "method": "visual inspection + content keyword match",
+          "similarity": 0.469,
+          "method": "pHash (imagehash library, 64-bit)",
           "threshold": 0.75,
-          "passed": true
+          "passed": false,
+          "note": "Low score explained by OneTrust consent gate visible in live capture; bundle captured post-gate dismissal. Content text match (keywords: JUVÉDERM, lippen, behandeling) confirms correct page identity."
         },
         {
           "name": "mobile",
           "source_screenshot": "source-bundle/pages/nl/mobile.png",
           "preview_screenshot": ".eds-migration/verifier-results/crawler/screenshots/nl-mobile.png",
-          "similarity": 0.87,
-          "method": "visual inspection + content keyword match",
+          "similarity": 0.531,
+          "method": "pHash (imagehash library, 64-bit)",
           "threshold": 0.75,
-          "passed": true
+          "passed": false,
+          "note": "Same consent gate explanation as desktop."
         }
       ]
     },
@@ -62,26 +78,28 @@
       "page": "https://www.juvederm.nl/nl/treatment/lips",
       "source_artifact": "source-bundle/pages/nl--treatment--lips/index.html",
       "preview_artifact": ".eds-migration/verifier-results/crawler/screenshots/nl--treatment--lips-desktop.png",
-      "render_strategy": "Playwright Chromium headless, networkidle + body.innerText stable, dismissed OneTrust overlays, viewport 1440x900 (desktop) / 390x844 (mobile)",
-      "finding": "Live page renders correctly. Title confirmed 'Juvederm en lippen | Juvéderm® Netherlands'. Bundle HTML 347KB with matching Dutch content (lippen, hyaluronzuur, behandeling). Bundle desktop.png 1440x7027 (2.4MB). Bundle mobile.png 390x7180 (1MB).",
+      "render_strategy": "Playwright Chromium headless, networkidle + main.textLength stable 500ms x2, viewport 1440x900 desktop / 390x844 mobile",
+      "finding": "Live page accessible. Title confirmed 'Juvederm en lippen | Juvéderm® Netherlands'. Bundle HTML 347KB with 12685 visible chars. My render: main_text=168 (behind gate), body_text not separately measured. Bundle desktop.png=2.5MB, mobile.png=1MB. pHash similarity 0.469 desktop / 0.438 mobile — explained by consent gate difference.",
       "viewports": [
         {
           "name": "desktop",
           "source_screenshot": "source-bundle/pages/nl--treatment--lips/desktop.png",
           "preview_screenshot": ".eds-migration/verifier-results/crawler/screenshots/nl--treatment--lips-desktop.png",
-          "similarity": 0.87,
-          "method": "visual inspection + content keyword match",
+          "similarity": 0.469,
+          "method": "pHash (imagehash library, 64-bit)",
           "threshold": 0.75,
-          "passed": true
+          "passed": false,
+          "note": "Consent gate explains low score; bundle correctly captured post-gate content (12685 visible chars)."
         },
         {
           "name": "mobile",
           "source_screenshot": "source-bundle/pages/nl--treatment--lips/mobile.png",
           "preview_screenshot": ".eds-migration/verifier-results/crawler/screenshots/nl--treatment--lips-mobile.png",
-          "similarity": 0.86,
-          "method": "visual inspection + content keyword match",
+          "similarity": 0.438,
+          "method": "pHash (imagehash library, 64-bit)",
           "threshold": 0.75,
-          "passed": true
+          "passed": false,
+          "note": "Same consent gate explanation."
         }
       ]
     },
@@ -89,39 +107,41 @@
       "page": "https://www.juvederm.nl/nl/qa",
       "source_artifact": "source-bundle/pages/nl--qa/index.html",
       "preview_artifact": ".eds-migration/verifier-results/crawler/screenshots/nl--qa-desktop.png",
-      "render_strategy": "Playwright Chromium headless, networkidle + body.innerText stable, dismissed OneTrust overlays, viewport 1440x900 (desktop) / 390x844 (mobile)",
-      "finding": "Live FAQ page renders with substantial content. main.innerText=20604 chars (rich content, no pre-hydration issue). Bundle HTML 343KB. Bundle desktop.png 1440x18883 (2MB full-page). Bundle mobile.png 390x21661 (1.3MB).",
+      "render_strategy": "Playwright Chromium headless, networkidle + main.textLength stable 500ms x2, viewport 1440x900 desktop / 390x844 mobile",
+      "finding": "Live FAQ page fully rendered. main.innerText=20604 chars live, bundle HTML has 23681 visible chars — comparable, confirming no significant pre-hydration issue. Strongly indicates correct post-hydration capture. Bundle desktop.png=2MB, mobile.png=1.4MB. pHash 0.562 desktop / 0.406 mobile — still affected by consent gate.",
       "viewports": [
         {
           "name": "desktop",
           "source_screenshot": "source-bundle/pages/nl--qa/desktop.png",
           "preview_screenshot": ".eds-migration/verifier-results/crawler/screenshots/nl--qa-desktop.png",
-          "similarity": 0.89,
-          "method": "visual inspection + content keyword match",
+          "similarity": 0.562,
+          "method": "pHash (imagehash library, 64-bit)",
           "threshold": 0.75,
-          "passed": true
+          "passed": false,
+          "note": "Text length comparison (live 20604 vs bundle 23681) confirms bundle captured post-hydration content correctly. pHash delta due to consent overlay in fresh render."
         },
         {
           "name": "mobile",
           "source_screenshot": "source-bundle/pages/nl--qa/mobile.png",
           "preview_screenshot": ".eds-migration/verifier-results/crawler/screenshots/nl--qa-mobile.png",
-          "similarity": 0.88,
-          "method": "visual inspection + content keyword match",
+          "similarity": 0.406,
+          "method": "pHash (imagehash library, 64-bit)",
           "threshold": 0.75,
-          "passed": true
+          "passed": false,
+          "note": "Same consent gate explanation; FAQ content verified via text length match."
         }
       ]
     },
     {
       "page": "https://www.juvederm.nl/nl/algemene-voorwaarden-kliniekzoeker",
-      "source_artifact": "source-bundle/pages/nl--algemene-voorwaarden-kliniekzoeker/ (MISSING)",
+      "source_artifact": "source-bundle/pages/nl--algemene-voorwaarden-kliniekzoeker/ — ABSENT",
       "preview_artifact": ".eds-migration/verifier-results/crawler/screenshots/nl--algemene-voorwaarden-kliniekzoeker-desktop.png",
-      "render_strategy": "Playwright Chromium headless, networkidle + body.innerText stable, viewport 1440x900 (desktop) / 390x844 (mobile)",
-      "finding": "Page is live and accessible (text_length=12719, title='General Terms and Conditions Clinic Finder | Juvéderm® Netherlands', httpStatus=200). Has full metadata in manifest.json. MISSING from source-bundle/pages/ directory despite README claiming capture. Meets orchestrator minimum requirement (metadata present in manifest).",
+      "render_strategy": "Playwright Chromium headless, networkidle + body.innerText stable, viewport 1440x900 desktop / 390x844 mobile",
+      "finding": "Page live and accessible: title='General Terms and Conditions Clinic Finder | Juvéderm® Netherlands', body_text=12719 chars, main_text=0 (all content in <section> outside <main>). httpStatus 200. Page IS in manifest but completely absent from source-bundle/pages/ — no index.html, meta.json, or screenshots. README inaccurately claims 14 full captures.",
       "viewports": [
         {
           "name": "desktop",
-          "source_screenshot": "MISSING — not in bundle",
+          "source_screenshot": "ABSENT — source-bundle/pages/nl--algemene-voorwaarden-kliniekzoeker/ does not exist",
           "preview_screenshot": ".eds-migration/verifier-results/crawler/screenshots/nl--algemene-voorwaarden-kliniekzoeker-desktop.png",
           "similarity": null,
           "method": "no source to compare against",
@@ -130,7 +150,7 @@
         },
         {
           "name": "mobile",
-          "source_screenshot": "MISSING — not in bundle",
+          "source_screenshot": "ABSENT — source-bundle/pages/nl--algemene-voorwaarden-kliniekzoeker/ does not exist",
           "preview_screenshot": ".eds-migration/verifier-results/crawler/screenshots/nl--algemene-voorwaarden-kliniekzoeker-mobile.png",
           "similarity": null,
           "method": "no source to compare against",
@@ -144,7 +164,15 @@
       "source_artifact": "source-bundle/chrome/header.html + footer.html + *.links.json + *.png",
       "preview_artifact": "n/a",
       "render_strategy": "static file inspection",
-      "finding": "header.html is 40KB with real navigation elements. footer.html is 55KB with real elements. header.links.json has 27 links (14 unique hrefs — duplication from desktop+mobile menus, see issues). footer.links.json has 21 links (all distinct, including social media, legal, and nav links). header-desktop.png is 1440x150 (205KB). footer-desktop.png exists (53KB). Chrome is non-empty and correctly captured.",
+      "finding": "header.html: 40KB with real AEM navigation elements (emu-navigation, aaaem-navigation, emu-button classes present). footer.html: 55KB with real footer elements (footer class, aaaem-container, social links). header.links.json: 27 links. footer.links.json: 21 links. Both match manifest.navigation counts. header-desktop.png: 205KB non-empty. footer-desktop.png: 53KB non-empty. No mobile chrome screenshots — README only promises desktop crops, acceptable.",
+      "viewports": []
+    },
+    {
+      "page": "aem-component-classes",
+      "source_artifact": "source-bundle/pages/*/index.html (all 13 pages)",
+      "preview_artifact": "n/a",
+      "render_strategy": "regex extraction from static HTML files",
+      "finding": "AEM component classes correctly present and catalogued: 82 distinct emu-* classes (top: emu-type, emu-item-title, emu-navigation__item, emu-title, emu-image, emu-button), 13 distinct data-cmp-* attributes (data-cmp-data-layer, data-cmp-hook-image, data-cmp-lazythreshold, data-cmp-clickable, data-cmp-hook-accordion, data-cmp-hook-carousel), 64 distinct aaaem-* classes (aaaem-container, aaaem-carousel, aaaem-accordion, aaaem-tabs, aaaem-teaser). Key component types present: accordion (aaaem-accordion, data-cmp-hook-accordion), carousel (aaaem-carousel, data-cmp-hook-carousel), navigation, teaser, image, button — fully covering the expected AEM component vocabulary.",
       "viewports": []
     },
     {
@@ -152,9 +180,17 @@
       "source_artifact": "source-bundle/README.md",
       "preview_artifact": "n/a",
       "render_strategy": "static file inspection",
-      "finding": "README documents: Playwright Chromium headless, networkidle wait, 15+ overlay selectors (OneTrust, Cookiebot, Abbvie banner), content stability loop polling main.innerText every 500ms requiring 2 identical readings (up to 12s), Escape fallback, desktop 1440x900, mobile 390x844. Strategy is complete and reproducible.",
+      "finding": "README fully documents render strategy: Playwright Chromium headless, networkidle waitUntil, 15+ overlay selectors (OneTrust, Cookiebot, Abbvie consent banner), content-stability loop polling main.innerText every 500ms x2 identical readings (up to 12s), Escape fallback, desktop 1440×900, mobile 390×844. Site-specific quirks documented (apex 503, SSL, OneTrust). Strategy is complete and reproducible.",
+      "viewports": []
+    },
+    {
+      "page": "sample-scrape-json-check",
+      "source_artifact": ".eds-migration/state/sample-scrape.json — ABSENT",
+      "preview_artifact": "n/a",
+      "render_strategy": "filesystem check",
+      "finding": "sample-scrape.json does not exist at .eds-migration/state/sample-scrape.json. This is a Phase 2a Analyzer artifact. Cannot verify archetype sampleUrl alignment or content pattern cataloguing against it. AEM component classes (emu-*, data-cmp-*, aaaem-*) were verified independently from bundle HTML — 82 emu-* classes, 13 data-cmp-* attrs, 64 aaaem-* classes confirmed present. Informational page (algemene-voorwaarden-kliniekzoeker) is fully accessible live with 12719 body chars.",
       "viewports": []
     }
   ],
-  "summary": "PASS — 14 pages in manifest (all www.juvederm.nl), 13/14 fully captured in bundle with valid screenshots at 1440x900 and 390x844; late-discovered page (algemene-voorwaarden-kliniekzoeker) has manifest metadata meeting minimum requirement but is missing from bundle despite README claiming full capture (medium issue); chrome header/footer captured correctly with 27/21 links; no infinite clinic-finder URLs; render strategy documented; all 3 spot-checked live pages confirm correct content."
+  "summary": "FAIL — 13/14 manifest pages captured in bundle (nl--algemene-voorwaarden-kliniekzoeker missing despite README claiming 14 full captures); sample-scrape.json absent; all 3 spot-checked live URLs return real content; chrome header/footer non-empty with 27/21 links; render strategy fully documented; AEM component classes (82 emu-*, 13 data-cmp-*, 64 aaaem-*) confirmed in bundle HTML; pHash similarity low (0.47-0.56) explained by consent gate in fresh renders vs crawler gate-dismissed captures."
 }
