@@ -19,6 +19,12 @@ indices:
       image:
         select: head > meta[property="og:image"]
         value: attribute(el, "content")
+      template:
+        select: head > meta[name="template"]
+        value: attribute(el, "content")
+      path:
+        select: none
+        value: path
       lastModified:
         select: none
         value: dateValue(headers["last-modified"], "ddd, DD MMM YYYY hh:mm:ss GMT")

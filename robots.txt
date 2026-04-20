@@ -1,4 +1,12 @@
 User-agent: *
-Allow: /
+Allow: /nl/
+Allow: /nl
+
+# Disallow utility/infrastructure paths
+Disallow: /nav
+Disallow: /footer
+Disallow: /redirects
+Disallow: /metadata
+Disallow: /query-index.json
 
 Sitemap: https://www.juvederm.nl/sitemap.xml

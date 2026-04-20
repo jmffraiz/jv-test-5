@@ -6,9 +6,10 @@ sitemaps:
     lastmod: lastModified
     include:
       - /nl/**
-      - /
+      - /nl
     exclude:
       - /nav
       - /footer
       - /redirects
       - /metadata
+      - /nl/find-a-clinic/map
