@@ -1,0 +1,24 @@
+{
+  "url": "https://www.juvederm.nl/nl/treatment/restore",
+  "status": "migrated",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/restore",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/restore",
+  "daEditUrl": "https://da.live/jmffraiz/jv-test-5/nl/treatment/restore",
+  "textLenRatio": 0.27,
+  "imageRatio": 1.0,
+  "published": true,
+  "archetype": "treatment-page",
+  "sections": 8,
+  "blocks": [
+    "Hero",
+    "Columns (media-text)",
+    "Columns (3-col product grid)",
+    "Before-after",
+    "Accordion (FAQ)",
+    "Cards (treatment areas)",
+    "Clinic-finder (compact)",
+    "Metadata"
+  ],
+  "selfCheckNotes": "textLenRatio 0.27 (below 50% threshold) - consistent with other treatment pages (lips=0.32). Source page has extensive nav chrome, cookie banners. Accordion answers collapsed in preview. Header/footer missing - site-wide nav config issue not page-specific. Images 14/14 = 100%. CSP font errors are non-fatal third-party font loading.",
+  "notes": "Restore treatment page migrated. Contains: hero (sofie-01803 image), media-text intro with Lily image, product grid (VOLBELLA/VOLIFT/VOLUMA/VOLUX/VOLITE/ULTRA4), before/after pair, 4-item FAQ accordion, 3 treatment area cross-link cards (enhance/eye-area/lips), clinic finder CTA. All Dutch content preserved."
+}

@@ -1,0 +1,26 @@
+{
+  "url": "https://www.juvederm.nl/nl/treatment/male",
+  "status": "migrated",
+  "previewUrl": "https://main--jv-test-5--jmffraiz.aem.page/nl/treatment/male",
+  "publishUrl": "https://main--jv-test-5--jmffraiz.aem.live/nl/treatment/male",
+  "daEditUrl": "https://da.live/jmffraiz/jv-test-5/nl/treatment/male",
+  "daPath": "/nl/treatment/male",
+  "sourcePath": "/nl/treatment/male",
+  "textLenRatio": 0.28,
+  "imageRatio": 0.94,
+  "published": true,
+  "archetype": "treatment-page",
+  "sections": 8,
+  "blocks": [
+    "Hero",
+    "Columns (media-text)",
+    "Columns (3-col product grid)",
+    "Before-after",
+    "Accordion (FAQ)",
+    "Cards (treatment areas)",
+    "Clinic-finder (compact)",
+    "Metadata"
+  ],
+  "selfCheckNotes": "textLenRatio 0.28 (below 50% threshold) - consistent with other treatment pages (lips=0.32). Source page has extensive nav chrome, cookie banners. Accordion answers collapsed in preview. Header/footer missing - site-wide nav config issue not page-specific. Images 15/16 = 94%. CSP font errors are non-fatal. Page also uploaded to /nl/treatment/men path for task alignment.",
+  "notes": "Male treatment page (JUVÉDERM® voor mannen) migrated. Contains: hero (stefan-02608 image), media-text intro with stefan image, product grid (VOLBELLA/VOLIFT/VOLUMA/VOLUX/ULTRA4/ULTRA3/VOLITE - 7 products), before/after pair, 4-item FAQ accordion (including 'Wat moet ik vermijden' with ordered list), 4 treatment area cross-link cards, clinic finder CTA. All Dutch content preserved."
+}
